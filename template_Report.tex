@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage[european resistors]{circuitikz}
+
+\begin{document}
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{circuitikz}
+				\draw 
+				(1,0) node[bnc](B){CON2} to[short](2,0)
+				node[below]{1}to[short, *-](2,2)
+				to[R, l=$R_{11}$, a=\SI{1}{\kohm}] (6,2)
+				node[above]{2}to[short, *-](6,2)
+				to[C, l=$C_{11}$] (10,2) -- (10,0)
+				node[left]{4}to[short,*-](10,0)
+				to[R, l=$R_{12}$] (6,0)
+				node[above]{3}to[short, -*](6,0)
+				to[C, l=$C_{12}$] (2,0)
+				;
+				\node[ground] at (B.shield){};
+				\draw 
+				(6,0)
+				to[L, l=$L_{11}$](6,-2)
+				to[short] node[ground] {} (6,-2)
+				;
+				\draw 
+				(10,0) to[C, l=$C_{12}$](10,-2)
+				to[short] node[ground] {} (10,-2)
+				;
+			\end{circuitikz}
+			\caption{circuit A}
+		\end{center}
+		\begin{center}
+			\begin{circuitikz}
+				\draw (0,0)
+				node[bnc](B){CON2} to[short](2,0)
+				node[above]{1}to[short,*-,](2,0)
+				to[C, l=$C_{22}$](4,0)
+				node[right]{3}to[short,-*](4,0)
+				;
+				\node[ground] at (B.shield){};
+				\draw 
+				(0,3) node[ground]{}
+				to[R, l=$R_{21}$](4,3)
+				node[above]{2}to[short, -*](4,3)
+				;
+				\draw 
+				(0,-3) node[ground]{}
+				to[C, l=$C_{23}$](4,-3)
+				node[below]{4}to[short, -*](4,-3)
+				;
+				\draw 
+				(4,3) -- (7,3)
+				to[R, l=$R_{22}$](7,-3) -- (4,-3)
+				to[L, l=$L_21$](4,0)
+				to[C, l=$C_{21}$](4,3)
+				;
+			\end{circuitikz}
+			\caption{circuit B}
+		\end{center}
+	\end{figure}
+	
+\end{document}
