@@ -1,65 +1,174 @@
-\documentclass{article}
+\documentclass[notitlepage, a4paper, 11pt]{article}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
 
 \usepackage{tikz}
 \usepackage[european resistors]{circuitikz}
 
+\title{Nodal Analysis\\
+	\large Laboratory I}
+\author{Patrycja Nazim, Adrian Król, Kamil Chaj}
+\date{}
+
 \begin{document}
-	
-	\begin{figure}[h!]
+	\maketitle
+	\section{Nodal analysis - method}
+	\section{theoretical calculations}
+	\section{real measurements}
+	\subsection{Circuit A}
+		\begin{figure}[h] %circuit A
 		\begin{center}
 			\begin{circuitikz}
 				\draw 
 				(1,0) node[bnc](B){CON2} to[short](2,0)
 				node[below]{1}to[short, *-](2,2)
-				to[R, l=$R_{11}$, a=1<\kilo\ohm>] (6,2)
+				to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
 				node[above]{2}to[short, *-](6,2)
-				to[C, l=$C_{11}$] (10,2) -- (10,0)
+				to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
 				node[left]{4}to[short,*-](10,0)
-				to[R, l=$R_{12}$] (6,0)
+				to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
 				node[above]{3}to[short, -*](6,0)
-				to[C, l=$C_{12}$] (2,0)
+				to[C, l=$C_{12}$, a=47nF] (2,0)
 				;
 				\node[ground] at (B.shield){};
 				\draw 
 				(6,0)
-				to[L, l=$L_{11}$](6,-2)
+				to[L, l=$L_{11}$, a=10mH](6,-2)
 				to[short] node[ground] {} (6,-2)
 				;
 				\draw 
-				(10,0) to[C, l=$C_{12}$](10,-2)
+				(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
 				to[short] node[ground] {} (10,-2)
 				;
 			\end{circuitikz}
 			\caption{circuit A}
 		\end{center}
-		\begin{center}
-			\begin{circuitikz}
-				\draw (0,0)
-				node[bnc](B){CON2} to[short](2,0)
-				node[above]{1}to[short,*-,](2,0)
-				to[C, l=$C_{22}$](4,0)
-				node[right]{3}to[short,-*](4,0)
-				;
-				\node[ground] at (B.shield){};
-				\draw 
-				(0,3) node[ground]{}
-				to[R, l=$R_{21}$](4,3)
-				node[above]{2}to[short, -*](4,3)
-				;
-				\draw 
-				(0,-3) node[ground]{}
-				to[C, l=$C_{23}$](4,-3)
-				node[below]{4}to[short, -*](4,-3)
-				;
-				\draw 
-				(4,3) -- (7,3)
-				to[R, l=$R_{22}$](7,-3) -- (4,-3)
-				to[L, l=$L_21$](4,0)
-				to[C, l=$C_{21}$](4,3)
-				;
-			\end{circuitikz}
-			\caption{circuit B}
-		\end{center}
 	\end{figure}
+		\begin{table}[hbt!] %table circuit A
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{\textbf{Circuit A:}} \\
+				\hline\hline
+				Freq [kHz]: & Channel 1 [V]: & Channel 2 [V]: & Angle[°]: \\
+				\hline
+				\multicolumn{4}{|c|}{Node 1:   } \\
+				\hline
+				1kHz & 1.117 & 1.115 &   \\
+				\hline
+				5kHz & 2&1.119 &   \\
+				\hline
+				9kHz & 1.121 & 1.119 &   \\
+				\hline
+				\multicolumn{4}{|c|}{Node 2:   } \\
+				\hline
+				1kHz & 1.117 & 0.830 & -19.5 \\
+				\hline
+				5kHz & 1.122 & 0.338 & 14.0 \\
+				\hline
+				9kHz & 1.121 & 1.342 & -11.7 \\
+				\hline
+				\multicolumn{4}{|c|}{Node 3:   } \\
+				\hline
+				1kHz & 1.117 & 0.043 & 140,1 \\
+				\hline
+				5kHz & 1.122 & 0.952 & 135.0 \\
+				\hline
+				9kHz & 1.121 & 1.864 & 28.6 \\
+				\hline
+				\multicolumn{4}{|c|}{Node 4:   } \\
+				\hline
+				1kHz & 1.117 & 0.422 & 37.3 \\
+				\hline
+				5kHz & 1.122 & 0.493 & 43.9 \\
+				\hline
+				9kHz & 1.121 & 1.302 & 13.6 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{evaluation board measurements for Circuit A}
+	\end{table}
+	\subsection{Circuit B}
+		\begin{table}[hbt!] %table circuit B
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|c|}{\textbf{Circuit B:}} \\
+				\hline\hline
+				Freq [kHz]: & Channel 1 [V]: & Channel 2 [V]: & Angle[°]: \\
+				\hline
+				\multicolumn{4}{|c|}{Node 1:   } \\
+				\hline
+				1kHz &   &   &   \\
+				\hline
+				5kHz &   &   &   \\
+				\hline
+				9kHz &   &   &   \\
+				\hline
+				\multicolumn{4}{|c|}{Node 2:   } \\
+				\hline
+				1kHz & 1.117 & 0.250 & 28.1 \\
+				\hline
+				5kHz & 1.122 & 0.245 & -42.9 \\
+				\hline
+				9kHz & 1.121 & 0.921 & 68.0 \\
+				\hline
+				\multicolumn{4}{|c|}{Node 3:   } \\
+				\hline
+				1kHz & 1.117 & 0.486 & 22.6 \\
+				\hline
+				5kHz & 1.122 & 0.332 & 69.0 \\
+				\hline
+				9kHz & 1.121 & 1.279 & 24.0 \\
+				\hline
+				\multicolumn{4}{|c|}{Node 4:   } \\
+				\hline
+				1kHz & 1.117 & 0.502 & 20.6 \\
+				\hline
+				5kHz & 1.122 & 1.077 & -13.5 \\
+				\hline
+				9kHz & 1.121 & 0.503 & -114.5 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{evaluation board measurements for Circuit B}
+	\end{table}
+		\begin{figure}[hbt!] %circuit B
+					\begin{center}
+				\begin{circuitikz}
+					\draw (0,0)
+					node[bnc](B){CON2} to[short](2,0)
+					node[above]{1}to[short,*-,](2,0)
+					to[C, l=$C_{22}$, a=22nF](4,0)
+					node[right]{3}to[short,-*](4,0)
+					;
+					\node[ground] at (B.shield){};
+					\draw 
+					(0,3) node[ground]{}
+					to[R, l=$R_{21}$, a=1k$\Omega$](4,3)
+					node[above]{2}to[short, -*](4,3)
+					;
+					\draw 
+					(0,-3) node[ground]{}
+					to[C, l=$C_{23}$, a=100nF](4,-3)
+					node[below]{4}to[short, -*](4,-3)
+					;
+					\draw 
+					(4,3) -- (7,3)
+					to[R, l=$R_{22}$, a=1k$\Omega$](7,-3) -- (4,-3)
+					to[L, l=$L_21$, a=10mH](4,0)
+					to[C, l=$C_{21}$, a=47nF](4,3)
+					;
+				\end{circuitikz}
+				\caption{circuit B}
+			\end{center}
+		\end{figure}
+	\section{summery}
 	
 \end{document}
