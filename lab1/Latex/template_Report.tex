@@ -8,6 +8,9 @@
 	top=20mm,
 }
 
+\usepackage{graphicx}
+\usepackage{amsmath}
+
 \usepackage{tikz}
 \usepackage[european resistors]{circuitikz}
 
@@ -19,12 +22,88 @@
 \begin{document}
 	\maketitle
 	\section{Nodal analysis - method}
+		\begin{center}
+			\begin{math}
+				\begin{bmatrix}
+					G_{AC} & -G_{AB} \\
+					-G_{AB} & G_{BC}			
+				\end{bmatrix}
+				\begin{bmatrix}
+					U_A \\
+					U_B
+				\end{bmatrix}
+				=
+				\begin{bmatrix}
+					I_A \\
+					I_B
+				\end{bmatrix}
+			\end{math}
+		\end{center}
+		\newpage
 	\section{theoretical calculations}
+			\begin{figure}[!ht] %circuit A
+		\begin{center}
+			\begin{circuitikz}[scale = 0.75, transform shape]
+				\draw 
+				(2,-2) to[vsourcesin] (2,0)
+				node[left]{1}to[short, *-](2,2)
+				to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
+				node[above]{2}to[short, *-](6,2)
+				to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
+				node[right]{4}to[short,*-](10,0)
+				to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
+				node[above]{3}to[short, -*](6,0)
+				to[C, l=$C_{12}$, a=47nF] (2,0)
+				;
+				\draw 
+				(6,0)
+				to[L, l=$L_{11}$, a=10mH](6,-2)
+				;
+				\draw 
+				(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
+				;
+				\draw (2,-2)
+				to[short](10,-2);
+			\end{circuitikz}
+			\caption{theoretical circuit A}
+			\label{fig:tA}
+		\end{center}
+	\end{figure}
+		\begin{figure}[!ht] %circuit B
+		\begin{center}
+			\begin{circuitikz}[scale = 0.75, transform shape]
+				\draw (0,0)
+				to[vsourcesin](2,0)
+				node[above]{1}to[short,*-,](2,0)
+				to[C, l=$C_{22}$, a=22nF](4,0)
+				node[right]{3}to[short,-*](4,0)
+				;
+				\draw (0,3)
+				to[R, l=$R_{21}$, a=1k$\Omega$](4,3)
+				node[above]{2}to[short, -*](4,3)
+				;
+				\draw (0,-3)
+				to[C, l=$C_{23}$, a=100nF](4,-3)
+				node[below]{4}to[short, -*](4,-3)
+				;
+				\draw 
+				(4,3) -- (7,3)
+				to[R, l=$R_{22}$, a=1k$\Omega$](7,-3) -- (4,-3)
+				to[L, l=$L_21$, a=10mH](4,0)
+				to[C, l=$C_{21}$, a=47nF](4,3)
+				;
+				\draw (0,3)
+				to[short](0,-3);
+			\end{circuitikz}
+			\label{fig:tB}
+			\caption{theoretical circuit B}
+		\end{center}
+	\end{figure}
 	\section{real measurements}
 	\subsection{Circuit A}
-		\begin{figure}[h] %circuit A
+		\begin{figure}[!ht] %circuit A
 		\begin{center}
-			\begin{circuitikz}
+			\begin{circuitikz}[scale = 0.75, transform shape]
 				\draw 
 				(1,0) node[bnc](B){CON2} to[short](2,0)
 				node[below]{1}to[short, *-](2,2)
@@ -48,10 +127,12 @@
 				;
 			\end{circuitikz}
 			\caption{circuit A}
+			\label{fig:A}
 		\end{center}
 	\end{figure}
-		\begin{table}[hbt!] %table circuit A
+		\begin{table}[!ht] %table circuit A
 		\begin{center}
+			\resizebox{75mm}{!}{
 			\begin{tabular}{|c|c|c|c|}
 				\hline
 				\multicolumn{4}{|c|}{\textbf{Circuit A:}} \\
@@ -91,57 +172,16 @@
 				9kHz & 1.121 & 1.302 & 13.6 \\
 				\hline
 			\end{tabular}
+		}
 		\end{center}
+		\label{tab:A}
 		\caption{evaluation board measurements for Circuit A}
 	\end{table}
+	\newpage
 	\subsection{Circuit B}
-		\begin{table}[hbt!] %table circuit B
-		\begin{center}
-			\begin{tabular}{|c|c|c|c|}
-				\hline
-				\multicolumn{4}{|c|}{\textbf{Circuit B:}} \\
-				\hline\hline
-				Freq [kHz]: & Channel 1 [V]: & Channel 2 [V]: & Angle[°]: \\
-				\hline
-				\multicolumn{4}{|c|}{Node 1:   } \\
-				\hline
-				1kHz &   &   &   \\
-				\hline
-				5kHz &   &   &   \\
-				\hline
-				9kHz &   &   &   \\
-				\hline
-				\multicolumn{4}{|c|}{Node 2:   } \\
-				\hline
-				1kHz & 1.117 & 0.250 & 28.1 \\
-				\hline
-				5kHz & 1.122 & 0.245 & -42.9 \\
-				\hline
-				9kHz & 1.121 & 0.921 & 68.0 \\
-				\hline
-				\multicolumn{4}{|c|}{Node 3:   } \\
-				\hline
-				1kHz & 1.117 & 0.486 & 22.6 \\
-				\hline
-				5kHz & 1.122 & 0.332 & 69.0 \\
-				\hline
-				9kHz & 1.121 & 1.279 & 24.0 \\
-				\hline
-				\multicolumn{4}{|c|}{Node 4:   } \\
-				\hline
-				1kHz & 1.117 & 0.502 & 20.6 \\
-				\hline
-				5kHz & 1.122 & 1.077 & -13.5 \\
-				\hline
-				9kHz & 1.121 & 0.503 & -114.5 \\
-				\hline
-			\end{tabular}
-		\end{center}
-		\caption{evaluation board measurements for Circuit B}
-	\end{table}
-		\begin{figure}[hbt!] %circuit B
+		\begin{figure}[!ht] %circuit B
 					\begin{center}
-				\begin{circuitikz}
+				\begin{circuitikz}[scale = 0.75, transform shape]
 					\draw (0,0)
 					node[bnc](B){CON2} to[short](2,0)
 					node[above]{1}to[short,*-,](2,0)
@@ -166,9 +206,57 @@
 					to[C, l=$C_{21}$, a=47nF](4,3)
 					;
 				\end{circuitikz}
+				\label{fig:B}
 				\caption{circuit B}
 			\end{center}
 		\end{figure}
+				\begin{table}[!ht] %table circuit B
+				\begin{center}
+					\resizebox{75mm}{!}{
+					\begin{tabular}{|c|c|c|c|}
+						\hline
+						\multicolumn{4}{|c|}{\textbf{Circuit B:}} \\
+						\hline\hline
+						Freq [kHz]: & Channel 1 [V]: & Channel 2 [V]: & Angle[°]: \\
+						\hline
+						\multicolumn{4}{|c|}{Node 1:   } \\
+						\hline
+						1kHz &   &   &   \\
+						\hline
+						5kHz &   &   &   \\
+						\hline
+						9kHz &   &   &   \\
+						\hline
+						\multicolumn{4}{|c|}{Node 2:   } \\
+						\hline
+						1kHz & 1.117 & 0.250 & 28.1 \\
+						\hline
+						5kHz & 1.122 & 0.245 & -42.9 \\
+						\hline
+						9kHz & 1.121 & 0.921 & 68.0 \\
+						\hline
+						\multicolumn{4}{|c|}{Node 3:   } \\
+						\hline
+						1kHz & 1.117 & 0.486 & 22.6 \\
+						\hline
+						5kHz & 1.122 & 0.332 & 69.0 \\
+						\hline
+						9kHz & 1.121 & 1.279 & 24.0 \\
+						\hline
+						\multicolumn{4}{|c|}{Node 4:   } \\
+						\hline
+						1kHz & 1.117 & 0.502 & 20.6 \\
+						\hline
+						5kHz & 1.122 & 1.077 & -13.5 \\
+						\hline
+						9kHz & 1.121 & 0.503 & -114.5 \\
+						\hline
+				\end{tabular}
+			}
+			\end{center}
+			\label{tab:B}
+			\caption{evaluation board measurements for Circuit B}
+		\end{table}
 	\section{summery}
 	
 \end{document}
