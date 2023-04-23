@@ -89,11 +89,13 @@
 				\draw 
 				(4,3) -- (7,3)
 				to[R, l=$R_{22}$, a=1k$\Omega$](7,-3) -- (4,-3)
-				to[L, l=$L_21$, a=10mH](4,0)
+				to[L, l=$L_{21}$, a=10mH](4,0)
 				to[C, l=$C_{21}$, a=47nF](4,3)
 				;
 				\draw (0,3)
 				to[short](0,-3);
+				\draw (-1,0)
+				node[rground] {} (0,0);
 			\end{circuitikz}
 			\label{fig:tB}
 			\caption{theoretical circuit B}
@@ -143,7 +145,7 @@
 				\hline
 				1kHz & 1.117 & 1.115 &   \\
 				\hline
-				5kHz & 2&1.119 &   \\
+				5kHz & 1.122&1.119 &   \\
 				\hline
 				9kHz & 1.121 & 1.119 &   \\
 				\hline
@@ -185,7 +187,7 @@
 					\draw (0,0)
 					node[bnc](B){CON2} to[short](2,0)
 					node[above]{1}to[short,*-,](2,0)
-					to[C, l=$C_{22}$, a=22nF](4,0)
+					to[C, l=$C_{22}$, a=100nF](4,0)
 					node[right]{3}to[short,-*](4,0)
 					;
 					\node[ground] at (B.shield){};
@@ -202,7 +204,7 @@
 					\draw 
 					(4,3) -- (7,3)
 					to[R, l=$R_{22}$, a=1k$\Omega$](7,-3) -- (4,-3)
-					to[L, l=$L_21$, a=10mH](4,0)
+					to[L, l=$L_{21}$, a=10mH](4,0)
 					to[C, l=$C_{21}$, a=47nF](4,3)
 					;
 				\end{circuitikz}
