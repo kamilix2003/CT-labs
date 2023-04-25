@@ -1,7 +1,7 @@
 import numpy as np
 import cmath as cm
 
-f=1e3
+f=1e3 # f=5e3 f=9e3
 w=2*3.14*f
 Zr=1e3
 Zc1=1/complex(0,-((100e-9))*w)

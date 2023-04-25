@@ -59,23 +59,23 @@
 		\mathbf{u} = \mathbf{G}^{-1}\mathbf{i}
 		$$
 		which can be easily calculated
-		\newpage
 	\section{theoretical calculations}
-	We are using Python with library NumPy for all calculation
+	all calculation are made with Python and NumPy library
+	\newpage
 	\subsection{Circuit A}
 		\begin{figure}[!ht] %circuit A
 			\begin{center}
 			\begin{circuitikz}[scale = 0.75, transform shape]
 				\draw 
 				(2,-2) to[vsourcesin, l=V] (2,0)
-				node[left]{1}to[short, *-](2,2)
+				node[left]{$U_1$}to[short, *-](2,2)
 				to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
 				node[above]{2}to[short, *-](6,2)
 				to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
-				node[right]{4}to[short,*-](10,0)
+				node[right]{$U_4$}to[short,*-](10,0)
 				to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
-				node[above]{3}to[short, -*](6,0)
-				to[C, l=$C_{12}$, a=47nF] (2,0)
+				node[above]{$U_3$}to[short, -*](6,0)
+				to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$] (2,0)
 				;
 				\draw 
 				(6,0)
@@ -113,9 +113,8 @@
 			\end{bmatrix}
 		\end{math}
 	\end{center}
-	\begin{lstlisting}
-
-	\end{lstlisting}	
+	Current of the capacitor $C_{12}$ can be calculated using $I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}$
+	\lstinputlisting[language=Python, numbersep=1]{../CircuitA.py}
 	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
 		\begin{center}
@@ -136,7 +135,7 @@
 				;
 				\draw 
 				(4,3) -- (7,3)
-				to[R, l=$R_{22}$, a=1k$\Omega$](7,-3) -- (4,-3)
+				to[R, l=$R_{22}$, a=1k$\Omega$, i=$I_{R_{22}}$](7,-3) -- (4,-3)
 				to[L, l=$L_{21}$, a=10mH](4,0)
 				to[C, l=$C_{21}$, a=47nF](4,3)
 				;
@@ -170,10 +169,8 @@
 			\end{bmatrix}
 		\end{math}
 	\end{center}
-		\begin{lstlisting}
-		import
-	\end{lstlisting}
-	\newpage
+	Current of the resistor $R_{22}$ can be calculated using $I_{R_{22}} = \frac{U_4 - U_2}{Z_{R_{22}}}$
+	\lstinputlisting[language=Python, numbersep=1]{../CircuitA.py}
 	\section{real measurements}
 	\subsection{Circuit A}
 			\begin{figure}[!ht] %circuit A
@@ -188,7 +185,7 @@
 					node[left]{4}to[short,*-](10,0)
 					to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
 					node[above]{3}to[short, -*](6,0)
-					to[C, l=$C_{12}$, a=47nF] (2,0)
+					to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$] (2,0)
 					;
 					\node[ground] at (B.shield){};
 					\draw 
@@ -253,6 +250,18 @@
 		\label{tab:A}
 		\caption{evaluation board measurements for Circuit A}
 	\end{table}
+	Current of capacitor $C_{12}$
+	\begin{tabular}{|c|c|}
+			\hline
+			freq [kHz] & $I_{R_{22}}$ \\
+			\hline
+			1kHz &  \\
+			\hline
+			5kHz &  \\
+			\hline
+			9kHz &  \\
+			\hline
+	\end{tabular}
 	\newpage
 	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
@@ -277,7 +286,7 @@
 					;
 					\draw 
 					(4,3) -- (7,3)
-					to[R, l=$R_{22}$, a=1k$\Omega$](7,-3) -- (4,-3)
+					to[R, l=$R_{22}$, a=1k$\Omega$, i=$I_{R_{22}}$](7,-3) -- (4,-3)
 					to[L, l=$L_{21}$, a=10mH](4,0)
 					to[C, l=$C_{21}$, a=47nF](4,3)
 					;
@@ -333,6 +342,17 @@
 			\label{tab:B}
 			\caption{evaluation board measurements for Circuit B}
 		\end{table}
+		\begin{tabular}{|c|c|}
+			\hline
+			freq [kHz] & $I_{R_{22}}$ \\
+			\hline
+			1kHz &  \\
+			\hline
+			5kHz &  \\
+			\hline
+			9kHz &  \\
+			\hline
+		\end{tabular}
 	\section{summery}
 	
 \end{document}
