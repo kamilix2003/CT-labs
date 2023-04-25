@@ -10,6 +10,7 @@
 
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{listings}
 
 \usepackage{tikz}
 \usepackage[european resistors]{circuitikz}
@@ -21,31 +22,52 @@
 
 \begin{document}
 	\maketitle
+	\section{Aim of exercise}
+	The aim of our exercise was to experimentally verify the nodal analysis in RLC circuits. We have achieved it by measuring the voltages on different nodes of the chosen circuits using a dedicated evaluation board and vector voltmeter. The obtained measurement results are compared with analytical calculations.
+	
+	Apart from the values of potentials in individual nodes of the circuits being measured, we calculated the currents flowing through pointed elements.
+
 	\section{Nodal analysis - method}
+	Method which we are going to use to solve this circuit is know as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$
+		\begin{center}
+			$\mathbf{Gu=i}$
+		\end{center}
 		\begin{center}
 			\begin{math}
 				\begin{bmatrix}
-					G_{AC} & -G_{AB} \\
-					-G_{AB} & G_{BC}			
+					G_{11} & -G_{12} & -G_{13} \\
+					-G_{21} & G_{22} & -G_{23} \\
+					-G_{31} & -G_{32} & G_{33} 
 				\end{bmatrix}
 				\begin{bmatrix}
-					U_A \\
-					U_B
+					U_1 \\
+					U_2 \\ 
+					U_3
 				\end{bmatrix}
 				=
 				\begin{bmatrix}
-					I_A \\
-					I_B
+					I_1 \\
+					I_2 \\
+					I_3
 				\end{bmatrix}
 			\end{math}
 		\end{center}
+		Where $G_{11}$, $G_{22}$, $G_{33}$ are sums of conductance of each branch connected to the node \newline $G_{12} = G_{21}$, $G_{13} = G_{31}$, $G_{32} = G_{23}$ are sums of conductance of branches between nodes \newline $I_1, I_2, I_3$ are sums of current sources entering or exiting node and $U_1, U_2, U_3$ are unknown voltages that we are trying to find
+		\newline\newline
+		With simple matrix operation we obtain equation
+		$$
+		\mathbf{u} = \mathbf{G}^{-1}\mathbf{i}
+		$$
+		which can be easily calculated
 		\newpage
 	\section{theoretical calculations}
-			\begin{figure}[!ht] %circuit A
-		\begin{center}
+	We are using Python with library NumPy for all calculation
+	\subsection{Circuit A}
+		\begin{figure}[!ht] %circuit A
+			\begin{center}
 			\begin{circuitikz}[scale = 0.75, transform shape]
 				\draw 
-				(2,-2) to[vsourcesin] (2,0)
+				(2,-2) to[vsourcesin, l=V] (2,0)
 				node[left]{1}to[short, *-](2,2)
 				to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
 				node[above]{2}to[short, *-](6,2)
@@ -64,16 +86,42 @@
 				;
 				\draw (2,-2)
 				to[short](10,-2);
+				\draw (6,-2)
+				node[rground] {} (6,-2);
 			\end{circuitikz}
 			\caption{theoretical circuit A}
 			\label{fig:tA}
 		\end{center}
 	\end{figure}
+	\begin{center}
+			\begin{math}
+			\begin{bmatrix}
+				\frac{1}{Z_{C_12}} + \frac{1}{Z_{C_11}+Z_{R_{11}}} & \frac{-1}{Z_{C_{11}}} & \frac{-1}{Z_{R_{11}}+Z_{C_{11}}} \\
+				\frac{-1}{Z_{C_{11}}} & \frac{1}{Z_{R_{12}}}+\frac{1}{Z_{C_{12}}}+\frac{1}{Z_{L_{11}}} & \frac{-1}{Z_{R_{12}}} \\ 
+				\frac{-1}{Z_{R_{11}}+Z_{C_{11}}} & \frac{-1}{Z_{R_{12}}} & 	\frac{1}{Z_{C_13}} + \frac{1}{Z_{C_11}+Z_{R_{11}}} + \frac{1}{Z_{R_{12}}}
+			\end{bmatrix}
+			\begin{bmatrix}
+				U_1 \\
+				U_3 \\ 
+				U_4
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				\frac{-V}{Z_{R_{11}}}-\frac{1}{Z_{C_11}+Z_{R_{11}}} \\
+				\frac{V}{Z_{C_{12}}} \\
+				\frac{V}{Z_{R_{12}}+Z_{C_{11}}}
+			\end{bmatrix}
+		\end{math}
+	\end{center}
+	\begin{lstlisting}
+
+	\end{lstlisting}	
+	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
 		\begin{center}
 			\begin{circuitikz}[scale = 0.75, transform shape]
 				\draw (0,0)
-				to[vsourcesin](2,0)
+				to[vsourcesin, l=V](2,0)
 				node[above]{1}to[short,*-,](2,0)
 				to[C, l=$C_{22}$, a=22nF](4,0)
 				node[right]{3}to[short,-*](4,0)
@@ -94,44 +142,70 @@
 				;
 				\draw (0,3)
 				to[short](0,-3);
-				\draw (-1,0)
-				node[rground] {} (0,0);
+				\draw (0,0)
+				node[rground, rotate=-90] {} (0,0);
 			\end{circuitikz}
 			\label{fig:tB}
 			\caption{theoretical circuit B}
 		\end{center}
 	\end{figure}
+	\begin{center}
+			\begin{math}
+			\begin{bmatrix}
+				\frac{2}{Z_{R_{21}}} + \frac{1}{Z_{L_{21}}} & \frac{-1}{Z_{C_{21}}} & \frac{-1}{Z_{R_{22}}} \\
+				\frac{-1}{Z_{C_{21}}} & \frac{1}{Z_{C_21}} + \frac{1}{Z_{C_{22}}} + \frac{1}{Z_{L_{21}}} &
+				\frac{-1}{Z_{L_{21}}} \\
+				\frac{-1}{Z_{R_{22}}} & \frac{-1}{Z_{L_{21}}} & \frac{1}{Z_{C_{23}}} + \frac{1}{Z_{L_{21}}} + \frac{1}{Z_{R_{22}}}
+			\end{bmatrix}
+			\begin{bmatrix}
+				U_2 \\
+				U_3 \\ 
+				U_4
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				0 \\
+				\frac{V}{Z_{C_{22}}} \\
+				0
+			\end{bmatrix}
+		\end{math}
+	\end{center}
+		\begin{lstlisting}
+		import
+	\end{lstlisting}
+	\newpage
 	\section{real measurements}
 	\subsection{Circuit A}
-		\begin{figure}[!ht] %circuit A
-		\begin{center}
-			\begin{circuitikz}[scale = 0.75, transform shape]
-				\draw 
-				(1,0) node[bnc](B){CON2} to[short](2,0)
-				node[below]{1}to[short, *-](2,2)
-				to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
-				node[above]{2}to[short, *-](6,2)
-				to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
-				node[left]{4}to[short,*-](10,0)
-				to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
-				node[above]{3}to[short, -*](6,0)
-				to[C, l=$C_{12}$, a=47nF] (2,0)
-				;
-				\node[ground] at (B.shield){};
-				\draw 
-				(6,0)
-				to[L, l=$L_{11}$, a=10mH](6,-2)
-				to[short] node[ground] {} (6,-2)
-				;
-				\draw 
-				(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
-				to[short] node[ground] {} (10,-2)
-				;
-			\end{circuitikz}
-			\caption{circuit A}
-			\label{fig:A}
-		\end{center}
-	\end{figure}
+			\begin{figure}[!ht] %circuit A
+			\begin{center}
+				\begin{circuitikz}[scale = 0.75, transform shape]
+					\draw 
+					(1,0) node[bnc](B){CON2} to[short](2,0)
+					node[below]{1}to[short, *-](2,2)
+					to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
+					node[above]{2}to[short, *-](6,2)
+					to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
+					node[left]{4}to[short,*-](10,0)
+					to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
+					node[above]{3}to[short, -*](6,0)
+					to[C, l=$C_{12}$, a=47nF] (2,0)
+					;
+					\node[ground] at (B.shield){};
+					\draw 
+					(6,0)
+					to[L, l=$L_{11}$, a=10mH](6,-2)
+					to[short] node[ground] {} (6,-2)
+					;
+					\draw 
+					(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
+					to[short] node[ground] {} (10,-2)
+					;
+				\end{circuitikz}
+				\caption{circuit A}
+				\label{fig:A}
+			\end{center}
+		\end{figure}
+	
 		\begin{table}[!ht] %table circuit A
 		\begin{center}
 			\resizebox{75mm}{!}{

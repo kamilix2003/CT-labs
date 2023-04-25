@@ -1,7 +1,7 @@
 import numpy as np
 import cmath as cm
 
-f=1e3
+f=5e3
 w=2*3.14*f
 Zr=1e3
 Zc1=1/complex(0,-((47e-9)*w))
@@ -17,12 +17,8 @@ G23 = -1/Zc1
 G24 = -1/Zr
 G34 = -1/Zl
 
-# Ga = complex(0.002, 2.963e-4)
-# Gb = complex(0.001, 0.01654)
-# Gab = 1/1000
-
 I1 = 0
-I2 = V / (Zc2+50)
+I2 = V / (Zc2)
 I3 = 0
 G = np.array([[G2, G23, G24],
               [G23, G3, G34],
@@ -34,4 +30,5 @@ I = np.array([[I1],
 V = np.matmul(np.linalg.inv(G), I)
 
 print('V: \n', V)
-print('V: \n', np.abs(V))
+print('phase: \n', np.angle(V, True))
+print('|V|: \n', np.abs(V))

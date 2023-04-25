@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  23 APR 2023 19:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  25 APR 2023 01:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -139,6 +139,31 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
+(C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count274
+\lst@gtempboxa=\box53
+\lst@token=\toks23
+\lst@length=\count275
+\lst@currlwidth=\dimen160
+\lst@column=\count276
+\lst@pos=\count277
+\lst@lostspace=\dimen161
+\lst@width=\dimen162
+\lst@newlines=\count278
+\lst@lineno=\count279
+\lst@maxwidth=\dimen163
+
+(C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count280
+\lst@skipnumbers=\count281
+\lst@framebox=\box54
+)
+(C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
 sty
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
@@ -146,15 +171,15 @@ sty
 y
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks23
-\pgfutil@tempdima=\dimen160
-\pgfutil@tempdimb=\dimen161
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box53
+\pgfutil@abb=\box55
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -173,33 +198,33 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks24
-\pgfkeys@temptoks=\toks25
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 filtered.code.tex
-\pgfkeys@tmptoks=\toks26
+\pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen162
-\pgf@y=\dimen163
-\pgf@xa=\dimen164
-\pgf@ya=\dimen165
-\pgf@xb=\dimen166
-\pgf@yb=\dimen167
-\pgf@xc=\dimen168
-\pgf@yc=\dimen169
-\pgf@xd=\dimen170
-\pgf@yd=\dimen171
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count274
-\c@pgf@countb=\count275
-\c@pgf@countc=\count276
-\c@pgf@countd=\count277
-\t@pgf@toka=\toks27
-\t@pgf@tokb=\toks28
-\t@pgf@tokc=\toks29
-\pgf@sys@id@count=\count278
+\c@pgf@counta=\count282
+\c@pgf@countb=\count283
+\c@pgf@countc=\count284
+\c@pgf@countd=\count285
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count286
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -218,8 +243,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count279
-\pgfsyssoftpath@bigbuffer@items=\count280
+\pgfsyssoftpath@smallbuffer@items=\count287
+\pgfsyssoftpath@bigbuffer@items=\count288
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -255,12 +280,12 @@ code.tex
 code.tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen172
-\pgfmath@count=\count281
-\pgfmath@box=\box54
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count289
+\pgfmath@box=\box56
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex
@@ -282,59 +307,59 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count282
+\c@pgfmathroundto@lastzeros=\count290
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen173
-\pgf@picmaxx=\dimen174
-\pgf@picminy=\dimen175
-\pgf@picmaxy=\dimen176
-\pgf@pathminx=\dimen177
-\pgf@pathmaxx=\dimen178
-\pgf@pathminy=\dimen179
-\pgf@pathmaxy=\dimen180
-\pgf@xx=\dimen181
-\pgf@xy=\dimen182
-\pgf@yx=\dimen183
-\pgf@yy=\dimen184
-\pgf@zx=\dimen185
-\pgf@zy=\dimen186
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen187
-\pgf@path@lasty=\dimen188
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen189
-\pgf@shorten@start@additional=\dimen190
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box55
-\pgf@hbox=\box56
-\pgf@layerbox@main=\box57
-\pgf@picture@serial@count=\count283
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count291
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen191
+\pgflinewidth=\dimen195
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen192
-\pgf@pt@y=\dimen193
-\pgf@pt@temp=\dimen194
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -351,14 +376,14 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen195
+\pgfarrowsep=\dimen199
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen196
-\pgf@sys@shading@range@num=\count284
-\pgf@shadingcount=\count285
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count292
+\pgf@shadingcount=\count293
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -367,7 +392,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box58
+\pgfexternal@startupbox=\box60
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -388,7 +413,7 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box59
+\pgfnodeparttextbox=\box61
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -397,8 +422,8 @@ File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen197
-\pgf@nodesepend=\dimen198
+\pgf@nodesepstart=\dimen257
+\pgf@nodesepend=\dimen258
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -419,10 +444,10 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen199
-\pgffor@skip=\dimen256
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@iter=\dimen259
+\pgffor@skip=\dimen260
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -431,34 +456,34 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count286
-\pgfplotmarksize=\dimen257
+\pgf@plot@mark@count=\count294
+\pgfplotmarksize=\dimen261
 )
-\tikz@lastx=\dimen258
-\tikz@lasty=\dimen259
-\tikz@lastxsaved=\dimen260
-\tikz@lastysaved=\dimen261
-\tikz@lastmovetox=\dimen262
-\tikz@lastmovetoy=\dimen263
-\tikzleveldistance=\dimen264
-\tikzsiblingdistance=\dimen265
-\tikz@figbox=\box60
-\tikz@figbox@bg=\box61
-\tikz@tempbox=\box62
-\tikz@tempbox@bg=\box63
-\tikztreelevel=\count287
-\tikznumberofchildren=\count288
-\tikznumberofcurrentchild=\count289
-\tikz@fig@count=\count290
+\tikz@lastx=\dimen262
+\tikz@lasty=\dimen263
+\tikz@lastxsaved=\dimen264
+\tikz@lastysaved=\dimen265
+\tikz@lastmovetox=\dimen266
+\tikz@lastmovetoy=\dimen267
+\tikzleveldistance=\dimen268
+\tikzsiblingdistance=\dimen269
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count295
+\tikznumberofchildren=\count296
+\tikznumberofcurrentchild=\count297
+\tikz@fig@count=\count298
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count291
-\pgfmatrixcurrentcolumn=\count292
-\pgf@matrix@numberofcolumns=\count293
+\pgfmatrixcurrentrow=\count299
+\pgfmatrixcurrentcolumn=\count300
+\pgf@matrix@numberofcolumns=\count301
 )
-\tikz@expandcount=\count294
+\tikz@expandcount=\count302
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -476,10 +501,10 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowinset=\dimen266
-\pgfarrowlength=\dimen267
-\pgfarrowwidth=\dimen268
-\pgfarrowlinewidth=\dimen269
+\pgfarrowinset=\dimen270
+\pgfarrowlength=\dimen271
+\pgfarrowwidth=\dimen272
+\pgfarrowlinewidth=\dimen273
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarybending.code.tex
@@ -492,18 +517,18 @@ File: pgfmodulebending.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 nonlineartransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgftransformnonlinearflatness=\dimen270
+\pgftransformnonlinearflatness=\dimen274
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 arycurvilinear.code.tex
 File: pgflibrarycurvilinear.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@curvilinear@time@a=\dimen271
-\pgf@curvilinear@length@a=\dimen272
-\pgf@curvilinear@length@b=\dimen273
-\pgf@curvilinear@length@c=\dimen274
-\pgf@curvilinear@length@d=\dimen275
+\pgf@curvilinear@time@a=\dimen275
+\pgf@curvilinear@length@a=\dimen276
+\pgf@curvilinear@length@b=\dimen277
+\pgf@curvilinear@length@c=\dimen278
+\pgf@curvilinear@length@d=\dimen279
 )
-\pgf@arrows@the@rigidity=\dimen276
+\pgf@arrows@the@rigidity=\dimen280
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibraryfpu.code.tex
@@ -511,24 +536,24 @@ z/libraries\tikzlibraryfpu.code.tex
 aryfpu.code.tex))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirc.de
 fines.tex
-\pgf@circ@count@a=\count295
-\pgf@circ@count@b=\count296
-\pgf@circ@count@c=\count297
-\pgf@circ@res@up=\dimen277
-\pgf@circ@res@down=\dimen278
-\pgf@circ@res@zero=\dimen279
-\pgf@circ@res@left=\dimen280
-\pgf@circ@res@right=\dimen281
-\pgf@circ@res@other=\dimen282
-\pgf@circ@res@step=\dimen283
-\pgf@circ@res@temp=\dimen284
-\pgf@circ@Rlen=\dimen285
-\pgf@circ@scaled@Rlen=\dimen286
-\pgfstartlinewidth=\dimen287
+\pgf@circ@count@a=\count303
+\pgf@circ@count@b=\count304
+\pgf@circ@count@c=\count305
+\pgf@circ@res@up=\dimen281
+\pgf@circ@res@down=\dimen282
+\pgf@circ@res@zero=\dimen283
+\pgf@circ@res@left=\dimen284
+\pgf@circ@res@right=\dimen285
+\pgf@circ@res@other=\dimen286
+\pgf@circ@res@step=\dimen287
+\pgf@circ@res@temp=\dimen288
+\pgf@circ@Rlen=\dimen289
+\pgf@circ@scaled@Rlen=\dimen290
+\pgfstartlinewidth=\dimen291
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircuti
 ls.tex
-\ctikz@scratchbox=\box64
+\ctikz@scratchbox=\box66
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircpat
 h.tex)
@@ -540,7 +565,7 @@ opoles.tex)
 oles.tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirctri
 poles.tex
-\pgf@circ@res@count=\count298
+\pgf@circ@res@count=\count306
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircqua
 dpoles.tex)
@@ -550,7 +575,7 @@ tipoles.tex)
 el.tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircvol
 tage.tex
-\pgfcirc@labelshift=\dimen288
+\pgfcirc@labelshift=\dimen292
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirccur
 rent.tex)
@@ -559,25 +584,25 @@ w.tex))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count299
-\l__pdf_internal_box=\box65
+\l__color_backend_stack_int=\count307
+\l__pdf_internal_box=\box67
 ) (template_Report.aux)
 \openout1 = `template_Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -617,17 +642,17 @@ LaTeX Font Info:    ... okay on input line 22.
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
-\scratchdimen=\dimen289
-\scratchbox=\box66
-\nofMPsegments=\count301
-\nofMParguments=\count302
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count303
-\MPscratchDim=\dimen290
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count308
+\scratchdimen=\dimen293
+\scratchbox=\box68
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen294
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks37
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -669,34 +694,45 @@ G,.JBIG2,.JB2,.eps]
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)) [1
+))
+\c@lstlisting=\count314
 
-{C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2] [3] [4] (template_Report.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
+
+ []
+
+[1
+
+{C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+[3] [4] (template_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 32051 strings out of 475385
- 839428 string characters out of 2776906
- 1433805 words of memory out of 3000000
- 53123 multiletter control sequences out of 15000+600000
- 475669 words of font info for 50 fonts, out of 8000000 for 9000
+ 33701 strings out of 475385
+ 861906 string characters out of 2776906
+ 1436724 words of memory out of 3000000
+ 54756 multiletter control sequences out of 15000+600000
+ 477337 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,89p,441b,954s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\kamaj\AppData\Local\MiKTeX\fonts/
-pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/kamaj/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kamaj/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/kamaj/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/k
-amaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr17.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on template_Report.pdf (4 pages, 126441 bytes).
+ 84i,10n,89p,441b,972s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\kamaj\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/kamaj/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kamaj/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/kamaj/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kamaj
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Us
+ers/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/kamaj/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kamaj/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/kamaj/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kama
+j/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on template_Report.pdf (4 pages, 171863 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
