@@ -1,14 +1,14 @@
 import numpy as np
 import cmath as cm
 
-f=1e3 # f=5e3 f=9e3
+f=1e3 #f=1e3 f=5e3 f=9e3
 w=2*3.14*f
 Zr=1e3
-Zc1=1/complex(0,-((47e-9)*w))
-Zc2=1/complex(0,-((100e-9)*w))
-Zc3=1/complex(0,-((100e-9)*w))
+Zc1=1/complex(0,((47e-9)*w))
+Zc2=1/complex(0,((100e-9)*w))
+Zc3=1/complex(0,((100e-9)*w))
 Zl=complex(0,(10e-3)*w)
-V = 1.117
+V = 0.192
 
 G2 = 2/Zr + 1/Zc1
 G3 = 1/Zc1 + 1/Zc2 + 1/Zl
