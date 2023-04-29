@@ -11,7 +11,8 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{listings}
-
+\usepackage{xcolor}
+\usepackage{minted}
 \usepackage{tikz}
 \usepackage[european resistors]{circuitikz}
 
@@ -22,7 +23,7 @@
 
 \begin{document}
 	\maketitle
-	\section{Aim of exercise}
+	\section*{Aim of exercise}
 	The aim of our exercise was to experimentally verify the nodal analysis in RLC circuits. We have achieved it by measuring the voltages on different nodes of the chosen circuits using a dedicated evaluation board and vector voltmeter. The obtained measurement results are compared with analytical calculations.
 	
 	Apart from the values of potentials in individual nodes of the circuits being measured, we calculated the currents flowing through pointed elements.
@@ -93,28 +94,10 @@
 			\label{fig:tA}
 		\end{center}
 	\end{figure}
-	\begin{center}
-			\begin{math}
-			\begin{bmatrix}
-				\frac{1}{Z_{C_12}} + \frac{1}{Z_{C_11}+Z_{R_{11}}} & \frac{-1}{Z_{C_{11}}} & \frac{-1}{Z_{R_{11}}+Z_{C_{11}}} \\
-				\frac{-1}{Z_{C_{11}}} & \frac{1}{Z_{R_{12}}}+\frac{1}{Z_{C_{12}}}+\frac{1}{Z_{L_{11}}} & \frac{-1}{Z_{R_{12}}} \\ 
-				\frac{-1}{Z_{R_{11}}+Z_{C_{11}}} & \frac{-1}{Z_{R_{12}}} & 	\frac{1}{Z_{C_13}} + \frac{1}{Z_{C_11}+Z_{R_{11}}} + \frac{1}{Z_{R_{12}}}
-			\end{bmatrix}
-			\begin{bmatrix}
-				U_1 \\
-				U_3 \\ 
-				U_4
-			\end{bmatrix}
-			=
-			\begin{bmatrix}
-				\frac{-V}{Z_{R_{11}}}-\frac{1}{Z_{C_11}+Z_{R_{11}}} \\
-				\frac{V}{Z_{C_{12}}} \\
-				\frac{V}{Z_{R_{12}}+Z_{C_{11}}}
-			\end{bmatrix}
-		\end{math}
-	\end{center}
 	Current of the capacitor $C_{12}$ can be calculated using $I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}$
-	\lstinputlisting[language=Python, numbersep=1]{../CircuitA.py}
+	\begin{minted}{python}
+		code...
+	\end{minted}
 	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
 		\begin{center}
@@ -148,29 +131,10 @@
 			\caption{theoretical circuit B}
 		\end{center}
 	\end{figure}
-	\begin{center}
-			\begin{math}
-			\begin{bmatrix}
-				\frac{2}{Z_{R_{21}}} + \frac{1}{Z_{L_{21}}} & \frac{-1}{Z_{C_{21}}} & \frac{-1}{Z_{R_{22}}} \\
-				\frac{-1}{Z_{C_{21}}} & \frac{1}{Z_{C_21}} + \frac{1}{Z_{C_{22}}} + \frac{1}{Z_{L_{21}}} &
-				\frac{-1}{Z_{L_{21}}} \\
-				\frac{-1}{Z_{R_{22}}} & \frac{-1}{Z_{L_{21}}} & \frac{1}{Z_{C_{23}}} + \frac{1}{Z_{L_{21}}} + \frac{1}{Z_{R_{22}}}
-			\end{bmatrix}
-			\begin{bmatrix}
-				U_2 \\
-				U_3 \\ 
-				U_4
-			\end{bmatrix}
-			=
-			\begin{bmatrix}
-				0 \\
-				\frac{V}{Z_{C_{22}}} \\
-				0
-			\end{bmatrix}
-		\end{math}
-	\end{center}
 	Current of the resistor $R_{22}$ can be calculated using $I_{R_{22}} = \frac{U_4 - U_2}{Z_{R_{22}}}$
-	\lstinputlisting[language=Python, numbersep=1]{../CircuitA.py}
+	\begin{minted}{python}
+		code...
+	\end{minted}
 	\section{real measurements}
 	\subsection{Circuit A}
 			\begin{figure}[!ht] %circuit A

@@ -1,34 +1,42 @@
 import numpy as np
-import cmath as cm
+from tabulate import tabulate
 
-f=1e3 #f=1e3 f=5e3 f=9e3
-w=2*3.14*f
-Zr=1e3
-Zc1=1/complex(0,((47e-9)*w))
-Zc2=1/complex(0,((100e-9)*w))
-Zc3=1/complex(0,((100e-9)*w))
-Zl=complex(0,(10e-3)*w)
-V = 0.192
+def get_V(f):
+    w=2*np.pi*f
+    Zr=1e3
+    Zc1=1/(complex(0,47e-9)*w)
+    Zc2=1/(complex(0,100e-9)*w)
+    Zc3=1/(complex(0,100e-9)*w)
+    Zl=complex(0,10e-3)*w
+    V = 0.192
 
-G2 = 2/Zr + 1/Zc1
-G3 = 1/Zc1 + 1/Zc2 + 1/Zl
-G4 = 1/Zc3 + 1/Zl + 1/Zr
-G23 = -1/Zc1
-G24 = -1/Zr
-G34 = -1/Zl
+    G2 = 2/Zr + 1/Zc1
+    G3 = 1/Zc1 + 1/Zc2 + 1/Zl
+    G4 = 1/Zc3 + 1/Zl + 1/Zr
+    G23 = -1/Zc1
+    G24 = -1/Zr
+    G34 = -1/Zl
 
-I1 = 0
-I2 = V / (Zc2)
-I3 = 0
-G = np.array([[G2, G23, G24],
-              [G23, G3, G34],
-              [G24, G34, G4]])
-I = np.array([[I1],
-              [I2],
-              [I3]])
+    I1 = 0
+    I2 = V / (Zc2)
+    I3 = 0
+    G = np.array([[G2, G23, G24],
+                [G23, G3, G34],
+                [G24, G34, G4]])
+    I = np.array([[I1],
+                [I2],
+                [I3]])
 
-V = np.matmul(np.linalg.inv(G), I)
+    V = np.matmul(np.linalg.inv(G), I)
+    VP = np.angle(V, True)
+    VA = np.abs(V)
+    headers = [str(f)+' Hz', 'Magnitude', 'Phase']
+    first_col = ['Node 2', 'Node 3', 'Node 4']
+    table1 = np.column_stack((first_col, VA, VP))
+    print(tabulate(table1, headers=headers,tablefmt='simple'))
+    return(V, VA, VP)
 
-print('V: \n', V)
-print('phase: \n', np.angle(V, True))
-print('|V|: \n', np.abs(V))
+(V1, VA1, VP1)=get_V(1e3)
+(V5, VA5, VP5)=get_V(5e3)
+(V9, VA9, VP9)=get_V(9e3)
+
