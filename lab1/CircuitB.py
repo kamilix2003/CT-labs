@@ -30,8 +30,11 @@ def get_V(f):
     V = np.matmul(np.linalg.inv(G), I)
     VP = np.angle(V, True)
     VA = np.abs(V)
+    IR22 = (V[0]-V[2])/Zr
+    VA = np.append(VA, np.abs(IR22))
+    VP = np.append(VP, np.angle(IR22))
     headers = [str(f)+' Hz', 'Magnitude', 'Phase']
-    first_col = ['Node 2', 'Node 3', 'Node 4']
+    first_col = ['Node 2', 'Node 3', 'Node 4', 'I of R_22']
     table1 = np.column_stack((first_col, VA, VP))
     print(tabulate(table1, headers=headers,tablefmt='simple'))
     return(V, VA, VP)

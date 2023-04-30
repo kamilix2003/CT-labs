@@ -23,16 +23,44 @@
 
 \begin{document}
 	\maketitle
-	\section*{Aim of exercise}
+	\section{Aim of exercise}
 	The aim of our exercise was to experimentally verify the nodal analysis in RLC circuits. We have achieved it by measuring the voltages on different nodes of the chosen circuits using a dedicated evaluation board and vector voltmeter. The obtained measurement results are compared with analytical calculations.
 	
 	Apart from the values of potentials in individual nodes of the circuits being measured, we calculated the currents flowing through pointed elements.
 
-	\section{Nodal analysis - method}
-	Method which we are going to use to solve this circuit is know as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$
+	\section{Course of measurements}
+	First step of our measurements was connecting evaluation board(fig. \ref{fig:ms}) to laboratory computer via USB and starting Vector Voltage Meter software. Next we connected both INPUT1 and CON1 to OUTPUT using BNC cables and splitter, last we connected oscilloscope probe to INPUT2 connector. Now with all preparation finished we started voltage measurements of each node in Circuit A(fig. \ref{fig:A}). Then we disconnected BNC cable connected to CON1 and connected it to CON2 and repeated previous measurements for Circuit B(fig. \ref{fig:B})
+	
+	\begin{figure}[!ht]
 		\begin{center}
-			$\mathbf{Gu=i}$
+			\begin{circuitikz}
+				\draw(0, 0)node[bnc](I1){INPUT1};
+				\draw [black, ->](I1.hot) -- (3, 0) -- (3, -0.5);
+				\draw(3, -0.57)node[right]{node} to[short, -*](3, -0.57);
+				\draw(0, -1)node[bnc](I2){INPUT2};
+				\draw [black, ->](I2.hot) -- (-1.5, -1) -- (-1.5, -2);
+				\draw(0, -2)node[bnc](O){OUTPUT};
+				\draw(3, -2)node[bnc, rotate=180](D) {};
+				\draw(-3,-2)node[ground] {}
+				to[vsourcesin](-1.5,-2)
+				to[short](O.hot);
+				\draw [black, ->](O.hot) -- (D.hot);
+				\draw [black, thick](-4,1) rectangle (0.9, -3);
+				\draw [black, thick](2,1) rectangle (4, -3);
+				\draw(-1.5, 1.2) node[short]{EVALUATION BOARD} (-1.5, 1.2);
+				\draw(3, 1.2) node[short]{DUT} (3, 1.2);
+				\draw(3, 0.2) node[short]{probe} (3, 0.2);
+				\draw(3, -2.5) node[short]{CON1/2} (3, -2.5);
+			\end{circuitikz}
 		\end{center}
+		\caption{measurements schematic}
+		\label{fig:ms}
+	\end{figure}
+
+	\section{Nodal analysis - method}
+	Method which we are going to use to solve this circuit is know as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$
+
+		\begin{center} $\mathbf{Gu=i}$ \end{center}
 		\begin{center}
 			\begin{math}
 				\begin{bmatrix}
@@ -60,9 +88,8 @@
 		\mathbf{u} = \mathbf{G}^{-1}\mathbf{i}
 		$$
 		which can be easily calculated
-	\section{theoretical calculations}
-	all calculation are made with Python and NumPy library
-	\newpage
+	\section{Theoretical calculations}
+	all calculation are made in Python with NumPy library. Source code for all calculation can be found in the Appendix
 	\subsection{Circuit A}
 		\begin{figure}[!ht] %circuit A
 			\begin{center}
@@ -95,9 +122,7 @@
 		\end{center}
 	\end{figure}
 	Current of the capacitor $C_{12}$ can be calculated using $I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}$
-	\begin{minted}{python}
-		code...
-	\end{minted}
+	\newpage
 	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
 		\begin{center}
@@ -132,10 +157,8 @@
 		\end{center}
 	\end{figure}
 	Current of the resistor $R_{22}$ can be calculated using $I_{R_{22}} = \frac{U_4 - U_2}{Z_{R_{22}}}$
-	\begin{minted}{python}
-		code...
-	\end{minted}
-	\section{real measurements}
+	\newpage
+	\section{Real measurements}
 	\subsection{Circuit A}
 			\begin{figure}[!ht] %circuit A
 			\begin{center}
@@ -229,7 +252,7 @@
 	\newpage
 	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
-					\begin{center}
+			\begin{center}
 				\begin{circuitikz}[scale = 0.75, transform shape]
 					\draw (0,0)
 					node[bnc](B){CON2} to[short](2,0)
@@ -255,8 +278,8 @@
 					to[C, l=$C_{21}$, a=47nF](4,3)
 					;
 				\end{circuitikz}
-				\label{fig:B}
 				\caption{circuit B}
+				\label{fig:B}
 			\end{center}
 		\end{figure}
 				\begin{table}[!ht] %table circuit B
@@ -317,6 +340,21 @@
 			9kHz &  \\
 			\hline
 		\end{tabular}
-	\section{summery}
-	
+	\section{Comparison}
+	\section{Summery}
+	\newpage
+	\appendix
+	\section*{Appendix}\label{Appendix}
+	\section{Source code circuit A}
+	\begin{minted}{python}
+		import etc
+		print(x)
+	\end{minted}
+	\label{code:A}
+	\section{Source code circuit B}
+	\begin{minted}{python}
+		import etc
+		print(x)
+	\end{minted}
+	\label{code:B}
 \end{document}
