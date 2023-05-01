@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  1 MAY 2023 02:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  1 MAY 2023 16:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -869,13 +869,13 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (_minted-template_Report/6D0EBFEBB7611399F13BDE2FB06424782416EB20912532C6BEFD71
 6960F15F9C.pygtex) [7] (template_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 38863 strings out of 475385
- 979590 string characters out of 2776906
- 1581895 words of memory out of 3000000
- 59832 multiletter control sequences out of 15000+600000
+ 38869 strings out of 475385
+ 979676 string characters out of 2776906
+ 1581908 words of memory out of 3000000
+ 59838 multiletter control sequences out of 15000+600000
  477673 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,80p,587b,1118s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,13n,80p,587b,1118s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\kamaj\AppData\Local\Mi
 KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/kamaj/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kamaj/Ap
@@ -896,7 +896,7 @@ fb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmti10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on template_Report.pdf (7 pages, 208876 bytes).
+Output written on template_Report.pdf (7 pages, 212132 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
