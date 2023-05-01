@@ -36,7 +36,7 @@ def get_V(f):
     headers = [str(f)+' Hz', 'Magnitude', 'Phase']
     first_col = ['Node 2', 'Node 3', 'Node 4', 'I of R_22']
     table1 = np.column_stack((first_col, VA, VP))
-    print(tabulate(table1, headers=headers,tablefmt='simple'))
+    print(tabulate(table1, headers=headers,tablefmt='latex'))
     return(V, VA, VP)
 
 (V1, VA1, VP1)=get_V(1e3)

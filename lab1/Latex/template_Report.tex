@@ -15,6 +15,8 @@
 \usepackage{minted}
 \usepackage{tikz}
 \usepackage[european resistors]{circuitikz}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \title{Nodal Analysis\\
 	\large Laboratory I}
@@ -29,7 +31,7 @@
 	Apart from the values of potentials in individual nodes of the circuits being measured, we calculated the currents flowing through pointed elements.
 
 	\section{Course of measurements}
-	First step of our measurements was connecting evaluation board(fig. \ref{fig:ms}) to laboratory computer via USB and starting Vector Voltage Meter software. Next we connected both INPUT1 and CON1 to OUTPUT using BNC cables and splitter, last we connected oscilloscope probe to INPUT2 connector. Now with all preparation finished we started voltage measurements of each node in Circuit A(fig. \ref{fig:A}). Then we disconnected BNC cable connected to CON1 and connected it to CON2 and repeated previous measurements for Circuit B(fig. \ref{fig:B})
+	First step of our measurements was connecting evaluation board(fig.\ref{fig:ms}) to laboratory computer via USB and starting Vector Voltage Meter software. Next we connected both INPUT1 and CON1 to OUTPUT using BNC cables and splitter, last we connected oscilloscope probe to INPUT2 connector. Now with all preparation finished we started voltage measurements of each node in Circuit A(fig.\ref{fig:A}). Then we disconnected BNC cable connected to CON1 and connected it to CON2 and repeated previous measurements for Circuit B(fig.\ref{fig:B})
 	
 	\begin{figure}[!ht]
 		\begin{center}
@@ -58,7 +60,9 @@
 	\end{figure}
 
 	\section{Nodal analysis - method}
-	Method which we are going to use to solve this circuit is know as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$
+	Method which we are going to use to solve these circuits is known as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$.
+	
+	Size of conductance matrix is always smaller then number of nodes in the circuit by one because in nodal analysis one node is connected to ground.
 
 		\begin{center} $\mathbf{Gu=i}$ \end{center}
 		\begin{center}
@@ -81,7 +85,7 @@
 				\end{bmatrix}
 			\end{math}
 		\end{center}
-		Where $G_{11}$, $G_{22}$, $G_{33}$ are sums of conductance of each branch connected to the node \newline $G_{12} = G_{21}$, $G_{13} = G_{31}$, $G_{32} = G_{23}$ are sums of conductance of branches between nodes \newline $I_1, I_2, I_3$ are sums of current sources entering or exiting node and $U_1, U_2, U_3$ are unknown voltages that we are trying to find
+		Where $G_{11}$, $G_{22}$, $G_{33}$ are sums of conductance of each branch connected to the node \newline $G_{12} = G_{21}$, $G_{13} = G_{31}$, $G_{32} = G_{23}$ are sums of conductance of branches between nodes \newline $I_1, I_2, I_3$ are sums of current sources entering or exiting node and $U_1, U_2, U_3$ are unknown voltages that we are trying to find.
 		\newline\newline
 		With simple matrix operation we obtain equation
 		$$
@@ -90,38 +94,135 @@
 		which can be easily calculated
 	\section{Theoretical calculations}
 	all calculation are made in Python with NumPy library. Source code for all calculation can be found in the Appendix
+	
+	Before starting any calculation we modified original circuits' schematics by replacing BNC connectors with AC voltage source and drawing connection between ground
 	\subsection{Circuit A}
+	In our calculations voltages in nodes 1, 3 and 4 are named $U_1, U_3, U_4$ and grounded node is the same node that was ground in original circuit schematic. Lone voltage source must be transfigured to solve this circuit with nodal analysis
+	
 		\begin{figure}[!ht] %circuit A
-			\begin{center}
-			\begin{circuitikz}[scale = 0.75, transform shape]
-				\draw 
-				(2,-2) to[vsourcesin, l=V] (2,0)
-				node[left]{$U_1$}to[short, *-](2,2)
-				to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
-				node[above]{2}to[short, *-](6,2)
-				to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
-				node[right]{$U_4$}to[short,*-](10,0)
-				to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
-				node[above]{$U_3$}to[short, -*](6,0)
-				to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$] (2,0)
-				;
-				\draw 
-				(6,0)
-				to[L, l=$L_{11}$, a=10mH](6,-2)
-				;
-				\draw 
-				(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
-				;
-				\draw (2,-2)
-				to[short](10,-2);
-				\draw (6,-2)
-				node[rground] {} (6,-2);
-			\end{circuitikz}
+		\centering
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+						\begin{circuitikz}[scale = 0.7, transform shape]
+						\draw 
+						(2,-2) to[vsourcesin, l=V] (2,0)
+						node[left]{$U_1$}to[short, *-](2,2)
+						to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
+						node[above]{2}to[short, *-](6,2)
+						to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
+						node[right]{$U_4$}to[short,*-](10,0)
+						to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
+						node[above]{$U_3$}to[short, -*](6,0)
+						to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$] (2,0)
+						;
+						\draw 
+						(6,0)
+						to[L, l=$L_{11}$, a=10mH](6,-2)
+						;
+						\draw 
+						(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
+						;
+						\draw (2,-2)
+						to[short](10,-2);
+						\draw (6,-2)
+						node[rground] {} (6,-2);
+					\end{circuitikz}
+					\caption{}
+				\end{subfigure}
+				\begin{subfigure}{0.45\textwidth}
+					\centering
+						\begin{circuitikz}[scale = 0.7, transform shape]
+							\draw 
+							(2,-2) to[short] (2,0)
+							node[left]{$U_1$}to[short, *-](2,0)
+							to[vsourcesin, l=V](2,2)
+							to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
+							node[above]{2}to[short, *-](6,2)
+							to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
+							node[right]{$U_4$}to[short,*-](10,0)
+							to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
+							node[above]{$U_3$}to[short, -*](6,0)
+							to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$](3,0)
+							to[vsourcesin, l=V](2,0)
+							;
+							\draw 
+							(6,0)
+							to[L, l=$L_{11}$, a=10mH](6,-2)
+							;
+							\draw 
+							(10,0) to[C, l=$C_{13}$, a=22nF](10,-2)
+							;
+							\draw (2,-2)
+							to[short](10,-2);
+							\draw (6,-2)
+							node[rground] {} (6,-2);
+						\end{circuitikz}
+						\caption{}
+				\end{subfigure}
 			\caption{theoretical circuit A}
 			\label{fig:tA}
-		\end{center}
 	\end{figure}
+
+	\begin{math}
+		\centering
+		\begin{bmatrix}
+			G_{R_{11}+C_{11}} + G_{C_{12}} & G_{C_{12}} & G_{R_{11}+C_{11}}\\
+			G_{C_{12}} & G_{C_{12}} + G_{L_{11}} + G_{R_{12}} & G_{R_{12}}\\ 
+			G_{R_{11}}+G_{C_{11}} & G_{C_{12}} & G_{R_{11}+C_{11}} + G_{R_{12}} + G_{C_{12}}
+		\end{bmatrix}
+		\begin{bmatrix}
+			U_1\\
+			U_3\\
+			U_4
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			I1\\
+			I3\\
+			I4
+		\end{bmatrix}
+	\end{math}
+	\newline
 	Current of the capacitor $C_{12}$ can be calculated using $I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}$
+	
+	\subsubsection*{results of calculations}
+	source code in Appendix. \ref{code:A}
+	\begin{center}
+		!!!WRONG RESULTS... I THINK!!!
+		\resizebox{165mm}{!}{
+			\begin{tabular}{lrr}
+				\hline
+				1000.0 Hz   &   Magnitude &    Phase \\
+				\hline
+				Node 2      & 0.192       & 180      \\
+				Node 3      & 1.22663e-18 & 135      \\
+				Node 4      & 0           &   0      \\
+				I of C\_12   & 5.66995e-05 &  -1.5708 \\
+				\hline
+			\end{tabular}
+		\begin{tabular}{lrr}
+			\hline
+			5000.0 Hz   &   Magnitude &     Phase \\
+			\hline
+			Node 2      & 0.192       & -180      \\
+			Node 3      & 2.86098e-17 &  104.036  \\
+			Node 4      & 1.43049e-17 &   14.0362 \\
+			I of C\_12   & 0.000283497 &   -1.5708 \\
+			\hline
+		\end{tabular}
+		\begin{tabular}{lrr}
+			\hline
+			9000.0 Hz   &   Magnitude &     Phase \\
+			\hline
+			Node 2      & 0.192       &  180      \\
+			Node 3      & 5.72196e-17 & -165.964  \\
+			Node 4      & 2.08167e-17 &  -90      \\
+			I of C\_12   & 0.000510295 &   -1.5708 \\
+			\hline
+		\end{tabular}
+	}
+	\end{center}
+
 	\newpage
 	\subsection{Circuit B}
 		\begin{figure}[!ht] %circuit B
@@ -157,6 +258,7 @@
 		\end{center}
 	\end{figure}
 	Current of the resistor $R_{22}$ can be calculated using $I_{R_{22}} = \frac{U_4 - U_2}{Z_{R_{22}}}$
+	
 	\newpage
 	\section{Real measurements}
 	\subsection{Circuit A}
@@ -346,15 +448,10 @@
 	\appendix
 	\section*{Appendix}\label{Appendix}
 	\section{Source code circuit A}
-	\begin{minted}{python}
-		import etc
-		print(x)
-	\end{minted}
+	\inputminted{python}{../CircuitA.py}
 	\label{code:A}
+	\newpage
 	\section{Source code circuit B}
-	\begin{minted}{python}
-		import etc
-		print(x)
-	\end{minted}
+	\inputminted{python}{../CircuitB.py}
 	\label{code:B}
 \end{document}

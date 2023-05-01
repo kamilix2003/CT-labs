@@ -31,12 +31,13 @@ def get_V(f):
     VA = np.append(VA, np.abs(IC12))
     VP = np.append(VP, np.angle(IC12))
     headers = [str(f)+' Hz' , 'Magnitude', 'Phase']
-    first_col = ['Node 2', 'Node 3', 'Node 4', 'I of C_12']
+    first_col = ['Node 1', 'Node 3', 'Node 4', 'I of C_12']
     table1 = np.column_stack((first_col, VA, VP))
-    print(tabulate(table1, headers=headers, tablefmt="simple"))
+    print(tabulate(table1, headers=headers, tablefmt="latex"))
+    return(V, VA, VP)
 
-get_V(1e3)
-get_V(5e3)
-get_V(9e3)
+(V1, VA1, VP1)=get_V(1e3)
+(V5, VA5, VP5)=get_V(5e3)
+(V9, VA9, VP9)=get_V(9e3)
 
 
