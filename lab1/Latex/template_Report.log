@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  1 MAY 2023 16:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  1 MAY 2023 21:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -871,7 +871,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 Here is how much of TeX's memory you used:
  38869 strings out of 475385
  979676 string characters out of 2776906
- 1581908 words of memory out of 3000000
+ 1581909 words of memory out of 3000000
  59838 multiletter control sequences out of 15000+600000
  477673 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
