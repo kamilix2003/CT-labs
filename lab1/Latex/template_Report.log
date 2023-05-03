@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  1 MAY 2023 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  4 MAY 2023 00:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -860,22 +860,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--91
 [1
 
 {C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] [4] [5] (_minted-template_Report/default.pygstyle)
+[3]
+Overfull \hbox (29.22601pt too wide) in paragraph at lines 425--436
+ [][] 
+ []
+
+[4]
+Overfull \hbox (27.09694pt too wide) in paragraph at lines 531--542
+ [][] 
+ []
+
+[5] [6] (_minted-template_Report/default.pygstyle)
 (_minted-template_Report/DFA8D13E092F4A695E0119BB91FB462A6FA1E5E683FF20A3A53441
 2018AAB9B2.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
-) [6]
+) [7]
 (_minted-template_Report/6D0EBFEBB7611399F13BDE2FB06424782416EB20912532C6BEFD71
-6960F15F9C.pygtex) [7] (template_Report.aux) ) 
+6960F15F9C.pygtex) [8] (template_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 38869 strings out of 475385
- 979676 string characters out of 2776906
- 1581909 words of memory out of 3000000
- 59838 multiletter control sequences out of 15000+600000
+ 38877 strings out of 475385
+ 979802 string characters out of 2776906
+ 1581933 words of memory out of 3000000
+ 59846 multiletter control sequences out of 15000+600000
  477673 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,80p,587b,1118s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,14n,80p,587b,1118s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\kamaj\AppData\Local\Mi
 KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/kamaj/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/kamaj/Ap
@@ -896,9 +906,9 @@ fb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmti10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on template_Report.pdf (7 pages, 212132 bytes).
+Output written on template_Report.pdf (8 pages, 214791 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

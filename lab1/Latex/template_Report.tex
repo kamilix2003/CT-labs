@@ -30,8 +30,8 @@
 	
 	Apart from the values of potentials in individual nodes of the circuits being measured, we calculated the currents flowing through pointed elements.
 
-	\section{Course of measurements}
-	First step of our measurements was connecting evaluation board(fig.\ref{fig:ms}) to laboratory computer via USB and starting Vector Voltage Meter software. Next we connected both INPUT1 and CON1 to OUTPUT using BNC cables and splitter, last we connected oscilloscope probe to INPUT2 connector. Now with all preparation finished we started voltage measurements of each node in Circuit A(fig.\ref{fig:A}). Then we disconnected BNC cable connected to CON1 and connected it to CON2 and repeated previous measurements for Circuit B(fig.\ref{fig:B})
+	\section{Course of measurements}\label{sec:course-of-measurements}
+	First step of our measurements was connecting evaluation board(fig.\ref{fig:ms}) to laboratory computer via USB and starting Vector Voltage Meter software. Next we connected both INPUT1 and CON1 to OUTPUT using BNC cables and splitter, last we connected oscilloscope probe to INPUT2 connector. Now with all preparation finished we started voltage measurements of each node in Circuit A(fig.\ref{fig:A}). Then we disconnected BNC cable connected to CON1 and connected it to CON2 and repeated the same measurements for Circuit B(fig.\ref{fig:B})
 	
 	\begin{figure}[!ht]
 		\begin{center}
@@ -62,7 +62,7 @@
 	\section{Nodal analysis - method}\label{sec:Nodal analysis}
 	Method which we are going to use to solve these circuits is known as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$.
 	
-	Size of conductance matrix is always smaller then number of nodes in the circuit by one because in nodal analysis one node is connected to ground.
+	Size of conductance matrix is always smaller then number of nodes in the circuit by one because in nodal analysis one node is connected to ground as reference node.
 
 		\begin{center} $\mathbf{Gu=i}$ \end{center}
 		\begin{center}
@@ -99,7 +99,7 @@
 	
 	for both circuits amplitude of Voltage source is 0.192V and calculations are made for frequencies 1kHz, 5kHz and 9kHz 
 	\subsection{Circuit A}
-	In our calculations voltages in nodes 1, 3 and 4 are named $U_1, U_3, U_4$ and grounded node is the same node that was ground in original circuit schematic. Lone voltage source must be transfigured to solve this circuit with nodal analysis, after source transfiguration circuit looks like this fig. \ref{fig:tAt}
+	In our calculations voltages in nodes 1, 3 and 4 are named $U_1, U_3, U_4$ and reference node is the same node that was ground in original circuit schematic. Lone voltage source must be transfigured in order to solve this circuit by nodal analysis, after source transfiguration circuit looks like this fig. \ref{fig:tAt}
 	
 		\begin{figure}[!ht] %circuit A
 		\centering
@@ -174,7 +174,7 @@
 		\begin{bmatrix}
 			G_{R_{11}+C_{11}} + G_{C_{12}} & -G_{C_{12}} & -G_{R_{11}+C_{11}}\\[6pt]
 			-G_{C_{12}} & G_{C_{12}} + G_{L_{11}} + G_{R_{12}} & -G_{R_{12}}\\[6pt]
-			-G_{R_{11}}+G_{C_{11}} & -G_{C_{12}} & G_{R_{11}+C_{11}} + G_{R_{12}} + G_{C_{12}}
+			-G_{R_{11}}-G_{C_{11}} & -G_{C_{12}} & G_{R_{11}+C_{11}} + G_{R_{12}} + G_{C_{12}}
 		\end{bmatrix}
 		\begin{bmatrix}
 			U_1\\[6pt]
@@ -203,37 +203,37 @@
 				\hline
 				1000.0 Hz   &   Magnitude &    Phase \\
 				\hline
-				Node 2      & 0.192       & 180      \\
+				Node 1      & 0.192       & 180      \\
 				Node 3      & 1.22663e-18 & 135      \\
 				Node 4      & 0           &   0      \\
 				I of C\_12   & 5.66995e-05 &  -1.5708 \\
 				\hline
 			\end{tabular}
-		\begin{tabular}{lrr}
-			\hline
-			5000.0 Hz   &   Magnitude &     Phase \\
-			\hline
-			Node 2      & 0.192       & -180      \\
-			Node 3      & 2.86098e-17 &  104.036  \\
-			Node 4      & 1.43049e-17 &   14.0362 \\
-			I of C\_12   & 0.000283497 &   -1.5708 \\
-			\hline
-		\end{tabular}
-		\begin{tabular}{lrr}
-			\hline
-			9000.0 Hz   &   Magnitude &     Phase \\
-			\hline
-			Node 2      & 0.192       &  180      \\
-			Node 3      & 5.72196e-17 & -165.964  \\
-			Node 4      & 2.08167e-17 &  -90      \\
-			I of C\_12   & 0.000510295 &   -1.5708 \\
-			\hline
-		\end{tabular}
+			\begin{tabular}{lrr}
+				\hline
+				5000.0 Hz   &   Magnitude &     Phase \\
+				\hline
+				Node 1      & 0.192       & -180      \\
+				Node 3      & 2.86098e-17 &  104.036  \\
+				Node 4      & 1.43049e-17 &   14.0362 \\
+				I of C\_12   & 0.000283497 &   -1.5708 \\
+				\hline
+			\end{tabular}
+			\begin{tabular}{lrr}
+				\hline
+				9000.0 Hz   &   Magnitude &     Phase \\
+				\hline
+				Node 1      & 0.192       &  180      \\
+				Node 3      & 5.72196e-17 & -165.964  \\
+				Node 4      & 2.08167e-17 &  -90      \\
+				I of C\_12   & 0.000510295 &   -1.5708 \\
+				\hline
+			\end{tabular}
 	}
 	\end{center}
 
 	\subsection{Circuit B}
-	Following similar steps as in Circuit A, voltages in notes 2, 3 and 4 are named $U_2, U_3, U_4$ and grounded node is the same node that was ground in original circuit schematic. There is no lone voltage source so source transfiguration is not required.
+	Following similar steps as in Circuit A, voltages in notes 2, 3 and 4 are named $U_2, U_3, U_4$ and reference node is the same node that was ground in original circuit schematic. There is no lone voltage source so source transfiguration is not necessary.
 	
 		\begin{figure}[!ht] %circuit B
 		\begin{center}
@@ -241,7 +241,7 @@
 				\draw (0,0)
 				to[vsourcesin, l=V](2,0)
 				node[above]{1}to[short,*-,](2,0)
-				to[C, l=$C_{22}$, a=22nF](4,0)
+				to[C, l=$C_{22}$, a=100nF](4,0)
 				node[right]{$U_3$}to[short,-*](4,0)
 				;
 				\draw (0,3)
@@ -334,6 +334,7 @@
 	\end{center}
 	\newpage
 	\section{Real measurements}
+	Following steps of measurements described in Section \ref{sec:course-of-measurements} we obtain measurements for each circuit
 	\subsection{Circuit A}
 			\begin{figure}[!ht] %circuit A
 			\begin{center}
@@ -365,6 +366,14 @@
 			\end{center}
 		\end{figure}
 	
+		Current $I_{C_{12}}$ is measured indirectly using measured voltage and impedance of the component
+		
+		$$
+		I_{C_{12}}=\frac{U_1-U_3}{Z_{C_{12}}}
+		$$
+		
+		where $U_3$ is voltage in node 3, $U_1$ is voltage in node 1 and $Z_{C_{12}}$ is impedance of capacitor $C_{12}$
+	
 		\begin{table}[!ht] %table circuit A
 		\begin{subtable}{0.6\textwidth}
 			\centering
@@ -373,7 +382,7 @@
 					\hline
 					\multicolumn{4}{|c|}{Circuit A} \\
 					\hline
-					Freq[kHz] & Channel 1[V] & Channel 2 [V] & Angle [°] \\
+					Freq & Channel 1[V] & Channel 2 [V] & Angle [°] \\
 					\hline
 					\multicolumn{4}{|c|}{node 1} \\
 					\hline
@@ -409,25 +418,27 @@
 					\hline
 				\end{tabular}
 			}
+			\caption{}
 		\end{subtable}
 		\begin{subtable}{0.25\textwidth}
 			\centering
-				\begin{tabular}{|c|c|}
+				\begin{tabular}{|c|c|c|}
 				\hline
-				freq [kHz] & $I_{R_{22}}$ \\
+				freq & $I_{C_{12}}$[I] & angle[°]\\
 				\hline
-				1kHz &  \\
+				1kHz &  0.198 & 178.5°\\
 				\hline
-				5kHz &  \\
+				5kHz &  $7.543\cdot10^{-5}$ & 1.5°\\
 				\hline
-				9kHz &  \\
+				9kHz &  $9.954\cdot10^{-5}$ & -36.9°\\
 				\hline
 			\end{tabular}
+			\caption{}
+			\label{subtab:A}
 		\end{subtable}
-		\label{tab:A}
 		\caption{evaluation board measurements for Circuit A}
+		\label{tab:A}
 	\end{table}
-	Current of capacitor $C_{12}$
 
 	\newpage
 	\subsection{Circuit B}
@@ -462,6 +473,13 @@
 				\label{fig:B}
 			\end{center}
 		\end{figure}
+		Current $I_{R_{22}}$ is measured indirectly using measured voltage and impedance of the component
+		
+		$$
+		I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
+		$$
+		
+		where $U_4$ is voltage in node 4, $U_2$ is voltage in node 2 and $Z_{R_{22}}$ is impedance of resistor $R_{22}$
 				\begin{table}[ht] %table circuit B		
 					\begin{subtable}{0.60\textwidth}
 						\centering
@@ -470,7 +488,7 @@
 								\hline
 								\multicolumn{4}{|c|}{Circuit B} \\
 								\hline
-								Freq[kHz] & Channel 1[V] & Channel 2 [V] & Angle [°] \\
+								Freq & Channel 1[V] & Channel 2 [V] & Angle [°] \\
 								\hline
 								\multicolumn{4}{|c|}{node 1} \\
 								\hline
@@ -506,26 +524,32 @@
 								\hline
 							\end{tabular}
 						}
+						\caption{}
 					\end{subtable}
 					\begin{subtable}{0.25\textwidth}
 						\centering
-						\begin{tabular}{|c|c|}
+						\begin{tabular}{|c|c|c|}
 							\hline
-							freq [kHz] & $I_{R_{22}}$ \\
+							freq & $I_{R_{22}}$[I] & Angle[°]\\
 							\hline
-							1kHz &  \\
+							1kHz & 4.379$\cdot10^{-5}$ & 28.83 \\
 							\hline
-							5kHz &  \\
+							5kHz & 1.407$\cdot10^{-4}$ & 175.48 \\
 							\hline
-							9kHz &  \\
+							9kHz & 2.456$\cdot10^{-4}$ & 68.44\\
 							\hline
 						\end{tabular}
+						\caption{}
+						\label{subtab:B}
 					\end{subtable}
 					\label{tab:B}
 			\caption{evaluation board measurements for Circuit B}
 		\end{table}
-	\section{Comparison}
+	\newpage
+	\section{Comparison}\label{sec:comparison}
+	Results of measurements are in general similar to results of nodal analysis. In most cases at least first significant digit of amplitude is the same in both results and phase shifts are within few percent of error, for some applications it can be not satisfying, but roughly both results are comparable. In order to verify how precise nodal analysis is more data and more precise measuring equipment are needed
 	\section{Summery}
+	Nodal analysis broadly speaking is good method to evaluate values in a circuit, but in terms of precision as stated in Section \ref{sec:comparison} for some applications evaluation can be not good enough. 
 	\newpage
 	\appendix
 	\section*{Appendix}\label{Appendix}
