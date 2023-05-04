@@ -8,6 +8,7 @@
 	top=20mm,
 }
 
+\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{listings}
@@ -23,7 +24,7 @@
 	colorlinks=true,
 	linkcolor=black,
 	filecolor=black,      
-	urlcolor=black,
+	urlcolor=blue,
 	pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen,
 }
@@ -72,34 +73,38 @@
 	Method which we are going to use to solve these circuits is known as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$.
 	
 	Size of conductance matrix is always smaller then number of nodes in the circuit by one because in nodal analysis one node is connected to ground as reference node.
-
-		\begin{center} $\mathbf{Gu=i}$ \end{center}
-		\begin{center}
-			\begin{math}
-				\begin{bmatrix}
-					G_{11} & -G_{12} & -G_{13} \\
-					-G_{21} & G_{22} & -G_{23} \\
-					-G_{31} & -G_{32} & G_{33} 
-				\end{bmatrix}
-				\begin{bmatrix}
-					U_1 \\
-					U_2 \\ 
-					U_3
-				\end{bmatrix}
-				=
-				\begin{bmatrix}
-					I_1 \\
-					I_2 \\
-					I_3
-				\end{bmatrix}
-			\end{math}
-		\end{center}
+	\begin{center} 
+		\begin{equation}
+			\mathbf{Gu=i}
+		\end{equation}
+	\end{center}
+	
+	\begin{center}
+		\begin{equation}
+			\begin{bmatrix}
+				G_{11} & -G_{12} & -G_{13} \\
+				-G_{21} & G_{22} & -G_{23} \\
+				-G_{31} & -G_{32} & G_{33} 
+			\end{bmatrix}
+			\begin{bmatrix}
+				U_1 \\
+				U_2 \\ 
+				U_3
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				I_1 \\
+				I_2 \\
+				I_3
+			\end{bmatrix}
+		\end{equation}
+	\end{center}
 		Where $G_{11}$, $G_{22}$, $G_{33}$ are sums of conductance of each branch connected to the node \newline $G_{12} = G_{21}$, $G_{13} = G_{31}$, $G_{32} = G_{23}$ are sums of conductance of branches between nodes \newline $I_1, I_2, I_3$ are sums of current sources entering or exiting node and $U_1, U_2, U_3$ are unknown voltages that we are trying to find.
 		\newline\newline
 		With simple matrix operation we obtain equation
-		$$
-		\mathbf{u} = \mathbf{G}^{-1}\mathbf{i}
-		$$
+		\begin{equation}
+			\mathbf{u} = \mathbf{G}^{-1}\mathbf{i}
+		\end{equation}
 		which can be easily calculated
 	\section{Theoretical calculations}
 	All calculation are made in Python with NumPy library. Source code for all calculation can be found in the Appendix
@@ -178,29 +183,32 @@
 
 	following rules of Nodal Analysis by Inspection(Sec. \ref{sec:Nodal analysis}) we obtain $\mathbf{Gu=i}$ equation
 	
-	$$
-		\centering
-		\begin{bmatrix}
-			G_{R_{11}+C_{11}} + G_{C_{12}} & -G_{C_{12}} & -G_{R_{11}+C_{11}}\\[6pt]
-			-G_{C_{12}} & G_{C_{12}} + G_{L_{11}} + G_{R_{12}} & -G_{R_{12}}\\[6pt]
-			-G_{R_{11}}-G_{C_{11}} & -G_{C_{12}} & G_{R_{11}+C_{11}} + G_{R_{12}} + G_{C_{12}}
-		\end{bmatrix}
-		\begin{bmatrix}
-			U_1\\[6pt]
-			U_3\\[6pt]
-			U_4
-		\end{bmatrix}
-		=
-		\begin{bmatrix}
-			\frac{-V}{Z_{R_{11}+C_{11}}}+\frac{-V}{Z_{C_12}}\\[6pt]
-			\frac{V}{Z_{C_12}}\\[6pt]
-			\frac{V}{Z_{R_{11}+C_{11}}}
-		\end{bmatrix}
-	$$
+	\begin{center}
+		\begin{equation}
+			\begin{bmatrix}
+				G_{R_{11}+C_{11}} + G_{C_{12}} & -G_{C_{12}} & -G_{R_{11}+C_{11}}\\[6pt]
+				-G_{C_{12}} & G_{C_{12}} + G_{L_{11}} + G_{R_{12}} & -G_{R_{12}}\\[6pt]
+				-G_{R_{11}}-G_{C_{11}} & -G_{C_{12}} & G_{R_{11}+C_{11}} + G_{R_{12}} + G_{C_{12}}
+			\end{bmatrix}
+			\begin{bmatrix}
+				U_1\\[6pt]
+				U_3\\[6pt]
+				U_4
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				\frac{-V}{Z_{R_{11}+C_{11}}}+\frac{-V}{Z_{C_12}}\\[6pt]
+				\frac{V}{Z_{C_12}}\\[6pt]
+				\frac{V}{Z_{R_{11}+C_{11}}}
+			\end{bmatrix}
+		\end{equation}
+	\end{center}
 	
 	after solving above equation we can easily calculate current of the capacitor $C_{12}$
 	
-	$$I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}$$
+	\begin{equation}
+		I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}
+	\end{equation}
 
 	all that is left to do is computing	
 	\subsubsection*{results of calculations}
@@ -279,30 +287,32 @@
 	
 	following rules of Nodal Analysis by Inspection(Sec. \ref{sec:Nodal analysis}) we obtain $\mathbf{Gu=i}$ equation
 	
-	$$
-	\begin{bmatrix}
-		G_{R_{21}}+G_{R_{22}}+G_{C_{21}} & -G_{C_{21}} &-G_{R_{22}}\\[6pt]
-		-G_{C_{21}} & G_{C_{21}} + G_{C_{22}} + G_{L_{21}} & G_{L_{21}}\\[6pt]
-		-G_{R_{22}} & -G_{L_{21}} & G_{R_{22}} + G_{C_{23}} + G_{L_{21}}
-	\end{bmatrix}
-	\begin{bmatrix}
-		U_2\\[6pt]
-		U_3\\[6pt]
-		U_4
-	\end{bmatrix}
-	=
-	\begin{bmatrix}
-		0\\[6pt]
-		\frac{V}{Z_{C_{22}}}\\[6pt]
-		0
-	\end{bmatrix}
-	$$
+	\begin{center}
+		\begin{equation}
+			\begin{bmatrix}
+				G_{R_{21}}+G_{R_{22}}+G_{C_{21}} & -G_{C_{21}} &-G_{R_{22}}\\[6pt]
+				-G_{C_{21}} & G_{C_{21}} + G_{C_{22}} + G_{L_{21}} & G_{L_{21}}\\[6pt]
+				-G_{R_{22}} & -G_{L_{21}} & G_{R_{22}} + G_{C_{23}} + G_{L_{21}}
+			\end{bmatrix}
+			\begin{bmatrix}
+				U_2\\[6pt]
+				U_3\\[6pt]
+				U_4
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+				0\\[6pt]
+				\frac{V}{Z_{C_{22}}}\\[6pt]
+				0
+			\end{bmatrix}
+		\end{equation}
+	\end{center}
 	
 	after solving above equation we can easily calculate current of the capacitor $R_{22}$
 	
-	$$
-	I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
-	$$
+	\begin{equation}
+		I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
+	\end{equation}
 	
 	and these are the results
 	\subsubsection{Results of calculations}
@@ -377,9 +387,9 @@
 	
 		Current $I_{C_{12}}$ is measured indirectly using measured voltage and impedance of the component
 		
-		$$
-		I_{C_{12}}=\frac{U_1-U_3}{Z_{C_{12}}}
-		$$
+		\begin{equation}
+			I_{C_{12}}=\frac{U_1-U_3}{Z_{C_{12}}}
+		\end{equation}
 		
 		where $U_3$ is voltage in node 3, $U_1$ is voltage in node 1 and $Z_{C_{12}}$ is impedance of capacitor $C_{12}$
 	
@@ -484,9 +494,9 @@
 		\end{figure}
 		Current $I_{R_{22}}$ is measured indirectly using measured voltage and impedance of the component
 		
-		$$
-		I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
-		$$
+		\begin{equation}
+			I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
+		\end{equation}
 		
 		where $U_4$ is voltage in node 4, $U_2$ is voltage in node 2 and $Z_{R_{22}}$ is impedance of resistor $R_{22}$
 				\begin{table}[ht] %table circuit B		
@@ -557,7 +567,7 @@
 	\newpage
 	\section{Comparison}\label{sec:comparison}
 	Results of measurements are in general similar to results of nodal analysis. In most cases at least first significant digit of amplitude is the same in both results and phase shift is within few percent of error, but with increasing frequency calculations become less precise. For some applications first significant digit precision can be not satisfying, but roughly both results are comparable. In order to verify how precise nodal analysis is, more data and more precise measuring equipment are needed
-	\section{Summery}
+	\section{Summary}
 	Nodal analysis broadly speaking is good method to evaluate values in a circuit, real simple for circuits with many branches and very easy to compute with computer aid because. But in terms of precision as stated in Section \ref{sec:comparison} for some applications evaluation can be not good enough. 
 	\newpage
 	\appendix
