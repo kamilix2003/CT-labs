@@ -17,7 +17,16 @@
 \usepackage[european resistors]{circuitikz}
 \usepackage{caption}
 \usepackage{subcaption}
-
+\usepackage{hyperref}
+\hypersetup{
+	pdfborder = false,
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=black,      
+	urlcolor=black,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
 \title{Nodal Analysis\\
 	\large Laboratory I}
 \author{Patrycja Nazim, Adrian Król, Kamil Chaj}
@@ -547,12 +556,13 @@
 		\end{table}
 	\newpage
 	\section{Comparison}\label{sec:comparison}
-	Results of measurements are in general similar to results of nodal analysis. In most cases at least first significant digit of amplitude is the same in both results and phase shifts are within few percent of error, for some applications it can be not satisfying, but roughly both results are comparable. In order to verify how precise nodal analysis is more data and more precise measuring equipment are needed
+	Results of measurements are in general similar to results of nodal analysis. In most cases at least first significant digit of amplitude is the same in both results and phase shift is within few percent of error, but with increasing frequency calculations become less precise. For some applications first significant digit precision can be not satisfying, but roughly both results are comparable. In order to verify how precise nodal analysis is, more data and more precise measuring equipment are needed
 	\section{Summery}
-	Nodal analysis broadly speaking is good method to evaluate values in a circuit, but in terms of precision as stated in Section \ref{sec:comparison} for some applications evaluation can be not good enough. 
+	Nodal analysis broadly speaking is good method to evaluate values in a circuit, real simple for circuits with many branches and very easy to compute with computer aid because. But in terms of precision as stated in Section \ref{sec:comparison} for some applications evaluation can be not good enough. 
 	\newpage
 	\appendix
 	\section*{Appendix}\label{Appendix}
+	\href{https://github.com/kamilix2003/CT-labs}{GITHUB repository}
 	\section{Source code circuit A}
 	\inputminted{python}{../CircuitA.py}
 	\label{code:A}
