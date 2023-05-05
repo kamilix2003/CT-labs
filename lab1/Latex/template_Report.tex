@@ -70,7 +70,7 @@
 	\end{figure}
 
 	\section{Nodal analysis - method}\label{sec:Nodal analysis}
-	Method which we are going to use to solve these circuits is known as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{u}$ - voltage vector(unknown), $\mathbf{G}$ - conductance matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$.
+	Method which we are going to use to solve these circuits is known as "Nodal Analysis by Inspection". In this method we need to construct 3 matrices: $\mathbf{i}$ - current vector, $\mathbf{v}$ - voltage vector(unknown), $\mathbf{G}$ - conductance($\mathbf{Y}$ admittance for AC circuits) matrix, with sizes respectively $\mathit{N} \times 1$, $\mathit{N} \times 1$, $\mathit{N}-1 \times \mathit{N}-1$.
 	
 	Size of conductance matrix is always smaller then number of nodes in the circuit by one because in nodal analysis one node is connected to ground as reference node.
 	\begin{center} 
@@ -87,9 +87,9 @@
 				-G_{31} & -G_{32} & G_{33} 
 			\end{bmatrix}
 			\begin{bmatrix}
-				U_1 \\
-				U_2 \\ 
-				U_3
+				V_1 \\
+				V_2 \\ 
+				V_3
 			\end{bmatrix}
 			=
 			\begin{bmatrix}
@@ -99,11 +99,11 @@
 			\end{bmatrix}
 		\end{equation}
 	\end{center}
-		Where $G_{11}$, $G_{22}$, $G_{33}$ are sums of conductance of each branch connected to the node \newline $G_{12} = G_{21}$, $G_{13} = G_{31}$, $G_{32} = G_{23}$ are sums of conductance of branches between nodes \newline $I_1, I_2, I_3$ are sums of current sources entering or exiting node and $U_1, U_2, U_3$ are unknown voltages that we are trying to find.
+		Where $G_{11}$, $G_{22}$, $G_{33}$ are sums of conductance of each branch connected to the node \newline $G_{12} = G_{21}$, $G_{13} = G_{31}$, $G_{32} = G_{23}$ are sums of conductance of branches between nodes \newline $I_1, I_2, I_3$ are sums of current sources entering or exiting node and $V_1, V_2, V_3$ are unknown voltages that we are trying to find.
 		\newline\newline
 		With simple matrix operation we obtain equation
 		\begin{equation}
-			\mathbf{u} = \mathbf{G}^{-1}\mathbf{i}
+			\mathbf{v} = \mathbf{G}^{-1}\mathbf{i}
 		\end{equation}
 		which can be easily calculated
 	\section{Theoretical calculations}
@@ -113,7 +113,7 @@
 	
 	for both circuits amplitude of Voltage source is 0.192V and calculations are made for frequencies 1kHz, 5kHz and 9kHz 
 	\subsection{Circuit A}
-	In our calculations voltages in nodes 1, 3 and 4 are named $U_1, U_3, U_4$ and reference node is the same node that was ground in original circuit schematic. Lone voltage source must be transfigured in order to solve this circuit by nodal analysis, after source transfiguration circuit looks like this fig. \ref{fig:tAt}
+	In our calculations voltages in nodes 1, 2, 3 and 4 are named $V_1, V_2, V_3, V_4$ and reference node is the same node that was ground in original circuit schematic. Lone voltage source must be transfigured in order to solve this circuit by nodal analysis, after source transfiguration(fig. \ref{fig:tAt}) we can see that node 1 is directly connected to reference node therefore in the circuit there are only 2 nodes that have more than 2 elements connected, so $\mathbf{Y}$ will be only 2 $\times$ 2
 	
 		\begin{figure}[!ht] %circuit A
 		\centering
@@ -122,13 +122,13 @@
 						\begin{circuitikz}[scale = 0.7, transform shape]
 						\draw 
 						(2,-2) to[vsourcesin, l=V] (2,0)
-						node[left]{$U_1$}to[short, *-](2,2)
+						node[left]{$V_1$}to[short, *-](2,2)
 						to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
-						node[above]{2}to[short, *-](6,2)
+						node[above]{$V_2$}to[short, *-](6,2)
 						to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
-						node[right]{$U_4$}to[short,*-](10,0)
+						node[right]{$V_4$}to[short,*-](10,0)
 						to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
-						node[above]{$U_3$}to[short, -*](6,0)
+						node[above]{$V_3$}to[short, -*](6,0)
 						to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$] (2,0)
 						;
 						\draw 
@@ -151,14 +151,14 @@
 						\begin{circuitikz}[scale = 0.7, transform shape]
 							\draw 
 							(2,-2) to[short] (2,0)
-							node[left]{$U_1$}to[short, *-](2,0)
+							node[left]{$V_1$}to[short, *-](2,0)
 							to[vsourcesin, l=V](2,2)
 							to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
-							node[above]{2}to[short, *-](6,2)
+							node[above]{$V_2$}to[short, *-](6,2)
 							to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
-							node[right]{$U_4$}to[short,*-](10,0)
+							node[right]{$V_4$}to[short,*-](10,0)
 							to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
-							node[above]{$U_3$}to[short, -*](6,0)
+							node[above]{$V_3$}to[short, -*](6,0)
 							to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$](3,0)
 							to[vsourcesin, l=V](2,0)
 							;
@@ -180,94 +180,90 @@
 			\caption{theoretical circuit A}
 			\label{fig:tA}
 	\end{figure}
-
-	following rules of Nodal Analysis by Inspection(Sec. \ref{sec:Nodal analysis}) we obtain $\mathbf{Gu=i}$ equation
 	
-	\begin{center}
-		\begin{equation}
+	following rules of Nodal Analysis by Inspection(Sec. \ref{sec:Nodal analysis}) we obtain $\mathbf{Yu=i}$ equation
+		\begin{equation} \label{eq:cA}
 			\begin{bmatrix}
-				G_{R_{11}+C_{11}} + G_{C_{12}} & -G_{C_{12}} & -G_{R_{11}+C_{11}}\\[6pt]
-				-G_{C_{12}} & G_{C_{12}} + G_{L_{11}} + G_{R_{12}} & -G_{R_{12}}\\[6pt]
-				-G_{R_{11}}-G_{C_{11}} & -G_{C_{12}} & G_{R_{11}+C_{11}} + G_{R_{12}} + G_{C_{12}}
+				Y_{C_{12}} + Y_{L_{11}} + Y_{R_{12}} & -Y_{R_{12}} \\
+				-Y_{R_{12}} & Y_{R_{11}+C_{11}} + Y_{R_{12}} + Y_{C_{13}}
 			\end{bmatrix}
 			\begin{bmatrix}
-				U_1\\[6pt]
-				U_3\\[6pt]
-				U_4
+				V_3\\
+				V_4
 			\end{bmatrix}
 			=
 			\begin{bmatrix}
-				\frac{-V}{Z_{R_{11}+C_{11}}}+\frac{-V}{Z_{C_12}}\\[6pt]
-				\frac{V}{Z_{C_12}}\\[6pt]
-				\frac{V}{Z_{R_{11}+C_{11}}}
+				\frac{V}{Z_{C_{22}}}\\
+				\frac{V}{Z_{R_{11}}+Z_{C_{11}}}
 			\end{bmatrix}
 		\end{equation}
-	\end{center}
+%	$V_2$ is not in eq.\eqref{eq:cA} because node 2 connects only 2 components and better way to calculate this voltage is using simple voltage divider instead of complicating above equation
+%	
+%	\begin{equation}
+%		V_2 = V \frac{Z_{C_{11}}}{Z_{R_{11}} + Z_{C_{11}}}
+%	\end{equation}
 	
 	after solving above equation we can easily calculate current of the capacitor $C_{12}$
 	
 	\begin{equation}
-		I_{C_{12}} = \frac{U_3 - U_2}{Z_{C_{12}}}
+		I_{C_{12}} = \frac{V_1 - V_3}{Z_{C_{12}}}
 	\end{equation}
 
 	all that is left to do is computing	
 	\subsubsection*{results of calculations}
 	source code in the Appendix. \ref{code:A}
 	\begin{center}
-		!!!WRONG RESULTS... I THINK!!!
 		\resizebox{165mm}{!}{
 			\begin{tabular}{lrr}
 				\hline
 				1000.0 Hz   &   Magnitude &    Phase \\
 				\hline
-				Node 1      & 0.192       & 180      \\
-				Node 3      & 1.22663e-18 & 135      \\
-				Node 4      & 0           &   0      \\
-				I of C\_12   & 5.66995e-05 &  -1.5708 \\
+				Node 3      & 0.00742236  & 146.521  \\
+				Node 4      & 0.072673    &  37.3586 \\
+				I of C\_12   & 5.85402e-05 &  88.8165 \\
 				\hline
 			\end{tabular}
 			\begin{tabular}{lrr}
 				\hline
-				5000.0 Hz   &   Magnitude &     Phase \\
+				5000.0 Hz   &   Magnitude &    Phase \\
 				\hline
-				Node 1      & 0.192       & -180      \\
-				Node 3      & 2.86098e-17 &  104.036  \\
-				Node 4      & 1.43049e-17 &   14.0362 \\
-				I of C\_12   & 0.000283497 &   -1.5708 \\
+				Node 3      & 0.17592     & 141.258  \\
+				Node 4      & 0.0791113   &  50.1731 \\
+				I of C\_12   & 0.000512559 &  71.5092 \\
 				\hline
 			\end{tabular}
 			\begin{tabular}{lrr}
 				\hline
-				9000.0 Hz   &   Magnitude &     Phase \\
+				9000.0 Hz   &   Magnitude &    Phase \\
 				\hline
-				Node 1      & 0.192       &  180      \\
-				Node 3      & 5.72196e-17 & -165.964  \\
-				Node 4      & 2.08167e-17 &  -90      \\
-				I of C\_12   & 0.000510295 &   -1.5708 \\
+				Node 3      & 0.367336    &  22.0983 \\
+				Node 4      & 0.22825     & -17.7003 \\
+				I of C\_12   & 0.000538848 & -47.0308 \\
 				\hline
 			\end{tabular}
+			
 	}
 	\end{center}
 
 	\subsection{Circuit B}
-	Following similar steps as in Circuit A, voltages in notes 2, 3 and 4 are named $U_2, U_3, U_4$ and reference node is the same node that was ground in original circuit schematic. There is no lone voltage source so source transfiguration is not necessary.
+	Following similar steps as in Circuit A, voltages in notes1, 2, 3 and 4 are named $V_1, V_2, V_3, V_4$ and reference node is the same node that was ground in original circuit schematic. There is no lone voltage source so source transfiguration is not necessary.
 	
 		\begin{figure}[!ht] %circuit B
 		\begin{center}
 			\begin{circuitikz}[scale = 0.75, transform shape]
 				\draw (0,0)
 				to[vsourcesin, l=V](2,0)
-				node[above]{1}to[short,*-,](2,0)
+				node[above]{$V_1$}to[short,*-,](2,0)
 				to[C, l=$C_{22}$, a=100nF](4,0)
-				node[right]{$U_3$}to[short,-*](4,0)
+				node[right]{$V_3$}to[short,-*](4,0)
 				;
 				\draw (0,3)
 				to[R, l=$R_{21}$, a=1k$\Omega$](4,3)
-				node[above]{$U_2$}to[short, -*](4,3)
+				node[above]{$V_2$}to[short, -*](4,3)
 				;
 				\draw (0,-3)
 				to[C, l=$C_{23}$, a=100nF](4,-3)
-				node[below]{$U_4$}to[short, -*](4,-3)
+				node[below]{$V_4$}to[short, -*](4,-3)
 				;
 				\draw 
 				(4,3) -- (7,3)
@@ -285,19 +281,19 @@
 		\end{center}
 	\end{figure}
 	
-	following rules of Nodal Analysis by Inspection(Sec. \ref{sec:Nodal analysis}) we obtain $\mathbf{Gu=i}$ equation
+	following rules of Nodal Analysis by Inspection(Sec. \ref{sec:Nodal analysis}) we obtain $\mathbf{Yu=i}$ equation
 	
 	\begin{center}
 		\begin{equation}
 			\begin{bmatrix}
-				G_{R_{21}}+G_{R_{22}}+G_{C_{21}} & -G_{C_{21}} &-G_{R_{22}}\\[6pt]
-				-G_{C_{21}} & G_{C_{21}} + G_{C_{22}} + G_{L_{21}} & G_{L_{21}}\\[6pt]
-				-G_{R_{22}} & -G_{L_{21}} & G_{R_{22}} + G_{C_{23}} + G_{L_{21}}
+				Y_{R_{21}}+Y_{R_{22}}+Y_{C_{21}} & -Y_{C_{21}} &-Y_{R_{22}}\\[6pt]
+				-Y_{C_{21}} & Y_{C_{21}} + Y_{C_{22}} + Y_{L_{21}} & Y_{L_{21}}\\[6pt]
+				-Y_{R_{22}} & -Y_{L_{21}} & Y_{R_{22}} + Y_{C_{23}} + Y_{L_{21}}
 			\end{bmatrix}
 			\begin{bmatrix}
-				U_2\\[6pt]
-				U_3\\[6pt]
-				U_4
+				V_2\\[6pt]
+				V_3\\[6pt]
+				V_4
 			\end{bmatrix}
 			=
 			\begin{bmatrix}
@@ -311,7 +307,7 @@
 	after solving above equation we can easily calculate current of the capacitor $R_{22}$
 	
 	\begin{equation}
-		I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
+		I_{R_{22}}=\frac{V_4-V_2}{Z_{R_{22}}}
 	\end{equation}
 	
 	and these are the results
@@ -321,32 +317,32 @@
 		\resizebox{165mm}{!}{
 		\begin{tabular}{lrr}
 			\hline
-			1000.0 Hz   &   Magnitude &    Phase \\
+			1000.0 Hz   &   Magnitude &     Phase \\
 			\hline
-			Node 2      & 0.0442579   & 28.1037  \\
-			Node 3      & 0.0837746   & 22.3054  \\
-			Node 4      & 0.0867875   & 20.4605  \\
-			I of R\_22   & 4.33246e-05 & -2.92078 \\
-			\hline
-		\end{tabular}
-		\begin{tabular}{lrr}
-			\hline
-			5000.0 Hz   &   Magnitude &     Phase \\
-			\hline
-			Node 2      & 0.0521098   & -53.9736  \\
-			Node 3      & 0.0534524   &  86.6776  \\
-			Node 4      & 0.206963    & -12.1633  \\
-			I of R\_22   & 0.000171674 &   3.13307 \\
+			Node 2      & 0.0442579   &   28.1037 \\
+			Node 3      & 0.0837746   &   22.3054 \\
+			Node 4      & 0.0867875   &   20.4605 \\
+			I of R\_22   & 4.33246e-05 & -167.348  \\
 			\hline
 		\end{tabular}
 		\begin{tabular}{lrr}
 			\hline
-			9000.0 Hz   &   Magnitude &      Phase \\
+			5000.0 Hz   &   Magnitude &    Phase \\
 			\hline
-			Node 2      & 0.16282     &   63.622   \\
-			Node 3      & 0.219774    &   20.3532  \\
-			Node 4      & 0.0750914   & -122.05    \\
-			I of R\_22   & 0.000237659 &    1.07918 \\
+			Node 2      & 0.0521098   & -53.9736 \\
+			Node 3      & 0.0534524   &  86.6776 \\
+			Node 4      & 0.206963    & -12.1633 \\
+			I of R\_22   & 0.000171674 & 179.512  \\
+			\hline
+		\end{tabular}
+		\begin{tabular}{lrr}
+			\hline
+			9000.0 Hz   &   Magnitude &     Phase \\
+			\hline
+			Node 2      & 0.16282     &   63.622  \\
+			Node 3      & 0.219774    &   20.3532 \\
+			Node 4      & 0.0750914   & -122.05   \\
+			I of R\_22   & 0.000237659 &   61.8326 \\
 			\hline
 		\end{tabular}	
 		}
@@ -364,7 +360,7 @@
 					to[R, l=$R_{11}$, a=1k$\Omega$] (6,2)
 					node[above]{2}to[short, *-](6,2)
 					to[C, l=$C_{11}$, a=100nF] (10,2) -- (10,0)
-					node[left]{4}to[short,*-](10,0)
+					node[right]{4}to[short,*-](10,0)
 					to[R, l=$R_{12}$, a=1k$\Omega$] (6,0)
 					node[above]{3}to[short, -*](6,0)
 					to[C, l=$C_{12}$, a=47nF, i<=$I_{C_{12}}$] (2,0)
@@ -388,10 +384,10 @@
 		Current $I_{C_{12}}$ is measured indirectly using measured voltage and impedance of the component
 		
 		\begin{equation}
-			I_{C_{12}}=\frac{U_1-U_3}{Z_{C_{12}}}
+			I_{C_{12}}=\frac{V_1-V_3}{Z_{C_{12}}}
 		\end{equation}
 		
-		where $U_3$ is voltage in node 3, $U_1$ is voltage in node 1 and $Z_{C_{12}}$ is impedance of capacitor $C_{12}$
+		where $V_3$ is voltage in node 3, $V_1$ is voltage in node 1 and $Z_{C_{12}}$ is impedance of capacitor $C_{12}$
 	
 		\begin{table}[!ht] %table circuit A
 		\begin{subtable}{0.6\textwidth}
@@ -495,10 +491,10 @@
 		Current $I_{R_{22}}$ is measured indirectly using measured voltage and impedance of the component
 		
 		\begin{equation}
-			I_{R_{22}}=\frac{U_4-U_2}{Z_{R_{22}}}
+			I_{R_{22}}=\frac{V_4-V_2}{Z_{R_{22}}}
 		\end{equation}
 		
-		where $U_4$ is voltage in node 4, $U_2$ is voltage in node 2 and $Z_{R_{22}}$ is impedance of resistor $R_{22}$
+		where $V_4$ is voltage in node 4, $V_2$ is voltage in node 2 and $Z_{R_{22}}$ is impedance of resistor $R_{22}$
 				\begin{table}[ht] %table circuit B		
 					\begin{subtable}{0.60\textwidth}
 						\centering
@@ -566,9 +562,64 @@
 		\end{table}
 	\newpage
 	\section{Comparison}\label{sec:comparison}
-	Results of measurements are in general similar to results of nodal analysis. In most cases at least first significant digit of amplitude is the same in both results and phase shift is within few percent of error, but with increasing frequency calculations become less precise. For some applications first significant digit precision can be not satisfying, but roughly both results are comparable. In order to verify how precise nodal analysis is, more data and more precise measuring equipment are needed
+	\begin{table}[H]\label{tab:comp}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			& \multicolumn{2}{|c|}{measurements} & \multicolumn{2}{|c|}{calculations}  & \multicolumn{2}{|c|}{deviation}  \\
+			\hline
+			& V & phase & V & phase & $\Delta$V & $\Delta$phase\\
+			\hline
+			\multicolumn{7}{|c|}{Circuit A} \\
+			\hline
+			\multicolumn{7}{|c|}{Node 3} \\
+			\hline
+			1kHz & 0.008 & 140.7 & 0.0074 & 146.52 & 0.00057 & 4\% \\
+			\hline
+			5kHz & 0.154 & 136.1 & 0.17 & 141.25 & 0.021 & 4\% \\
+			\hline
+			9kHz & 0.376 & 30 & 0.36 & 22.09 & 0.0086 & 26\% \\
+			\hline
+			\multicolumn{7}{|c|}{Node 4} \\
+			\hline
+			1kHz & 0.072 & 38.6 & 0.072 & 37.35 & 0.00067 & 3\% \\
+			\hline
+			5kHz & 0.082 & 42.1 & 0.079 & 50.17 & 0.0028 & 19\% \\
+			\hline
+			9kHz & 0.231 & -11.8 & 0.22 & -17.7 & 0.0027 & 50\% \\
+			\hline
+			\multicolumn{7}{|c|}{Circuit B} \\
+			\hline
+			\multicolumn{7}{|c|}{Node 2} \\
+			\hline
+			1kHz & 0.044 & 28.7 & 0.044 & 28.10 & 0.00025 & 2\% \\
+			\hline
+			5kHz & 0.044 & -35.7 & 0.052 & -53.97 & 0.0081 & 51\% \\
+			\hline
+			9kHz & 0.156 & 69.7 & 0.16 & 63.62 & 0.0068 & 9\% \\
+			\hline
+			\multicolumn{7}{|c|}{Node 3} \\
+			\hline
+			1kHz & 0.084 & 23.3 & 0.083 & 22.3 & 0.00022 & 4\% \\
+			\hline
+			5kHz & 0.055 & 62.4 & 0.053 & 86.67 & 0.0015 & 39\% \\
+			\hline
+			9kHz & 0.22 & 24.4 & 0.21 & 20.35 & 0.00022 & 17\% \\
+			\hline
+			\multicolumn{7}{|c|}{Node 4} \\
+			\hline
+			1kHz & 0.086 & 21.2 & 0.086 & 20.4605 & 0.00078 & 3\% \\
+			\hline
+			5kHz & 0.18 & -11.8 & 0.20 & -12.16 & 0.026 & 3\% \\
+			\hline
+			9kHz & 0.09 & -113.8 & 0.075 & -122.05 & 0.014 & 7\% \\
+			\hline
+		\end{tabular}
+		\caption{Comparison of measurements and calculations}
+	\end{table}
+	Results of measurements are in general similar to results of nodal analysis. In most cases at least first significant digit of amplitude is the same in both results and phase shift is within few percent of error, but with increasing frequency calculations often become less precise. For some applications first significant digit precision can be not satisfying, but roughly both results are comparable. In order to verify how precise nodal analysis is, more data and more precise measuring equipment are needed
 	\section{Summary}
-	Nodal analysis broadly speaking is good method to evaluate values in a circuit, real simple for circuits with many branches and very easy to compute with computer aid because. But in terms of precision as stated in Section \ref{sec:comparison} for some applications evaluation can be not good enough. 
+	Nodal analysis broadly speaking is good method to evaluate values in a circuit, really simple method for circuits with many branches. But in terms of precision as stated in Section \ref{sec:comparison} for some applications evaluation can be not good enough. 
 	\newpage
 	\appendix
 	\section*{Appendix}\label{Appendix}

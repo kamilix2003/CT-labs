@@ -9,37 +9,34 @@
     \PYG{n}{Zc2}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n+nb}{complex}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{47e\PYGZhy{}9}\PYG{p}{)}\PYG{o}{*}\PYG{n}{w}\PYG{p}{)}
     \PYG{n}{Zc3}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n+nb}{complex}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{22e\PYGZhy{}9}\PYG{p}{)}\PYG{o}{*}\PYG{n}{w}\PYG{p}{)}
     \PYG{n}{Zl}\PYG{o}{=}\PYG{n+nb}{complex}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{10e\PYGZhy{}3}\PYG{p}{)}\PYG{o}{*}\PYG{n}{w}
-    \PYG{n}{V} \PYG{o}{=} \PYG{l+m+mf}{0.192}
-    \PYG{n}{G1} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zc2} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n}{Zc1}\PYG{o}{+}\PYG{n}{Zr}\PYG{p}{)}
+    \PYG{n}{VS} \PYG{o}{=} \PYG{l+m+mf}{0.192}
     \PYG{n}{G3} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zr} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zc2} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zl}
     \PYG{n}{G4} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zc3} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n}{Zc1}\PYG{o}{+}\PYG{n}{Zr}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zr}
-    \PYG{n}{G13} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zc2}
-    \PYG{n}{G14} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{n}{Zr}\PYG{o}{+}\PYG{n}{Zc1}\PYG{p}{)}
     \PYG{n}{G34} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Zr}
-    \PYG{n}{I1} \PYG{o}{=} \PYG{o}{\PYGZhy{}} \PYG{n}{V}\PYG{o}{/}\PYG{p}{(}\PYG{n}{Zr}\PYG{o}{+}\PYG{n}{Zc1}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{V}\PYG{o}{/}\PYG{n}{Zc2}
-    \PYG{n}{I3} \PYG{o}{=} \PYG{n}{V}\PYG{o}{/}\PYG{n}{Zc2}
-    \PYG{n}{I4} \PYG{o}{=} \PYG{n}{V}\PYG{o}{/}\PYG{p}{(}\PYG{n}{Zr}\PYG{o}{+}\PYG{n}{Zc1}\PYG{p}{)}
-    \PYG{n}{G} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{G1}\PYG{p}{,} \PYG{n}{G13}\PYG{p}{,} \PYG{n}{G14}\PYG{p}{],}
-                \PYG{p}{[}\PYG{n}{G13}\PYG{p}{,} \PYG{n}{G3}\PYG{p}{,} \PYG{n}{G34}\PYG{p}{],}
-                \PYG{p}{[}\PYG{n}{G14}\PYG{p}{,} \PYG{n}{G34}\PYG{p}{,} \PYG{n}{G4}\PYG{p}{]])}
-    \PYG{n}{I} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{I1}\PYG{p}{],}
-                \PYG{p}{[}\PYG{n}{I3}\PYG{p}{],}
+    \PYG{n}{I3} \PYG{o}{=} \PYG{n}{VS}\PYG{o}{/}\PYG{n}{Zc2}
+    \PYG{n}{I4} \PYG{o}{=} \PYG{n}{VS}\PYG{o}{/}\PYG{p}{(}\PYG{n}{Zr}\PYG{o}{+}\PYG{n}{Zc1}\PYG{p}{)}
+    \PYG{n}{G} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{G3}\PYG{p}{,} \PYG{n}{G34}\PYG{p}{],}
+                \PYG{p}{[}\PYG{n}{G34}\PYG{p}{,} \PYG{n}{G4}\PYG{p}{]])}
+    \PYG{n}{I} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{I3}\PYG{p}{],}
                 \PYG{p}{[}\PYG{n}{I4}\PYG{p}{]])}
     \PYG{n}{V} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{inv}\PYG{p}{(}\PYG{n}{G}\PYG{p}{),} \PYG{n}{I}\PYG{p}{)}
     \PYG{n}{VP} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{angle}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{k+kc}{True}\PYG{p}{)}
     \PYG{n}{VA} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{V}\PYG{p}{)}
-    \PYG{n}{IC12} \PYG{o}{=} \PYG{p}{(}\PYG{n}{V}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{\PYGZhy{}}\PYG{n}{V}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}\PYG{o}{/}\PYG{n}{Zc2}
+    \PYG{c+c1}{\PYGZsh{} V2 = ((VS\PYGZhy{}V[1])*Zc1)/(Zr + Zc1)}
+    \PYG{n}{IC12} \PYG{o}{=} \PYG{p}{(}\PYG{n}{VS} \PYG{o}{\PYGZhy{}} \PYG{n}{V}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}\PYG{o}{/}\PYG{n}{Zc2}
+    \PYG{c+c1}{\PYGZsh{} VA = np.insert(VA, 0,np.abs(V2), axis=0)}
+    \PYG{c+c1}{\PYGZsh{} VP = np.insert(VP, 0,np.angle(V2,True), axis=0)}
     \PYG{n}{VA} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{VA}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{IC12}\PYG{p}{))}
-    \PYG{n}{VP} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{VP}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{angle}\PYG{p}{(}\PYG{n}{IC12}\PYG{p}{))}
+    \PYG{n}{VP} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{VP}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{angle}\PYG{p}{(}\PYG{n}{IC12}\PYG{p}{,}\PYG{k+kc}{True}\PYG{p}{))}
     \PYG{n}{headers} \PYG{o}{=} \PYG{p}{[}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{} Hz\PYGZsq{}} \PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Magnitude\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Phase\PYGZsq{}}\PYG{p}{]}
-    \PYG{n}{first\PYGZus{}col} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Node 1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Node 3\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Node 4\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}I of C\PYGZus{}12\PYGZsq{}}\PYG{p}{]}
+    \PYG{n}{first\PYGZus{}col} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Node 3\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Node 4\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}I of C\PYGZus{}12\PYGZsq{}}\PYG{p}{]}
     \PYG{n}{table1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{column\PYGZus{}stack}\PYG{p}{((}\PYG{n}{first\PYGZus{}col}\PYG{p}{,} \PYG{n}{VA}\PYG{p}{,} \PYG{n}{VP}\PYG{p}{))}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tabulate}\PYG{p}{(}\PYG{n}{table1}\PYG{p}{,} \PYG{n}{headers}\PYG{o}{=}\PYG{n}{headers}\PYG{p}{,} \PYG{n}{tablefmt}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}latex\PYGZdq{}}\PYG{p}{))}
-    \PYG{k}{return}\PYG{p}{(}\PYG{n}{V}\PYG{p}{,} \PYG{n}{VA}\PYG{p}{,} \PYG{n}{VP}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} print (VA,\PYGZsq{}\PYGZbs{}n\PYGZsq{}, VP)}
 
-\PYG{p}{(}\PYG{n}{V1}\PYG{p}{,} \PYG{n}{VA1}\PYG{p}{,} \PYG{n}{VP1}\PYG{p}{)}\PYG{o}{=}\PYG{n}{get\PYGZus{}V}\PYG{p}{(}\PYG{l+m+mf}{1e3}\PYG{p}{)}
-\PYG{p}{(}\PYG{n}{V5}\PYG{p}{,} \PYG{n}{VA5}\PYG{p}{,} \PYG{n}{VP5}\PYG{p}{)}\PYG{o}{=}\PYG{n}{get\PYGZus{}V}\PYG{p}{(}\PYG{l+m+mf}{5e3}\PYG{p}{)}
-\PYG{p}{(}\PYG{n}{V9}\PYG{p}{,} \PYG{n}{VA9}\PYG{p}{,} \PYG{n}{VP9}\PYG{p}{)}\PYG{o}{=}\PYG{n}{get\PYGZus{}V}\PYG{p}{(}\PYG{l+m+mf}{9e3}\PYG{p}{)}
+\PYG{n}{get\PYGZus{}V}\PYG{p}{(}\PYG{l+m+mf}{1e3}\PYG{p}{)}
+\PYG{n}{get\PYGZus{}V}\PYG{p}{(}\PYG{l+m+mf}{5e3}\PYG{p}{)}
+\PYG{n}{get\PYGZus{}V}\PYG{p}{(}\PYG{l+m+mf}{9e3}\PYG{p}{)}
 
 
 \end{Verbatim}

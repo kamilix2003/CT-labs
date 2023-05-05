@@ -8,36 +8,33 @@ def get_V(f):
     Zc2=1/(complex(0,47e-9)*w)
     Zc3=1/(complex(0,22e-9)*w)
     Zl=complex(0,10e-3)*w
-    V = 0.192
-    G1 = 1/Zc2 + 1/(Zc1+Zr)
+    VS = 0.192
     G3 = 1/Zr + 1/Zc2 + 1/Zl
     G4 = 1/Zc3 + 1/(Zc1+Zr) + 1/Zr
-    G13 = -1/Zc2
-    G14 = -1/(Zr+Zc1)
     G34 = -1/Zr
-    I1 = - V/(Zr+Zc1) - V/Zc2
-    I3 = V/Zc2
-    I4 = V/(Zr+Zc1)
-    G = np.array([[G1, G13, G14],
-                [G13, G3, G34],
-                [G14, G34, G4]])
-    I = np.array([[I1],
-                [I3],
+    I3 = VS/Zc2
+    I4 = VS/(Zr+Zc1)
+    G = np.array([[G3, G34],
+                [G34, G4]])
+    I = np.array([[I3],
                 [I4]])
     V = np.matmul(np.linalg.inv(G), I)
     VP = np.angle(V, True)
     VA = np.abs(V)
-    IC12 = (V[0]-V[1])/Zc2
+    # V2 = ((VS-V[1])*Zc1)/(Zr + Zc1)
+    IC12 = (VS - V[0])/Zc2
+    # VA = np.insert(VA, 0,np.abs(V2), axis=0)
+    # VP = np.insert(VP, 0,np.angle(V2,True), axis=0)
     VA = np.append(VA, np.abs(IC12))
-    VP = np.append(VP, np.angle(IC12))
+    VP = np.append(VP, np.angle(IC12,True))
     headers = [str(f)+' Hz' , 'Magnitude', 'Phase']
-    first_col = ['Node 1', 'Node 3', 'Node 4', 'I of C_12']
+    first_col = ['Node 3', 'Node 4', 'I of C_12']
     table1 = np.column_stack((first_col, VA, VP))
     print(tabulate(table1, headers=headers, tablefmt="latex"))
-    return(V, VA, VP)
+    # print (VA,'\n', VP)
 
-(V1, VA1, VP1)=get_V(1e3)
-(V5, VA5, VP5)=get_V(5e3)
-(V9, VA9, VP9)=get_V(9e3)
+get_V(1e3)
+get_V(5e3)
+get_V(9e3)
 
 
