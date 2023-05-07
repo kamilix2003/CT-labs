@@ -1,7 +1,6 @@
-
 clear all;
 
-fs = 10000;
+fs = 20000;
 duration = 0.1;
 N = fs*duration;
 t = 0:1/fs:duration-1/fs;
@@ -21,7 +20,7 @@ xlabel('Time (seconds)');
 xlim([0,0.002])
 ylabel('Amplitude (Volts)');
 ylim([-3,3])
-title('Time-domain triangle');
+title('Time-domain sinus');
 
 %triangle with 50% duty cycle
 subplot(4,3,2)
@@ -66,21 +65,21 @@ Sq_meg =  abs(sq_oneSide)/(N/2);
 subplot(4,3,4)
 plot(f,S_meg);
 xlabel('Frequency (Hz)');
-xlim([0,2000])
+xlim([0,fs/2])
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,5)
 plot(f,Tr_meg);
 xlabel('Frequency (Hz)');
-xlim([0,2000])
+xlim([0,fs/2])
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,6)
 plot(f,Sq_meg);
 xlabel('Frequency (Hz)');
-xlim([0,2000])
+xlim([0,fs/2])
 ylabel('Magnitude');
 title('Frequency spectrum');
 
@@ -88,21 +87,21 @@ title('Frequency spectrum');
 subplot(4,3,7)
 stem(f,S_meg);
 xlabel('Frequency (Hz)');
-xlim([0,2000])
+xlim([0,fs/2])
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,8)
 stem(f,Tr_meg);
 xlabel('Frequency (Hz)');
-xlim([0,2000])
+xlim([0,fs/2])
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,9)
 stem(f,Sq_meg);
 xlabel('Frequency (Hz)');
-xlim([0,2000])
+xlim([0,fs/2])
 ylabel('Magnitude');
 title('Frequency spectrum');
 
