@@ -18,7 +18,6 @@ for k=1:10
     B(k) = sum(f.*sin(pi*k*x*frequency))*dx;
     fFS = fFS + A(k)*cos(k*pi*x*frequency) + B(k)*sin(k*pi*x*frequency);
     plot(x, fFS)
-    pause(.1)
 end
 T = table((1:10)', A', B', 'VariableNames', {'N', 'A', 'B'});
 end
