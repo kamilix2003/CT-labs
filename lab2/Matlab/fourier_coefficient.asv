@@ -20,14 +20,14 @@ for k=1:10
     plot(x, fFS);
     pause(.01);
 end
-amplitude = db(sqrt(A.^2.+B.^2));
+amplitude = sqrt(A.^2.+B.^2);
 phase = rad2deg(angle(conj(complex(A, B))));
 subplot(2,4,[5,6]);
 stem(amplitude);
 title('subplot 2: amplitude');
 subplot(2,4,[7,8]);
 stem(phase);
-title('subplot 3: phase')
-%T = table((1:10)', amplitude', phase', 'VariableNames', {'N', 'Amplitude', 'Phase'});
+title('su')
+T = table((1:10)', amplitude', phase', 'VariableNames', {'N', 'Amplitude', 'Phase'});
 end
 
