@@ -1,7 +1,12 @@
-function [outputArg1,outputArg2] = RC_circuit(inputArg1,inputArg2)
-%RC_CIRCUIT Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function [Vout_integrator, Vout_differentiator] = RC_circuit(Vin, t)
+figure('Name', 'RC circuit');
+R = 1.5e3;
+C1 = 47e-9;
+C2 = 10e-9;
+N = size(Vin);
+dt = 1/(N(1,2)-1);
+Vout_integrator = Vin .* (1 - exp(-t/(R*C1)));
+Vout_differentiator = Vin .* exp(-t/(R*C2));
+plot(t, Vin, t, Vout_integrator, t, Vout_differentiator);
 end
 

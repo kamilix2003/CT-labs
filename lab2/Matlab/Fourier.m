@@ -29,6 +29,8 @@ Triangle40 = 0*x;
 Triangle40(1:(4*N/10-1)) = (Vpp/0.4*(1:4*N/10-1))/N-(Vpp*0.5);
 Triangle40((4*N/10):N) = -(Vpp/0.6*(4*N/10:N))/N+(Vpp*1.167);
 
+RC_circuit(Square25, x);
+pause(1);
 %fourier coefficient
 fourier_coefficient(Sinus, frequency, N, 'sinus');
 fourier_coefficient(Square50, frequency, N, 'square wave 50% duty cycle');
