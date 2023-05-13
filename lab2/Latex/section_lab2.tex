@@ -44,17 +44,47 @@
 	
 	\section{Course of measurements}
 
-	\begin{circuitikz}
-		\draw (0,0) node[ground]
-		to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
-		to[C, l=$C_{11}$, a=47nF] (3,-2)
-		node[rground] {}
-		;
-		\draw (3,0) 
-		to[short] (6,0)
-		node[ground]
-		;
-	\end{circuitikz}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+				\begin{circuitikz}
+				\draw (0,0) node[bnc](B1) {}
+				to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
+				to[C, l=$C_{11}$, a=47nF] (3,-2)
+				node[ground] {}
+				;
+				\draw (3,0) 
+				to[short] (4.5,0)
+				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{}}
+				;
+				\draw node[ground] at (B1.shield) {};
+				\draw node[ground] at (B2.shield) {};
+			\end{circuitikz}
+			\caption{Circuit A}
+			\label{fig:Circuit A}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+				\begin{circuitikz}
+				\draw (0,0) node[bnc](B1) {}
+				to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
+				to[C, l=$C_{11}$, a=47nF] (3,-2)
+				node[ground] {}
+				;
+				\draw (3,0) 
+				to[short] (4.5,0)
+				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{}}
+				;
+				\draw node[ground] at (B1.shield) {};
+				\draw node[ground] at (B2.shield) {};
+			\end{circuitikz}
+			\caption{Circuit B}
+			\label{fig:Circuit B}
+		\end{subfigure}
+		\caption{Measured RC Circuits}
+		\label{fig: Circuit}
+	\end{figure}
 	
 	\section{Method for calculating Fourier Series coefficients}
 	
