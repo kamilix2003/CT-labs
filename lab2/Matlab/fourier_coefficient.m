@@ -20,7 +20,7 @@ for k=1:10
     plot(x, fFS);
     pause(.01);
 end
-amplitude = db(sqrt(A.^2.+B.^2));
+amplitude = sqrt(A.^2.+B.^2);
 phase = rad2deg(angle(conj(complex(A, B))));
 subplot(2,4,[5,6]);
 stem(amplitude);
