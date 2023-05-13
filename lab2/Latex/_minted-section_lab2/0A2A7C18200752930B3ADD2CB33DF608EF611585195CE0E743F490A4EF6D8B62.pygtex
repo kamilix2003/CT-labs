@@ -5,7 +5,7 @@
 \PYG{n}{frequency}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{1000}\PYG{p}{;}
 \PYG{n}{Vpp}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
 \PYG{n}{L}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{frequency}\PYG{p}{;}
-\PYG{n}{N}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{2048}\PYG{p}{;}
+\PYG{n}{N}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{o}{.*}\PYG{l+m+mi}{1024}\PYG{p}{;}
 \PYG{n}{dx}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{L}\PYG{o}{/}\PYG{p}{(}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{);}
 \PYG{n}{x}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{L}\PYG{p}{:}\PYG{n}{dx}\PYG{p}{:}\PYG{n}{L}\PYG{p}{;}
 
@@ -33,9 +33,9 @@
 \PYG{n}{RC\PYGZus{}circuit}\PYG{p}{(}\PYG{n}{Square25}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{);}
 \PYG{n+nb}{pause}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
 \PYG{c}{\PYGZpc{}fourier coefficient}
-\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Sinus}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sinus\PYGZsq{}}\PYG{p}{);}
-\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Square50}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{);}
-\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Square25}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}square wave 25\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{);}
-\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Triangle50}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}triangle wave 50\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{);}
-\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Triangle40}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Sinus}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sinus\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sin\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Square50}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sqr50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Square25}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}square wave 25\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sqr25\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Triangle50}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}triangle wave 50\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}tri50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Triangle40}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}tri40\PYGZsq{}}\PYG{p}{);}
 \end{Verbatim}

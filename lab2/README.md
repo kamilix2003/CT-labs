@@ -5,6 +5,8 @@
 ## 2 What is Fourier Series
 - [x] Done
 ## 3 Courese of measurements
+- [x] circuits/diagrams
+- [ ] discription **IN PROGRESS**
 - [ ] Done
 ## 4 Calculations
 - [ ] Matlab
