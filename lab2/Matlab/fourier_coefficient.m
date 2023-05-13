@@ -1,4 +1,4 @@
-function [amplitude, phase, T] = fourier_coefficient(f, frequency, N, name)
+function [amplitude, phase, T] = fourier_coefficient(f, frequency, N, name, filename)
 figure('Name', name);
 %domain
 L = 1/frequency;
@@ -20,7 +20,7 @@ for k=1:10
     plot(x, fFS);
     pause(.01);
 end
-amplitude = sqrt(A.^2.+B.^2);
+amplitude = 20 * log10(sqrt(A.^2.+B.^2)/A0);
 phase = rad2deg(angle(conj(complex(A, B))));
 subplot(2,4,[5,6]);
 stem(amplitude);
@@ -29,5 +29,6 @@ subplot(2,4,[7,8]);
 stem(phase);
 title('subplot 3: phase')
 %T = table((1:10)', amplitude', phase', 'VariableNames', {'N', 'Amplitude', 'Phase'});
+print(filename, '-deps');
 end
 

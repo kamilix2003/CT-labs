@@ -4,7 +4,7 @@ clear all; close all; clc;
 frequency = 1000;
 Vpp = 5;
 L = 1/frequency;
-N = 2048;
+N = 5.*1024;
 dx = 2*L/(N-1);
 x = -L:dx:L;
 
@@ -32,8 +32,8 @@ Triangle40((4*N/10):N) = -(Vpp/0.6*(4*N/10:N))/N+(Vpp*1.167);
 RC_circuit(Square25, x);
 pause(1);
 %fourier coefficient
-fourier_coefficient(Sinus, frequency, N, 'sinus');
-fourier_coefficient(Square50, frequency, N, 'square wave 50% duty cycle');
-fourier_coefficient(Square25, frequency, N, 'square wave 25% duty cycle');
-fourier_coefficient(Triangle50, frequency, N, 'triangle wave 50% symmetry ratio');
-fourier_coefficient(Triangle40, frequency, N, 'triangle wave 40% symmetry ratio');
+fourier_coefficient(Sinus, frequency, N, 'sinus', 'sin');
+fourier_coefficient(Square50, frequency, N, 'square wave 50% duty cycle', 'sqr50');
+fourier_coefficient(Square25, frequency, N, 'square wave 25% duty cycle', 'sqr25');
+fourier_coefficient(Triangle50, frequency, N, 'triangle wave 50% symmetry ratio', 'tri50');
+fourier_coefficient(Triangle40, frequency, N, 'triangle wave 40% symmetry ratio', 'tri40');
