@@ -43,7 +43,19 @@
 	A Fourier series is an expansion of a periodic function $f(x)$ in terms of an infinite sum of sines and cosines. Fourier series make use of the orthogonal relationships of the sine and cosine functions. The computation and study of Fourier series is known as harmonic analysis and is extremely useful to break up an arbitrary periodic function into a set of simple terms that can be plugged in, solved individually, and then recombined to obtain the solution to the original problem or an approximation to it to whatever accuracy is desired or practical
 	
 	\section{Course of measurements}
-
+	During our measurements we skipped first part of exercise and did all measurements with configuration for second part of exercise.
+	
+	\begin{figure}
+		\begin{circuitikz}
+			\ctikzset{bipoles/oscope/width=1.5}
+			\ctikzset{bipoles/oscope/height=1}
+			\draw (2, 3.5) node[oscopeshape](O) {};
+			\draw [black, thick] (-2.5, 1) rectangle (-0.5, 2.5);
+			\draw [black, thick] (6.5, 1) rectangle (4.5, 2.5);
+			\draw [black, thick] (0, 0) rectangle (4, 2);
+		\end{circuitikz}
+	\end{figure}
+	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.45\textwidth}
@@ -88,4 +100,14 @@
 	
 	\section{Method for calculating Fourier Series coefficients}
 	
+	\newpage
+	\appendix
+	\section{Source Code}\label{sec:source-code}
+	\href{https://github.com/kamilix2003/CT_labs}{GITHUB repository}
+	\subsection*{Fourier.m}
+	\inputminted{matlab}{../Matlab/Fourier.m}
+	\subsection*{fourier coefficient.m}
+	\inputminted{matlab}{../Matlab/fourier_coefficient.m}
+	\subsection*{RC circuit.m}
+	\inputminted{matlab}{../Matlab/RC_circuit.m}
 \end{document}

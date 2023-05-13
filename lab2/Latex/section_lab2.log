@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  13 MAY 2023 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  13 MAY 2023 20:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -983,29 +983,40 @@ Package hyperref Info: Link coloring ON on input line 36.
 
  [1
 
-{C:/Users/Kamil/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (section_lab
-2.aux)
+{C:/Users/Kamil/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (_minted-sec
+tion_lab2/default.pygstyle)
+(_minted-section_lab2/214C5A2C6D43FD2B2415F3BDCE75785BEF611585195CE0E743F490A4E
+F6D8B62.pygtex)
+(_minted-section_lab2/2411728259C8F4F85042890DEBF8F197A150E21EBB3A9D7C006E2B467
+0D4F01D.pygtex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
+ [2])
+(_minted-section_lab2/0471FB1E7CA8B0F07A5C5300C2D32A884B4F787A94861D3284776F359
+F55CA29.pygtex) [3] (section_lab2.aux)
 Package rerunfilecheck Info: File `section_lab2.out' has not changed.
-(rerunfilecheck)             Checksum: A2C70D90A1E208299EEE8E0D1132A091;776.
+(rerunfilecheck)             Checksum: B755727CC5D963DD2260D8AABDEC625A;878.
  ) 
 Here is how much of TeX's memory you used:
- 42781 strings out of 476331
- 1006749 string characters out of 5787766
- 1877660 words of memory out of 5000000
- 62750 multiletter control sequences out of 15000+600000
- 517741 words of font info for 51 fonts, out of 8000000 for 9000
+ 42951 strings out of 476331
+ 1010444 string characters out of 5787766
+ 1880660 words of memory out of 5000000
+ 62895 multiletter control sequences out of 15000+600000
+ 518384 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,80p,594b,1027s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,80p,594b,1023s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Kamil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/Kamil/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Users/Kamil/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/Kamil/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Kamil/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Kamil/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on section_lab2.pdf (1 page, 81419 bytes).
+fonts/cm/cmitt10.pfb><C:/Users/Kamil/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/Users/Kamil/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Kamil/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Kamil/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Kamil/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Kamil/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on section_lab2.pdf (3 pages, 119130 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
