@@ -30,7 +30,7 @@
 \PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{phase}\PYG{p}{);}
 \PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}subplot 3: phase\PYGZsq{}}\PYG{p}{)}
 \PYG{c}{\PYGZpc{}T = table((1:10)\PYGZsq{}, amplitude\PYGZsq{}, phase\PYGZsq{}, \PYGZsq{}VariableNames\PYGZsq{}, \PYGZob{}\PYGZsq{}N\PYGZsq{}, \PYGZsq{}Amplitude\PYGZsq{}, \PYGZsq{}Phase\PYGZsq{}\PYGZcb{});}
-\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{filename}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}\PYGZhy{}deps\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb}{join}\PYG{p}{([}\PYG{l+s}{\PYGZsq{}img/\PYGZsq{}}\PYG{p}{,}\PYG{n}{filename}\PYG{p}{]),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}\PYGZhy{}deps\PYGZsq{}}\PYG{p}{);}
 \PYG{k}{end}
 
 \end{Verbatim}

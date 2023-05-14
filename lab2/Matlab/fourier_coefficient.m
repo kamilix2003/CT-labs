@@ -18,7 +18,7 @@ for k=1:10
     B(k) = (1/L)*sum(f.*sin(pi*k*x*frequency))*dx;
     fFS = fFS + A(k)*cos(k*pi*x*frequency) + B(k)*sin(k*pi*x*frequency);
     plot(x, fFS);
-    pause(.01);
+    pause(.05);
 end
 amplitude = 20 * log10(sqrt(A.^2.+B.^2)/A0);
 phase = rad2deg(angle(conj(complex(A, B))));
@@ -29,6 +29,6 @@ subplot(2,4,[7,8]);
 stem(phase);
 title('subplot 3: phase')
 %T = table((1:10)', amplitude', phase', 'VariableNames', {'N', 'Amplitude', 'Phase'});
-print(filename, '-deps');
+print(join(['img/',filename]), '-deps');
 end
 
