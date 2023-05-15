@@ -1,17 +1,16 @@
 clear all;
 
-fs = 20000;
-duration = 0.1;
-N = fs*duration;
+fs = 22000;
+duration = 0.01;
+N = fs * duration;
 t = 0:1/fs:duration-1/fs;
 f = 1000;
-a = 2.75;
+a = 2.119;
 phi = 0;
 
-s = a*sin(2*pi*t*f+phi);
-tr = a*sawtooth(2*pi*t*f+phi,0.5);
-sq = a*square(2*pi*t*f+phi,50);
-
+s = a * sin(2*pi*t*f + phi);
+tr = a * sawtooth(2*pi*t*f + phi, 0.5);
+sq = a * square(2*pi*t*f + phi, 50);
 
 %sin
 subplot(4,3,1)
@@ -41,92 +40,98 @@ ylim([-3,3])
 title('Time-domain square');
 
 %fft sin
-s=fft(s);
+s_fft = fft(s);
 %fft triangle
-tr=fft(tr);
+tr_fft = fft(tr);
 %fft square
-sq=fft(sq);
+sq_fft = fft(sq);
 
+s_oneSide = s_fft(1:N/2);
+frequencies = fs * (0:N/2-1) / N; 
+S_magnitude = abs(s_oneSide) / (N/2);
+S_phase = angle(s_oneSide) * 180/pi;
 
-s_oneSide = s(1:N/2);
-f = fs*(0:N/2-1)/N; 
-S_meg =  abs(s_oneSide)/(N/2);
+tr_oneSide = tr_fft(1:N/2);
+Tr_magnitude = abs(tr_oneSide) / (N/2);
+Tr_phase = angle(tr_oneSide) * 180/pi;
 
-tr_oneSide = tr(1:N/2);
-f = fs*(0:N/2-1)/N; 
-Tr_meg =  abs(tr_oneSide)/(N/2);
+sq_oneSide = sq_fft(1:N/2);
+Sq_magnitude = abs(sq_oneSide) / (N/2);
+Sq_phase = angle(sq_oneSide) * 180/pi;
 
-sq_oneSide = sq(1:N/2);
-f = fs*(0:N/2-1)/N; 
-Sq_meg =  abs(sq_oneSide)/(N/2);
-
-
+freq_of_interest = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000];
+indices = zeros(size(freq_of_interest));
+for i = 1:length(freq_of_interest)
+    [~, indices(i)] = min(abs(frequencies - freq_of_interest(i)));
+end
 
 subplot(4,3,4)
-plot(f,S_meg);
+plot(frequencies, db(S_magnitude));
 xlabel('Frequency (Hz)');
-xlim([0,fs/2])
+xlim([0, fs/2]);
+ylim([-40, 10]);
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,5)
-plot(f,Tr_meg);
+plot(frequencies, db(Tr_magnitude));
 xlabel('Frequency (Hz)');
-xlim([0,fs/2])
+xlim([0, fs/2]);
 ylabel('Magnitude');
+ylim([-40, 10]);
 title('Frequency spectrum');
 
 subplot(4,3,6)
-plot(f,Sq_meg);
+plot(frequencies, db(Sq_magnitude));
 xlabel('Frequency (Hz)');
-xlim([0,fs/2])
+xlim([0, fs/2]);
 ylabel('Magnitude');
+ylim([-20, 10]);
 title('Frequency spectrum');
 
 
 subplot(4,3,7)
-stem(f,S_meg);
+stem(frequencies(indices), S_magnitude(indices));
 xlabel('Frequency (Hz)');
-xlim([0,fs/2])
+xlim([0, fs/2]);
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,8)
-stem(f,Tr_meg);
+stem(frequencies(indices), Tr_magnitude(indices));
 xlabel('Frequency (Hz)');
-xlim([0,fs/2])
+xlim([0, fs/2]);
 ylabel('Magnitude');
 title('Frequency spectrum');
 
 subplot(4,3,9)
-stem(f,Sq_meg);
+stem(frequencies(indices), Sq_magnitude(indices));
 xlabel('Frequency (Hz)');
-xlim([0,fs/2])
+xlim([0, fs/2]);
 ylabel('Magnitude');
 title('Frequency spectrum');
 
+
 subplot(4,3,10)
-stem(f,angle(s_oneSide)*180/pi);
+stem(frequencies(indices), S_phase(indices));
 xlabel('Frequency (Hz)');
-xlim([0,200])
+xlim([0, fs/2]);
 ylabel('Phase (deg)');
-ylim([-180,180])
-title('Angle spectrum');
+ylim([-180, 180]);
+title('Phase spectrum');
 
 subplot(4,3,11)
-stem(f,angle(tr_oneSide)*180/pi);
+stem(frequencies(indices), Tr_phase(indices));
 xlabel('Frequency (Hz)');
-xlim([0,200])
+xlim([0, fs/2]);
 ylabel('Phase (deg)');
-ylim([-180,180])
-title('Angle spectrum');
+ylim([-200, 200]);
+title('Phase spectrum');
 
 subplot(4,3,12)
-stem(f,angle(sq_oneSide)*180/pi);
+stem(frequencies(indices), Sq_phase(indices));
 xlabel('Frequency (Hz)');
-xlim([0,200])
+xlim([0, fs/2]);
 ylabel('Phase (deg)');
-ylim([-180,180])
-title('Angle spectrum');
-
-
+ylim([-200, 200]);
+title('Phase spectrum');
