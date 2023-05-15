@@ -29,9 +29,8 @@ Triangle40 = 0*x;
 Triangle40(1:(4*N/10-1)) = (Vpp/0.4*(1:4*N/10-1))/N-(Vpp*0.5);
 Triangle40((4*N/10):N) = -(Vpp/0.6*(4*N/10:N))/N+(Vpp*1.167);
 %%RC filters responses
-square50_lowpass = readtable("csv\RC_lowpass_square.csv");
-square50_lowpass = square50_lowpass(1:1000, 4:5);
-size(square50_lowpass)
+[S5I, S5D, T4I, T4D] = Import_csv('csv/RC_filters_1.csv');
+plot(S5I);
 
 pause(1);
 %fourier coefficient
@@ -40,5 +39,5 @@ pause(1);
 % fourier_coefficient(Square25, frequency, N, 'square wave 25% duty cycle', 'sqr25');
 % fourier_coefficient(Triangle50, frequency, N, 'triangle wave 50% symmetry ratio', 'tri50');
 % fourier_coefficient(Triangle40, frequency, N, 'triangle wave 40% symmetry ratio', 'tri40');
-[test] = RC_circuit(frequency, N);
+% [test] = RC_circuit(frequency, N);
 % fourier_coefficient(test,frequency, N, 'test', 'test');
