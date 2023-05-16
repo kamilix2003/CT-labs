@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{clear}\PYG{+w}{ }\PYG{n+nb}{all}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{close}\PYG{+w}{ }\PYG{l+s}{all}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nb}{clc}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{}domain}
+\PYG{n}{frequency}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{1000}\PYG{p}{;}
+\PYG{n}{Vpp}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{n}{L}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{frequency}\PYG{p}{;}
+\PYG{n}{N}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{o}{.*}\PYG{l+m+mi}{1024}\PYG{p}{;}
+\PYG{n}{dx}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{L}\PYG{o}{/}\PYG{p}{(}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{n}{x}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{L}\PYG{p}{:}\PYG{n}{dx}\PYG{p}{:}\PYG{n}{L}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{}signals}
+\PYG{c}{\PYGZpc{}sin}
+\PYG{n}{Sinus}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{*}\PYG{n}{x}\PYG{p}{;}
+\PYG{n}{Sinus}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{N}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{frequency}\PYG{o}{*}\PYG{n}{x}\PYG{p}{);}
+\PYG{c}{\PYGZpc{}square duty cycle 50}
+\PYG{n}{Square50}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{*}\PYG{n}{x}\PYG{p}{;}
+\PYG{n}{Square50}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{n}{Square50}\PYG{p}{(}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{n}{N}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{c}{\PYGZpc{}square duty cycle 25}
+\PYG{n}{Square25}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{*}\PYG{n}{x}\PYG{p}{;}
+\PYG{n}{Square25}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{4}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{n}{Square25}\PYG{p}{(}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{4}\PYG{p}{:}\PYG{n}{N}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{c}{\PYGZpc{}triangle symetry ratio 50}
+\PYG{n}{Triangle50}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{*}\PYG{n}{x}\PYG{p}{;}
+\PYG{n}{Triangle50}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Vpp}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{/}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{n}{Triangle50}\PYG{p}{(}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{n}{N}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{Vpp}\PYG{o}{*}\PYG{p}{(}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{n}{N}\PYG{p}{)}\PYG{o}{/}\PYG{n}{N}\PYG{o}{+}\PYG{p}{(}\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{c}{\PYGZpc{}triangle symetry ratio 40}
+\PYG{n}{Triangle40}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{*}\PYG{n}{x}\PYG{p}{;}
+\PYG{n}{Triangle40}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:(}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mf}{0.4}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}\PYG{o}{/}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{Vpp}\PYG{o}{*}\PYG{l+m+mf}{0.5}\PYG{p}{);}
+\PYG{n}{Triangle40}\PYG{p}{((}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{):}\PYG{n}{N}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{Vpp}\PYG{o}{/}\PYG{l+m+mf}{0.6}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{N}\PYG{o}{/}\PYG{l+m+mi}{10}\PYG{p}{:}\PYG{n}{N}\PYG{p}{))}\PYG{o}{/}\PYG{n}{N}\PYG{o}{+}\PYG{p}{(}\PYG{n}{Vpp}\PYG{o}{*}\PYG{l+m+mf}{1.167}\PYG{p}{);}
+\PYG{c}{\PYGZpc{}\PYGZpc{}RC filters responses}
+\PYG{p}{[}\PYG{n}{Square50\PYGZus{}integrator}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Square50\PYGZus{}differentiatior}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Triangle40\PYGZus{}integrator}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Triangle40\PYGZus{}differentiatior}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{time}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Import\PYGZus{}csv}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}csv/RC\PYGZus{}filters.csv\PYGZsq{}}\PYG{p}{);}
+
+\PYG{n+nb}{pause}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{c}{\PYGZpc{}fourier coefficient}
+\PYG{c}{\PYGZpc{} fourier\PYGZus{}coefficient(Sinus, frequency, \PYGZsq{}sinus\PYGZsq{}, \PYGZsq{}sin\PYGZsq{});}
+\PYG{c}{\PYGZpc{} fourier\PYGZus{}coefficient(Square50, frequency, \PYGZsq{}square wave 50\PYGZpc{} duty cycle\PYGZsq{}, \PYGZsq{}sqr50\PYGZsq{});}
+\PYG{c}{\PYGZpc{} fourier\PYGZus{}coefficient(Square25, frequency, \PYGZsq{}square wave 25\PYGZpc{} duty cycle\PYGZsq{}, \PYGZsq{}sqr25\PYGZsq{});}
+\PYG{c}{\PYGZpc{} fourier\PYGZus{}coefficient(Triangle50, frequency, \PYGZsq{}triangle wave 50\PYGZpc{} symmetry ratio\PYGZsq{}, \PYGZsq{}tri50\PYGZsq{});}
+\PYG{c}{\PYGZpc{} fourier\PYGZus{}coefficient(Triangle40, frequency, \PYGZsq{}triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}, \PYGZsq{}tri40\PYGZsq{});}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Square50\PYGZus{}integrator}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RC low\PYGZhy{}pass filter square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCLPsqr50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Square50\PYGZus{}differentiatior}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RC high\PYGZhy{}pass filter square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCHPsqr50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Triangle40\PYGZus{}integrator}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RC low\PYGZhy{}pass filter triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCLPtri40\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{fourier\PYGZus{}coefficient}\PYG{p}{(}\PYG{n}{Triangle40\PYGZus{}differentiatior}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{frequency}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RC high\PYGZhy{}pass filter triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCHPtri40\PYGZsq{}}\PYG{p}{);}
+\end{Verbatim}
