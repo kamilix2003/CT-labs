@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  16 MAY 2023 01:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  16 MAY 2023 02:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -990,197 +990,154 @@ Package hyperref Info: Link coloring ON on input line 36.
 
  [1
 
-{C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 Package epstopdf Info: Source file: <../Matlab/img/sin.eps>
-(epstopdf)                    date: 2023-05-16 01:33:30
-(epstopdf)                    size: 996249 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 1052767 bytes
 (epstopdf)             Output file: <../Matlab/img/sin-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-14 23:38:29
-(epstopdf)                    size: 343823 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 362023 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sin-eps-converted-to.pdf ../Matlab/img/sin.eps>
-(epstopdf)             \includegraphics on input line 135.
-runsystem(miktex-epstopdf-unrestricted --outfile=../Matlab/img/sin-eps-converte
-d-to.pdf ../Matlab/img/sin.eps)...executed.
-
-Package epstopdf Info: Result file: <../Matlab/img/sin-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-16 01:37:15
-(epstopdf)                    size: 362023 bytes.
+(epstopdf)             \includegraphics on input line 146.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/sin-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/sin-eps-converted-to.pdf, id=48, 350.30875pt x 283.0575pt>
+<../Matlab/img/sin-eps-converted-to.pdf, id=71, 350.30875pt x 283.0575pt>
 File: ../Matlab/img/sin-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sin-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sin-eps-converted-to.pdf  used on input 
-line 135.
+line 146.
 (pdftex.def)             Requested size: 350.30789pt x 283.0568pt.
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-16 01:33:31
-(epstopdf)                    size: 976173 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 1032689 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-14 23:38:30
-(epstopdf)                    size: 327371 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 327213 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 136.
-runsystem(miktex-epstopdf-unrestricted --outfile=../Matlab/img/sqr50-eps-conver
-ted-to.pdf ../Matlab/img/sqr50.eps)...executed.
-
-Package epstopdf Info: Result file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-16 01:37:17
-(epstopdf)                    size: 327213 bytes.
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/sqr50-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/sqr50-eps-converted-to.pdf, id=49, 343.2825pt x 283.0575pt>
+<../Matlab/img/sqr50-eps-converted-to.pdf, id=72, 343.2825pt x 283.0575pt>
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 136.
+t line 147.
 (pdftex.def)             Requested size: 343.28165pt x 283.0568pt.
 Package epstopdf Info: Source file: <../Matlab/img/sqr25.eps>
-(epstopdf)                    date: 2023-05-16 01:33:32
-(epstopdf)                    size: 963503 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 1020025 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr25-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-14 23:38:31
-(epstopdf)                    size: 323933 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 323845 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr25-eps-converted-to.pdf ../Matlab/img/sqr25.eps>
-(epstopdf)             \includegraphics on input line 137.
-runsystem(miktex-epstopdf-unrestricted --outfile=../Matlab/img/sqr25-eps-conver
-ted-to.pdf ../Matlab/img/sqr25.eps)...executed.
-
-Package epstopdf Info: Result file: <../Matlab/img/sqr25-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-16 01:37:18
-(epstopdf)                    size: 323845 bytes.
+(epstopdf)             \includegraphics on input line 148.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/sqr25-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/sqr25-eps-converted-to.pdf, id=50, 347.2975pt x 283.0575pt>
+<../Matlab/img/sqr25-eps-converted-to.pdf, id=73, 347.2975pt x 283.0575pt>
 File: ../Matlab/img/sqr25-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr25-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr25-eps-converted-to.pdf  used on inpu
-t line 137.
+t line 148.
 (pdftex.def)             Requested size: 347.29665pt x 283.0568pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri50.eps>
-(epstopdf)                    date: 2023-05-16 01:33:33
-(epstopdf)                    size: 991463 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 1047979 bytes
 (epstopdf)             Output file: <../Matlab/img/tri50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-14 23:38:33
-(epstopdf)                    size: 359362 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 359156 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri50-eps-converted-to.pdf ../Matlab/img/tri50.eps>
-(epstopdf)             \includegraphics on input line 138.
-runsystem(miktex-epstopdf-unrestricted --outfile=../Matlab/img/tri50-eps-conver
-ted-to.pdf ../Matlab/img/tri50.eps)...executed.
-
-Package epstopdf Info: Result file: <../Matlab/img/tri50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-16 01:37:19
-(epstopdf)                    size: 359156 bytes.
+(epstopdf)             \includegraphics on input line 149.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/tri50-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/tri50-eps-converted-to.pdf, id=51, 347.2975pt x 283.0575pt>
+<../Matlab/img/tri50-eps-converted-to.pdf, id=74, 347.2975pt x 283.0575pt>
 File: ../Matlab/img/tri50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri50-eps-converted-to.pdf  used on inpu
-t line 138.
+t line 149.
 (pdftex.def)             Requested size: 347.29665pt x 283.0568pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri40.eps>
-(epstopdf)                    date: 2023-05-16 01:33:34
-(epstopdf)                    size: 997899 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 1054421 bytes
 (epstopdf)             Output file: <../Matlab/img/tri40-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-14 23:38:34
-(epstopdf)                    size: 362482 bytes
+(epstopdf)                    date: 2023-05-16 01:44:59
+(epstopdf)                    size: 362526 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri40-eps-converted-to.pdf ../Matlab/img/tri40.eps>
-(epstopdf)             \includegraphics on input line 139.
-runsystem(miktex-epstopdf-unrestricted --outfile=../Matlab/img/tri40-eps-conver
-ted-to.pdf ../Matlab/img/tri40.eps)...executed.
-
-Package epstopdf Info: Result file: <../Matlab/img/tri40-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-16 01:37:20
-(epstopdf)                    size: 362526 bytes.
+(epstopdf)             \includegraphics on input line 150.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/tri40-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/tri40-eps-converted-to.pdf, id=52, 347.2975pt x 283.0575pt>
+<../Matlab/img/tri40-eps-converted-to.pdf, id=75, 347.2975pt x 283.0575pt>
 File: ../Matlab/img/tri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri40-eps-converted-to.pdf  used on inpu
-t line 139.
+t line 150.
 (pdftex.def)             Requested size: 347.29665pt x 283.0568pt.
-[2] [3 <../Matlab/img/sin-eps-converted-to.pdf> <../Matlab/img/sqr50-eps-conver
-ted-to.pdf>] [4 <../Matlab/img/sqr25-eps-converted-to.pdf> <../Matlab/img/tri50
--eps-converted-to.pdf>] [5 <../Matlab/img/tri40-eps-converted-to.pdf>]
+[3 <../Matlab/img/sin-eps-converted-to.pdf> <../Matlab/img/sqr50-eps-converted-
+to.pdf>] [4 <../Matlab/img/sqr25-eps-converted-to.pdf> <../Matlab/img/tri50-eps
+-converted-to.pdf>] [5 <../Matlab/img/tri40-eps-converted-to.pdf>]
 (_minted-section_lab2/default.pygstyle)
-runsystem(pygmentize -l "matlab" -f latex -P commandprefix=PYG -F tokenmerge -P
- stripnl="False" -o _minted-section_lab2/9D7D3C5D037117AB149B0F29668F9E90EF6115
-85195CE0E743F490A4EF6D8B62.pygtex ../Matlab/Fourier.m)...executed.
-
-
 (_minted-section_lab2/9D7D3C5D037117AB149B0F29668F9E90EF611585195CE0E743F490A4E
 F6D8B62.pygtex [6])
-runsystem(pygmentize -l "matlab" -f latex -P commandprefix=PYG -F tokenmerge -P
- stripnl="False" -o _minted-section_lab2/63A3293ACBBFC7C4E5840C5E7488511CA150E2
-1EBB3A9D7C006E2B4670D4F01D.pygtex ../Matlab/fourier_coefficient.m)...executed.
-
-
 (_minted-section_lab2/63A3293ACBBFC7C4E5840C5E7488511CA150E21EBB3A9D7C006E2B467
 0D4F01D.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 )
-runsystem(pygmentize -l "matlab" -f latex -P commandprefix=PYG -F tokenmerge -P
- stripnl="False" -o _minted-section_lab2/A83E46F63F6B389E3E8EFC26C2B0CAAB4B4F78
-7A94861D3284776F359F55CA29.pygtex ../Matlab/RC_circuit.m)...executed.
-
-
 (_minted-section_lab2/A83E46F63F6B389E3E8EFC26C2B0CAAB4B4F787A94861D3284776F359
-F55CA29.pygtex [7])
-runsystem(del _minted-section_lab2\5C4B7DA4FD0C4B57820745DB49E424B9EF611585195C
-E0E743F490A4EF6D8B62.pygtex)...executed.
+F55CA29.pygtex [7]) [8] (section_lab2.aux)
 
-runsystem(del _minted-section_lab2\4C08CF798EF16CDF30581F6708852BF5A150E21EBB3A
-9D7C006E2B4670D4F01D.pygtex)...executed.
+Package rerunfilecheck Warning: File `section_lab2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-runsystem(del _minted-section_lab2\F9F12977882F43F06EF44272B4CAF4EC4B4F787A9486
-1D3284776F359F55CA29.pygtex)...executed.
-
- [8] (section_lab2.aux)
-Package rerunfilecheck Info: File `section_lab2.out' has not changed.
-(rerunfilecheck)             Checksum: 77B87D45F7BF487344F620C5ADC84851;1067.
+Package rerunfilecheck Info: Checksums for `section_lab2.out':
+(rerunfilecheck)             Before: 5A89BBC7ECE3E5F7C88485C02A2A8BA3;1593
+(rerunfilecheck)             After:  ABB0A1BB77C481F7C9771D3AEF15E04D;1576.
  ) 
 Here is how much of TeX's memory you used:
- 43326 strings out of 475385
- 1021164 string characters out of 2776906
- 1621990 words of memory out of 3000000
- 64179 multiletter control sequences out of 15000+600000
- 475697 words of font info for 51 fonts, out of 8000000 for 9000
+ 43328 strings out of 475385
+ 1020557 string characters out of 2776906
+ 1621995 words of memory out of 3000000
+ 64178 multiletter control sequences out of 15000+600000
+ 476005 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,80p,620b,1033s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\kamaj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmitt10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/kamaj/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kamaj/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/kamaj/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/k
-amaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
-Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
-fb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb>
-Output written on section_lab2.pdf (8 pages, 1878248 bytes).
+ts/cm/cmbx10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmitt10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kamaj/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/kamaj/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kamaj/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
+kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C
+:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6
+.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb>
+Output written on section_lab2.pdf (8 pages, 1895869 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
