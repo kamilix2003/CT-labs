@@ -6,13 +6,12 @@
 - [x] Done
 ## 3 Courese of measurements
 - [x] circuits/diagrams
-- [ ] discription **IN PROGRESS**
-- [ ] Done
+- [x] discription
+- [x] Done
 ## 4 Calculations
 - [ ] Matlab
   - [x] amplitude and phase for pure signals
-  - [ ] RC transfer function
-  - [ ] RC circuits' responses
+  - [x] RC circuits' responses
 - [ ] Done
 ## 5 Comparison measurements vs calculations
 - [ ] Done
