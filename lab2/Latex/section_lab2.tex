@@ -28,6 +28,7 @@
 	pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen,
 }
+\usepackage{wrapfig}
 \title{Fourier Series\\
 	\large Laboratory II}
 \author{Patrycja Nazim, Adrian Król, Kamil Chaj}
@@ -129,14 +130,47 @@
 	\end{figure}
 	
 	\section{Method for calculating Fourier Series coefficients}
+	\begin{wrapfigure}[27 ]{R}{0.3\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{../Matlab/img/sqr50}
+		\caption{example plot}
+		\label{fig:example-plot}
+	\end{wrapfigure}
 	All calculations are made using Matlab with Signal Processing Toolbox, source code can be found in Appendix \ref{sec:source-code}
 	
-	First step in our calculation is generating signals that we measured during exercise. Pure signals were obtained with built in function of Signal Processing Toolbox and Filtered signals were evaluated using NI Multisim SPICE software.
+	First step in our calculation is generating signals that we measured during exercise. Pure signals were obtained with built-in functions of Signal Processing Toolbox and Filtered signals were evaluated using NI Multisim SPICE software.
+		
+	Next step is finding first 10 coefficients of Fourier series for a signal which we calculated by taking inner product of signal with basis vector. In our calculations we used $\sin nt ,\thinspace \cos nt$ and $1$ as our basis vectors.
+	\begin{equation}
+		a_0 = \left\langle s(t), 1 \right\rangle
+	\end{equation}
+	\begin{equation}
+		a_n = \left\langle s(t), \cos n\omega t \right\rangle
+	\end{equation}
+	\begin{equation}
+		b_n = \left\langle s(t), \sin n\omega t \right\rangle
+	\end{equation}
+
+	During exercise we recorded Fourier series of a signal in Amplitude-Phase form so we need to convert $a_n$ and $b_n$ coefficients into amplitude $A_n$ and phase $\varphi_n$
+	\begin{equation}
+		A_n = \sqrt{a_n^2 + b_n^2}
+	\end{equation}
+	\begin{equation}
+		\varphi_n = \arg(a_n - j b_n)
+	\end{equation}
+		
+	Knowing first 10 coefficients we can plot approximation of a signal using one of following formulas. Example of approximation of square wave is on the second plot in Figure \ref{fig:example-plot}.
 	
-	Next step is finding first 10 
-	
+	\begin{equation}
+		s(t) = \frac{a_0}{2} + \sum_{n=1}^{10}(a_n\cos(n\omega t)+b_n\sin(n\omega t))
+	\end{equation}
+	\begin{equation}
+		s(t) = \frac{A_0}{2} + \sum_{n=1}^{10}(A_n\cos(n\omega t +\varphi_n))
+	\end{equation}
+
+	For third and fourth plot in Figure \ref{fig:example-plot} we are calculating Discrete Fourier transform for 10 oscillations of a signal using Fast Fourier transform algorithm from Signal Processing Toolbox and then plotting magnitude and argument of FT both in decibel scale on y axis.
+
 	\section{Comparison}
-	
 	\subsection{Pure signals}
 	\begin{figure}[H]
 		\centering
@@ -159,7 +193,32 @@
 			\includegraphics[width=\textwidth]{../Matlab/img/tri50}
 			\caption{Triangle wave 50\% symmetry ratio}
 		\end{subfigure}
-		\caption{Fourier Series expansion, frequency and phase spectrum plots}
+		\caption{Calculated signals}
+		\label{fig:pure-signals}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../img/Circuit1/sin}
+			\caption{Sin wave}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../img/Circuit1/dut50}
+			\caption{Square wave 50\% duty cycle}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../img/Circuit1/dut25}
+			\caption{Square wave 25\% duty cycle}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../img/Circuit1/trig50}
+			\caption{Triangle wave 50\% symmetry ratio}
+		\end{subfigure}
+		\caption{Calculated signals}
 		\label{fig:pure-signals}
 	\end{figure}
 	

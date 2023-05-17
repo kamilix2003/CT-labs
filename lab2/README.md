@@ -12,12 +12,17 @@
 - [x] Matlab
   - [x] amplitude and phase for pure signals
   - [x] RC circuits' responses
-- [ ] Done **Minor corrections**
+- [x] Done
 ## 5 Comparison measurements vs calculations
-- [ ] Done
 ### 5.1 pure singnals
+- [ ] Figures
+  - [x] calculated
+  - [ ] measured
 - [ ] Done
 ### 5.2 RC Circuits' Responses
+- [ ] Figures
+  - [x] calculated
+  - [ ] measured
 - [ ] Done
 # Summary
 - [ ] Done
