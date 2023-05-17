@@ -33,12 +33,12 @@ Triangle40((4*N/10):N) = -(Vpp/0.6*(4*N/10:N))/N+(Vpp*1.167);
 
 pause(1);
 %fourier coefficient
-% fourier_coefficient(Sinus, frequency, 'sinus', 'sin');
-% fourier_coefficient(Square50, frequency, 'square wave 50% duty cycle', 'sqr50');
-% fourier_coefficient(Square25, frequency, 'square wave 25% duty cycle', 'sqr25');
+fourier_coefficient(Sinus, frequency, 'sinus', 'sin');
+fourier_coefficient(Square50, frequency, 'square wave 50% duty cycle', 'sqr50');
+fourier_coefficient(Square25, frequency, 'square wave 25% duty cycle', 'sqr25');
 % fourier_coefficient(Triangle50, frequency, 'triangle wave 50% symmetry ratio', 'tri50');
 % fourier_coefficient(Triangle40, frequency, 'triangle wave 40% symmetry ratio', 'tri40');
-fourier_coefficient(Square50_integrator, frequency, 'RC low-pass filter square wave 50% duty cycle', 'RCLPsqr50');
-fourier_coefficient(Square50_differentiatior, frequency, 'RC high-pass filter square wave 50% duty cycle', 'RCHPsqr50');
-fourier_coefficient(Triangle40_integrator, frequency, 'RC low-pass filter triangle wave 40% symmetry ratio', 'RCLPtri40');
-fourier_coefficient(Triangle40_differentiatior, frequency, 'RC high-pass filter triangle wave 40% symmetry ratio', 'RCHPtri40');
+% fourier_coefficient(Square50_integrator, frequency, 'RC low-pass filter square wave 50% duty cycle', 'RCLPsqr50');
+% fourier_coefficient(Square50_differentiatior, frequency, 'RC high-pass filter square wave 50% duty cycle', 'RCHPsqr50');
+% fourier_coefficient(Triangle40_integrator, frequency, 'RC low-pass filter triangle wave 40% symmetry ratio', 'RCLPtri40');
+% fourier_coefficient(Triangle40_differentiatior, frequency, 'RC high-pass filter triangle wave 40% symmetry ratio', 'RCHPtri40');

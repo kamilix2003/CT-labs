@@ -9,10 +9,10 @@
 - [x] discription
 - [x] Done
 ## 4 Calculations
-- [ ] Matlab
+- [x] Matlab
   - [x] amplitude and phase for pure signals
   - [x] RC circuits' responses
-- [ ] Done
+- [ ] Done **Minor corrections**
 ## 5 Comparison measurements vs calculations
 - [ ] Done
 ### 5.1 pure singnals
