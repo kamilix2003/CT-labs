@@ -4,7 +4,8 @@ duration = 10/frequency;
 N = size(f,2);
 sampling_frequency = N/duration;
 t = 0:1/sampling_frequency:duration-1/sampling_frequency;
-figure('Name', name);
+fig = figure('Name', name);
+fig.Position(3:4) = [300 500];
 
 %% signal
 subplot(4,1,1);
@@ -12,8 +13,9 @@ plot(t, f);
 xlabel('Time (seconds)');
 xlim([0,0.001])
 ylabel('Amplitude (Volts)');
-ylim([-max(f)-1,max(f)+1])
+ylim([-max(f)-(max(f)*0.3),max(f)+(max(f)*0.3)])
 title(join(['', name]));
+grid on;
 
 %% fourier series
 X = t(1:size(t,2)/10);
@@ -39,8 +41,9 @@ hold off;
 xlabel('Time (seconds)');
 xlim([0,0.001])
 ylabel('Amplitude (Volts)');
-ylim([-max(f)-1,max(f)+1])
-title(join(['Fourier series expansion of ', name]));
+ylim([-max(f)-(max(f)*0.3),max(f)+(max(f)*0.3)])
+title('Fourier series expansion');
+grid on;
 
 %% fft amplitude
 % plot
@@ -71,6 +74,7 @@ xlabel('Frequency (Hz)');
 xlim([0, 11000]);
 ylabel('Magnitude');
 title('Frequency spectrum');
+grid on;
 
 %% fft phase
 subplot(4,1,4)
@@ -80,8 +84,9 @@ xlim([0, 11000]);
 ylabel('Phase (deg)');
 ylim([-180, 180]);
 title('Phase spectrum');
+grid on;
 
 %% saving img
-print(join(['img/',filename]), '-deps');
+print(join(['img/',filename]), '-depsc');
 end
 
