@@ -23,10 +23,10 @@ Final_Plots(tr50, 'Triangle wave 50% symmetry ratio', 'tri50');
 Final_Plots(tr40, 'Triangle wave 40% symmetry ratio', 'tri40');
 Final_Plots(sq50, 'Square wave 50% duty cycle', 'sqr50');
 Final_Plots(sq25, 'Square wave 25% duty cycle', 'sqr25');
-Final_Plots(Square50_integrator,'Low-pass filter response for Square wave 50% duty cycle', 'LPsqr50');
-Final_Plots(Square50_differentiatior,'High-pass filter response for Square wave 50% duty cycle', 'HPsqr50');
-Final_Plots(Triangle40_integrator,'Low-pass filter response for Triangle wave 40% symmetry ratio', 'LPtri40');
-Final_Plots(Triangle40_differentiatior,'High-pass filter response for Triangle wave 40% symmetry ratio', 'HPtri40');
+Final_Plots(Square50_integrator,['Low-pass filter response for' newline 'Square wave 50% duty cycle'], 'RCLPsqr50');
+Final_Plots(Square50_differentiatior,['High-pass filter response for' newline 'Square wave 50% duty cycle'], 'RCHPsqr50');
+Final_Plots(Triangle40_integrator,['Low-pass filter response for' newline 'Triangle wave 40% symmetry ratio'], 'RCLPtri40');
+Final_Plots(Triangle40_differentiatior,['High-pass filter response for' newline 'Triangle wave 40% symmetry ratio'], 'RCHPtri40');
 
 %% converted to Final_Plot function
 % figure(123);

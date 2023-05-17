@@ -1,0 +1,157 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{clear}\PYG{+w}{ }\PYG{n+nb}{all}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{close}\PYG{+w}{ }\PYG{l+s}{all}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nb}{clc}\PYG{p}{;}
+\PYG{p}{[}\PYG{n}{Square50\PYGZus{}integrator}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Square50\PYGZus{}differentiatior}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Triangle40\PYGZus{}integrator}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Triangle40\PYGZus{}differentiatior}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{time}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Import\PYGZus{}csv}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}csv/RC\PYGZus{}filters.csv\PYGZsq{}}\PYG{p}{);}
+
+\PYG{n}{fs}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{100000}\PYG{p}{;}
+\PYG{n+nb}{duration}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.01}\PYG{p}{;}
+\PYG{n}{N}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{fs}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nb}{duration}\PYG{p}{;}
+\PYG{n}{t}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{fs}\PYG{p}{:}\PYG{n+nb}{duration}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{fs}\PYG{p}{;}
+\PYG{n}{f}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{1000}\PYG{p}{;}
+\PYG{n}{a}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mf}{2.119}\PYG{p}{;}
+\PYG{n}{phi}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{n}{a}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mf}{2.5}\PYG{p}{;}
+\PYG{n}{phi}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{n}{s}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nb}{sin}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{);}
+\PYG{n}{tr50}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sawtooth}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.5}\PYG{p}{);}
+\PYG{n}{tr40}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sawtooth}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.4}\PYG{p}{);}
+\PYG{n}{sq50}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{square}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{50}\PYG{p}{);}
+\PYG{n}{sq25}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{square}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{25}\PYG{p}{);}
+
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Sin wave\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sin\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{tr50}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Triangle wave 50\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}tri50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{tr40}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}tri40\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{sq50}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sqr50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{sq25}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Square wave 25\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}sqr25\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Square50\PYGZus{}integrator}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}Low\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCLPsqr50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Square50\PYGZus{}differentiatior}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}High\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCHPsqr50\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Triangle40\PYGZus{}integrator}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}Low\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCLPtri40\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Triangle40\PYGZus{}differentiatior}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}High\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCHPtri40\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} converted to Final\PYGZus{}Plot function}
+\PYG{c}{\PYGZpc{} figure(123);}
+\PYG{c}{\PYGZpc{} \PYGZpc{}sin}
+\PYG{c}{\PYGZpc{} subplot(4,3,1)}
+\PYG{c}{\PYGZpc{} plot(t,s)}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Time (seconds)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0,0.002])}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Amplitude (Volts)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}3,3])}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Time\PYGZhy{}domain sinus\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} \PYGZpc{}triangle with 50\PYGZpc{} duty cycle}
+\PYG{c}{\PYGZpc{} subplot(4,3,2)}
+\PYG{c}{\PYGZpc{} plot(t,tr)}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Time (seconds)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0,0.002])}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Amplitude (Volts)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}3,3])}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Time\PYGZhy{}domain triangle\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} \PYGZpc{}square with 50\PYGZpc{} duty cycle}
+\PYG{c}{\PYGZpc{} subplot(4,3,3)}
+\PYG{c}{\PYGZpc{} plot(t,sq)}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Time (seconds)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0,0.002])}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Amplitude (Volts)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}3,3])}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Time\PYGZhy{}domain square\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} \PYGZpc{}fft sin}
+\PYG{c}{\PYGZpc{} s\PYGZus{}fft = fft(s);}
+\PYG{c}{\PYGZpc{} \PYGZpc{}fft triangle}
+\PYG{c}{\PYGZpc{} tr\PYGZus{}fft = fft(tr);}
+\PYG{c}{\PYGZpc{} \PYGZpc{}fft square}
+\PYG{c}{\PYGZpc{} sq\PYGZus{}fft = fft(sq);}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} s\PYGZus{}oneSide = s\PYGZus{}fft(1:N/2);}
+\PYG{c}{\PYGZpc{} frequencies = fs * (0:N/2\PYGZhy{}1) / N; }
+\PYG{c}{\PYGZpc{} S\PYGZus{}magnitude = abs(s\PYGZus{}oneSide) / (N/2);}
+\PYG{c}{\PYGZpc{} S\PYGZus{}phase = angle(s\PYGZus{}oneSide) * 180/pi;}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} tr\PYGZus{}oneSide = tr\PYGZus{}fft(1:N/2);}
+\PYG{c}{\PYGZpc{} Tr\PYGZus{}magnitude = abs(tr\PYGZus{}oneSide) / (N/2);}
+\PYG{c}{\PYGZpc{} Tr\PYGZus{}phase = angle(tr\PYGZus{}oneSide) * 180/pi;}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} sq\PYGZus{}oneSide = sq\PYGZus{}fft(1:N/2);}
+\PYG{c}{\PYGZpc{} Sq\PYGZus{}magnitude = abs(sq\PYGZus{}oneSide) / (N/2);}
+\PYG{c}{\PYGZpc{} Sq\PYGZus{}phase = angle(sq\PYGZus{}oneSide) * 180/pi;}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} freq\PYGZus{}of\PYGZus{}interest = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000];}
+\PYG{c}{\PYGZpc{} indices = zeros(size(freq\PYGZus{}of\PYGZus{}interest));}
+\PYG{c}{\PYGZpc{} for i = 1:length(freq\PYGZus{}of\PYGZus{}interest)}
+\PYG{c}{\PYGZpc{}     [\PYGZti{}, indices(i)] = min(abs(frequencies \PYGZhy{} freq\PYGZus{}of\PYGZus{}interest(i)));}
+\PYG{c}{\PYGZpc{} end}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,4)}
+\PYG{c}{\PYGZpc{} plot(frequencies, db(S\PYGZus{}magnitude));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}40, 10]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Magnitude\PYGZsq{});}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Frequency spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,5)}
+\PYG{c}{\PYGZpc{} plot(frequencies, db(Tr\PYGZus{}magnitude));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Magnitude\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}40, 10]);}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Frequency spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,6)}
+\PYG{c}{\PYGZpc{} plot(frequencies, db(Sq\PYGZus{}magnitude));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Magnitude\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}20, 10]);}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Frequency spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,7)}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), S\PYGZus{}magnitude(indices));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Magnitude\PYGZsq{});}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Frequency spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,8)}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), Tr\PYGZus{}magnitude(indices));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Magnitude\PYGZsq{});}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Frequency spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,9)}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), Sq\PYGZus{}magnitude(indices));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Magnitude\PYGZsq{});}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Frequency spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,10)}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), S\PYGZus{}phase(indices));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Phase (deg)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}180, 180]);}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Phase spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,11)}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), Tr\PYGZus{}phase(indices));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Phase (deg)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}200, 200]);}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Phase spectrum\PYGZsq{});}
+\PYG{c}{\PYGZpc{} }
+\PYG{c}{\PYGZpc{} subplot(4,3,12)}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), Sq\PYGZus{}phase(indices));}
+\PYG{c}{\PYGZpc{} xlabel(\PYGZsq{}Frequency (Hz)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} xlim([0, 11000]);}
+\PYG{c}{\PYGZpc{} ylabel(\PYGZsq{}Phase (deg)\PYGZsq{});}
+\PYG{c}{\PYGZpc{} ylim([\PYGZhy{}200, 200]);}
+\PYG{c}{\PYGZpc{} title(\PYGZsq{}Phase spectrum\PYGZsq{});}
+\end{Verbatim}

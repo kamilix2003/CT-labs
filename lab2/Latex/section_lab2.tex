@@ -129,41 +129,109 @@
 	\end{figure}
 	
 	\section{Method for calculating Fourier Series coefficients}
-	All calculations are made using Matlab with Signal Processing Toolbox, source code can be found in the Appendix \ref{sec:source-code}
+	All calculations are made using Matlab with Signal Processing Toolbox, source code can be found in Appendix \ref{sec:source-code}
 	
+	First step in our calculation is generating signals that we measured during exercise. Pure signals were obtained with built in function of Signal Processing Toolbox and Filtered signals were evaluated using NI Multisim SPICE software.
 	
+	Next step is finding first 10 
 	
 	\section{Comparison}
 	
 	\subsection{Pure signals}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sin}
+			\caption{Sin wave}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
+			\caption{Square wave 50\% duty cycle}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr25}
+			\caption{Square wave 25\% duty cycle}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.23\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/tri50}
+			\caption{Triangle wave 50\% symmetry ratio}
+		\end{subfigure}
+		\caption{Fourier Series expansion, frequency and phase spectrum plots}
+		\label{fig:pure-signals}
+	\end{figure}
 	
 	\subsection{RC filters}
 	\subsubsection{Low-pass filter}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
+			\caption{Pure signal}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/RCLPsqr50}
+			\caption{Filtered signal}
+		\end{subfigure}
+		\caption{Low-pass filter response for Square wave 50\% duty cycle}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/tri40}
+			\caption{Pure signal}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/RCLPtri40}
+			\caption{Pure signal}
+		\end{subfigure}
+		\caption{Low-pass filter response for Triangle wave 40\% symmetry ratio}
+	\end{figure}
+	
 	\subsubsection{High-pass filter}
 	
-	\newpage
-	\begin{center}
-		\includegraphics{../Matlab/img/sin}
-		\includegraphics{../Matlab/img/sqr50}
-		\includegraphics{../Matlab/img/sqr25}
-		\includegraphics{../Matlab/img/tri50}
-		\includegraphics{../Matlab/img/tri40}
-		\includegraphics{../Matlab/img/RCLPsqr50}
-		\includegraphics{../Matlab/img/RCHPsqr50}
-		\includegraphics{../Matlab/img/RCLPtri40}
-		\includegraphics{../Matlab/img/RCHPtri40}
-	\end{center}
-	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
+			\caption{Pure signal}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/RCHPsqr50}
+			\caption{Filtered signal}
+		\end{subfigure}
+		\caption{High-pass filter response for Square wave 50\% duty cycle}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/tri40}
+			\caption{Pure signal}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/RCHPtri40}
+			\caption{Filtered signal}
+		\end{subfigure}
+		\caption{High-pass filter response for Triangle wave 40\% symmetry ratio}
+	\end{figure}
+		
 	\section{Summary}
 	
 	\newpage
 	\appendix
 	\section{Source Code}\label{sec:source-code}
 	\href{https://github.com/kamilix2003/CT_labs}{GITHUB repository}
-	\subsection*{Fourier.m}
-	\inputminted{matlab}{../Matlab/Fourier.m}
-	\subsection*{fourier coefficient.m}
-	\inputminted{matlab}{../Matlab/fourier_coefficient.m}
-	\subsection*{RC circuit.m}
+	\subsection*{lab2.m}
+	\inputminted{matlab}{../Matlab/lab2.m}
+	\subsection*{Final Plots.m}
+	\inputminted{matlab}{../Matlab/Final_Plots.m}
+%	\subsection*{Fourier.m}
+%	\inputminted{matlab}{../Matlab/Fourier.m}
+%	\subsection*{fourier coefficient.m}
+%	\inputminted{matlab}{../Matlab/fourier_coefficient.m}
+	\subsection*{Import csv.m}
 	\inputminted{matlab}{../Matlab/RC_circuit.m}
 \end{document}
