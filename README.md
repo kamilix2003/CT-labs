@@ -1,5 +1,6 @@
 # Circuit theory laboratory
 [Nodal Analysis](lab1/Latex/template_Report.pdf)
+
 [Fourier Series](lab2/Latex/section_lab2.pdf)
 
 ## HOW TO GIT(gud) for teamek
