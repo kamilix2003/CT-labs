@@ -8,6 +8,7 @@
 	top=20mm,
 }
 
+\usepackage{wrapfig}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -28,7 +29,6 @@
 	pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen,
 }
-\usepackage{wrapfig}
 \title{Fourier Series\\
 	\large Laboratory II}
 \author{Patrycja Nazim, Adrian Król, Kamil Chaj}
@@ -199,31 +199,52 @@
 	
 		\begin{figure}[H]
 		\centering
+		
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/sin}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint5.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/sin}
 			\caption{Sin wave}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/dut50}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut50}
 			\caption{Square wave 50\% duty cycle}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/dut25}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint3.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut25}
 			\caption{Square wave 25\% duty cycle}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/trig50}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint2.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/trig50}
 			\caption{Triangle wave 50\% symmetry ratio}
 		\end{subfigure}
-		\caption{Calculated signals}
+		\caption{Measured signals}
 		\label{fig:pure-signals}
 	\end{figure}
 	
 	\subsection{RC filters}
+	
 	\subsubsection{Low-pass filter}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint1.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/dut50}
+			\caption{Sin wave}
+		\end{subfigure}
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/trig40}
+			\caption{Square wave 50\% duty cycle}
+		\end{subfigure}
+		\caption{Measured signals}
+	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
@@ -251,6 +272,22 @@
 	\end{figure}
 	
 	\subsubsection{High-pass filter}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint10.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/dut50}
+			\caption{Square wave 25\% duty cycle}
+		\end{subfigure}
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint7.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/trig40}
+			\caption{Triangle wave 50\% symmetry ratio}
+		\end{subfigure}
+		\caption{Measured signals}
+		\label{fig:pure-signals}
+	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
