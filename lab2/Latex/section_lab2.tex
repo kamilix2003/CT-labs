@@ -8,6 +8,8 @@
 	top=20mm,
 }
 
+\usepackage{ gensymb }
+\usepackage{wrapfig}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -28,7 +30,6 @@
 	pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen,
 }
-\usepackage{wrapfig}
 \title{Fourier Series\\
 	\large Laboratory II}
 \author{Patrycja Nazim, Adrian Król, Kamil Chaj}
@@ -141,89 +142,139 @@
 	First step in our calculation is generating signals that we measured during exercise. Pure signals were obtained with built-in functions of Signal Processing Toolbox and Filtered signals were evaluated using NI Multisim SPICE software.
 		
 	Next step is finding first 10 coefficients of Fourier series for a signal which we calculated by taking inner product of signal with basis vector. In our calculations we used $\sin nt ,\thinspace \cos nt$ and $1$ as our basis vectors.
-	\begin{equation}
+	\begin{equation}\label{eq:a0}
 		a_0 = \left\langle s(t), 1 \right\rangle
 	\end{equation}
-	\begin{equation}
+	\begin{equation}\label{eq:an}
 		a_n = \left\langle s(t), \cos n\omega t \right\rangle
 	\end{equation}
-	\begin{equation}
+	\begin{equation}\label{eq:bn}
 		b_n = \left\langle s(t), \sin n\omega t \right\rangle
 	\end{equation}
 
 	During exercise we recorded Fourier series of a signal in Amplitude-Phase form so we need to convert $a_n$ and $b_n$ coefficients into amplitude $A_n$ and phase $\varphi_n$
-	\begin{equation}
+	\begin{equation}\label{eq:An}
 		A_n = \sqrt{a_n^2 + b_n^2}
 	\end{equation}
-	\begin{equation}
+	\begin{equation}\label{eq:phi}
 		\varphi_n = \arg(a_n - j b_n)
 	\end{equation}
 		
 	Knowing first 10 coefficients we can plot approximation of a signal using one of following formulas. Example of approximation of square wave is on the second plot in Figure \ref{fig:example-plot}.
 	
-	\begin{equation}
-		s(t) = \frac{a_0}{2} + \sum_{n=1}^{10}(a_n\cos(n\omega t)+b_n\sin(n\omega t))
+	\begin{equation}\label{eq:FS}
+		s(t) \approx \frac{a_0}{2} + \sum_{n=1}^{10}(a_n\cos(n\omega t)+b_n\sin(n\omega t))
 	\end{equation}
-	\begin{equation}
-		s(t) = \frac{A_0}{2} + \sum_{n=1}^{10}(A_n\cos(n\omega t +\varphi_n))
+	\begin{equation}\label{eq:FSap}
+		s(t) \approx \frac{A_0}{2} + \sum_{n=1}^{10}(A_n\cos(n\omega t +\varphi_n))
 	\end{equation}
 
-	For third and fourth plot in Figure \ref{fig:example-plot} we are calculating Discrete Fourier transform for 10 oscillations of a signal using Fast Fourier transform algorithm from Signal Processing Toolbox and then plotting magnitude and argument of FT both in decibel scale on y axis.
+	For third and fourth plot in Figure \ref{fig:example-plot} we are calculating Discrete Fourier transform for 10 oscillations of a signal using Fast Fourier transform algorithm from Signal Processing Toolbox and then plotting magnitude and argument of FT both in decibel scale on vertical axis.
 
 	\section{Comparison}
+	We are going to be comparing calculated and measured signals, their Fourier series expansion and/or Fourier transform. During comparison we will determine if Harmonic analysis is useful in signal analysis and what benefits it brings.
+	
+	$\ast$ Yellow signal on oscilloscope is pure signal, Blue is filtered signal
 	\subsection{Pure signals}
+	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is approximately equal to amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90$\degree$ therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sin}
+			\caption{calculated}
+			\label{fig:calc-signals-a}
+		\end{subfigure}
+		\quad
+		\begin{subfigure}[][][t]{0.3\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint5.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/sin}
+			\caption{measured}
+			\label{fig:meas-signal-a}
+		\end{subfigure}
+		\caption{Sin wave}
+		\label{fig:pure-sin}
+	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.23\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sin}
 			\caption{Sin wave}
+			\label{fig:calc-signals-a}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
 			\caption{Square wave 50\% duty cycle}
+			\label{fig:calc-signals-b}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sqr25}
 			\caption{Square wave 25\% duty cycle}
+			\label{fig:calc-signals-c}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/tri50}
 			\caption{Triangle wave 50\% symmetry ratio}
+			\label{fig:calc-signals-d}
 		\end{subfigure}
 		\caption{Calculated signals}
-		\label{fig:pure-signals}
+		\label{fig:calc-signals}
 	\end{figure}
 	
 		\begin{figure}[H]
 		\centering
+		
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/sin}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint5.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/sin}
 			\caption{Sin wave}
+			\label{fig:meas-signal-a}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/dut50}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut50}
 			\caption{Square wave 50\% duty cycle}
+			\label{fig:meas-signal-b}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/dut25}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint3.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut25}
 			\caption{Square wave 25\% duty cycle}
+			\label{fig:meas-signal-c}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../img/Circuit1/trig50}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint2.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/trig50}
 			\caption{Triangle wave 50\% symmetry ratio}
+			\label{fig:meas-signal-d}
 		\end{subfigure}
-		\caption{Calculated signals}
-		\label{fig:pure-signals}
+		\caption{Measured signals}
+		\label{fig:meas-signal}
 	\end{figure}
 	
 	\subsection{RC filters}
+	
 	\subsubsection{Low-pass filter}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint1.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/dut50}
+			\caption{Sin wave}
+		\end{subfigure}
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/trig40}
+			\caption{Square wave 50\% duty cycle}
+		\end{subfigure}
+		\caption{Measured signals}
+	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
@@ -251,6 +302,22 @@
 	\end{figure}
 	
 	\subsubsection{High-pass filter}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint10.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/dut50}
+			\caption{Square wave 25\% duty cycle}
+		\end{subfigure}
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint7.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/trig40}
+			\caption{Triangle wave 50\% symmetry ratio}
+		\end{subfigure}
+		\caption{Measured signals}
+		\label{fig:pure-signals}
+	\end{figure}
 	
 	\begin{figure}[H]
 		\centering

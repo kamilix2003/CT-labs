@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  17 MAY 2023 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  19 MAY 2023 02:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -50,6 +50,17 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@dimlist=\toks17
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/gensymb\gensymb.sty
+Package: gensymb 2022/10/17 v1.0.2 (KJH)
+)
+(C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen147
+\WF@size=\dimen148
+\c@WF@wrappedlines=\count196
+\WF@box=\box51
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 
@@ -60,8 +71,8 @@ Package xcolor Info: Driver file: pdftex.def on input line 227.
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-\stockwidth=\dimen147
-\stockheight=\dimen148
+\stockwidth=\dimen149
+\stockheight=\dimen150
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
@@ -87,8 +98,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
@@ -100,83 +111,83 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen151
+\@emptytoks=\toks19
+\ex@=\dimen153
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen152
+\pmbraise@=\dimen154
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count196
+\inf@bad=\count197
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count197
-\leftroot@=\count198
+\uproot@=\count198
+\leftroot@=\count199
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count199
-\DOTSCASE@=\count266
+\classnum@=\count266
+\DOTSCASE@=\count267
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
+\Mathstrutbox@=\box52
+\strutbox@=\box53
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen153
+\big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count267
+\macc@depth=\count268
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count268
+\c@MaxMatrixCols=\count269
 \dotsspace@=\muskip16
-\c@parentequation=\count269
-\dspbrk@lvl=\count270
-\tag@help=\toks19
-\row@=\count271
-\column@=\count272
-\maxfields@=\count273
-\andhelp@=\toks20
-\eqnshift@=\dimen154
-\alignsep@=\dimen155
-\tagshift@=\dimen156
-\tagwidth@=\dimen157
-\totwidth@=\dimen158
-\lineht@=\dimen159
-\@envbody=\toks21
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks20
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks21
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks22
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks22
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count274
-\lst@gtempboxa=\box53
-\lst@token=\toks23
-\lst@length=\count275
-\lst@currlwidth=\dimen160
-\lst@column=\count276
-\lst@pos=\count277
-\lst@lostspace=\dimen161
-\lst@width=\dimen162
-\lst@newlines=\count278
-\lst@lineno=\count279
-\lst@maxwidth=\dimen163
+\lst@mode=\count275
+\lst@gtempboxa=\box54
+\lst@token=\toks24
+\lst@length=\count276
+\lst@currlwidth=\dimen162
+\lst@column=\count277
+\lst@pos=\count278
+\lst@lostspace=\dimen163
+\lst@width=\dimen164
+\lst@newlines=\count279
+\lst@lineno=\count280
+\lst@maxwidth=\dimen165
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count280
-\lst@skipnumbers=\count281
-\lst@framebox=\box54
+\c@lstnumber=\count281
+\lst@skipnumbers=\count282
+\lst@framebox=\box55
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -197,15 +208,15 @@ Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count282
+\etb@tempcnta=\count283
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
-\FV@CodeLineNo=\count283
+\FV@CodeLineNo=\count284
 \FV@InFile=\read2
-\FV@TabBox=\box55
-\c@FancyVerbLine=\count284
-\FV@StepNumber=\count285
+\FV@TabBox=\box56
+\c@FancyVerbLine=\count285
+\FV@StepNumber=\count286
 \FV@OutFile=\write3
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
@@ -214,61 +225,61 @@ tim
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2023/01/19 line numbers on paragraphs v5.1
-\linenopenalty=\count286
-\output=\toks24
-\linenoprevgraf=\count287
-\linenumbersep=\dimen164
-\linenumberwidth=\dimen165
-\c@linenumber=\count288
-\c@pagewiselinenumber=\count289
-\c@LN@truepage=\count290
-\c@internallinenumber=\count291
-\c@internallinenumbers=\count292
-\quotelinenumbersep=\dimen166
-\bframerule=\dimen167
-\bframesep=\dimen168
-\bframebox=\box56
-\linenoamsmath@ams@eqpen=\count293
+\linenopenalty=\count287
+\output=\toks25
+\linenoprevgraf=\count288
+\linenumbersep=\dimen166
+\linenumberwidth=\dimen167
+\c@linenumber=\count289
+\c@pagewiselinenumber=\count290
+\c@LN@truepage=\count291
+\c@internallinenumber=\count292
+\c@internallinenumbers=\count293
+\quotelinenumbersep=\dimen168
+\bframerule=\dimen169
+\bframesep=\dimen170
+\bframebox=\box57
+\linenoamsmath@ams@eqpen=\count294
 LaTeX Info: Redefining \\ on input line 3131.
 )
-\c@FV@TrueTabGroupLevel=\count294
-\c@FV@TrueTabCounter=\count295
-\FV@TabBox@Group=\box57
+\c@FV@TrueTabGroupLevel=\count295
+\c@FV@TrueTabCounter=\count296
+\FV@TabBox@Group=\box58
 \FV@TmpLength=\skip52
-\c@FV@HighlightLinesStart=\count296
-\c@FV@HighlightLinesStop=\count297
-\FV@LoopCount=\count298
-\FV@NCharsBox=\box58
-\FV@BreakIndent=\dimen169
-\FV@BreakIndentNChars=\count299
-\FV@BreakSymbolSepLeft=\dimen170
-\FV@BreakSymbolSepLeftNChars=\count300
-\FV@BreakSymbolSepRight=\dimen171
-\FV@BreakSymbolSepRightNChars=\count301
-\FV@BreakSymbolIndentLeft=\dimen172
-\FV@BreakSymbolIndentLeftNChars=\count302
-\FV@BreakSymbolIndentRight=\dimen173
-\FV@BreakSymbolIndentRightNChars=\count303
-\c@FancyVerbLineBreakLast=\count304
-\FV@LineBox=\box59
-\FV@LineIndentBox=\box60
-\c@FV@BreakBufferDepth=\count305
-\FV@LineWidth=\dimen174
+\c@FV@HighlightLinesStart=\count297
+\c@FV@HighlightLinesStop=\count298
+\FV@LoopCount=\count299
+\FV@NCharsBox=\box59
+\FV@BreakIndent=\dimen171
+\FV@BreakIndentNChars=\count300
+\FV@BreakSymbolSepLeft=\dimen172
+\FV@BreakSymbolSepLeftNChars=\count301
+\FV@BreakSymbolSepRight=\dimen173
+\FV@BreakSymbolSepRightNChars=\count302
+\FV@BreakSymbolIndentLeft=\dimen174
+\FV@BreakSymbolIndentLeftNChars=\count303
+\FV@BreakSymbolIndentRight=\dimen175
+\FV@BreakSymbolIndentRightNChars=\count304
+\c@FancyVerbLineBreakLast=\count305
+\FV@LineBox=\box60
+\FV@LineIndentBox=\box61
+\c@FV@BreakBufferDepth=\count306
+\FV@LineWidth=\dimen176
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count306
-\calc@Bcount=\count307
-\calc@Adimen=\dimen175
-\calc@Bdimen=\dimen176
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen177
+\calc@Bdimen=\dimen178
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count308
+\calc@Ccount=\count309
 \calc@Cskip=\skip55
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
@@ -302,33 +313,33 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )) (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\integerpart=\count309
-\decimalpart=\count310
+\integerpart=\count310
+\decimalpart=\count311
 )
 Package: xstring 2023/01/14 v1.85 String manipulations (CT)
 ) (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip56
-\fb@frw=\dimen177
-\fb@frh=\dimen178
-\FrameRule=\dimen179
-\FrameSep=\dimen180
+\fb@frw=\dimen179
+\fb@frh=\dimen180
+\FrameRule=\dimen181
+\FrameSep=\dimen182
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count311
-\float@exts=\toks25
-\float@box=\box61
-\@float@everytoks=\toks26
-\@floatcapt=\box62
+\c@float@type=\count312
+\float@exts=\toks26
+\float@box=\box62
+\@float@everytoks=\toks27
+\@floatcapt=\box63
 )
 \minted@appexistsfile=\read3
-\minted@bgbox=\box63
+\minted@bgbox=\box64
 \minted@code=\write4
-\c@minted@FancyVerbLineTemp=\count312
-\c@minted@pygmentizecounter=\count313
-\@float@every@listing=\toks27
-\c@listing=\count314
+\c@minted@FancyVerbLineTemp=\count313
+\c@minted@pygmentizecounter=\count314
+\@float@every@listing=\toks28
+\c@listing=\count315
 )
 runsystem(if not exist _minted-section_lab2 mkdir _minted-section_lab2)...execu
 ted.
@@ -341,15 +352,15 @@ sty
 y
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks28
-\pgfutil@tempdima=\dimen181
-\pgfutil@tempdimb=\dimen182
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen183
+\pgfutil@tempdimb=\dimen184
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box64
+\pgfutil@abb=\box65
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -368,33 +379,33 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 filtered.code.tex
-\pgfkeys@tmptoks=\toks31
+\pgfkeys@tmptoks=\toks32
 ))
-\pgf@x=\dimen183
-\pgf@y=\dimen184
-\pgf@xa=\dimen185
-\pgf@ya=\dimen186
-\pgf@xb=\dimen187
-\pgf@yb=\dimen188
-\pgf@xc=\dimen189
-\pgf@yc=\dimen190
-\pgf@xd=\dimen191
-\pgf@yd=\dimen192
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
+\pgf@xd=\dimen193
+\pgf@yd=\dimen194
 \w@pgf@writea=\write5
 \r@pgf@reada=\read4
-\c@pgf@counta=\count315
-\c@pgf@countb=\count316
-\c@pgf@countc=\count317
-\c@pgf@countd=\count318
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
-\pgf@sys@id@count=\count319
+\c@pgf@counta=\count316
+\c@pgf@countb=\count317
+\c@pgf@countc=\count318
+\c@pgf@countd=\count319
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count320
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -413,8 +424,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count320
-\pgfsyssoftpath@bigbuffer@items=\count321
+\pgfsyssoftpath@smallbuffer@items=\count321
+\pgfsyssoftpath@bigbuffer@items=\count322
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -432,12 +443,12 @@ code.tex
 code.tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen193
-\pgfmath@count=\count322
-\pgfmath@box=\box65
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
+\pgfmath@dimen=\dimen195
+\pgfmath@count=\count323
+\pgfmath@box=\box66
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex
@@ -459,59 +470,59 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count323
+\c@pgfmathroundto@lastzeros=\count324
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen194
-\pgf@picmaxx=\dimen195
-\pgf@picminy=\dimen196
-\pgf@picmaxy=\dimen197
-\pgf@pathminx=\dimen198
-\pgf@pathmaxx=\dimen199
-\pgf@pathminy=\dimen256
-\pgf@pathmaxy=\dimen257
-\pgf@xx=\dimen258
-\pgf@xy=\dimen259
-\pgf@yx=\dimen260
-\pgf@yy=\dimen261
-\pgf@zx=\dimen262
-\pgf@zy=\dimen263
+\pgf@picminx=\dimen196
+\pgf@picmaxx=\dimen197
+\pgf@picminy=\dimen198
+\pgf@picmaxy=\dimen199
+\pgf@pathminx=\dimen256
+\pgf@pathmaxx=\dimen257
+\pgf@pathminy=\dimen258
+\pgf@pathmaxy=\dimen259
+\pgf@xx=\dimen260
+\pgf@xy=\dimen261
+\pgf@yx=\dimen262
+\pgf@yy=\dimen263
+\pgf@zx=\dimen264
+\pgf@zy=\dimen265
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen264
-\pgf@path@lasty=\dimen265
+\pgf@path@lastx=\dimen266
+\pgf@path@lasty=\dimen267
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen266
-\pgf@shorten@start@additional=\dimen267
+\pgf@shorten@end@additional=\dimen268
+\pgf@shorten@start@additional=\dimen269
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box66
-\pgf@hbox=\box67
-\pgf@layerbox@main=\box68
-\pgf@picture@serial@count=\count324
+\pgfpic=\box67
+\pgf@hbox=\box68
+\pgf@layerbox@main=\box69
+\pgf@picture@serial@count=\count325
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen268
+\pgflinewidth=\dimen270
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen269
-\pgf@pt@y=\dimen270
-\pgf@pt@temp=\dimen271
+\pgf@pt@x=\dimen271
+\pgf@pt@y=\dimen272
+\pgf@pt@temp=\dimen273
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -528,14 +539,14 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen272
+\pgfarrowsep=\dimen274
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen273
-\pgf@sys@shading@range@num=\count325
-\pgf@shadingcount=\count326
+\pgf@max=\dimen275
+\pgf@sys@shading@range@num=\count326
+\pgf@shadingcount=\count327
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -544,7 +555,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box69
+\pgfexternal@startupbox=\box70
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -565,7 +576,7 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box70
+\pgfnodeparttextbox=\box71
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -574,8 +585,8 @@ File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen274
-\pgf@nodesepend=\dimen275
+\pgf@nodesepstart=\dimen276
+\pgf@nodesepend=\dimen277
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -596,10 +607,10 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen276
-\pgffor@skip=\dimen277
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@iter=\dimen278
+\pgffor@skip=\dimen279
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -608,34 +619,34 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count327
-\pgfplotmarksize=\dimen278
+\pgf@plot@mark@count=\count328
+\pgfplotmarksize=\dimen280
 )
-\tikz@lastx=\dimen279
-\tikz@lasty=\dimen280
-\tikz@lastxsaved=\dimen281
-\tikz@lastysaved=\dimen282
-\tikz@lastmovetox=\dimen283
-\tikz@lastmovetoy=\dimen284
-\tikzleveldistance=\dimen285
-\tikzsiblingdistance=\dimen286
-\tikz@figbox=\box71
-\tikz@figbox@bg=\box72
-\tikz@tempbox=\box73
-\tikz@tempbox@bg=\box74
-\tikztreelevel=\count328
-\tikznumberofchildren=\count329
-\tikznumberofcurrentchild=\count330
-\tikz@fig@count=\count331
+\tikz@lastx=\dimen281
+\tikz@lasty=\dimen282
+\tikz@lastxsaved=\dimen283
+\tikz@lastysaved=\dimen284
+\tikz@lastmovetox=\dimen285
+\tikz@lastmovetoy=\dimen286
+\tikzleveldistance=\dimen287
+\tikzsiblingdistance=\dimen288
+\tikz@figbox=\box72
+\tikz@figbox@bg=\box73
+\tikz@tempbox=\box74
+\tikz@tempbox@bg=\box75
+\tikztreelevel=\count329
+\tikznumberofchildren=\count330
+\tikznumberofcurrentchild=\count331
+\tikz@fig@count=\count332
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count332
-\pgfmatrixcurrentcolumn=\count333
-\pgf@matrix@numberofcolumns=\count334
+\pgfmatrixcurrentrow=\count333
+\pgfmatrixcurrentcolumn=\count334
+\pgf@matrix@numberofcolumns=\count335
 )
-\tikz@expandcount=\count335
+\tikz@expandcount=\count336
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -653,10 +664,10 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowinset=\dimen287
-\pgfarrowlength=\dimen288
-\pgfarrowwidth=\dimen289
-\pgfarrowlinewidth=\dimen290
+\pgfarrowinset=\dimen289
+\pgfarrowlength=\dimen290
+\pgfarrowwidth=\dimen291
+\pgfarrowlinewidth=\dimen292
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarybending.code.tex
@@ -669,18 +680,18 @@ File: pgfmodulebending.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 nonlineartransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgftransformnonlinearflatness=\dimen291
+\pgftransformnonlinearflatness=\dimen293
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 arycurvilinear.code.tex
 File: pgflibrarycurvilinear.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@curvilinear@time@a=\dimen292
-\pgf@curvilinear@length@a=\dimen293
-\pgf@curvilinear@length@b=\dimen294
-\pgf@curvilinear@length@c=\dimen295
-\pgf@curvilinear@length@d=\dimen296
+\pgf@curvilinear@time@a=\dimen294
+\pgf@curvilinear@length@a=\dimen295
+\pgf@curvilinear@length@b=\dimen296
+\pgf@curvilinear@length@c=\dimen297
+\pgf@curvilinear@length@d=\dimen298
 )
-\pgf@arrows@the@rigidity=\dimen297
+\pgf@arrows@the@rigidity=\dimen299
 ))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibraryfpu.code.tex
@@ -688,24 +699,24 @@ z/libraries\tikzlibraryfpu.code.tex
 aryfpu.code.tex))
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirc.de
 fines.tex
-\pgf@circ@count@a=\count336
-\pgf@circ@count@b=\count337
-\pgf@circ@count@c=\count338
-\pgf@circ@res@up=\dimen298
-\pgf@circ@res@down=\dimen299
-\pgf@circ@res@zero=\dimen300
-\pgf@circ@res@left=\dimen301
-\pgf@circ@res@right=\dimen302
-\pgf@circ@res@other=\dimen303
-\pgf@circ@res@step=\dimen304
-\pgf@circ@res@temp=\dimen305
-\pgf@circ@Rlen=\dimen306
-\pgf@circ@scaled@Rlen=\dimen307
-\pgfstartlinewidth=\dimen308
+\pgf@circ@count@a=\count337
+\pgf@circ@count@b=\count338
+\pgf@circ@count@c=\count339
+\pgf@circ@res@up=\dimen300
+\pgf@circ@res@down=\dimen301
+\pgf@circ@res@zero=\dimen302
+\pgf@circ@res@left=\dimen303
+\pgf@circ@res@right=\dimen304
+\pgf@circ@res@other=\dimen305
+\pgf@circ@res@step=\dimen306
+\pgf@circ@res@temp=\dimen307
+\pgf@circ@Rlen=\dimen308
+\pgf@circ@scaled@Rlen=\dimen309
+\pgfstartlinewidth=\dimen310
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircuti
 ls.tex
-\ctikz@scratchbox=\box75
+\ctikz@scratchbox=\box76
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircpat
 h.tex)
@@ -717,7 +728,7 @@ opoles.tex)
 oles.tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirctri
 poles.tex
-\pgf@circ@res@count=\count339
+\pgf@circ@res@count=\count340
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircqua
 dpoles.tex)
@@ -727,7 +738,7 @@ tipoles.tex)
 el.tex)
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircvol
 tage.tex
-\pgfcirc@labelshift=\dimen309
+\pgfcirc@labelshift=\dimen311
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirccur
 rent.tex)
@@ -738,27 +749,28 @@ Package: caption 2023/03/12 v3.6j Customizing captions (AR)
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
-\caption@tempdima=\dimen310
-\captionmargin=\dimen311
-\caption@leftmargin=\dimen312
-\caption@rightmargin=\dimen313
-\caption@width=\dimen314
-\caption@indent=\dimen315
-\caption@parindent=\dimen316
-\caption@hangindent=\dimen317
+\caption@tempdima=\dimen312
+\captionmargin=\dimen313
+\caption@leftmargin=\dimen314
+\caption@rightmargin=\dimen315
+\caption@width=\dimen316
+\caption@indent=\dimen317
+\caption@parindent=\dimen318
+\caption@hangindent=\dimen319
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count340
-\c@continuedfloat=\count341
+\c@caption@flags=\count341
+\c@continuedfloat=\count342
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
 )
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 239.
-\c@subfigure=\count342
+\c@subfigure=\count343
 Package caption Info: New subtype `subtable' on input line 239.
-\c@subtable=\count343
+\c@subtable=\count344
 ) (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
 
@@ -789,11 +801,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count344
+\c@section@level=\count345
 )
-\@linkdim=\dimen318
-\Hy@linkcounter=\count345
-\Hy@pagecounter=\count346
+\@linkdim=\dimen320
+\Hy@linkcounter=\count346
+\Hy@pagecounter=\count347
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
@@ -803,7 +815,7 @@ Now handling font encoding PD1 ...
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count347
+\Hy@SavedSpaceFactor=\count348
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
@@ -817,14 +829,14 @@ Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4410.
-\c@Hy@tempcnt=\count348
+\c@Hy@tempcnt=\count349
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen319
+\XeTeXLinkMargin=\dimen321
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -834,9 +846,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count349
-\Field@Width=\dimen320
-\Fld@charsize=\dimen321
+\Fld@menulength=\count350
+\Field@Width=\dimen322
+\Fld@charsize=\dimen323
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -849,9 +861,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6057.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count350
-\c@Item=\count351
-\c@Hfootnote=\count352
+\Hy@abspage=\count351
+\c@Item=\count352
+\c@Hfootnote=\count353
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -862,8 +874,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count353
-\c@bookmark@seq@number=\count354
+\Fld@listcount=\count354
+\c@bookmark@seq@number=\count355
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -881,17 +893,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 Package hyperref Warning: Invalid value `false'
 (hyperref)                for option `pdfborder'.
-(hyperref)                Option setting is ignored on input line 30.
+(hyperref)                Option setting is ignored on input line 32.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 30.
-(C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen322
-\WF@size=\dimen323
-\c@WF@wrappedlines=\count355
-\WF@box=\box76
-\WF@everypar=\toks40
-Package: wrapfig 2003/01/31  v 3.6
-)
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > se
 ction_lab2.aex <nul: /p x=^%~$PATH:i>> section_lab2.aex)...executed.
 
@@ -905,29 +909,38 @@ File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box77
 ) (section_lab2.aux
 
-LaTeX Warning: Label `fig:pure-signals' multiply defined.
+LaTeX Warning: Label `fig:calc-signals-a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:calc-signals-a' multiply defined.
+
+
+LaTeX Warning: Label `fig:meas-signal-a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:meas-signal-a' multiply defined.
 
 )
 \openout1 = `section_lab2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -963,6 +976,17 @@ LaTeX Font Info:    ... okay on input line 37.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \celsius on input line 38.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 38.
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 38.
+Package gensymb Info: Using \Omega for \ohm on input line 38.
+
+Package gensymb Warning: Not defining \micro.
+
 
 (C:\Users\kamaj\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -994,9 +1018,8 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 \c@lstlisting=\count363
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
-Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 38.
 (section_lab2.out) (section_lab2.out)
 \@outlinefile=\write6
 \openout6 = `section_lab2.out'.
@@ -1005,14 +1028,14 @@ Package hyperref Info: Link coloring ON on input line 37.
 
 {C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:38
+(epstopdf)                    date: 2023-05-19 00:25:03
 (epstopdf)                    size: 56052 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:55
+(epstopdf)                    date: 2023-05-19 00:27:34
 (epstopdf)                    size: 16915 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 135.
+(epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1022,295 +1045,391 @@ DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 135.
+t line 136.
 (pdftex.def)             Requested size: 145.11052pt x 232.1775pt.
 
-Underfull \hbox (badness 1968) in paragraph at lines 154--155
+Underfull \hbox (badness 1968) in paragraph at lines 155--156
 []\OT1/cmr/m/n/10.95 During ex-er-cise we recorded Fourier se-ries of a sig-nal
  in
  []
 
 Package epstopdf Info: Source file: <../Matlab/img/sin.eps>
-(epstopdf)                    date: 2023-05-17 15:37:35
+(epstopdf)                    date: 2023-05-19 00:24:59
 (epstopdf)                    size: 56467 bytes
 (epstopdf)             Output file: <../Matlab/img/sin-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:55
+(epstopdf)                    date: 2023-05-19 00:27:34
 (epstopdf)                    size: 16635 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sin-eps-converted-to.pdf ../Matlab/img/sin.eps>
-(epstopdf)             \includegraphics on input line 178.
+(epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/sin-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/sin-eps-converted-to.pdf, id=72, 205.76875pt x 329.23pt>
+<../Matlab/img/sin-eps-converted-to.pdf, id=73, 205.76875pt x 329.23pt>
 File: ../Matlab/img/sin-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sin-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sin-eps-converted-to.pdf  used on input 
-line 178.
+line 183.
+(pdftex.def)             Requested size: 145.11052pt x 232.1775pt.
+<../img/osc/DS2_QuickPrint5.png, id=74, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint5.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint5.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint5.png  used on input line 189
+.
+(pdftex.def)             Requested size: 145.11052pt x 92.64809pt.
+<../img/Circuit1/sin.png, id=76, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit1/sin.png Graphic file (type png)
+<use ../img/Circuit1/sin.png>
+Package pdftex.def Info: ../img/Circuit1/sin.png  used on input line 190.
+(pdftex.def)             Requested size: 145.11052pt x 137.8203pt.
+[2 <../Matlab/img/sqr50-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <../Matlab/img/sin.eps>
+(epstopdf)                    date: 2023-05-19 00:24:59
+(epstopdf)                    size: 56467 bytes
+(epstopdf)             Output file: <../Matlab/img/sin-eps-converted-to.pdf>
+(epstopdf)                    date: 2023-05-19 00:27:34
+(epstopdf)                    size: 16635 bytes
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
+ab/img/sin-eps-converted-to.pdf ../Matlab/img/sin.eps>
+(epstopdf)             \includegraphics on input line 200.
+Package epstopdf Info: Output file is already uptodate.
+File: ../Matlab/img/sin-eps-converted-to.pdf Graphic file (type pdf)
+<use ../Matlab/img/sin-eps-converted-to.pdf>
+Package pdftex.def Info: ../Matlab/img/sin-eps-converted-to.pdf  used on input 
+line 200.
 (pdftex.def)             Requested size: 111.2482pt x 177.99756pt.
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:38
+(epstopdf)                    date: 2023-05-19 00:25:03
 (epstopdf)                    size: 56052 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:55
+(epstopdf)                    date: 2023-05-19 00:27:34
 (epstopdf)                    size: 16915 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 183.
+(epstopdf)             \includegraphics on input line 206.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 183.
+t line 206.
 (pdftex.def)             Requested size: 111.2482pt x 177.99756pt.
 
-Underfull \hbox (badness 5231) in paragraph at lines 184--184
+Underfull \hbox (badness 5231) in paragraph at lines 207--207
 []\OT1/cmr/m/n/10 (b) |Square wave 50%
  []
 
 Package epstopdf Info: Source file: <../Matlab/img/sqr25.eps>
-(epstopdf)                    date: 2023-05-17 15:37:40
+(epstopdf)                    date: 2023-05-19 00:25:04
 (epstopdf)                    size: 56556 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr25-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:56
+(epstopdf)                    date: 2023-05-19 00:27:35
 (epstopdf)                    size: 17436 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr25-eps-converted-to.pdf ../Matlab/img/sqr25.eps>
-(epstopdf)             \includegraphics on input line 188.
+(epstopdf)             \includegraphics on input line 212.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/sqr25-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/sqr25-eps-converted-to.pdf, id=73, 205.76875pt x 329.23pt>
+<../Matlab/img/sqr25-eps-converted-to.pdf, id=102, 205.76875pt x 329.23pt>
 File: ../Matlab/img/sqr25-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr25-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr25-eps-converted-to.pdf  used on inpu
-t line 188.
+t line 212.
 (pdftex.def)             Requested size: 111.2482pt x 177.99756pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:36
+(epstopdf)                    date: 2023-05-19 00:25:00
 (epstopdf)                    size: 56543 bytes
 (epstopdf)             Output file: <../Matlab/img/tri50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:57
+(epstopdf)                    date: 2023-05-19 00:27:36
 (epstopdf)                    size: 17669 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri50-eps-converted-to.pdf ../Matlab/img/tri50.eps>
-(epstopdf)             \includegraphics on input line 193.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/tri50-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/tri50-eps-converted-to.pdf, id=74, 205.76875pt x 329.23pt>
+<../Matlab/img/tri50-eps-converted-to.pdf, id=103, 205.76875pt x 329.23pt>
 File: ../Matlab/img/tri50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri50-eps-converted-to.pdf  used on inpu
-t line 193.
+t line 218.
 (pdftex.def)             Requested size: 111.2482pt x 177.99756pt.
-
-Underfull \hbox (badness 1596) in paragraph at lines 194--194
-[]\OT1/cmr/m/n/10 (d) |Tri-an-gle wave 50%
- []
-
-[2 <../Matlab/img/sqr50-eps-converted-to.pdf>]
-<../img/Circuit1/sin.png, id=98, 1041.8925pt x 631.60968pt>
-File: ../img/Circuit1/sin.png Graphic file (type png)
-<use ../img/Circuit1/sin.png>
-Package pdftex.def Info: ../img/Circuit1/sin.png  used on input line 203.
-(pdftex.def)             Requested size: 111.2482pt x 67.43411pt.
-<../img/Circuit1/dut50.png, id=100, 1041.8925pt x 631.60968pt>
-File: ../img/Circuit1/dut50.png Graphic file (type png)
-<use ../img/Circuit1/dut50.png>
-Package pdftex.def Info: ../img/Circuit1/dut50.png  used on input line 208.
-(pdftex.def)             Requested size: 111.2482pt x 67.43411pt.
-
-Underfull \hbox (badness 5231) in paragraph at lines 209--209
-[]\OT1/cmr/m/n/10 (b) |Square wave 50%
- []
-
-<../img/Circuit1/dut25.png, id=101, 1041.8925pt x 631.60968pt>
-File: ../img/Circuit1/dut25.png Graphic file (type png)
-<use ../img/Circuit1/dut25.png>
-Package pdftex.def Info: ../img/Circuit1/dut25.png  used on input line 213.
-(pdftex.def)             Requested size: 111.2482pt x 67.43411pt.
-<../img/Circuit1/trig50.png, id=102, 1041.8925pt x 631.60968pt>
-File: ../img/Circuit1/trig50.png Graphic file (type png)
-<use ../img/Circuit1/trig50.png>
-Package pdftex.def Info: ../img/Circuit1/trig50.png  used on input line 218.
-(pdftex.def)             Requested size: 111.2482pt x 67.43411pt.
 
 Underfull \hbox (badness 1596) in paragraph at lines 219--219
 []\OT1/cmr/m/n/10 (d) |Tri-an-gle wave 50%
  []
 
+File: ../img/osc/DS2_QuickPrint5.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint5.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint5.png  used on input line 230
+.
+(pdftex.def)             Requested size: 111.2482pt x 71.02509pt.
+File: ../img/Circuit1/sin.png Graphic file (type png)
+<use ../img/Circuit1/sin.png>
+Package pdftex.def Info: ../img/Circuit1/sin.png  used on input line 231.
+(pdftex.def)             Requested size: 111.2482pt x 105.65993pt.
+<../img/osc/DS2_QuickPrint4.png, id=106, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint4.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint4.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint4.png  used on input line 237
+.
+(pdftex.def)             Requested size: 111.2482pt x 71.02509pt.
+<../img/Circuit1/dut50.png, id=108, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit1/dut50.png Graphic file (type png)
+<use ../img/Circuit1/dut50.png>
+Package pdftex.def Info: ../img/Circuit1/dut50.png  used on input line 238.
+(pdftex.def)             Requested size: 111.2482pt x 105.65993pt.
+
+Underfull \hbox (badness 5231) in paragraph at lines 239--239
+[]\OT1/cmr/m/n/10 (b) |Square wave 50%
+ []
+
+<../img/osc/DS2_QuickPrint3.png, id=110, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint3.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint3.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint3.png  used on input line 244
+.
+(pdftex.def)             Requested size: 111.2482pt x 71.02509pt.
+<../img/Circuit1/dut25.png, id=112, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit1/dut25.png Graphic file (type png)
+<use ../img/Circuit1/dut25.png>
+Package pdftex.def Info: ../img/Circuit1/dut25.png  used on input line 245.
+(pdftex.def)             Requested size: 111.2482pt x 105.65993pt.
+<../img/osc/DS2_QuickPrint2.png, id=114, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint2.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint2.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint2.png  used on input line 251
+.
+(pdftex.def)             Requested size: 111.2482pt x 71.02509pt.
+<../img/Circuit1/trig50.png, id=116, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit1/trig50.png Graphic file (type png)
+<use ../img/Circuit1/trig50.png>
+Package pdftex.def Info: ../img/Circuit1/trig50.png  used on input line 252.
+(pdftex.def)             Requested size: 111.2482pt x 105.65993pt.
+
+Underfull \hbox (badness 1596) in paragraph at lines 253--253
+[]\OT1/cmr/m/n/10 (d) |Tri-an-gle wave 50%
+ []
+
+[3 <../img/osc/DS2_QuickPrint5.png (PNG copy)> <../img/Circuit1/sin.png> <../Ma
+tlab/img/sin-eps-converted-to.pdf> <../Matlab/img/sqr25-eps-converted-to.pdf> <
+../Matlab/img/tri50-eps-converted-to.pdf>]
+<../img/osc/DS2_QuickPrint1.png, id=152, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint1.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint1.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint1.png  used on input line 267
+.
+(pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
+File: ../img/Circuit1/dut50.png Graphic file (type png)
+<use ../img/Circuit1/dut50.png>
+Package pdftex.def Info: ../img/Circuit1/dut50.png  used on input line 268.
+(pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
+File: ../img/osc/DS2_QuickPrint4.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint4.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint4.png  used on input line 272
+.
+(pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
+<../img/Circuit1/trig40.png, id=156, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit1/trig40.png Graphic file (type png)
+<use ../img/Circuit1/trig40.png>
+Package pdftex.def Info: ../img/Circuit1/trig40.png  used on input line 273.
+(pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:38
+(epstopdf)                    date: 2023-05-19 00:25:03
 (epstopdf)                    size: 56052 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:55
+(epstopdf)                    date: 2023-05-19 00:27:34
 (epstopdf)                    size: 16915 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 231.
+(epstopdf)             \includegraphics on input line 282.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 231.
+t line 282.
 (pdftex.def)             Requested size: 217.6621pt x 348.26375pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCLPsqr50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:41
+(epstopdf)                    date: 2023-05-19 00:25:06
 (epstopdf)                    size: 65437 bytes
 (epstopdf)             Output file: <../Matlab/img/RCLPsqr50-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-17 15:37:57
+(epstopdf)                    date: 2023-05-19 00:27:37
 (epstopdf)                    size: 64661 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCLPsqr50-eps-converted-to.pdf ../Matlab/img/RCLPsqr50.eps>
-(epstopdf)             \includegraphics on input line 235.
+(epstopdf)             \includegraphics on input line 286.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCLPsqr50-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCLPsqr50-eps-converted-to.pdf, id=103, 226.8475pt x 377.41pt>
+<../Matlab/img/RCLPsqr50-eps-converted-to.pdf, id=158, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCLPsqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCLPsqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCLPsqr50-eps-converted-to.pdf  used on 
-input line 235.
+input line 286.
 (pdftex.def)             Requested size: 217.6621pt x 362.13095pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri40.eps>
-(epstopdf)                    date: 2023-05-17 15:37:37
+(epstopdf)                    date: 2023-05-19 00:25:02
 (epstopdf)                    size: 56625 bytes
 (epstopdf)             Output file: <../Matlab/img/tri40-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:58
+(epstopdf)                    date: 2023-05-19 00:27:38
 (epstopdf)                    size: 17810 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri40-eps-converted-to.pdf ../Matlab/img/tri40.eps>
-(epstopdf)             \includegraphics on input line 243.
+(epstopdf)             \includegraphics on input line 294.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/tri40-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/tri40-eps-converted-to.pdf, id=104, 205.76875pt x 329.23pt>
+<../Matlab/img/tri40-eps-converted-to.pdf, id=159, 205.76875pt x 329.23pt>
 File: ../Matlab/img/tri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri40-eps-converted-to.pdf  used on inpu
-t line 243.
+t line 294.
 (pdftex.def)             Requested size: 217.6621pt x 348.26375pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCLPtri40.eps>
-(epstopdf)                    date: 2023-05-17 15:37:43
+(epstopdf)                    date: 2023-05-19 00:25:09
 (epstopdf)                    size: 64242 bytes
 (epstopdf)             Output file: <../Matlab/img/RCLPtri40-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-17 15:37:59
+(epstopdf)                    date: 2023-05-19 00:27:38
 (epstopdf)                    size: 62826 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCLPtri40-eps-converted-to.pdf ../Matlab/img/RCLPtri40.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 298.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCLPtri40-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCLPtri40-eps-converted-to.pdf, id=105, 226.8475pt x 377.41pt>
+<../Matlab/img/RCLPtri40-eps-converted-to.pdf, id=160, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCLPtri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCLPtri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCLPtri40-eps-converted-to.pdf  used on 
-input line 247.
+input line 298.
 (pdftex.def)             Requested size: 217.6621pt x 362.13095pt.
-[3 <../Matlab/img/sin-eps-converted-to.pdf> <../Matlab/img/sqr25-eps-converted-
-to.pdf> <../Matlab/img/tri50-eps-converted-to.pdf> <../img/Circuit1/sin.png> <.
-./img/Circuit1/dut50.png> <../img/Circuit1/dut25.png> <../img/Circuit1/trig50.p
-ng>] [4 <../Matlab/img/RCLPsqr50-eps-converted-to.pdf>]
+[4 <../img/osc/DS2_QuickPrint4.png (PNG copy)> <../img/Circuit1/dut50.png> <../
+img/osc/DS2_QuickPrint3.png (PNG copy)> <../img/Circuit1/dut25.png> <../img/osc
+/DS2_QuickPrint2.png (PNG copy)> <../img/Circuit1/trig50.png> <../img/osc/DS2_Q
+uickPrint1.png (PNG copy)> <../img/Circuit1/trig40.png>] [5 <../Matlab/img/RCLP
+sqr50-eps-converted-to.pdf>]
+<../img/osc/DS2_QuickPrint10.png, id=195, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint10.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint10.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint10.png  used on input line 30
+9.
+(pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
+<../img/Circuit2/dut50.png, id=197, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit2/dut50.png Graphic file (type png)
+<use ../img/Circuit2/dut50.png>
+Package pdftex.def Info: ../img/Circuit2/dut50.png  used on input line 310.
+(pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
+<../img/osc/DS2_QuickPrint7.png, id=199, 803.0pt x 481.8pt>
+File: ../img/osc/DS2_QuickPrint7.png Graphic file (type png)
+<use ../img/osc/DS2_QuickPrint7.png>
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint7.png  used on input line 314
+.
+(pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
+<../img/Circuit2/trig40.png, id=201, 1041.8925pt x 631.60968pt>
+File: ../img/Circuit2/trig40.png Graphic file (type png)
+<use ../img/Circuit2/trig40.png>
+Package pdftex.def Info: ../img/Circuit2/trig40.png  used on input line 315.
+(pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:38
+(epstopdf)                    date: 2023-05-19 00:25:03
 (epstopdf)                    size: 56052 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:55
+(epstopdf)                    date: 2023-05-19 00:27:34
 (epstopdf)                    size: 16915 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 258.
+(epstopdf)             \includegraphics on input line 325.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 258.
+t line 325.
 (pdftex.def)             Requested size: 217.6621pt x 348.26375pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCHPsqr50.eps>
-(epstopdf)                    date: 2023-05-17 15:37:42
+(epstopdf)                    date: 2023-05-19 00:25:07
 (epstopdf)                    size: 61991 bytes
 (epstopdf)             Output file: <../Matlab/img/RCHPsqr50-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-17 15:38:00
+(epstopdf)                    date: 2023-05-19 00:27:39
 (epstopdf)                    size: 60583 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCHPsqr50-eps-converted-to.pdf ../Matlab/img/RCHPsqr50.eps>
-(epstopdf)             \includegraphics on input line 262.
+(epstopdf)             \includegraphics on input line 329.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCHPsqr50-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCHPsqr50-eps-converted-to.pdf, id=152, 226.8475pt x 377.41pt>
+<../Matlab/img/RCHPsqr50-eps-converted-to.pdf, id=203, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCHPsqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCHPsqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCHPsqr50-eps-converted-to.pdf  used on 
-input line 262.
+input line 329.
 (pdftex.def)             Requested size: 217.6621pt x 362.13095pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri40.eps>
-(epstopdf)                    date: 2023-05-17 15:37:37
+(epstopdf)                    date: 2023-05-19 00:25:02
 (epstopdf)                    size: 56625 bytes
 (epstopdf)             Output file: <../Matlab/img/tri40-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-17 15:37:58
+(epstopdf)                    date: 2023-05-19 00:27:38
 (epstopdf)                    size: 17810 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri40-eps-converted-to.pdf ../Matlab/img/tri40.eps>
-(epstopdf)             \includegraphics on input line 270.
+(epstopdf)             \includegraphics on input line 337.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/tri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri40-eps-converted-to.pdf  used on inpu
-t line 270.
+t line 337.
 (pdftex.def)             Requested size: 217.6621pt x 348.26375pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCHPtri40.eps>
-(epstopdf)                    date: 2023-05-17 15:37:44
+(epstopdf)                    date: 2023-05-19 00:25:10
 (epstopdf)                    size: 68467 bytes
 (epstopdf)             Output file: <../Matlab/img/RCHPtri40-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-17 15:38:00
+(epstopdf)                    date: 2023-05-19 00:27:40
 (epstopdf)                    size: 67275 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCHPtri40-eps-converted-to.pdf ../Matlab/img/RCHPtri40.eps>
-(epstopdf)             \includegraphics on input line 274.
+(epstopdf)             \includegraphics on input line 341.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCHPtri40-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCHPtri40-eps-converted-to.pdf, id=153, 226.8475pt x 377.41pt>
+<../Matlab/img/RCHPtri40-eps-converted-to.pdf, id=204, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCHPtri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCHPtri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCHPtri40-eps-converted-to.pdf  used on 
-input line 274.
+input line 341.
 (pdftex.def)             Requested size: 217.6621pt x 362.13095pt.
-[5 <../Matlab/img/tri40-eps-converted-to.pdf> <../Matlab/img/RCLPtri40-eps-conv
-erted-to.pdf>] [6 <../Matlab/img/RCHPsqr50-eps-converted-to.pdf>] [7 <../Matlab
-/img/RCHPtri40-eps-converted-to.pdf>] (_minted-section_lab2/default.pygstyle)
-(_minted-section_lab2/F8600561B9F100B8C5E098BC79914CA91C032BB267CF280A4D6B53AE0
-A23D5D8.pygtex [8] [9] [10])
+[6 <../img/osc/DS2_QuickPrint10.png (PNG copy)> <../img/Circuit2/dut50.png> <..
+/img/osc/DS2_QuickPrint7.png (PNG copy)> <../img/Circuit2/trig40.png> <../Matla
+b/img/tri40-eps-converted-to.pdf> <../Matlab/img/RCLPtri40-eps-converted-to.pdf
+>] [7 <../Matlab/img/RCHPsqr50-eps-converted-to.pdf>] [8 <../Matlab/img/RCHPtri
+40-eps-converted-to.pdf>] (_minted-section_lab2/default.pygstyle)
+(_minted-section_lab2/E3C048B211082A0F6A52DBC636405E901C032BB267CF280A4D6B53AE0
+A23D5D8.pygtex [9] [10] [11])
 (_minted-section_lab2/8FCA2E98D0030E16E3A1483E349043BD58851C29DEAA63078F9E81D9F
 BCF5C20.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
- [11])
+ [12])
 (_minted-section_lab2/A83E46F63F6B389E3E8EFC26C2B0CAAB4B4F787A94861D3284776F359
-F55CA29.pygtex [12]) [13] (section_lab2.aux)
+F55CA29.pygtex [13]) [14] (section_lab2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1318,10 +1437,10 @@ Package rerunfilecheck Info: File `section_lab2.out' has not changed.
 (rerunfilecheck)             Checksum: ABB0A1BB77C481F7C9771D3AEF15E04D;1576.
  ) 
 Here is how much of TeX's memory you used:
- 43604 strings out of 475385
- 1028231 string characters out of 2776906
- 1623484 words of memory out of 3000000
- 64423 multiletter control sequences out of 15000+600000
+ 43776 strings out of 475385
+ 1032449 string characters out of 2776906
+ 1625100 words of memory out of 3000000
+ 64577 multiletter control sequences out of 15000+600000
  476005 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,80p,620b,1033s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1340,10 +1459,11 @@ C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 s/cm/cmr6.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on section_lab2.pdf (13 pages, 678996 bytes).
+ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kamaj/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on section_lab2.pdf (14 pages, 1132222 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 324 words of extra memory for PDF output out of 10000 (max. 10000000)
 
