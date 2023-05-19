@@ -59,7 +59,7 @@ for i = 1:length(freq_of_interest)
     [~, indices(i)] = min(abs(frequencies - freq_of_interest(i)));
 end
 
-% subplot(4,1,2)
+% subplot(4,1,3)
 % plot(frequencies, db(f_magnitude));
 % xlabel('Frequency (Hz)');
 % xlim([0, 11000]);

@@ -194,154 +194,149 @@
 		\caption{Sin wave}
 		\label{fig:pure-sin}
 	\end{figure}
+	
+	Now moving to more interesting signal than simple sin, square wave we can see many more components of Fourier series that are not negligible. Starting with first element which is exactly the same as in sin signal we can deduce that square signal have similar shape to sinus and is mostly odd function, but looking further on the rest of coefficient we can see that all non-zero coefficient is shifted by -90$\degree$, so square signal is built entirely from sins therefore is completely odd.
+	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/sin}
-			\caption{Sin wave}
-			\label{fig:calc-signals-a}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[][][t]{0.23\textwidth}
+		\begin{subfigure}[][][t]{0.3\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
-			\caption{Square wave 50\% duty cycle}
+			\caption{calculated}
 			\label{fig:calc-signals-b}
 		\end{subfigure}
-		\hfill
-		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/sqr25}
-			\caption{Square wave 25\% duty cycle}
-			\label{fig:calc-signals-c}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/tri50}
-			\caption{Triangle wave 50\% symmetry ratio}
-			\label{fig:calc-signals-d}
-		\end{subfigure}
-		\caption{Calculated signals}
-		\label{fig:calc-signals}
-	\end{figure}
-	
-		\begin{figure}[H]
-		\centering
-		
-		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint5.png}
-			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/sin}
-			\caption{Sin wave}
-			\label{fig:meas-signal-a}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[][][t]{0.23\textwidth}
+		\quad
+		\begin{subfigure}[][][t]{0.3\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
 			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut50}
-			\caption{Square wave 50\% duty cycle}
+			\caption{measured}
 			\label{fig:meas-signal-b}
 		\end{subfigure}
-		\hfill
-		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint3.png}
-			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut25}
-			\caption{Square wave 25\% duty cycle}
-			\label{fig:meas-signal-c}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[][][t]{0.23\textwidth}
-			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint2.png}
-			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/trig50}
-			\caption{Triangle wave 50\% symmetry ratio}
-			\label{fig:meas-signal-d}
-		\end{subfigure}
-		\caption{Measured signals}
-		\label{fig:meas-signal}
+		\caption{Square wave 50\% duty cycle}
+		\label{fig:pure-sqr50}
 	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr25}
+			\caption{calculated}
+			\label{fig:calc-signals-a}
+		\end{subfigure}
+		\quad
+		\begin{subfigure}[][][t]{0.3\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint3.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut25}
+			\caption{measured}
+			\label{fig:meas-signal-a}
+		\end{subfigure}
+		\caption{Square wave 25\% duty cycle}
+		\label{fig:pure-sin}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[][][t]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/tri50}
+			\caption{calculated}
+			\label{fig:calc-signals-a}
+		\end{subfigure}
+		\quad
+		\begin{subfigure}[][][t]{0.3\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint2.png}
+			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/trig50}
+			\caption{measured}
+			\label{fig:meas-signal-a}
+		\end{subfigure}
+		\caption{Triangle wave 50\% symmetry ratio}
+		\label{fig:pure-sin}
+	\end{figure}
+		
 	\subsection{RC filters}
 	
 	\subsubsection{Low-pass filter}
 
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}[][][t]{0.45\textwidth}
-			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint1.png}
-			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/dut50}
-			\caption{Sin wave}
+		\begin{subfigure}[][][t]{0.26\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
+			\caption{Pure signal}
 		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.26\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/RCLPsqr50}
+			\caption{Filtered pure signal}
+		\end{subfigure}
+		\hfill
 		\begin{subfigure}[][][t]{0.45\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
-			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/trig40}
-			\caption{Square wave 50\% duty cycle}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/dut50}
+			\caption{Measured signal}
 		\end{subfigure}
-		\caption{Measured signals}
+		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.45\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
-			\caption{Pure signal}
-		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/RCLPsqr50}
-			\caption{Filtered signal}
-		\end{subfigure}
-		\caption{Low-pass filter response for Square wave 50\% duty cycle}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\begin{subfigure}{0.45\textwidth}
+		\begin{subfigure}[][][t]{0.26\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/tri40}
 			\caption{Pure signal}
 		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
+		\hfill
+		\begin{subfigure}[][][t]{0.26\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/RCLPtri40}
-			\caption{Pure signal}
+			\caption{Filtered pure signal}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint1.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit1/trig40}
+			\caption{Measured signal}
 		\end{subfigure}
 		\caption{Low-pass filter response for Triangle wave 40\% symmetry ratio}
 	\end{figure}
+
+
 	
 	\subsubsection{High-pass filter}
 
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}[][][t]{0.45\textwidth}
-			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint10.png}
-			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/dut50}
-			\caption{Square wave 25\% duty cycle}
+		\begin{subfigure}[][][t]{0.26\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
+			\caption{Pure signal}
 		\end{subfigure}
+		\hfill
+		\begin{subfigure}[][][t]{0.26\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/RCHPsqr50}
+			\caption{Filtered pure signal}
+		\end{subfigure}
+		\hfill
 		\begin{subfigure}[][][t]{0.45\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint7.png}
-			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/trig40}
-			\caption{Triangle wave 50\% symmetry ratio}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/dut50}
+			\caption{Measured signal}
 		\end{subfigure}
-		\caption{Measured signals}
-		\label{fig:pure-signals}
+		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.45\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
-			\caption{Pure signal}
-		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
-			\includegraphics[width=\textwidth]{../Matlab/img/RCHPsqr50}
-			\caption{Filtered signal}
-		\end{subfigure}
-		\caption{High-pass filter response for Square wave 50\% duty cycle}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\begin{subfigure}{0.45\textwidth}
+		\begin{subfigure}[][][t]{0.26\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/tri40}
 			\caption{Pure signal}
 		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
+		\hfill
+		\begin{subfigure}[][][t]{0.26\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/RCHPtri40}
-			\caption{Filtered signal}
+			\caption{Filtered pure signal}
 		\end{subfigure}
-		\caption{High-pass filter response for Triangle wave 40\% symmetry ratio}
+		\hfill
+		\begin{subfigure}[][][t]{0.45\textwidth}
+			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint10.png}
+			\includegraphics[width=\textwidth, trim=10 80 10 100, clip]{../img/Circuit2/trig40}
+			\caption{Measured signal}
+		\end{subfigure}
+		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
 		
 	\section{Summary}
