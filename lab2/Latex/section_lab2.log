@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  20 MAY 2023 02:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  20 MAY 2023 15:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1046,10 +1046,10 @@ Package hyperref Info: Link coloring ON on input line 38.
 
 {C:/Users/kamaj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:54
-(epstopdf)                    size: 57157 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 58638 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:50
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 19592 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
@@ -1072,10 +1072,10 @@ Underfull \hbox (badness 1968) in paragraph at lines 155--156
  []
 
 Package epstopdf Info: Source file: <../Matlab/img/sin.eps>
-(epstopdf)                    date: 2023-05-20 02:09:51
-(epstopdf)                    size: 56297 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 57778 bytes
 (epstopdf)             Output file: <../Matlab/img/sin-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:51
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 18612 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sin-eps-converted-to.pdf ../Matlab/img/sin.eps>
@@ -1090,24 +1090,24 @@ File: ../Matlab/img/sin-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sin-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sin-eps-converted-to.pdf  used on input 
 line 183.
-(pdftex.def)             Requested size: 145.11052pt x 242.79558pt.
+(pdftex.def)             Requested size: 135.43451pt x 226.60316pt.
 <../img/osc/DS2_QuickPrint5.png, id=74, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint5.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint5.png>
 Package pdftex.def Info: ../img/osc/DS2_QuickPrint5.png  used on input line 189
 .
-(pdftex.def)             Requested size: 145.11052pt x 92.64809pt.
+(pdftex.def)             Requested size: 135.43451pt x 86.4684pt.
 <../img/Circuit1/sin.png, id=76, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit1/sin.png Graphic file (type png)
 <use ../img/Circuit1/sin.png>
 Package pdftex.def Info: ../img/Circuit1/sin.png  used on input line 190.
-(pdftex.def)             Requested size: 145.11052pt x 137.8203pt.
+(pdftex.def)             Requested size: 135.43451pt x 128.63457pt.
 [2 <../Matlab/img/sqr50-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:54
-(epstopdf)                    size: 57157 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 58638 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:50
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 19592 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
@@ -1117,25 +1117,26 @@ File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
 t line 203.
-(pdftex.def)             Requested size: 145.11052pt x 242.79558pt.
+(pdftex.def)             Requested size: 135.43451pt x 226.60316pt.
 <../img/osc/DS2_QuickPrint4.png, id=102, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint4.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint4.png>
 Package pdftex.def Info: ../img/osc/DS2_QuickPrint4.png  used on input line 209
 .
-(pdftex.def)             Requested size: 145.11052pt x 92.64809pt.
+(pdftex.def)             Requested size: 135.43451pt x 86.4684pt.
 <../img/Circuit1/dut50.png, id=104, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit1/dut50.png Graphic file (type png)
 <use ../img/Circuit1/dut50.png>
 Package pdftex.def Info: ../img/Circuit1/dut50.png  used on input line 210.
-(pdftex.def)             Requested size: 145.11052pt x 137.8203pt.
- [3 <../img/osc/DS2_QuickPrint5.png (PNG copy)> <../img/Circuit1/sin.png> <../M
-atlab/img/sin-eps-converted-to.pdf>]
+(pdftex.def)             Requested size: 135.43451pt x 128.63457pt.
+ [3 <../img/osc/DS2_QuickPrint5.png (PNG copy)> <../img/Circuit1/sin.png> <../i
+mg/osc/DS2_QuickPrint4.png (PNG copy)> <../img/Circuit1/dut50.png> <../Matlab/i
+mg/sin-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../Matlab/img/sqr25.eps>
-(epstopdf)                    date: 2023-05-20 02:09:56
-(epstopdf)                    size: 57734 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 59215 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr25-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:52
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 20707 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr25-eps-converted-to.pdf ../Matlab/img/sqr25.eps>
@@ -1145,28 +1146,28 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/sqr25-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/sqr25-eps-converted-to.pdf, id=123, 208.78pt x 349.305pt>
+<../Matlab/img/sqr25-eps-converted-to.pdf, id=127, 208.78pt x 349.305pt>
 File: ../Matlab/img/sqr25-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr25-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr25-eps-converted-to.pdf  used on inpu
 t line 223.
 (pdftex.def)             Requested size: 145.11052pt x 242.79558pt.
-<../img/osc/DS2_QuickPrint3.png, id=124, 803.0pt x 481.8pt>
+<../img/osc/DS2_QuickPrint3.png, id=128, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint3.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint3.png>
 Package pdftex.def Info: ../img/osc/DS2_QuickPrint3.png  used on input line 229
 .
 (pdftex.def)             Requested size: 145.11052pt x 92.64809pt.
-<../img/Circuit1/dut25.png, id=126, 1041.8925pt x 631.60968pt>
+<../img/Circuit1/dut25.png, id=130, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit1/dut25.png Graphic file (type png)
 <use ../img/Circuit1/dut25.png>
 Package pdftex.def Info: ../img/Circuit1/dut25.png  used on input line 230.
 (pdftex.def)             Requested size: 145.11052pt x 137.8203pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:52
-(epstopdf)                    size: 57166 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 58647 bytes
 (epstopdf)             Output file: <../Matlab/img/tri50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:52
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 20333 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri50-eps-converted-to.pdf ../Matlab/img/tri50.eps>
@@ -1176,235 +1177,233 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/tri50-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/tri50-eps-converted-to.pdf, id=128, 208.78pt x 349.305pt>
+<../Matlab/img/tri50-eps-converted-to.pdf, id=132, 208.78pt x 349.305pt>
 File: ../Matlab/img/tri50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri50-eps-converted-to.pdf  used on inpu
 t line 243.
 (pdftex.def)             Requested size: 145.11052pt x 242.79558pt.
-<../img/osc/DS2_QuickPrint2.png, id=129, 803.0pt x 481.8pt>
+<../img/osc/DS2_QuickPrint2.png, id=133, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint2.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint2.png>
 Package pdftex.def Info: ../img/osc/DS2_QuickPrint2.png  used on input line 249
 .
 (pdftex.def)             Requested size: 145.11052pt x 92.64809pt.
-<../img/Circuit1/trig50.png, id=131, 1041.8925pt x 631.60968pt>
+<../img/Circuit1/trig50.png, id=135, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit1/trig50.png Graphic file (type png)
 <use ../img/Circuit1/trig50.png>
 Package pdftex.def Info: ../img/Circuit1/trig50.png  used on input line 250.
 (pdftex.def)             Requested size: 145.11052pt x 137.8203pt.
-[4 <../img/osc/DS2_QuickPrint4.png (PNG copy)> <../img/Circuit1/dut50.png> <../
-img/osc/DS2_QuickPrint3.png (PNG copy)> <../img/Circuit1/dut25.png> <../Matlab/
-img/sqr25-eps-converted-to.pdf>]
+[4 <../img/osc/DS2_QuickPrint3.png (PNG copy)> <../img/Circuit1/dut25.png> <../
+img/osc/DS2_QuickPrint2.png (PNG copy)> <../img/Circuit1/trig50.png> <../Matlab
+/img/sqr25-eps-converted-to.pdf> <../Matlab/img/tri50-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:54
-(epstopdf)                    size: 57157 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 58638 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:50
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 19592 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 265.
+(epstopdf)             \includegraphics on input line 267.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 265.
+t line 267.
 (pdftex.def)             Requested size: 125.75851pt x 210.40543pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCLPsqr50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:57
-(epstopdf)                    size: 66166 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 66950 bytes
 (epstopdf)             Output file: <../Matlab/img/RCLPsqr50-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-20 02:10:53
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 65263 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCLPsqr50-eps-converted-to.pdf ../Matlab/img/RCLPsqr50.eps>
-(epstopdf)             \includegraphics on input line 270.
+(epstopdf)             \includegraphics on input line 272.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCLPsqr50-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCLPsqr50-eps-converted-to.pdf, id=153, 226.8475pt x 377.41pt>
+<../Matlab/img/RCLPsqr50-eps-converted-to.pdf, id=165, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCLPsqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCLPsqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCLPsqr50-eps-converted-to.pdf  used on 
-input line 270.
+input line 272.
 (pdftex.def)             Requested size: 125.75851pt x 209.22891pt.
 File: ../img/osc/DS2_QuickPrint4.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint4.png>
-Package pdftex.def Info: ../img/osc/DS2_QuickPrint4.png  used on input line 275
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint4.png  used on input line 277
 .
 (pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
 File: ../img/Circuit1/dut50.png Graphic file (type png)
 <use ../img/Circuit1/dut50.png>
-Package pdftex.def Info: ../img/Circuit1/dut50.png  used on input line 276.
+Package pdftex.def Info: ../img/Circuit1/dut50.png  used on input line 278.
 (pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
 Package epstopdf Info: Source file: <../Matlab/img/tri40.eps>
-(epstopdf)                    date: 2023-05-20 02:09:54
-(epstopdf)                    size: 57748 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 59229 bytes
 (epstopdf)             Output file: <../Matlab/img/tri40-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:54
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 20945 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri40-eps-converted-to.pdf ../Matlab/img/tri40.eps>
-(epstopdf)             \includegraphics on input line 285.
+(epstopdf)             \includegraphics on input line 287.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/tri40-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/tri40-eps-converted-to.pdf, id=156, 208.78pt x 349.305pt>
+<../Matlab/img/tri40-eps-converted-to.pdf, id=168, 208.78pt x 349.305pt>
 File: ../Matlab/img/tri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri40-eps-converted-to.pdf  used on inpu
-t line 285.
+t line 287.
 (pdftex.def)             Requested size: 125.75851pt x 210.40543pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCLPtri40.eps>
-(epstopdf)                    date: 2023-05-20 02:09:59
-(epstopdf)                    size: 65196 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 65969 bytes
 (epstopdf)             Output file: <../Matlab/img/RCLPtri40-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-20 02:10:54
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 63767 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCLPtri40-eps-converted-to.pdf ../Matlab/img/RCLPtri40.eps>
-(epstopdf)             \includegraphics on input line 290.
+(epstopdf)             \includegraphics on input line 292.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCLPtri40-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCLPtri40-eps-converted-to.pdf, id=157, 226.8475pt x 377.41pt>
+<../Matlab/img/RCLPtri40-eps-converted-to.pdf, id=169, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCLPtri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCLPtri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCLPtri40-eps-converted-to.pdf  used on 
-input line 290.
+input line 292.
 (pdftex.def)             Requested size: 125.75851pt x 209.22891pt.
-<../img/osc/DS2_QuickPrint1.png, id=158, 803.0pt x 481.8pt>
+<../img/osc/DS2_QuickPrint1.png, id=170, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint1.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint1.png>
-Package pdftex.def Info: ../img/osc/DS2_QuickPrint1.png  used on input line 295
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint1.png  used on input line 297
 .
 (pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
-<../img/Circuit1/trig40.png, id=160, 1041.8925pt x 631.60968pt>
+<../img/Circuit1/trig40.png, id=172, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit1/trig40.png Graphic file (type png)
 <use ../img/Circuit1/trig40.png>
-Package pdftex.def Info: ../img/Circuit1/trig40.png  used on input line 296.
+Package pdftex.def Info: ../img/Circuit1/trig40.png  used on input line 298.
 (pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
-[5 <../img/osc/DS2_QuickPrint2.png (PNG copy)> <../img/Circuit1/trig50.png> <..
-/Matlab/img/tri50-eps-converted-to.pdf> <../Matlab/img/RCLPsqr50-eps-converted-
-to.pdf>]
 Package epstopdf Info: Source file: <../Matlab/img/sqr50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:54
-(epstopdf)                    size: 57157 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 58638 bytes
 (epstopdf)             Output file: <../Matlab/img/sqr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:50
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 19592 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/sqr50-eps-converted-to.pdf ../Matlab/img/sqr50.eps>
-(epstopdf)             \includegraphics on input line 309.
+(epstopdf)             \includegraphics on input line 311.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/sqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/sqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/sqr50-eps-converted-to.pdf  used on inpu
-t line 309.
+t line 311.
 (pdftex.def)             Requested size: 125.75851pt x 210.40543pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCHPsqr50.eps>
-(epstopdf)                    date: 2023-05-20 02:09:58
-(epstopdf)                    size: 63032 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 63778 bytes
 (epstopdf)             Output file: <../Matlab/img/RCHPsqr50-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-20 02:10:55
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 61754 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCHPsqr50-eps-converted-to.pdf ../Matlab/img/RCHPsqr50.eps>
-(epstopdf)             \includegraphics on input line 314.
+(epstopdf)             \includegraphics on input line 316.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCHPsqr50-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCHPsqr50-eps-converted-to.pdf, id=188, 226.8475pt x 377.41pt>
+<../Matlab/img/RCHPsqr50-eps-converted-to.pdf, id=174, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCHPsqr50-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCHPsqr50-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCHPsqr50-eps-converted-to.pdf  used on 
-input line 314.
+input line 316.
 (pdftex.def)             Requested size: 125.75851pt x 209.22891pt.
-<../img/osc/DS2_QuickPrint7.png, id=189, 803.0pt x 481.8pt>
+<../img/osc/DS2_QuickPrint7.png, id=175, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint7.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint7.png>
-Package pdftex.def Info: ../img/osc/DS2_QuickPrint7.png  used on input line 319
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint7.png  used on input line 321
 .
 (pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
-<../img/Circuit2/dut50.png, id=191, 1041.8925pt x 631.60968pt>
+<../img/Circuit2/dut50.png, id=177, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit2/dut50.png Graphic file (type png)
 <use ../img/Circuit2/dut50.png>
-Package pdftex.def Info: ../img/Circuit2/dut50.png  used on input line 320.
+Package pdftex.def Info: ../img/Circuit2/dut50.png  used on input line 322.
 (pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
+[5 <../img/osc/DS2_QuickPrint1.png (PNG copy)> <../img/Circuit1/trig40.png> <..
+/Matlab/img/RCLPsqr50-eps-converted-to.pdf> <../Matlab/img/tri40-eps-converted-
+to.pdf> <../Matlab/img/RCLPtri40-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../Matlab/img/tri40.eps>
-(epstopdf)                    date: 2023-05-20 02:09:54
-(epstopdf)                    size: 57748 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 59229 bytes
 (epstopdf)             Output file: <../Matlab/img/tri40-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-05-20 02:10:54
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 20945 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/tri40-eps-converted-to.pdf ../Matlab/img/tri40.eps>
-(epstopdf)             \includegraphics on input line 329.
+(epstopdf)             \includegraphics on input line 331.
 Package epstopdf Info: Output file is already uptodate.
 File: ../Matlab/img/tri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/tri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/tri40-eps-converted-to.pdf  used on inpu
-t line 329.
+t line 331.
 (pdftex.def)             Requested size: 125.75851pt x 210.40543pt.
 Package epstopdf Info: Source file: <../Matlab/img/RCHPtri40.eps>
-(epstopdf)                    date: 2023-05-20 02:10:00
-(epstopdf)                    size: 68845 bytes
+(epstopdf)                    date: 2023-05-20 13:56:11
+(epstopdf)                    size: 69663 bytes
 (epstopdf)             Output file: <../Matlab/img/RCHPtri40-eps-converted-to.p
 df>
-(epstopdf)                    date: 2023-05-20 02:10:56
+(epstopdf)                    date: 2023-05-20 13:56:11
 (epstopdf)                    size: 67779 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=../Matl
 ab/img/RCHPtri40-eps-converted-to.pdf ../Matlab/img/RCHPtri40.eps>
-(epstopdf)             \includegraphics on input line 334.
+(epstopdf)             \includegraphics on input line 336.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ../Matlab/img/RCHPtri40-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../Matlab/img/RCHPtri40-eps-converted-to.pdf, id=193, 226.8475pt x 377.41pt>
+<../Matlab/img/RCHPtri40-eps-converted-to.pdf, id=211, 226.8475pt x 377.41pt>
 File: ../Matlab/img/RCHPtri40-eps-converted-to.pdf Graphic file (type pdf)
 <use ../Matlab/img/RCHPtri40-eps-converted-to.pdf>
 Package pdftex.def Info: ../Matlab/img/RCHPtri40-eps-converted-to.pdf  used on 
-input line 334.
+input line 336.
 (pdftex.def)             Requested size: 125.75851pt x 209.22891pt.
-<../img/osc/DS2_QuickPrint10.png, id=194, 803.0pt x 481.8pt>
+<../img/osc/DS2_QuickPrint10.png, id=212, 803.0pt x 481.8pt>
 File: ../img/osc/DS2_QuickPrint10.png Graphic file (type png)
 <use ../img/osc/DS2_QuickPrint10.png>
-Package pdftex.def Info: ../img/osc/DS2_QuickPrint10.png  used on input line 33
-9.
+Package pdftex.def Info: ../img/osc/DS2_QuickPrint10.png  used on input line 34
+1.
 (pdftex.def)             Requested size: 217.6621pt x 138.97214pt.
-<../img/Circuit2/trig40.png, id=196, 1041.8925pt x 631.60968pt>
+<../img/Circuit2/trig40.png, id=214, 1041.8925pt x 631.60968pt>
 File: ../img/Circuit2/trig40.png Graphic file (type png)
 <use ../img/Circuit2/trig40.png>
-Package pdftex.def Info: ../img/Circuit2/trig40.png  used on input line 340.
+Package pdftex.def Info: ../img/Circuit2/trig40.png  used on input line 342.
 (pdftex.def)             Requested size: 217.6621pt x 96.05447pt.
-[6 <../img/osc/DS2_QuickPrint1.png (PNG copy)> <../img/Circuit1/trig40.png> <..
-/img/osc/DS2_QuickPrint7.png (PNG copy)> <../img/Circuit2/dut50.png> <../Matlab
-/img/tri40-eps-converted-to.pdf> <../Matlab/img/RCLPtri40-eps-converted-to.pdf>
- <../Matlab/img/RCHPsqr50-eps-converted-to.pdf>] [7 <../img/osc/DS2_QuickPrint1
-0.png (PNG copy)> <../img/Circuit2/trig40.png> <../Matlab/img/RCHPtri40-eps-con
-verted-to.pdf>] (_minted-section_lab2/default.pygstyle)
+[6 <../img/osc/DS2_QuickPrint7.png (PNG copy)> <../img/Circuit2/dut50.png> <../
+img/osc/DS2_QuickPrint10.png (PNG copy)> <../img/Circuit2/trig40.png> <../Matla
+b/img/RCHPsqr50-eps-converted-to.pdf> <../Matlab/img/RCHPtri40-eps-converted-to
+.pdf>] (_minted-section_lab2/default.pygstyle)
 (_minted-section_lab2/63AAA849A1DC7CCDCF1593D6615385171C032BB267CF280A4D6B53AE0
-A23D5D8.pygtex [8] [9] [10])
+A23D5D8.pygtex [7] [8] [9])
 (_minted-section_lab2/3A55E3D04C43905AF60CDC2BD0209C7E58851C29DEAA63078F9E81D9F
 BCF5C20.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
- [11])
+ [10])
 (_minted-section_lab2/A83E46F63F6B389E3E8EFC26C2B0CAAB4B4F787A94861D3284776F359
-F55CA29.pygtex [12]) [13] (section_lab2.aux)
+F55CA29.pygtex [11]) [12] (section_lab2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1412,11 +1411,11 @@ Package rerunfilecheck Info: File `section_lab2.out' has not changed.
 (rerunfilecheck)             Checksum: ABB0A1BB77C481F7C9771D3AEF15E04D;1576.
  ) 
 Here is how much of TeX's memory you used:
- 43764 strings out of 475385
- 1032216 string characters out of 2776906
+ 43768 strings out of 475385
+ 1032261 string characters out of 2776906
  1624488 words of memory out of 3000000
- 64567 multiletter control sequences out of 15000+600000
- 476005 words of font info for 52 fonts, out of 8000000 for 9000
+ 64570 multiletter control sequences out of 15000+600000
+ 476853 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,80p,620b,1033s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\kamaj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -1436,9 +1435,9 @@ amsfonts/cm/cmr8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kamaj/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on section_lab2.pdf (13 pages, 1148489 bytes).
+Output written on section_lab2.pdf (12 pages, 1150790 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
+ 346 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
  312 words of extra memory for PDF output out of 10000 (max. 10000000)
 

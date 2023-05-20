@@ -112,8 +112,8 @@
 			\centering
 				\begin{circuitikz}[scale = 0.7, transform shape]
 				\draw (0,0) node[bnc](B1) {}
-				to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
-				to[C, l=$C_{11}$, a=47nF] (3,-2)
+				to[C, l=$C_{21}$, a=10nF] (3,0)
+				to[R, l=$R_{21}$, a=\tiny1.5k$\Omega$] (3,-2)
 				node[ground] {}
 				;
 				\draw (3,0) 
@@ -179,13 +179,13 @@
 	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is approximately equal to amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90\degree therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}[][][t]{0.3\textwidth}
+		\begin{subfigure}[][][t]{0.28\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sin}
 			\caption{calculated}
 			\label{fig:calc-signals-a}
 		\end{subfigure}
 		\quad
-		\begin{subfigure}[][][t]{0.3\textwidth}
+		\begin{subfigure}[][][t]{0.28\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint5.png}
 			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/sin}
 			\caption{measured}
@@ -199,13 +199,13 @@
 	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}[][][t]{0.3\textwidth}
+		\begin{subfigure}[][][t]{0.28\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sqr50}
 			\caption{calculated}
 			\label{fig:calc-signals-b}
 		\end{subfigure}
 		\quad
-		\begin{subfigure}[][][t]{0.3\textwidth}
+		\begin{subfigure}[][][t]{0.28\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint4.png}
 			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut50}
 			\caption{measured}
@@ -256,6 +256,8 @@
 	\end{figure}
 		
 	\subsection{RC filters}
+	
+	simple Low-pass and High pass filters can be build with just 2 simple electric components resistor and capacitor, the reason why it is possible is that capacitor is acting differently for low frequencies and high frequencies. From formula for impedance of capacitor $\mathbf{Z}=\frac{1}{j\omega L}$ we can see that if $\omega$ is approaching 0 impedance will go to infinity therefore we can treat if like open circuit, but when $\omega$ is approaching infinity impedance will go to 0 so capacitor will act like a wire.
 	
 	\subsubsection{Low-pass filter}
 
