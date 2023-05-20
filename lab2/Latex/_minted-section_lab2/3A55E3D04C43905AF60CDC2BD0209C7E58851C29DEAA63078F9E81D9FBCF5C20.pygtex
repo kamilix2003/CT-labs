@@ -42,7 +42,7 @@
 \PYG{n+nb}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Time (seconds)\PYGZsq{}}\PYG{p}{);}
 \PYG{n+nb}{xlim}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{0.001}\PYG{p}{])}
 \PYG{n+nb}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Amplitude (Volts)\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nb}{ylim}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mf}{0.3}\PYG{p}{),}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{+}\PYG{p}{(}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mf}{0.3}\PYG{p}{)])}
+\PYG{n+nb}{ylim}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mf}{0.5}\PYG{p}{),}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{+}\PYG{p}{(}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mf}{0.5}\PYG{p}{)])}
 \PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Fourier series expansion\PYGZsq{}}\PYG{p}{);}
 \PYG{n}{grid}\PYG{+w}{ }\PYG{l+s}{on}\PYG{p}{;}
 
@@ -70,16 +70,18 @@
 
 \PYG{c}{\PYGZpc{}stem}
 \PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}
-\PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{frequencies}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), f\PYGZus{}magnitude(indices), \PYGZsq{}x\PYGZsq{});}
+\PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{frequencies}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n+nb}{log10}\PYG{p}{(}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{)}\PYG{o}{/}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{)),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}filled\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}LineStyle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}:\PYGZsq{}}\PYG{p}{);}
 \PYG{n+nb}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency (Hz)\PYGZsq{}}\PYG{p}{);}
 \PYG{n+nb}{xlim}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{11000}\PYG{p}{]);}
-\PYG{n+nb}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Magnitude\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Magnitude (dB)\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{ylim}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{50}\PYG{p}{,}\PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n+nb}{log10}\PYG{p}{(}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{)}\PYG{o}{/}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{)))])}
 \PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency spectrum\PYGZsq{}}\PYG{p}{);}
 \PYG{n}{grid}\PYG{+w}{ }\PYG{l+s}{on}\PYG{p}{;}
 
 \PYG{c}{\PYGZpc{}\PYGZpc{} fft phase}
 \PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{)}
-\PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{frequencies}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{f\PYGZus{}phase}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{frequencies}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{f\PYGZus{}phase}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}filled\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}LineStyle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}\PYGZhy{}\PYGZsq{}}\PYG{p}{);}
 \PYG{n+nb}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency (Hz)\PYGZsq{}}\PYG{p}{);}
 \PYG{n+nb}{xlim}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{11000}\PYG{p}{]);}
 \PYG{n+nb}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Phase (deg)\PYGZsq{}}\PYG{p}{);}

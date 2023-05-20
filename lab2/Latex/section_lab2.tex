@@ -176,7 +176,7 @@
 	
 	$\ast$ Yellow signal on oscilloscope is pure signal, Blue is filtered signal
 	\subsection{Pure signals}
-	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is approximately equal to amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90$\degree$ therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
+	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is approximately equal to amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90\degree therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.3\textwidth}
@@ -195,7 +195,7 @@
 		\label{fig:pure-sin}
 	\end{figure}
 	
-	Now moving to more interesting signal than simple sin, square wave we can see many more components of Fourier series that are not negligible. Starting with first element which is exactly the same as in sin signal we can deduce that square signal have similar shape to sinus and is mostly odd function, but looking further on the rest of coefficient we can see that all non-zero coefficient is shifted by -90$\degree$, so square signal is built entirely from sins therefore is completely odd.
+	Now moving to more interesting signal than simple sin, square wave, we can see many more components of Fourier series that are not negligible. Starting with first element which is exactly the same as in sin signal we can deduce that square signal have similar shape to sinus and is mostly odd function, but looking further on the rest of coefficient we can see that all non-zero coefficient is shifted by -90\degree, so square signal is built entirely from sins therefore is completely odd.
 	
 	\begin{figure}[H]
 		\centering
@@ -215,6 +215,8 @@
 		\label{fig:pure-sqr50}
 	\end{figure}
 	
+	Third signal is also square wave but 25\% duty cycle. Looking at the most significant coefficients we can see that it is shifted by -45\degree therefore the signal is neither odd or even, also when looking at both coefficient there is repeating pattern. Phase of a harmonic is changing in order to negate previous, more significant harmonic.
+	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.3\textwidth}
@@ -232,6 +234,8 @@
 		\caption{Square wave 25\% duty cycle}
 		\label{fig:pure-sin}
 	\end{figure}
+	
+	Last of pure signals is triangle wave, 
 	
 	\begin{figure}[H]
 		\centering

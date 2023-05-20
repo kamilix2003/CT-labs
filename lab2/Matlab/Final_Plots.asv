@@ -70,17 +70,16 @@ end
 %stem
 subplot(4,1,3)
 % stem(frequencies(indices), f_magnitude(indices), 'x');
-stem(frequencies(indices), 20*log10(f_magnitude(indices)/f_magnitude(11)), 'filled', 'LineStyle', ':');
+stem(frequencies(indices), 20*log10(f_magnitude(indices)/f_magnitude(1)), 'x');
 xlabel('Frequency (Hz)');
 xlim([0, 11000]);
-ylabel('Magnitude (dB)');
-ylim([-50,max(20*log10(f_magnitude(indices)/f_magnitude(11)))])
+ylabel('Magnitude');
 title('Frequency spectrum');
 grid on;
 
 %% fft phase
 subplot(4,1,4)
-stem(frequencies(indices), f_phase(indices), 'filled', 'LineStyle', '-');
+stem(frequencies(indices), f_phase(indices), 'x');
 xlabel('Frequency (Hz)');
 xlim([0, 11000]);
 ylabel('Phase (deg)');
