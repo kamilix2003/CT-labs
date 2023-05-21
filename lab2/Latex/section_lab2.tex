@@ -222,34 +222,34 @@
 		\begin{subfigure}[][][t]{0.3\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/sqr25}
 			\caption{calculated}
-			\label{fig:calc-signals-a}
+			\label{fig:calc-signals-c}
 		\end{subfigure}
 		\quad
 		\begin{subfigure}[][][t]{0.3\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint3.png}
 			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/dut25}
 			\caption{measured}
-			\label{fig:meas-signal-a}
+			\label{fig:meas-signal-c}
 		\end{subfigure}
 		\caption{Square wave 25\% duty cycle}
 		\label{fig:pure-sin}
 	\end{figure}
 	
-	Last of pure signals is triangle wave, 
+	Last of pure signals is triangle wave, the signal is very similar to pure sin wave even first element is exactly the same as in sin wave, but all the difference is in harmonics with significantly smaller amplitudes that are "fine tuning" the signal.
 	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.3\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/tri50}
 			\caption{calculated}
-			\label{fig:calc-signals-a}
+			\label{fig:calc-signals-d}
 		\end{subfigure}
 		\quad
 		\begin{subfigure}[][][t]{0.3\textwidth}
 			\includegraphics[width=\textwidth, trim=85 50 112 45, clip]{../img/osc/DS2_QuickPrint2.png}
 			\includegraphics[width=\textwidth, trim=10 80 555 100, clip]{../img/Circuit1/trig50}
 			\caption{measured}
-			\label{fig:meas-signal-a}
+			\label{fig:meas-signal-d}
 		\end{subfigure}
 		\caption{Triangle wave 50\% symmetry ratio}
 		\label{fig:pure-sin}
@@ -259,7 +259,51 @@
 	
 	simple Low-pass and High pass filters can be build with just 2 simple electric components resistor and capacitor, the reason why it is possible is that capacitor is acting differently for low frequencies and high frequencies. From formula for impedance of capacitor $\mathbf{Z}=\frac{1}{j\omega L}$ we can see that if $\omega$ is approaching 0 impedance will go to infinity therefore we can treat if like open circuit, but when $\omega$ is approaching infinity impedance will go to 0 so capacitor will act like a wire.
 	
+		\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0,0) node[bnc](B1) {}
+				to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
+				to[C, l=$C_{11}$, a=47nF] (3,-2)
+				node[ground] {}
+				;
+				\draw (3,0) 
+				to[short] (4.5,0)
+				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{}}
+				;
+				\draw node[ground] at (B1.shield) {};
+				\draw node[ground] at (B2.shield) {};
+			\end{circuitikz}
+			\caption{Low-pass filter}
+			\label{fig:filter-a}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0,0) node[bnc](B1) {}
+				to[C, l=$C_{21}$, a=10nF] (3,0)
+				to[R, l=$R_{21}$, a=\tiny1.5k$\Omega$] (3,-2)
+				node[ground] {}
+				;
+				\draw (3,0) 
+				to[short] (4.5,0)
+				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{}}
+				;
+				\draw node[ground] at (B1.shield) {};
+				\draw node[ground] at (B2.shield) {};
+			\end{circuitikz}
+			\caption{High-pass filter}
+			\label{fig:filter-b}
+		\end{subfigure}
+		\caption{RC filters}
+		\label{fig: Filters}
+	\end{figure}
+	
 	\subsubsection{Low-pass filter}
+
+	First signal that we filtered using low-pass filter and measured was square wave 50\% duty cycle. Most noticeable thing in comparison of unfiltered and filtered signal is that amplitudes of harmonics with smaller frequency barely change when those with higher frequencies changed by several decibels
 
 	\begin{figure}[H]
 		\centering
@@ -270,7 +314,7 @@
 		\hfill
 		\begin{subfigure}[][][t]{0.26\textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/RCLPsqr50}
-			\caption{Filtered pure signal}
+			\caption{Filtered signal}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}[][][t]{0.45\textwidth}
@@ -280,6 +324,8 @@
 		\end{subfigure}
 		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
+	
+	
 	
 	\begin{figure}[H]
 		\centering

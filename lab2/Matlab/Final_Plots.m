@@ -69,8 +69,8 @@ end
 
 %stem
 subplot(4,1,3)
-% stem(frequencies(indices), f_magnitude(indices), 'x');
-stem(frequencies(indices), 20*log10(f_magnitude(indices)/f_magnitude(11)), 'filled', 'LineStyle', ':');
+% stem(frequencies(indices), f_magnitude(indices), 'x'); hold on;
+stem(frequencies(indices), 20*log10(f_magnitude(indices)/f_magnitude(11)), 'filled', 'LineStyle', ':'); hold off;
 xlabel('Frequency (Hz)');
 xlim([0, 11000]);
 ylabel('Magnitude (dB)');

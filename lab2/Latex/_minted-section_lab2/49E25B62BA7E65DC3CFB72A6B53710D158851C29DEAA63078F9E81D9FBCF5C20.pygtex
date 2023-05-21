@@ -70,8 +70,8 @@
 
 \PYG{c}{\PYGZpc{}stem}
 \PYG{n+nb}{subplot}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}
-\PYG{c}{\PYGZpc{} stem(frequencies(indices), f\PYGZus{}magnitude(indices), \PYGZsq{}x\PYGZsq{});}
-\PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{frequencies}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n+nb}{log10}\PYG{p}{(}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{)}\PYG{o}{/}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{)),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}filled\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}LineStyle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}:\PYGZsq{}}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} stem(frequencies(indices), f\PYGZus{}magnitude(indices), \PYGZsq{}x\PYGZsq{}); hold on;}
+\PYG{n+nb}{stem}\PYG{p}{(}\PYG{n}{frequencies}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{),}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n+nb}{log10}\PYG{p}{(}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{n}{indices}\PYG{p}{)}\PYG{o}{/}\PYG{n}{f\PYGZus{}magnitude}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{)),}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}filled\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}LineStyle\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}:\PYGZsq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{n}{hold}\PYG{+w}{ }\PYG{l+s}{off}\PYG{p}{;}
 \PYG{n+nb}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency (Hz)\PYGZsq{}}\PYG{p}{);}
 \PYG{n+nb}{xlim}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{11000}\PYG{p}{]);}
 \PYG{n+nb}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Magnitude (dB)\PYGZsq{}}\PYG{p}{);}
