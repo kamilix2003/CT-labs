@@ -175,7 +175,7 @@
 	We are going to be comparing calculated and measured signals, their Fourier series expansion and/or Fourier transform. During comparison we will determine if Harmonic analysis is useful in signal analysis and what benefits it brings.
 	
 	$\ast$ Yellow signal on oscilloscope is pure signal, Blue is filtered signal
-	\subsection{Pure signals}
+	\subsection{Pure signals}\label{sec:pure-signals}
 	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is approximately equal to amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90\degree therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
 	\begin{figure}[H]
 		\centering
@@ -255,9 +255,9 @@
 		\label{fig:pure-sin}
 	\end{figure}
 		
-	\subsection{RC filters}
+	\subsection{RC filters}\label{sec:rc-filters}
 	
-	simple Low-pass and High pass filters can be build with just 2 simple electric components resistor and capacitor, the reason why it is possible is that capacitor is acting differently for low frequencies and high frequencies. From formula for impedance of capacitor $\mathbf{Z}=\frac{1}{j\omega L}$ we can see that if $\omega$ is approaching 0 impedance will go to infinity therefore we can treat if like open circuit, but when $\omega$ is approaching infinity impedance will go to 0 so capacitor will act like a wire.
+	simple Low-pass and High pass filters can be build with just 2 simple electric components resistor and capacitor, the reason why it is possible is that capacitor is acting differently for low frequencies and high frequencies. From formula for impedance of capacitor $\mathbf{Z}=\frac{1}{j\omega C}$ we can see that if $\omega$ is approaching 0, impedance will go to infinity therefore we can treat if like open circuit, but when $\omega$ is approaching infinity, impedance will go to 0 so capacitor will act like a wire.
 	
 		\begin{figure}[H]
 		\centering
@@ -325,7 +325,9 @@
 		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
 	
+	\newpage
 	
+	For filtered triangle wave 40\% duty cycle similar to square wave amplitudes of harmonics with higher frequency are decreased by few decibels, and without those higher frequency harmonics which are responsible for "thin tuning" of signal loses sharp shape and retains rough shape of the signal.
 	
 	\begin{figure}[H]
 		\centering
@@ -346,11 +348,11 @@
 		\end{subfigure}
 		\caption{Low-pass filter response for Triangle wave 40\% symmetry ratio}
 	\end{figure}
-
-
 	
 	\subsubsection{High-pass filter}
-
+	
+	Moving to High-pass filter we measured the same signals as in Low-pass filter. Starting with Square wave, looking at amplitudes we can see that only small frequency harmonics are greatly impacted by order of -20dB which is around 0.1 of original amplitude, decreasing of amplitudes of harmonics eases off with increasing frequency.
+	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.26\textwidth}
@@ -371,6 +373,8 @@
 		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
 	
+	Moving to last of the signals which is Triangle wave with 40\% symmetry ratio. Similar to previous case the biggest difference is in first harmonic with lowest frequency, amplitude is reduced by -20dB another thing is change in phase between filtered and unfiltered first harmonic. Phase of first harmonic change to better match extremes of filtered signal.
+	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.26\textwidth}
@@ -390,8 +394,10 @@
 		\end{subfigure}
 		\caption{Low-pass filter response for Square wave 50\% duty cycle}
 	\end{figure}
-		
-	\section{Summary}
+	
+	\section{Conclusion}
+	
+	Fourier series is powerful tool in signal analysis, It allows us to split signal into simpler signals and point out characteristics of more complex periodic signals, as we did in section. \ref{sec:pure-signals}. Splitting signal into simple harmonics also allows us to evaluate effectiveness of for example filters, by compering Fourier series expansion of filtered and unfiltered signal. Another application of Fourier series that we didn't utilize is splitting signal into sins and cosines, performing some calculation on simple function and then recombining new sines and cosines to get processed signal. For example instead of simulating RC filters' responses we could have calculate transfer functions for cosine and decompose each signal apply transfer function and recompose back to get output signal.
 	
 	\newpage
 	\appendix
