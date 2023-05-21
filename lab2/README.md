@@ -1,5 +1,5 @@
 # Lab 2 - Fourier Series (Harmonic Analysis)
-[Latex](Latex/section_lab2.pdf)
+[pdf](Latex/section_lab2.pdf)
 ## 1 Aim of the exercise
 - [x] Done
 ## 2 What is Fourier Series
@@ -14,23 +14,22 @@
   - [x] RC circuits' responses
 - [x] Done
 ## 5 Comparison
-- [ ] idk
 ### 5.1 pure singnals
 - [x] Figures
 - [x] Sin
 - [x] Sqr50
-- [ ] Sqr25 **partially, need to retink**
-- [ ] Trig50 **partially, need to retink**
-- [ ] Done
+- [x] Sqr25 **partially, need to retink**
+- [x] Trig50 **partially, need to retink**
+- [x] Done
 ### 5.2 RC Circuits' Responses
 - [x] about RC filters
 - [x] Figures
-  - [ ] Low-pass
+  - [x] Low-pass
     - [x] Sqr50
-    - [ ] Trig40
-  - [ ] High-pass
-    - [ ] Sqr50
-    - [ ] Trig40
-- [ ] Done
-# Summary
-- [ ] Done
+    - [x] Trig40
+  - [x] High-pass
+    - [x] Sqr50
+    - [x] Trig40
+- [x] Done
+# Conclusion
+- [x] Done
