@@ -16,6 +16,8 @@
 \PYG{n}{s}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nb}{sin}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{);}
 \PYG{n}{tr50}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sawtooth}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.5}\PYG{p}{);}
 \PYG{n}{tr40}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sawtooth}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.4}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} tr50 = tr50(size(tr50, 2)/40:size(tr50, 2));}
+
 \PYG{n}{sq50}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{square}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{50}\PYG{p}{);}
 \PYG{n}{sq25}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{square}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb}{pi}\PYG{o}{*}\PYG{n}{t}\PYG{o}{*}\PYG{n}{f}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{phi}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{25}\PYG{p}{);}
 
@@ -28,6 +30,8 @@
 \PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Square50\PYGZus{}differentiatior}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}High\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Square wave 50\PYGZpc{} duty cycle\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCHPsqr50\PYGZsq{}}\PYG{p}{);}
 \PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Triangle40\PYGZus{}integrator}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}Low\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCLPtri40\PYGZsq{}}\PYG{p}{);}
 \PYG{n}{Final\PYGZus{}Plots}\PYG{p}{(}\PYG{n}{Triangle40\PYGZus{}differentiatior}\PYG{p}{,[}\PYG{l+s}{\PYGZsq{}High\PYGZhy{}pass filter response for\PYGZsq{}}\PYG{+w}{ }\PYG{n+nb}{newline}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Triangle wave 40\PYGZpc{} symmetry ratio\PYGZsq{}}\PYG{p}{],}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}RCHPtri40\PYGZsq{}}\PYG{p}{);}
+
+\PYG{n}{close}\PYG{+w}{ }\PYG{l+s}{all}\PYG{p}{;}
 
 \PYG{c}{\PYGZpc{}\PYGZpc{} converted to Final\PYGZus{}Plot function}
 \PYG{c}{\PYGZpc{} figure(123);}

@@ -41,7 +41,7 @@ hold off;
 xlabel('Time (seconds)');
 xlim([0,0.001])
 ylabel('Amplitude (Volts)');
-ylim([-max(f)-(max(f)*0.3),max(f)+(max(f)*0.3)])
+ylim([-max(f)-(max(f)*0.5),max(f)+(max(f)*0.5)])
 title('Fourier series expansion');
 grid on;
 
@@ -59,7 +59,7 @@ for i = 1:length(freq_of_interest)
     [~, indices(i)] = min(abs(frequencies - freq_of_interest(i)));
 end
 
-% subplot(4,1,2)
+% subplot(4,1,3)
 % plot(frequencies, db(f_magnitude));
 % xlabel('Frequency (Hz)');
 % xlim([0, 11000]);
@@ -69,16 +69,18 @@ end
 
 %stem
 subplot(4,1,3)
-stem(frequencies(indices), f_magnitude(indices), 'x');
+% stem(frequencies(indices), f_magnitude(indices), 'x'); hold on;
+stem(frequencies(indices), 20*log10(f_magnitude(indices)/f_magnitude(11)), 'filled', 'LineStyle', ':'); hold off;
 xlabel('Frequency (Hz)');
 xlim([0, 11000]);
-ylabel('Magnitude');
+ylabel('Magnitude (dB)');
+ylim([-50,max(20*log10(f_magnitude(indices)/f_magnitude(11)))])
 title('Frequency spectrum');
 grid on;
 
 %% fft phase
 subplot(4,1,4)
-stem(frequencies(indices), f_phase(indices), 'x');
+stem(frequencies(indices), f_phase(indices), 'filled', 'LineStyle', '-');
 xlabel('Frequency (Hz)');
 xlim([0, 11000]);
 ylabel('Phase (deg)');

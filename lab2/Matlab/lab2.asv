@@ -15,7 +15,7 @@ phi = 0;
 s = a * sin(2*pi*t*f + phi);
 tr50 = a * sawtooth(2*pi*t*f + phi, 0.5);
 tr40 = a * sawtooth(2*pi*t*f + phi, 0.4);
-% tr50 = tr50(size(tr50, 2)/40:size(tr50, 2));
+tr50(1:size(tr50, 2)) = tr50(1:size(tr50, 2))
 
 sq50 = a * square(2*pi*t*f + phi, 50);
 sq25 = a * square(2*pi*t*f + phi, 25);

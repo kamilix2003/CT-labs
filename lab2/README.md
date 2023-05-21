@@ -13,16 +13,24 @@
   - [x] amplitude and phase for pure signals
   - [x] RC circuits' responses
 - [x] Done
-## 5 Comparison measurements vs calculations
+## 5 Comparison
+- [ ] idk
 ### 5.1 pure singnals
-- [ ] Figures
-  - [x] calculated
-  - [ ] measured
+- [x] Figures
+- [x] Sin
+- [x] Sqr50
+- [ ] Sqr25 **partially, need to retink**
+- [ ] Trig50 **partially, need to retink**
 - [ ] Done
 ### 5.2 RC Circuits' Responses
-- [ ] Figures
-  - [x] calculated
-  - [ ] measured
+- [x] about RC filters
+- [x] Figures
+  - [ ] Low-pass
+    - [x] Sqr50
+    - [ ] Trig40
+  - [ ] High-pass
+    - [ ] Sqr50
+    - [ ] Trig40
 - [ ] Done
 # Summary
 - [ ] Done

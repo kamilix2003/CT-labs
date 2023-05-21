@@ -9,6 +9,7 @@
 3. do something...
 4. add, commit, push `git add [files]`, `git commit -m 'minor update'`, `git push origin <your-branch>`
 5. merge to main [here](https://github.com/kamilix2003/CT-labs/pulls)
+
 [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 ## tips
 1. Step by step what we did
