@@ -1,0 +1,125 @@
+\documentclass[notitlepage, a4paper, 11pt]{article}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+\usepackage{ gensymb }
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+\usepackage{tikz}
+\usepackage[european resistors]{circuitikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\hypersetup{
+	pdfborder = false,
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=black,      
+	urlcolor=blue,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+\title{Laplace Transform\\
+	\large Laboratory III}
+\author{Patrycja Nazim, Adrian Król, Gabriel Ćwiek, Kamil Chaj}
+\date{}
+
+\begin{document}
+	\maketitle
+	\section{Goal of the exercise}
+	\section{Laplace Transform}
+	\section{Course of measurements}
+	
+		\begin{figure}[H]
+			\centering
+			\begin{circuitikz}
+				\ctikzset{bipoles/oscope/width=1.5}
+				\ctikzset{bipoles/oscope/height=1}
+				\draw [black, thick] (0, 0) rectangle (3, -2);
+				\node [black, below] at (1.5, -2) {RC circuits};
+				\draw [black, thick] (-3, 0) rectangle (-1, -1.5);
+				\node [black, above] at (-2, 0) {\small Function Generator};
+				\draw (1.5, 1.3) node[oscopeshape](O) {Oscilloscope};
+				\node [bnc] at (-1.3, -0.75) (FG) {};
+				\node [bnc, font=\tiny, xscale=-1, anchor=zero] at (1, -0.75) (CON1) {\ctikzflipx{CON1}};
+				\node [bnc, font=\tiny, rotate=90, anchor=zero, label position=45] at (2, -0.75) (CON2) {CON2};
+				\draw (O.in 1) node[bnc, anchor=zero, rotate=-90](IN1) {};
+				\draw (O.in 2) node[bnc, anchor=zero, rotate=-90](IN2) {};
+				\draw (FG.hot) to[short, -*] (-0.4, -0.75) -- (-0.4, 0.4) -- (1.08, 0.4) to (IN1.hot);
+				\draw (CON1.hot) to[short] (-0.4, -0.75);
+				\draw (CON2.hot) to[short] (2, 0.4) -- (1.92, 0.4) -- (IN2.hot);
+				
+			\end{circuitikz}
+		\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0,0) node[bnc](B1) {CON11}
+				to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
+				to[C, l=$C_{11}$, a=47nF] (3,-2)
+				node[ground] {}
+				;
+				\draw (3,0) 
+				to[short] (4.5,0)
+				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{CON12}}
+				;
+				\draw node[ground] at (B1.shield) {};
+				\draw node[ground] at (B2.shield) {};
+			\end{circuitikz}
+			\caption{Circuit A}
+			\label{fig:Circuit A}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0,0) node[bnc](B1) {CON21}
+				to[C, l=$C_{21}$, a=10nF] (3,0)
+				to[R, l=$R_{21}$, a=\tiny1.5k$\Omega$] (3,-2)
+				node[ground] {}
+				;
+				\draw (3,0) 
+				to[short] (4.5,0)
+				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{CON21}}
+				;
+				\draw node[ground] at (B1.shield) {};
+				\draw node[ground] at (B2.shield) {};
+			\end{circuitikz}
+			\caption{Circuit B}
+			\label{fig:Circuit B}
+		\end{subfigure}
+		\caption{Measured RC Circuits}
+		\label{fig: Circuit}
+	\end{figure}
+	
+	\begin{figure}
+		\begin{circuitikz}
+			\node [bnc] at (0,0) (CON41) {};
+			\draw (CON41.hot) to[short, -*]
+			(1,0) -- (3,0) to[switch] (4,0);
+			\draw (1,0) -- (1,-2) to[R] (3,-2)
+			to[switch] (4,-2) -- (4, 0);
+			\draw (1,-2) -- (1,-4) to[R] (3,-4)
+			to[switch] (4,-4) -- (4, -2);
+			\draw (4,0) to[short, -*] (5,0)
+			to[C] (5,-2) to[L] (5,-4);
+			\draw (5, 0) to (6, 0) node[bnc, xscale=-1, anchor=zero](CON42){};
+		\end{circuitikz}
+	\end{figure}
+	\section{Theoretical calculations}
+	\section{Comparison}
+	\section{Conclusions}
+\end{document}
