@@ -1,0 +1,7 @@
+*/Latex/*.aux
+*/Latex/*.log
+*/Latex/*.out
+*/Latex/*.gz
+*/Latex/_minted*
+*/Matlab/*.asv
+*/img/*eps-converted-to.pdf
