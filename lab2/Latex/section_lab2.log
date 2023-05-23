@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  21 MAY 2023 22:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.13)  23 MAY 2023 02:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1384,14 +1384,8 @@ F55CA29.pygtex) [10] (section_lab2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `section_lab2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `section_lab2.out':
-(rerunfilecheck)             Before: D501363FDB87CFCD2C2E1201CC552AE7;1602
-(rerunfilecheck)             After:  7F8BD1536A0786B789ED0E17051EEB9D;1591.
+Package rerunfilecheck Info: File `section_lab2.out' has not changed.
+(rerunfilecheck)             Checksum: 7F8BD1536A0786B789ED0E17051EEB9D;1591.
  ) 
 Here is how much of TeX's memory you used:
  43966 strings out of 475385
@@ -1400,7 +1394,7 @@ Here is how much of TeX's memory you used:
  64768 multiletter control sequences out of 15000+600000
  477162 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,80p,872b,1034s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,10n,80p,877b,1034s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\kamaj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -1418,7 +1412,7 @@ amsfonts/cm/cmr8.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/kamaj/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/kamaj/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on section_lab2.pdf (10 pages, 1150293 bytes).
+Output written on section_lab2.pdf (10 pages, 1150083 bytes).
 PDF statistics:
  340 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)
