@@ -141,7 +141,7 @@
 	
 	First step in our calculation is generating signals that we measured during exercise. Pure signals were obtained with built-in functions of Signal Processing Toolbox and Filtered signals were evaluated using NI Multisim SPICE software.
 		
-	Next step is finding first 10 coefficients of Fourier series for a signal which we calculated by taking inner product of signal with basis vector. In our calculations we used $\sin nt ,\thinspace \cos nt$ and $1$ as our basis vectors.
+	Next step is finding first 10 coefficients of Fourier series for a signal which we calculated by taking inner product of signal with basis vector. In our calculations we used $\sin n\omega t ,\thinspace \cos n\omega t$ and $1$ as our basis vectors.
 	\begin{equation}\label{eq:a0}
 		a_0 = \left\langle s(t), 1 \right\rangle
 	\end{equation}
@@ -169,14 +169,14 @@
 		s(t) \approx \frac{A_0}{2} + \sum_{n=1}^{10}(A_n\cos(n\omega t +\varphi_n))
 	\end{equation}
 
-	For third and fourth plot in Figure \ref{fig:example-plot} we are calculating Discrete Fourier transform for 10 oscillations of a signal using Fast Fourier transform algorithm from Signal Processing Toolbox and then plotting magnitude and argument of FT both in decibel scale on vertical axis.
+	For third and fourth plot in Figure \ref{fig:example-plot} we are calculating Discrete Fourier transform for 10 oscillations of a signal using Fast Fourier transform algorithm from Signal Processing Toolbox and then plotting magnitude and argument of FT in decibel scale on vertical axis.
 
 	\section{Comparison}
-	We are going to be comparing calculated and measured signals, their Fourier series expansion and/or Fourier transform. During comparison we will determine if the Harmonic analysis is useful in signal analysis and what benefits does it bring.
+	We are going to be comparing calculated and measured signals, and their Fourier series expansion. During comparison we will determine if the Harmonic analysis is useful in signal analysis and what benefits does it bring.
 	
 	$\ast$ Yellow signal on oscilloscope is pure signal, Blue is filtered signal
 	\subsection{Pure signals}\label{sec:pure-signals}
-	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is approximately equal to an amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90\degree therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
+	Starting off with first signal, Sinus, we can see that $A_n$ coefficient for 1 kHz is equal to an amplitude of a signal and rest of coefficients are very small almost negligible, phase coefficient $\varphi_n$ at 1 kHz is approximately -90\degree therefore according to eq.\eqref{eq:FSap} first element of Fourier series is just $A_1 \sin \omega t$ and the rest of elements are very small, negligible.
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}[][][t]{0.28\textwidth}
@@ -215,7 +215,7 @@
 		\label{fig:pure-sqr50}
 	\end{figure}
 	
-	Third signal is also square wave but 25\% duty cycle. Looking at the most significant coefficients we can see that it is shifted by -45\degree therefore the signal is neither odd or even, also when looking at both coefficient there is repeating pattern. Phase of a harmonic is changing in order to negate previous, more significant harmonic.
+	Third signal is also square wave but with duty cycle of 25\%. Looking at the most significant coefficients we can see that it is shifted by -45\degree therefore the signal is neither odd or even, also when looking at both coefficient there is repeating pattern. Phase of a harmonic is changing in order to negate previous, more significant harmonic.
 	
 	\begin{figure}[H]
 		\centering
@@ -327,7 +327,7 @@
 	
 	\newpage
 	
-	For filtered triangle wave 40\% duty cycle similar to square wave amplitudes of harmonics with higher frequency are decreased by few decibels, and without those higher frequency harmonics which are responsible for "thin tuning" of signal loses sharp shape and retains rough shape of the signal.
+	For filtered triangle wave 40\% duty cycle similar to square wave amplitudes of harmonics with higher frequency are decreased by few decibels, and without those higher frequency harmonics which are responsible for "thin tuning". Signal loses sharp shape and retains only rough shape of the signal.
 	
 	\begin{figure}[H]
 		\centering
@@ -397,7 +397,7 @@
 	
 	\section{Conclusion}
 	
-	Fourier series is powerful tool in signal analysis. It allows us to split signals into much simpler components and point out characteristics of more complex periodic signals, as we did in section. \ref{sec:pure-signals}. Splitting signals into simple harmonics also allows us to evaluate effectiveness of for example filters, by comparing Fourier series expansion of filtered and unfiltered signals. Another application of Fourier series which we didn't utilize is splitting the signal into sins and cosines, performing some calculation on simple function and then recombining new sines and cosines to get processed signal. For example instead of simulating RC filters' responses we could have calculated transfer functions for cosine and decompose each signal, then apply transfer function and recompose back to get output signal.
+	Fourier series is powerful tool in signal analysis. It allows us to split  complex signals into much simpler components and point out characteristics of complex periodic signals, as we did in section. \ref{sec:pure-signals}. Splitting signals into simple harmonics also allows us to evaluate effectiveness of for example filters, by comparing Fourier series expansion of filtered and unfiltered signals. Another application of Fourier series which we didn't utilize is splitting the signal into sins and cosines, performing some calculation on simple function and then recombining new sines and cosines to get processed signal. %For example instead of simulating RC filters' responses we could have calculated transfer functions for cosine and decompose each signal, then apply transfer function and recompose back to get output signal.
 	
 	\newpage
 	\appendix

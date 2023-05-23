@@ -1,7 +1,14 @@
 # Circuit theory laboratory
+
 [Nodal Analysis](lab1/Latex/template_Report.pdf)
 
 [Fourier Series](lab2/Latex/section_lab2.pdf)
+
+[Laplace Transform](lab3/Latex/section3_lab3.pdf)
+
+[Frequency Response](lab4/Latex/section3_lab4.pdf)
+
+[Two-port Networks](lab5/Latex/section3_lab5.pdf)
 
 ## HOW TO GIT(gud) for teamek
 1. clone repo `git clone https://github.com/kamilix2003/CT-labs.git`
@@ -16,7 +23,7 @@
 2. Schematics
 3. Block diagrams
 4. Calculations 
-5. What is nodal analysis, we have to describe
-6. Script in python (on the last page)
+5. What is SOMETHING, we have to describe
+6. Scripts, calculations etc. (on the last page)
 7. Comparison 
-8. Conclusions ( nodal analysis is ok or not? Big differences or small?)
+8. Conclusions (SOMETHING is ok or not? Big differences or small?)
