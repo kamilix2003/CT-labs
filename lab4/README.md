@@ -5,10 +5,12 @@
 ## Frequency response
 - [ ] Done
 ## Course of measurements
+- [ ] Circuits *WIP*
 - [ ] Done
-## Theoretical calculations
+## Data processing
+- [x] Plots
 - [ ] Done
-## Characteristics of the tested circuits
+## Characteristics analysis
 - [ ] Done
 ## Conclusions
 - [ ] Done
