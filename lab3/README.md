@@ -5,6 +5,9 @@
 ## Laplace Transform
 - [ ] Done
 ## Course of measurements
+- [ ] Figures
+  - [x] Circuits
+  - [x] Measurements diagrams
 - [ ] Done
 ## Theoretical calculations
 - [ ] Done
