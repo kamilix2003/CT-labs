@@ -3,9 +3,9 @@
 [Report](Latex/section3_lab5.pdf)
 
 ## Goal of the exercise
-- [ ] Done
+- [x] Done
 ## Two-port networks
-- [ ] Done
+- [x] Done
 ## Course of measurements
 - [x] Figures
 - [ ] Measurement procesing

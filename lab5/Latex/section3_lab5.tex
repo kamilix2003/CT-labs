@@ -38,22 +38,64 @@
 \begin{document}
 	\maketitle
 	\section{Goal of the exercise}
+	
 	The aim of this exercise is to familiarize with experimental methods of determining two-port network parameters by measuring output and input voltages and currents, and then compare theoretical and experimental results
+	
 	\section{Two-port networks}
-	Two-port model is used in mathematical circuit analysis to isolate portions of large circuits. Two-port network can be regarded as "black box" with its properties specified by a characteristic matrix. Characteristic matrix in impedance form can be determine by following formulas.
 	
-	Characteristic matrix can have form of impedance $\mathbf{Z}$, admittance $\mathbf{Y}$ or chain(ABCD) matrix and many more form that we are not going to use right now. 
-	
-	Form of this matrix can be easily change using 
-	\section{Course of measurements}
-	\begin{figure}[H]
+	\begin{wrapfigure}{R}{0.3\textwidth}
 		\centering
-				\begin{subfigure}{0.45\textwidth}
+		\begin{circuitikz}
+			\node [align=center, text width=20mm, text height=5mm] at (1, 1.25) {Two-port network};
+			\draw [black, thick] (0, 0) rectangle (2, 2.5);
+			\draw (-1, 0.5) 
+			to[open, v^=$v_1$](-1, 2) 
+			to[short, *-, i=$i_1$] (0, 2);
+			\draw (-1, 0.5) to[short, *-] (0, 0.5);
+			\draw (3, 0.5) 
+			to[open, v=$v_2$] (3, 2) 
+			to[short, *-, i_=$i_2$] (2, 2);
+			\draw (3, 0.5) to[short, *-] (2, 0.5);
+		\end{circuitikz}
+		\caption{Two-port diagram}
+	\end{wrapfigure}
+	
+	Two-port network can be regarded as "black box" with its properties specified by a characteristic matrix. It allows us to simplify large circuit with those "black boxes" and move to higher level of abstraction, instead of using simple passive element now we can using complex circuits but seeing them as simple 2$\times$2 matrix similar to one in eq. \eqref{eq:simple-matrix}.
+	
+	\begin{equation}\label{eq:simple-matrix}
+		\mathbf{Z}
+		\begin{bmatrix}
+			i_1 \\
+			i_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			z_{11} & z_{12} \\
+			z_{21} & z_{22}
+		\end{bmatrix}
+		\begin{bmatrix}
+			i_1 \\
+			i_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			v_1 \\
+			v_2
+		\end{bmatrix}
+	\end{equation}
+
+	Characteristic matrix can have form of impedance $\mathbf{Z}$, admittance $\mathbf{Y}$ or chain(ABCD) matrix and many more forms which we are not going to use during this exercise.	
+	
+	\section{Course of measurements}  
+	
+		\begin{figure}[H]
+		\centering
+			\begin{subfigure}{0.45\textwidth}
 			\centering
 			\begin{circuitikz}[scale = 0.8, transform shape]
 				\ctikzset{bipoles/length = 10mm}
-				\node [bnc, scale=2] at (0, 0) (CON1) {};
-				\node [bnc, scale=2, anchor = zero, xscale=-1] at (8, 0) (CON2) {};
+				\node [bnc, scale=2, font=\tiny] at (0, 0) (CON1) {CON21};
+				\node [bnc, scale=2, anchor = zero, xscale=-1, font=\tiny] at (8, 0) (CON2) {\ctikzflipx{CON22}};
 				\node [ground] at (CON1.shield) {};
 				\node [ground] at (CON2.shield) {};
 				\draw (CON1.hot) -- (1, 0)
@@ -85,8 +127,8 @@
 			\centering
 			\begin{circuitikz}[scale = 0.8, transform shape]
 				\ctikzset{bipoles/length = 10mm}
-				\node [bnc, scale=2] at (0, 0) (CON1) {};
-				\node [bnc, scale=2, anchor = zero, xscale=-1] at (8, 0) (CON2) {};
+				\node [bnc, scale=2, font=\tiny] at (0, 0) (CON1) {CON31};
+				\node [bnc, scale=2, anchor = zero, xscale=-1, font=\tiny] at (8, 0) (CON2) {\ctikzflipx{CON32}};
 				\node [ground] at (CON1.shield) {};
 				\node [ground] at (CON2.shield) {};
 				\draw (CON1.hot) -- (1, 0)
@@ -114,7 +156,29 @@
 		\caption{Measured circuits}
 		\label{fig.circuits}
 	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{circuitikz}
+			\node [align=center, text width=20mm, text height=5mm] at (1, 1.25) {Circuit no. 2};
+			\node [align=center, text width=20mm, text height=5mm] at (4, 1.25) {Circuit no. 3};
+			\draw [black, thick] (0, 0) rectangle (2, 2.5);
+			\draw [black, thick] (3, 0) rectangle (5, 2.5);
+			\draw (-1, 0.5) 
+			to[open, v^=$v_1$](-1, 2) 
+			to[short, *-, i=$i_1$] (0, 2);
+			\draw (-1, 0.5) to[short, *-] (0, 0.5);
+			\draw(2, 2) to[short] (3, 2);
+			\draw (3, 0.5) to[short] (2, 0.5);
+			\draw (6, 0.5) 
+			to[open, v_=$v_2$](6, 2) 
+			to[short, *-, i=$i_2$] (5, 2);
+			\draw (6, 0.5) to[short, *-] (5, 0.5);
+		\end{circuitikz}
+		\caption{Chain configuration}
+	\end{figure}
 	\section{Theoretical calculations}
+	
 	
 		\begin{figure}[H]
 			\centering
