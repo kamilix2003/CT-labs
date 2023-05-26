@@ -1,5 +1,6 @@
 # Lab 4 - Frequency response measurements
 
+[Report](Latex/section3_lab4.pdf)
 ## Goal of the exercise
 - [ ] Done
 ## Frequency response

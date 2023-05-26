@@ -1,5 +1,7 @@
 # Lab 3 - Laplace Transform
 
+[Report](Latex/section3_lab3.pdf)
+
 ## Goal of the exercise
 - [ ] Done
 ## Laplace Transform
