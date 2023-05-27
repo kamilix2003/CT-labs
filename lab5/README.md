@@ -7,16 +7,21 @@
 ## Two-port networks
 - [x] Done
 ## Course of measurements
+- [ ] **CHECK MEASUREMENTS SOMETHING IS SUS, I TINK**
 - [x] Figures
 - [ ] Measurement procesing
-  - [x] import data to matlab
+  - [ ] import data to matlab
   - [x] Y matrix
   - [x] ABCD matrix
   - [x] chain calculated vs measured
 - [ ] Done
 ## Theoretical calculations
 - [x] Figures
-- [ ] Analytical solution
+- [ ] Analytical solution *WIP*
+  - [x] circuit 2
+  - [x] circuit 3
+  - [ ] chain connection
+  - [ ] matlab
 - [ ] Done
 ## Comparison
 - [ ] Done

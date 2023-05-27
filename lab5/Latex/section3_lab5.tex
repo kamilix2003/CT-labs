@@ -41,7 +41,7 @@
 	
 	The aim of this exercise is to familiarize with experimental methods of determining two-port network parameters by measuring output and input voltages and currents, and then compare theoretical and experimental results
 	
-	\section{Two-port networks}
+	\section{Two-port networks}\label{sec:two-port-networks}
 	
 	\begin{wrapfigure}{R}{0.3\textwidth}
 		\centering
@@ -60,7 +60,7 @@
 		\caption{Two-port diagram}
 	\end{wrapfigure}
 	
-	Two-port network can be regarded as "black box" with its properties specified by a characteristic matrix. It allows us to simplify large circuit with those "black boxes" and move to higher level of abstraction, instead of using simple passive element now we can using complex circuits but seeing them as simple 2$\times$2 matrix similar to one in eq. \eqref{eq:simple-matrix}.
+	Two-port network can be regarded as "black box" with its properties specified by a characteristic matrix. It allows us to simplify large circuits with those "black boxes" and move to higher level of abstraction, instead of using simple passive element now we can use complex circuits but seeing them as simple 2$\times$2 matrix similar to one in eq. \eqref{eq:simple-matrix}.
 	
 	\begin{equation}\label{eq:simple-matrix}
 		\mathbf{Z}
@@ -85,7 +85,37 @@
 	\end{equation}
 
 	Characteristic matrix can have form of impedance $\mathbf{Z}$, admittance $\mathbf{Y}$ or chain(ABCD) matrix and many more forms which we are not going to use during this exercise.	
-	
+	impedance $\mathbf{Z}$ matrix can be easily transformed into admittance $\mathbf{Y}$ and chain(ABCD) matrix using following formulas.
+	\begin{equation}\label{eq:ZtoY}
+		\mathbf{Y} = \mathbf{Z}^{-1} = 
+		\begin{bmatrix}
+			\frac{z_{11}}{\det\mathbf{Z}} & \frac{-z_{12}}{\det\mathbf{Z}} \\[4pt]
+			\frac{-z_{21}}{\det\mathbf{Z}} & \frac{z_{22}}{\det\mathbf{Z}}
+		\end{bmatrix}
+	\end{equation}
+	\begin{equation}\label{eq:YtoZ}
+		\mathbf{Z} = \mathbf{Y}^{-1} = 
+		\begin{bmatrix}
+			\frac{y_{11}}{\det\mathbf{Y}} & \frac{-y_{12}}{\det\mathbf{Y}} \\[4pt]
+			\frac{-y_{21}}{\det\mathbf{Y}} & \frac{y_{22}}{\det\mathbf{Y}}
+		\end{bmatrix}
+	\end{equation}
+	\begin{equation}\label{eq:toA}
+		\mathbf{A} =
+		\begin{bmatrix}
+			\frac{z_{11}}{z_{21}} & \frac{\det \mathbf{Z}}{z_{21}} \\[4pt]
+			\frac{1}{z_{21}} & \frac{z_{22}}{z_{21}}
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			-\frac{y_{11}}{y_{21}} & -\frac{1}{y_{21}} \\[4pt]
+			-\frac{\det \mathbf{Y}}{y_{21}} & -\frac{y_{22}}{y_{21}}
+		\end{bmatrix}
+	\end{equation}
+
+	Two-port networks, similar to simple passive components, can be in parallel and series connection, but also in chain configuration which is unique to two-port networks.
+	Parallel connection can be represented by sum of admittance characteristics, series connection by sum of impedance characteristics and chain connection by multiplication of chain(ABCD) characteristics, order of matrix multiplication is important.
+		
 	\section{Course of measurements}  
 	
 		\begin{figure}[H]
@@ -178,46 +208,115 @@
 		\caption{Chain configuration}
 	\end{figure}
 	\section{Theoretical calculations}
+	First step in our analytical solution is simplifying Circuits by removing connection used to measured voltages and currents.
 	
+	Some characteristics matrices of two-port network can be solved using mesh or nodal analysis by inspection, and both of our circuit can be solved using one of those methods. We solved circuit no. 2 using nodal analysis and circuit no. 3 using mesh analysis, %therefore we added current sources and voltage sources to each circuit according to below Figures \ref{fig:simplified-circuit-2}, \ref{fig:simplified-circuit-3}
 	
-		\begin{figure}[H]
-			\centering
-			\begin{circuitikz}[scale = 0.8, transform shape]
-				\draw (0, 0) 
-				to[sI=$i_1$] (0, 3) -- (2, 3)
-				to[R=$R_{21}$] (2, 0) -- (0, 0);
-				\draw (2, 3)
-				to[C=$C_{21}$] (4, 3)
-				to[R=$R_{22}$] (4, 0) -- (2, 0);
-				\draw (4, 0) -- (6, 0)
-				to[sI=$i_2$] (6, 3) -- (4, 3);
-				\node [rground] at (3, 0) {};
-				\draw [black, thick, dashed] (-0.2, 3.2) rectangle (2.2, 2.8);
-				\draw [black, thick, dashed] (3.8, 3.2) rectangle (6.2, 2.8);
-				\node [above] at (1, 3.2) {$v_1$};
-				\node [above] at (5, 3.2) {$v_2$};
-			\end{circuitikz}
-			\caption{Simplified circuit no. 2}
-			\label{fig:simplified-circuit-2}
-		\end{figure}
+%	In circuit no.2 (Figure. \ref{fig:simplified-circuit-2}) we used current sources 
+
+	\subsection{Circuit no. 2}
+	\begin{wrapfigure}{R}{0.35\textwidth}
+		\centering
+		\begin{circuitikz}[scale = 0.8, transform shape]
+			\draw (0, 0) 
+			to[sI=$i_1$] (0, 3) -- (2, 3)
+			to[R=$R_{21}$] (2, 0) -- (0, 0);
+			\draw (2, 3)
+			to[C=$C_{21}$] (4, 3)
+			to[R=$R_{22}$] (4, 0) -- (2, 0);
+			\draw (4, 0) -- (6, 0)
+			to[sI=$i_2$] (6, 3) -- (4, 3);
+			\node [rground] at (3, 0) {};
+			\draw [black, thick, dashed] (-0.2, 3.2) rectangle (2.2, 2.8);
+			\draw [black, thick, dashed] (3.8, 3.2) rectangle (6.2, 2.8);
+			\node [above] at (1, 3.2) {$v_1$};
+			\node [above] at (5, 3.2) {$v_2$};
+		\end{circuitikz}
+		\caption{Simplified circuit no. 2}
+		\label{fig:simplified-circuit-2}
+	\end{wrapfigure}
+	
+	In order to solve circuit no. 2 we added current sources $i_1$ and $i_2$ between each port, and marked nodes $v_1$ and $v_2$ then following rules of nodal analysis by inspection we constructed $\mathbf{Yv=i}$ matrix equation where $\mathbf{Y}$ is two-port characteristics in admittance form.
+	\begin{equation}
+		\begin{bmatrix}
+			\frac{1}{R_{21}} + j\omega C_{21} & -j\omega C_{21} \\
+			-j\omega C_{21} & \frac{1}{R_{22}} + j\omega C_{21} \\
+		\end{bmatrix}
+		\begin{bmatrix}
+			v_1 \\
+			v_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			i_1 \\
+			i_2
+		\end{bmatrix}
+	\end{equation}	
+	
+	Knowing admittance characteristics we can plugin values of each component and transform it into impedance and chain characteristics using formulas \eqref{eq:YtoZ} and \eqref{eq:toA}
+	
+	\begin{center}
+		\begin{math}
+			\mathbf{Y} = 
+			\quad
+			\mathbf{Z} = 
+			\quad
+			\mathbf{A} = 
+		\end{math}
+	\end{center}
+	\newpage
+	\subsection{Circuit no. 3}
+	
+	\begin{wrapfigure}{R}{0.35\textwidth}
+		\centering
+		\begin{circuitikz}[scale = 0.8, transform shape]
+			\draw (0, 0) 
+			to[sV=$v_1$] (0, 3)
+			to[C=$C_{31}$] (3, 3)
+			to[C=$C_{32}$] (6, 3);
+			\draw (3, 3)
+			to[R=$R_{31}$] (3, 0) -- (0, 0);
+			\draw (3, 0) -- (6, 0)
+			to[sV_=$v_2$] (6, 3);
+			\draw[->]   (1.3,2) arc(110:-110:5mm) node[midway, left] {$i_1$};
+			\draw[->]   (4.7,2) arc(-110:110:-5mm) node[midway, right] {$i_2$};
+		\end{circuitikz}
+		\caption{Simplified circuit no. 3}
+		\label{fig:simplified-circuit-3}
+	\end{wrapfigure}
+	
+	In circuit no. 3 we added voltage sources $v_1$ and $v_2$ between each port, and marked loops $i_1$ and $i_2$ in clockwise and counterclockwise directions respectively, then according to rules of mesh analysis by inspection we constructed $\mathbf{Zi=v}$ matrix equation, where $\mathbf{Z}$ is two-port characteristics in impedance form.
+	
+	\begin{equation}
+		\begin{bmatrix}
+			\frac{1}{j\omega C_{31}} + R_{31} & R_{31} \\[4pt]
+			R_{31} & \frac{1}{j\omega C_{32}} + R_{31}
+		\end{bmatrix}
+		\begin{bmatrix}
+			i_1 \\
+			i_2
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			v_1 \\ 
+			v_2
+		\end{bmatrix}		
+	\end{equation}
+	
+	Knowing impedance characteristics we can plugin values and transform it into admittance and chain characteristics using formulas \eqref{eq:ZtoY} and \eqref{eq:toA}
+
+	\begin{center}
+		\begin{math}
+			\mathbf{Z} = 
+			\quad
+			\mathbf{Y} = 
+			\quad
+			\mathbf{A} = 
+		\end{math}
 		
-		\begin{figure}[H]
-			\centering
-			\begin{circuitikz}[scale = 0.8, transform shape]
-				\draw (0, 0) 
-				to[sV=$v_1$] (0, 3)
-				to[C=$C_{31}$] (3, 3)
-				to[C=$C_{32}$] (6, 3);
-				\draw (3, 3)
-				to[R=$R_{31}$] (3, 0) -- (0, 0);
-				\draw (3, 0) -- (6, 0)
-				to[sV_=$v_2$] (6, 3);
-				\draw[->]   (1.3,2) arc(110:-110:5mm) node[midway, left] {$i_1$};
-				\draw[->]   (4.7,2) arc(-110:110:-5mm) node[midway, right] {$i_2$};
-			\end{circuitikz}
-			\caption{Simplified circuit no. 3}
-			\label{fig:simplified-circuit-3}
-		\end{figure}
+	\end{center}
+	
+	\subsection{Chain connection}
 	
 	\section{Comparison}
 	\section{Conclusions}
