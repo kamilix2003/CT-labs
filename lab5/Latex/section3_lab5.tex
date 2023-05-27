@@ -114,7 +114,7 @@
 	\end{equation}
 
 	Two-port networks, similar to simple passive components, can be in parallel and series connection, but also in chain configuration which is unique to two-port networks.
-	Parallel connection can be represented by sum of admittance characteristics, series connection by sum of impedance characteristics and chain connection by multiplication of chain or ABCD characteristics, also order of matrix multiplication is important,
+	Parallel connection can be represented by sum of admittance characteristics, series connection by sum of impedance characteristics and chain connection by multiplication of chain(ABCD) characteristics, order of matrix multiplication is important.
 		
 	\section{Course of measurements}  
 	
@@ -253,16 +253,18 @@
 		\end{bmatrix}
 	\end{equation}	
 	
-	Knowing admittance characteristics we can transform it into impedance and chain characteristics using formulas \eqref{eq:YtoZ} and \eqref{eq:toA}
+	Knowing admittance characteristics we can plugin values of each component and transform it into impedance and chain characteristics using formulas \eqref{eq:YtoZ} and \eqref{eq:toA}
 	
-	\begin{equation}\label{eq:C2Z}
-		Z
-	\end{equation}
-	
-	\begin{equation}\label{eq:C2A}
-		A
-	\end{equation}
-	
+	\begin{center}
+		\begin{math}
+			\mathbf{Y} = 
+			\quad
+			\mathbf{Z} = 
+			\quad
+			\mathbf{A} = 
+		\end{math}
+	\end{center}
+	\newpage
 	\subsection{Circuit no. 3}
 	
 	\begin{wrapfigure}{R}{0.35\textwidth}
@@ -287,8 +289,8 @@
 	
 	\begin{equation}
 		\begin{bmatrix}
-			j\omega C_{31} + +R_{31} & R_{31} \\ [4pt]
-			R_{31} & j\omega C_{32} + R_{31}
+			\frac{1}{j\omega C_{31}} + R_{31} & R_{31} \\[4pt]
+			R_{31} & \frac{1}{j\omega C_{32}} + R_{31}
 		\end{bmatrix}
 		\begin{bmatrix}
 			i_1 \\
@@ -301,15 +303,18 @@
 		\end{bmatrix}		
 	\end{equation}
 	
-	Knowing impedance characteristics we can transform it into impedance and chain characteristics using formulas \eqref{eq:ZtoY} and \eqref{eq:toA}
+	Knowing impedance characteristics we can plugin values and transform it into admittance and chain characteristics using formulas \eqref{eq:ZtoY} and \eqref{eq:toA}
 
-	\begin{equation}\label{eq:C3Y}
-		Y
-	\end{equation}
-	
-	\begin{equation}\label{eq:C3A}
-		A
-	\end{equation}
+	\begin{center}
+		\begin{math}
+			\mathbf{Z} = 
+			\quad
+			\mathbf{Y} = 
+			\quad
+			\mathbf{A} = 
+		\end{math}
+		
+	\end{center}
 	
 	\subsection{Chain connection}
 	
