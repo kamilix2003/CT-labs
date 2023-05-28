@@ -13,6 +13,8 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{braket}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{minted}
@@ -84,6 +86,15 @@
 		\end{bmatrix}
 	\end{equation}
 
+	Where $z_{11}$, $z_{12}$, $z_{21}$, $z_{22}$ are equal by definition
+	
+	$$
+		z_{11} = \frac{v_1}{i_1} |  _{i_2 = 0} \quad
+		z_{12} = \frac{v_1}{i_2} |  _{i_1 = 0} \quad
+		z_{21} = \frac{v_2}{i_1} |  _{i_2 = 0} \quad
+		z_{22} = \frac{v_2}{i_2} |  _{i_1 = 0}
+	$$
+
 	Characteristic matrix can have form of impedance $\mathbf{Z}$, admittance $\mathbf{Y}$ or chain(ABCD) matrix and many more forms which we are not going to use during this exercise.	
 	impedance $\mathbf{Z}$ matrix can be easily transformed into admittance $\mathbf{Y}$ and chain(ABCD) matrix using following formulas.
 	\begin{equation}\label{eq:ZtoY}
@@ -114,7 +125,7 @@
 	\end{equation}
 
 	Two-port networks, similar to simple passive components, can be in parallel and series connection, but also in chain configuration which is unique to two-port networks.
-	Parallel connection can be represented by sum of admittance characteristics, series connection by sum of impedance characteristics and chain connection by multiplication of chain(ABCD) characteristics, order of matrix multiplication is important.
+	Parallel connection can be represented by sum of admittance characteristics, series connection by sum of impedance characteristics and chain connection by multiplication of chain(ABCD) characteristics.%, order of matrix multiplication is important.
 		
 	\section{Course of measurements}  
 	
@@ -210,7 +221,7 @@
 	\section{Theoretical calculations}
 	First step in our analytical solution is simplifying Circuits by removing connection used to measured voltages and currents.
 	
-	Some characteristics matrices of two-port network can be solved using mesh or nodal analysis by inspection, and both of our circuit can be solved using one of those methods. We solved circuit no. 2 using nodal analysis and circuit no. 3 using mesh analysis, %therefore we added current sources and voltage sources to each circuit according to below Figures \ref{fig:simplified-circuit-2}, \ref{fig:simplified-circuit-3}
+	Some characteristics matrices of two-port network can be solved using mesh or nodal analysis by inspection, and both of our circuit can be solved using one of those methods. Usually mesh or nodal method is quicker and easier way of finding characteristics than using definition, that is why we opted for this method instead of definition. %therefore we added current sources and voltage sources to each circuit according to below Figures \ref{fig:simplified-circuit-2}, \ref{fig:simplified-circuit-3}
 	
 %	In circuit no.2 (Figure. \ref{fig:simplified-circuit-2}) we used current sources 
 
@@ -255,16 +266,61 @@
 	
 	Knowing admittance characteristics we can plugin values of each component and transform it into impedance and chain characteristics using formulas \eqref{eq:YtoZ} and \eqref{eq:toA}
 	
-	\begin{center}
-		\begin{math}
-			\mathbf{Y} = 
-			\quad
-			\mathbf{Z} = 
-			\quad
-			\mathbf{A} = 
-		\end{math}
-	\end{center}
-	\newpage
+	\begin{figure}[H]
+		\begin{subfigure}{0.45\textwidth}
+				\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+			\caption{frequency = 7 kHz}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+			\caption{frequency = 13 kHz}
+		\end{subfigure}
+		\caption{Circuit no. 2 characteristics}
+	\end{figure}
+
 	\subsection{Circuit no. 3}
 	
 	\begin{wrapfigure}{R}{0.35\textwidth}
@@ -305,18 +361,93 @@
 	
 	Knowing impedance characteristics we can plugin values and transform it into admittance and chain characteristics using formulas \eqref{eq:ZtoY} and \eqref{eq:toA}
 
-	\begin{center}
-		\begin{math}
-			\mathbf{Z} = 
-			\quad
-			\mathbf{Y} = 
-			\quad
-			\mathbf{A} = 
-		\end{math}
-		
-	\end{center}
+	\begin{figure}[H]
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+			\caption{frequency = 13 kHz}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+			\caption{frequency = 15 kHz}
+		\end{subfigure}
+		\caption{Circuit no. 3 characteristics}
+	\end{figure}
 	
 	\subsection{Chain connection}
+	With ABCD characteristics of each circuit at 13kHz calculated we can get characteristics for chain connection of these two-ports by multiplying $\mathbf{A_2}$ with $\mathbf{A_3}$, which are ABCD characteristics for circuit no. 2 and 3 respectively.
+	
+	\begin{equation}
+		\mathbf{A} = \mathbf{A_2} \mathbf{A_3}
+	\end{equation}
+	
+		\begin{figure}[H]
+		\begin{align*}
+			\mathbf{Y} &= 
+			\begin{bmatrix}
+				0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+				0.0000 - 0.0700i  & 0.2128 + 0.0700i
+			\end{bmatrix}
+			\cdot 10^{-3}
+			\\
+			\mathbf{Z} &= 
+			\begin{bmatrix}
+				1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+				0.1378 + 0.3223i & 4.3232 - 1.4677i
+			\end{bmatrix}
+			\cdot 10^{-3}
+			\\
+			\mathbf{A} &= 
+			\begin{bmatrix}
+				0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+				0.0000 - 0.0000i & 0.0001 - 0.0013i
+			\end{bmatrix}
+			\cdot 10^{-4}
+		\end{align*}
+		\caption{Equivalent characteristics}
+		\end{figure}
 	
 	\section{Comparison}
 	\section{Conclusions}
