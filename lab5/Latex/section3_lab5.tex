@@ -128,79 +128,79 @@
 	Parallel connection can be represented by sum of admittance characteristics, series connection by sum of impedance characteristics and chain connection by multiplication of chain(ABCD) characteristics.%, order of matrix multiplication is important.
 		
 	\section{Course of measurements}  
-	Our goal in the first part of the exercise, was to familiarize with the methods of determining the self-parameters of
-two-port networks for the given frequencies. We have measured the output voltages and currents. By equating the currents I1 and I2 to zero, respectively, we were able to estimate the values of the individual elements of the impedance matrix. After experimentally determining the parameters in the z matrix ( impedance), we would calculate parameters of the y matrix (admittance) from the formulas allowing for transformations between the respective matrices. The end of our work would be comparing the obtained results with
-theoretical calculations.
+	Our goal in the first part of the exercise, was to familiarize with the methods of determining the self-parameters of two-port networks for the given frequencies. We have measured the output voltages and currents. By equating the currents $i_1$ and $i_2$ to zero, respectively, we were able to estimate the values of the individual elements of the impedance matrix. After experimentally determining the parameters in the $\mathbf{Z}$ matrix (impedance), we would calculate parameters of the $\mathbf{Y}$ matrix (admittance) from the formulas allowing for transformations between the respective matrices. The end of our work would be comparing the obtained results with theoretical calculations.
 
-In the second part of the exercise, we connected two two-port circuits (2 and 3). Having given frequencies we measured the output voltages and currents. By equating the currents I1 and I2 to zero, and by adding adequate resistors to our two port respectively, we were able to estimate the values of the individual elements of the impedance matrix. The final step was to determine the chain (abcd) parameters of the resulting network.
 		\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
 		\centering
-			\begin{subfigure}{0.45\textwidth}
-			\centering
-			\begin{circuitikz}[scale = 0.8, transform shape]
-				\ctikzset{bipoles/length = 10mm}
-				\node [bnc, scale=2, font=\tiny] at (0, 0) (CON1) {CON21};
-				\node [bnc, scale=2, anchor = zero, xscale=-1, font=\tiny] at (8, 0) (CON2) {\ctikzflipx{CON22}};
-				\node [ground] at (CON1.shield) {};
-				\node [ground] at (CON2.shield) {};
-				\draw (CON1.hot) -- (1, 0)
-				to[R, l=$RS_{21}$, *-*] (3, 0)
-				to[C, l2=$C_{21}$ and 10nF, l2 halign=c, l2 valign=b](5, 0)
-				to[R, l=$RS_{22}$, *-*](7, 0) -- (CON2.hot);
-				\draw (3,0)
-				to[R, l2=$R_{21}$ and $1.1k\Omega$, l2 halign=c, l2 valign=c] (3,-2)
-				node[tlground]{};
-				\draw (5,0)
-				to[R, l2=$R_{22}$ and $4.7k\Omega$, l2 halign=c, l2 valign=c] (5,-2)
-				node[tlground]{};
-				\draw (1, 0) -- (1, 1)
-				to[nopb, l=\small JP21](3, 1) -- (3, 0);
-				\draw (5, 0) -- (5, 1)
-				to[nopb, l=\small JP22](7, 1) -- (7, 0);
-				\draw (1, 0)
-				to[nopb, l=\small JP23](1, -2)
-				node[tlground] {};
-				\draw (7, 0)
-				to[nopb, l=\small JP24](7, -2)
-				node[tlground] {};
-			\end{circuitikz}
-			\caption{Circuit no. 2}
-			\label{subfig.circuit-2}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}{0.45\textwidth}
-			\centering
-			\begin{circuitikz}[scale = 0.8, transform shape]
-				\ctikzset{bipoles/length = 10mm}
-				\node [bnc, scale=2, font=\tiny] at (0, 0) (CON1) {CON31};
-				\node [bnc, scale=2, anchor = zero, xscale=-1, font=\tiny] at (8, 0) (CON2) {\ctikzflipx{CON32}};
-				\node [ground] at (CON1.shield) {};
-				\node [ground] at (CON2.shield) {};
-				\draw (CON1.hot) -- (1, 0)
-				to[R, l=$RS_{31}$, *-*] (3, 0)
-				to[C, l2=$C_{31}$ and 22nF, l2 halign=c, l2 valign=b](4, 0)
-				to[C, l2=$C_{32}$ and 22nF, l2 halign=c, l2 valign=b](5, 0)
-				to[R, l=$RS_{32}$, *-*](7, 0) -- (CON2.hot);
-				\draw (4,0)
-				to[R, *-, l2=$R_{31}$ and $1k\Omega$, l2 halign=c, l2 valign=c] (4,-2)
-				node[tlground]{};
-				\draw (1, 0) -- (1, 1)
-				to[nopb, l=\small JP31](3, 1) -- (3, 0);
-				\draw (5, 0) -- (5, 1)
-				to[nopb, l=\small JP32](7, 1) -- (7, 0);
-				\draw (1, 0)
-				to[nopb, l=\small JP33](1, -2)
-				node[tlground] {};
-				\draw (7, 0)
-				to[nopb, l=\small JP34](7, -2)
-				node[tlground] {};
-			\end{circuitikz}
-			\caption{Circuit no. 3}
-			\label{subfig.circuit-3}
-		\end{subfigure}
-		\caption{Measured circuits}
-		\label{fig.circuits}
-	\end{figure}
+		\begin{circuitikz}[scale = 0.8, transform shape]
+			\ctikzset{bipoles/length = 10mm}
+			\node [bnc, scale=2, font=\tiny] at (0, 0) (CON1) {CON21};
+			\node [bnc, scale=2, anchor = zero, xscale=-1, font=\tiny] at (8, 0) (CON2) {\ctikzflipx{CON22}};
+			\node [ground] at (CON1.shield) {};
+			\node [ground] at (CON2.shield) {};
+			\draw (CON1.hot) -- (1, 0)
+			to[R, l=$RS_{21}$, *-*] (3, 0)
+			to[C, l2=$C_{21}$ and 10nF, l2 halign=c, l2 valign=b](5, 0)
+			to[R, l=$RS_{22}$, *-*](7, 0) -- (CON2.hot);
+			\draw (3,0)
+			to[R, l2=$R_{21}$ and $1.1k\Omega$, l2 halign=c, l2 valign=c] (3,-2)
+			node[tlground]{};
+			\draw (5,0)
+			to[R, l2=$R_{22}$ and $4.7k\Omega$, l2 halign=c, l2 valign=c] (5,-2)
+			node[tlground]{};
+			\draw (1, 0) -- (1, 1)
+			to[nopb, l=\small JP21](3, 1) -- (3, 0);
+			\draw (5, 0) -- (5, 1)
+			to[nopb, l=\small JP22](7, 1) -- (7, 0);
+			\draw (1, 0)
+			to[nopb, l=\small JP23](1, -2)
+			node[tlground] {};
+			\draw (7, 0)
+			to[nopb, l=\small JP24](7, -2)
+			node[tlground] {};
+		\end{circuitikz}
+		\caption{Circuit no. 2}
+		\label{subfig.circuit-2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\begin{circuitikz}[scale = 0.8, transform shape]
+			\ctikzset{bipoles/length = 10mm}
+			\node [bnc, scale=2, font=\tiny] at (0, 0) (CON1) {CON31};
+			\node [bnc, scale=2, anchor = zero, xscale=-1, font=\tiny] at (8, 0) (CON2) {\ctikzflipx{CON32}};
+			\node [ground] at (CON1.shield) {};
+			\node [ground] at (CON2.shield) {};
+			\draw (CON1.hot) -- (1, 0)
+			to[R, l=$RS_{31}$, *-*] (3, 0)
+			to[C, l2=$C_{31}$ and 22nF, l2 halign=c, l2 valign=b](4, 0)
+			to[C, l2=$C_{32}$ and 22nF, l2 halign=c, l2 valign=b](5, 0)
+			to[R, l=$RS_{32}$, *-*](7, 0) -- (CON2.hot);
+			\draw (4,0)
+			to[R, *-, l2=$R_{31}$ and $1k\Omega$, l2 halign=c, l2 valign=c] (4,-2)
+			node[tlground]{};
+			\draw (1, 0) -- (1, 1)
+			to[nopb, l=\small JP31](3, 1) -- (3, 0);
+			\draw (5, 0) -- (5, 1)
+			to[nopb, l=\small JP32](7, 1) -- (7, 0);
+			\draw (1, 0)
+			to[nopb, l=\small JP33](1, -2)
+			node[tlground] {};
+			\draw (7, 0)
+			to[nopb, l=\small JP34](7, -2)
+			node[tlground] {};
+		\end{circuitikz}
+		\caption{Circuit no. 3}
+		\label{subfig.circuit-3}
+	\end{subfigure}
+	\caption{Measured circuits}
+	\label{fig.circuits}
+\end{figure}
+
+	In the second part of the exercise, we connected two two-port circuits (2 and 3). Having given frequencies we measured the output voltages and currents. By equating the currents I1 and I2 to zero, and by adding adequate resistors to our two port respectively, we were able to estimate the values of the individual elements of the impedance matrix. The final step was to determine the chain (ABCD) parameters of the resulting network.
+
 	
 	\begin{figure}[H]
 		\centering
@@ -222,6 +222,11 @@ In the second part of the exercise, we connected two two-port circuits (2 and 3)
 		\end{circuitikz}
 		\caption{Chain configuration}
 	\end{figure}
+	
+	\subsection{Measurements processing}
+	
+	
+	\newpage
 	\section{Theoretical calculations}
 	First step in our analytical solution is simplifying Circuits by removing connection used to measured voltages and currents.
 	
@@ -268,62 +273,9 @@ In the second part of the exercise, we connected two two-port circuits (2 and 3)
 		\end{bmatrix}
 	\end{equation}	
 	
-	Knowing admittance characteristics we can plugin values of each component and transform it into impedance and chain characteristics using formulas \eqref{eq:YtoZ} and \eqref{eq:toA}
+	Knowing admittance characteristics we can plugin values of each component and transform it into impedance and chain characteristics using formulas \eqref{eq:YtoZ} and \eqref{eq:toA}. Calculated characteristics in section. \ref{sec:comparison}
 	
-	\begin{figure}[H]
-		\begin{subfigure}{0.45\textwidth}
-				\begin{align*}
-				\mathbf{Y} &= 
-				\begin{bmatrix}
-					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
-					0.0000 - 0.0700i  & 0.2128 + 0.0700i
-				\end{bmatrix}
-				\cdot 10^{-3}
-				\\
-				\mathbf{Z} &= 
-				\begin{bmatrix}
-					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
-					0.1378 + 0.3223i & 4.3232 - 1.4677i
-				\end{bmatrix}
-				\cdot 10^{-3}
-				\\
-				\mathbf{A} &= 
-				\begin{bmatrix}
-					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
-					0.0000 - 0.0000i & 0.0001 - 0.0013i
-				\end{bmatrix}
-				\cdot 10^{-4}
-			\end{align*}
-			\caption{frequency = 7 kHz}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}{0.45\textwidth}
-			\begin{align*}
-				\mathbf{Y} &= 
-				\begin{bmatrix}
-					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
-					0.0000 - 0.0700i  & 0.2128 + 0.0700i
-				\end{bmatrix}
-				\cdot 10^{-3}
-				\\
-				\mathbf{Z} &= 
-				\begin{bmatrix}
-					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
-					0.1378 + 0.3223i & 4.3232 - 1.4677i
-				\end{bmatrix}
-				\cdot 10^{-3}
-				\\
-				\mathbf{A} &= 
-				\begin{bmatrix}
-					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
-					0.0000 - 0.0000i & 0.0001 - 0.0013i
-				\end{bmatrix}
-				\cdot 10^{-4}
-			\end{align*}
-			\caption{frequency = 13 kHz}
-		\end{subfigure}
-		\caption{Circuit no. 2 characteristics}
-	\end{figure}
+
 
 	\subsection{Circuit no. 3}
 	
@@ -363,9 +315,22 @@ In the second part of the exercise, we connected two two-port circuits (2 and 3)
 		\end{bmatrix}		
 	\end{equation}
 	
-	Knowing impedance characteristics we can plugin values and transform it into admittance and chain characteristics using formulas \eqref{eq:ZtoY} and \eqref{eq:toA}
+	Knowing impedance characteristics we can plugin values and transform it into admittance and chain characteristics using formulas \eqref{eq:ZtoY} and \eqref{eq:toA}. Calculated characteristics in section. \ref{sec:comparison}
 
-	\begin{figure}[H]
+	
+	\subsection{Chain connection}
+	With ABCD characteristics of each circuit at 13kHz calculated we can get characteristics for chain connection of these two-ports by multiplying $\mathbf{A_2}$ with $\mathbf{A_3}$, which are ABCD characteristics for circuit no. 2 and 3 respectively.
+	
+	\begin{equation}
+		\mathbf{A} = \mathbf{A_2} \mathbf{A_3}
+	\end{equation}
+	
+	Calculated characteristics in section. \ref{sec:comparison}
+		
+	\section{Comparison}\label{sec:comparison}
+	\subsection{Circuit no. 2}
+	
+		\begin{figure}[H]
 		\begin{subfigure}{0.45\textwidth}
 			\begin{align*}
 				\mathbf{Y} &= 
@@ -389,7 +354,18 @@ In the second part of the exercise, we connected two two-port circuits (2 and 3)
 				\end{bmatrix}
 				\cdot 10^{-4}
 			\end{align*}
-			\caption{frequency = 13 kHz}
+			\caption{Calculated characteristics at 7 kHz}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\\
+				\mathbf{Z} &= 		
+				\\
+				\mathbf{A} &= 
+			\end{align*}
+			\caption{Measured characteristics at 7 kHz}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.45\textwidth}
@@ -415,47 +391,152 @@ In the second part of the exercise, we connected two two-port circuits (2 and 3)
 				\end{bmatrix}
 				\cdot 10^{-4}
 			\end{align*}
-			\caption{frequency = 15 kHz}
+			\caption{Calculated characteristics at 13 kHz}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\\
+				\mathbf{Z} &= 		
+				\\
+				\mathbf{A} &= 
+			\end{align*}
+			\caption{Measured characteristics at 13 kHz}
+		\end{subfigure}
+		\caption{Circuit no. 2 characteristics}
+	\end{figure}
+	
+	\subsection{Circuit no. 3}
+	
+		\begin{figure}[H]
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+			\caption{Calculated characteristics at 13 kHz}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\\
+				\mathbf{Z} &= 		
+				\\
+				\mathbf{A} &= 
+			\end{align*}
+			\caption{Measured characteristics at 13 kHz}
+		\end{subfigure}
+		
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+			\caption{Calculated characteristics at 15 kHz}
+		\end{subfigure}
+		\hfill
+				\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\\
+				\mathbf{Z} &= 
+				\\
+				\mathbf{A} &= 
+			\end{align*}
+			\caption{Measured characteristics at 15 kHz}
 		\end{subfigure}
 		\caption{Circuit no. 3 characteristics}
 	\end{figure}
 	
-	\subsection{Chain connection}
-	With ABCD characteristics of each circuit at 13kHz calculated we can get characteristics for chain connection of these two-ports by multiplying $\mathbf{A_2}$ with $\mathbf{A_3}$, which are ABCD characteristics for circuit no. 2 and 3 respectively.
+	\subsection{Chain configuration of circuit no. 2 and 3}
 	
-	\begin{equation}
-		\mathbf{A} = \mathbf{A_2} \mathbf{A_3}
-	\end{equation}
+	\begin{figure}[H]
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\begin{bmatrix}
+					0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
+					0.0000 - 0.0700i  & 0.2128 + 0.0700i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{Z} &= 
+				\begin{bmatrix}
+					1.1174 - 0.0967i & -0.1378 - 0.3223i \\
+					0.1378 + 0.3223i & 4.3232 - 1.4677i
+				\end{bmatrix}
+				\cdot 10^{-3}
+				\\
+				\mathbf{A} &= 
+				\begin{bmatrix}
+					0.0001 - 0.0003i & 0.0000 - 1.4286i \\
+					0.0000 - 0.0000i & 0.0001 - 0.0013i
+				\end{bmatrix}
+				\cdot 10^{-4}
+			\end{align*}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.45\textwidth}
+			\begin{align*}
+				\mathbf{Y} &= 
+				\\
+				\mathbf{Z} &= 
+				\\
+				\mathbf{A} &= 
+			\end{align*}
+		\end{subfigure}
+		\caption{Equivalent characteristics for chain connection}
+	\end{figure}
 	
-		\begin{figure}[H]
-		\begin{align*}
-			\mathbf{Y} &= 
-			\begin{bmatrix}
-				0.9091 + 0.0700i  & 0.0000 + 0.0700i \\
-				0.0000 - 0.0700i  & 0.2128 + 0.0700i
-			\end{bmatrix}
-			\cdot 10^{-3}
-			\\
-			\mathbf{Z} &= 
-			\begin{bmatrix}
-				1.1174 - 0.0967i & -0.1378 - 0.3223i \\
-				0.1378 + 0.3223i & 4.3232 - 1.4677i
-			\end{bmatrix}
-			\cdot 10^{-3}
-			\\
-			\mathbf{A} &= 
-			\begin{bmatrix}
-				0.0001 - 0.0003i & 0.0000 - 1.4286i \\
-				0.0000 - 0.0000i & 0.0001 - 0.0013i
-			\end{bmatrix}
-			\cdot 10^{-4}
-		\end{align*}
-		\caption{Equivalent characteristics}
-		\end{figure}
-	
-	\section{Comparison}
 	\section{Conclusions}
+	Two-port networks are very useful in circuit design and analysis, ability to describe any linear circuit with one expression is crucial in abstracting complex circuits. Option of find characteristics without looking into "black box" cam be useful.
 	
-	
+	\newpage
+	\appendix
+	\section{Appendix}
+	\inputminted{matlab}{../Matlab/main.m}
+	\inputminted{matlab}{../Matlab/import_csv.m}
+	\inputminted{matlab}{../Matlab/Y_to_Z.m}
+	\inputminted{matlab}{../Matlab/chain_to_Z.m}
+	\inputminted{matlab}{../Matlab/Z_to_admittance.m}
+	\inputminted{matlab}{../Matlab/Z_to_chain.m}
 	
 \end{document}
