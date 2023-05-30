@@ -35,9 +35,9 @@ Y3_15 = Z_to_admittance(Z3_15);
 A3_15 = Z_to_chain(Z3_15);
 
 %chain connection
-A_chain = A2_13 * A3_13
-Z_chain = chain_to_Z(A_chain)
-Y_chain = Z_to_admittance(Z_chain)
+A_chain = A2_13 * A3_13;
+Z_chain = chain_to_Z(A_chain);
+Y_chain = Z_to_admittance(Z_chain);
 
 %% circuit 2 
 % 7kHz
