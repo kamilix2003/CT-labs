@@ -13,6 +13,8 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{minted}
@@ -156,6 +158,108 @@
 	\end{figure}
 
 	\section{Theoretical calculations}
+	For all calculations we used Matlab with Symbolic Math Toolbox. Source code can be found in Appendix. \ref{sec:appendix}
+	
+	In all three circuit input voltage was square wave with 50\% duty cycle which can be described in time domain by
+	
+	\begin{equation}
+		v_{in}(t) = V_{offset} \mathbf{1}(t) + V_{pp} \mathbf{1}(t-\frac{T}{2}) - V_{pp} \mathbf{1}(t-T)
+	\end{equation}
+	
+	and after Laplace transform into frequency domain 
+	
+	\begin{equation}
+		V_{in}(s) = \mathcal{L}[v_{in}(t)] = \frac{V_{offset}}{s} + \dfrac{e^{-2Ts}}{s} - \dfrac{e^{-Ts}}{s}
+	\end{equation}
+
+	\subsection{Circuit A}
+	
+	\begin{wrapfigure}{r}{0.3\textwidth}
+		\begin{circuitikz}[scale = 0.7, transform shape]
+			\draw (0,0)
+			to[R, l=$R_{11}$, a=1.5k$\Omega$, *-] (3,0)
+			to[C, l2=$C_{11}$ and 47nF, l2 halign=c, l2 valign=c] (3,-2)
+			to[short, -*] (0, -2)
+			;
+			\draw (0, 0) to[open, v_<=$v_{in}$] (0, -2);
+			\draw (3, 0)
+			to[short, -*] (5, 0)
+			to[open, v^<=$v_{out}$] (5, -2)
+			to[short, *-] (3, -2);
+		\end{circuitikz}
+		\caption{Circuit A schematics}
+	\end{wrapfigure}
+	
+	
+	
+	\subsection{Circuit B}
+	
+	\begin{wrapfigure}{r}{0.3\textwidth}
+		\begin{circuitikz}[scale = 0.7, transform shape]
+			\draw (0,0)
+			to[C, l=$C_{21}$, a=10nF, *-] (3,0)
+			to[R, l2=$R_{21}$ and 1.5k$\Omega$, l2 halign=c, l2 valign=c] (3,-2)
+			to[short, -*] (0, -2)
+			;
+			\draw (0, 0) to[open, v_<=$v_{in}$] (0, -2);
+			\draw (3, 0)
+			to[short, -*] (5, 0)
+			to[open, v^<=$v_{out}$] (5, -2)
+			to[short, *-] (3, -2);
+		\end{circuitikz}
+		\caption{Circuit B schematics}
+	\end{wrapfigure}
+	
+	\subsection{Circuit C}
+	
+	\begin{wrapfigure}{r}{0.3\textwidth}
+		\centering
+		\begin{subfigure}{0.8\textwidth}
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0, 0)
+				to[short, *-*] (5, 0)
+				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
+				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
+				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
+				\draw (0, 0)
+				to[open, v=$v_{in}$](0, -3)
+				to[short, -*] (2.5, -3);
+			\end{circuitikz}
+		\end{subfigure}
+		
+		\begin{subfigure}{0.8\textwidth}
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0, 0)
+				to[R, l2=$R_{42}$ and 1.1k$\Omega$, l2 halign=c, l2 valign=b] (2.5, 0)
+				to[short, *-*] (5, 0)
+				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
+				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
+				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
+				\draw (0, 0)
+				to[open, v=$v_{in}$](0, -3)
+				to[short, -*] (2.5, -3);
+			\end{circuitikz}
+		\end{subfigure}
+		
+		\begin{subfigure}{0.8\textwidth}
+			\begin{circuitikz}[scale = 0.7, transform shape]
+				\draw (0, 0)
+				to[R, l2=$R_{41}$ and 3.3k$\Omega$, l2 halign=c, l2 valign=b] (2.5, 0)
+				to[short, *-*] (5, 0)
+				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
+				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
+				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
+				\draw (0, 0)
+				to[open, v=$v_{in}$](0, -3)
+				to[short, -*] (2.5, -3);
+			\end{circuitikz}
+		\end{subfigure}
+	\end{wrapfigure}
+	
 	\section{Comparison}
 	\section{Conclusions}
+	
+	\newpage
+	\appendix
+	\section{Appendix}\label{sec:appendix}
 \end{document}
