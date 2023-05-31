@@ -20,6 +20,7 @@ x = response1(t, 1.5e3, 47e-9);
 figure('Name','Circuit A')
 plot(t, x)
 ylim([-0.2, 2])
+xlim([0.45*T, 0.6*T])
 
 %% Circuit B
 syms C2 R response2(t, R, C2)

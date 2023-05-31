@@ -169,12 +169,13 @@
 	and after Laplace transform into frequency domain 
 	
 	\begin{equation}
-		V_{in}(s) = \mathcal{L}[v_{in}(t)] = \frac{V_{offset}}{s} + \dfrac{e^{-2Ts}}{s} - \dfrac{e^{-Ts}}{s}
+		V_{in}(s) = \mathcal{L}[v_{in}(t)] = \frac{V_{offset}}{s} + \dfrac{e^{-\frac{T}{2}s}}{s} - \dfrac{e^{-Ts}}{s}
 	\end{equation}
 
 	\subsection{Circuit A}
-	
-	\begin{wrapfigure}{r}{0.3\textwidth}
+
+	\begin{figure}[H]
+		\centering
 		\begin{circuitikz}[scale = 0.7, transform shape]
 			\draw (0,0)
 			to[R, l=$R_{11}$, a=1.5k$\Omega$, *-] (3,0)
@@ -188,13 +189,26 @@
 			to[short, *-] (3, -2);
 		\end{circuitikz}
 		\caption{Circuit A schematics}
-	\end{wrapfigure}
+	\end{figure}
+	
+	$v_{out}$ of circuit A can be described using simple voltage divider
+	
+	\begin{equation}
+		v_{out}(s) = v_{in}(s) \dfrac{\frac{1}{sC_{11}}}{R_{11} +\frac{1}{sC_{11}}}
+	\end{equation}
+	
+	after applying inverse Laplace transform to $V_out(s)$ we obtain below plot.
+	
+	\begin{figure}[H]
+		\caption{Circuit A output voltage}
+	\end{figure}
 	
 	
 	
 	\subsection{Circuit B}
 	
-	\begin{wrapfigure}{r}{0.3\textwidth}
+	\begin{figure}[H]
+		\centering
 		\begin{circuitikz}[scale = 0.7, transform shape]
 			\draw (0,0)
 			to[C, l=$C_{21}$, a=10nF, *-] (3,0)
@@ -208,16 +222,17 @@
 			to[short, *-] (3, -2);
 		\end{circuitikz}
 		\caption{Circuit B schematics}
-	\end{wrapfigure}
+	\end{figure}
 	
 	\subsection{Circuit C}
 	
-	\begin{wrapfigure}{r}{0.3\textwidth}
+	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.8\textwidth}
 			\begin{circuitikz}[scale = 0.7, transform shape]
 				\draw (0, 0)
-				to[short, *-*] (5, 0)
+				to[R, l2=$R_{c}$ and 50$\Omega$, l2 halign=c, l2 valign=b, *-] (2.5, 0)
+				to[short, -*] (5, 0)
 				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
 				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
 				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
@@ -254,7 +269,7 @@
 				to[short, -*] (2.5, -3);
 			\end{circuitikz}
 		\end{subfigure}
-	\end{wrapfigure}
+	\end{figure}
 	
 	\section{Comparison}
 	\section{Conclusions}
