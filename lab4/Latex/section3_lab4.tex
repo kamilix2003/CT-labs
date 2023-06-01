@@ -74,7 +74,7 @@
 					to[L, l2=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (5,-4) node[ground] {};
 					\draw (5, 0) to (6, 0) node[bnc, xscale=-1, anchor=zero](CON42){\ctikzflipx{CON42}};
 				\end{circuitikz}
-				\caption{III-order low-pass filter}
+				\caption{Resonant RLC circuit}
 			\end{subfigure}
 			\centering
 			\begin{subfigure}{\textwidth}
@@ -98,7 +98,7 @@
 					to[nopb] (7.5, -1)
 					to[R, l2^=$R_{31}$ and 51$\Omega$, l2 halign=c, l2 valign=c, bipoles/length = 8mm] (7.5, -2) node[tlground]{};
 				\end{circuitikz}
-				\caption{Resonant RLC circuit}
+				\caption{III-order low-pass filter}
 			\end{subfigure}
 			\caption{Measured circuits}
 	\end{figure}
@@ -129,14 +129,37 @@
 	Phase-frequency characteristics didn't require any calculation and is simply plotted on the right plot in figure \ref{fig:example}.
 	
 	\section{Characteristics analysis}
-	\includegraphics[width=\textwidth]{../Matlab/img/11.eps}
-	\includegraphics[width=\textwidth]{../Matlab/img/12.eps}
-	\includegraphics[width=\textwidth]{../Matlab/img/131.eps}
-	\includegraphics[width=\textwidth]{../Matlab/img/132.eps}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{../Matlab/img/11.eps}
+		\caption{Frequency response of RC low-pass filter}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{../Matlab/img/12.eps}
+		\caption{Frequency response of III-order low-pass filter}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.49\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/131.eps}
+			\caption{with JP41}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.49\textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/132.eps}
+			\caption{with JP42}
+		\end{subfigure}
+		\caption{Frequency response of Resonant RLC circuit}
+	\end{figure}
 	\section{Conclusions}
 	
 	
 	\newpage
 	\appendix
 	\section{Appendix}\label{sec:appendix}
+	\href{https://github.com/kamilix2003/CT_labs}{GITHUB repository}
+	\inputminted{matlab}{../Matlab/main.m}
+	\inputminted{matlab}{../Matlab/import_csv.m}
+	\inputminted{matlab}{../Matlab/characteristics.m}
 \end{document}

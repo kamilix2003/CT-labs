@@ -5,14 +5,14 @@
 ## Goal of the exercise
 - [ ] Done
 ## Laplace Transform
-- [ ] Done
+- [ ] Done **WIP**
 ## Course of measurements
-- [ ] Figures
+- [x] Figures
   - [x] Circuits
   - [x] Measurements diagrams
-- [ ] Done
+- [x] Done
 ## Theoretical calculations
-- [ ] Done
+- [ ] Done **WIP**
 ## Comparison
 - [ ] Done
 ## Conclusions

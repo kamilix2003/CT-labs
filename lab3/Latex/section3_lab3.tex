@@ -41,81 +41,101 @@
 	\maketitle
 	\section{Goal of the exercise}
 	\section{Laplace Transform}
+	Laplace transform is an integral transform that converts a function of a real variable(time domain) into a function of complex variable(frequency domain). It is powerful tool for solving differential equations, which turns ODEs into algebraic equations and convolution into multiplication. For function $x(t)$, the Laplace transform is the integral
+	
+	\begin{equation}
+		\mathcal{L}[x(t)] = X(s) = \int_{0}^{\infty}x(t)e^{-st}dt
+	\end{equation}
+	
+	Where $s = \sigma+j\omega$ $\quad \sigma,\omega\in \mathbb{R}$
+	\\
+	In order to get solution of differential equation solved in s-domain it is necessary to apply inverse Laplace transform which is given by following complex integral
+	
+	\begin{equation}
+		f(t) = \mathcal{L}^{-1}[X(s)] = \dfrac{1}{2\pi j}\int_{c-j\infty}^{c+j\infty}F(s)e^{-st}ds
+	\end{equation}
+	
+	Integrals like these can be quite difficult to solve, that is why lookup table of \href{https://en.wikipedia.org/wiki/Laplace_transform#Table_of_selected_Laplace_transforms}{Laplace transforms} and \href{https://en.wikipedia.org/wiki/Laplace_transform#Properties_and_theorems}{properties} can be very handy.
+	\\ \\
+	Moving to solving circuits using Laplace transform, there are two approaches, first is constructing differential equation in time domain describing circuit and then solve it using Laplace transform, or second option convert circuit to s-domain with taking into account initial condition.
+	
+	
 	\section{Course of measurements}
 		
-		  First we tested two circuits: low-pass and high-pass configuration of RC circuit and RLC circuts. After connecting
-		osciloscope to the wave generator and prototype board, we generated square wave with Vp2p = 1V, offset = .5V, frequency of 100Hz and duty cycle of 50\%. Then we read from the osciloscope Voltage value at times 1t, 5t and 10t (where 10t is just as failsafe) and time when voltage reaches 10\% and 90\% of the highest value.
+		First we tested two circuits: low-pass and high-pass configuration of RC circuit and RLC circuts. After connecting osciloscope to the wave generator and prototype board, we generated square wave with $v_{pp}$ = 1V, $v_{offset}$ = .5V, frequency of 100Hz and duty cycle of 50\%. Then we read from the oscilloscope Voltage value at times 1$\tau$, 5$\tau$ and 10$\tau$ (where 10$\tau$ is just as fail-safe) and time when voltage reaches 10\% and 90\% of the highest value.
 		
-		For RLC circuits we tested ho different resistances before RC circuit influence output charactristic. We measured response for 2 cases: Generator out resistance (50 Ohm) + resistance selected by jumper wire. In our case we tested jumper on 1.1k Ohm resistance path and 3.3k Ohm. After that we checked response of the circuit:
-		if response was sinusoid with decreasing amplitude - resustance was smaller then RC
-		if response was exp. decay if R was higher
-		if response was aperiodic critical waveform if resistance was equal RC
+			\begin{figure}[H]
+			\centering
+			\begin{subfigure}{0.95\textwidth}
+				\centering
+				\begin{circuitikz}
+					\ctikzset{bipoles/oscope/width=1.5}
+					\ctikzset{bipoles/oscope/height=1}
+					\draw [black, thick] (0, 0) rectangle (3, -2);
+					\node [black, below] at (1.5, -2) {RC circuits};
+					\draw [black, thick] (-3, 0) rectangle (-1, -1.5);
+					\node [black, above] at (-2, 0) {\small Function Generator};
+					\draw (1.5, 1.3) node[oscopeshape](O) {Oscilloscope};
+					\node [bnc] at (-1.3, -0.75) (FG) {};
+					\node [bnc, font=\tiny, xscale=-1, anchor=zero] at (1, -0.75) (CON1) {};
+					\node [bnc, font=\tiny, rotate=90, anchor=zero, label position=45] at (2, -0.75) (CON2) {};
+					\node [below, font=\tiny] at (1, -0.85) {CON2};
+					\node [below, font=\tiny] at (2, -0.85) {CON1};
+					\draw (O.in 1) node[bnc, anchor=zero, rotate=-90](IN1) {};
+					\draw (O.in 2) node[bnc, anchor=zero, rotate=-90](IN2) {};
+					\draw (FG.hot) to[short, -*] (-0.4, -0.75) -- (-0.4, 0.4) -- (1.08, 0.4) to (IN1.hot);
+					\draw (CON1.hot) to[short] (-0.4, -0.75);
+					\draw (CON2.hot) to[short] (2, 0.4) -- (1.92, 0.4) -- (IN2.hot);
+				\end{circuitikz}
+				\caption{Measurement setup}
+			\end{subfigure}
+			\begin{subfigure}{0.45\textwidth}
+				\centering
+				\begin{circuitikz}[scale = 0.7, transform shape]
+					\draw (0,0) node[bnc](B1) {CON11}
+					to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
+					to[C, l2=$C_{11}$ and 47nF, l2 halign=c, l2 valign=c] (3,-2)
+					node[ground] {}
+					;
+					\draw (3,0) 
+					to[short] (4.5,0)
+					node[bnc, xscale=-1](B2){\scalebox{-1}[1]{CON12}}
+					;
+					\draw node[ground] at (B1.shield) {};
+					\draw node[ground] at (B2.shield) {};
+				\end{circuitikz}
+				\caption{Circuit A}
+				\label{fig:Circuit A}
+			\end{subfigure}
+			\begin{subfigure}{0.45\textwidth}
+				\centering
+				\begin{circuitikz}[scale = 0.7, transform shape]
+					\draw (0,0) node[bnc](B1) {CON21}
+					to[C, l=$C_{21}$, a=10nF] (3,0)
+					to[R, l2=$R_{21}$ and 1.5k$\Omega$, l2 halign=c, l2 valign=c] (3,-2)
+					node[ground] {}
+					;
+					\draw (3,0) 
+					to[short] (4.5,0)
+					node[bnc, xscale=-1](B2){\scalebox{-1}[1]{CON21}}
+					;
+					\draw node[ground] at (B1.shield) {};
+					\draw node[ground] at (B2.shield) {};
+				\end{circuitikz}
+				\caption{Circuit B}
+				\label{fig:Circuit B}
+			\end{subfigure}
+			\caption{RC Circuits}
+			\label{fig: Circuit}
+		\end{figure}		
 		
+		For RLC circuits we tested two different resistances before RC circuit influence output characteristic. We measured response for 2 cases: Generator out resistance (50 $\Omega$) + resistance selected by jumper wire. In our case we tested jumper on 1.1k$\Omega$ resistance path and 3.3k$\Omega$. After that we checked response of the circuit:
+		\begin{itemize}
+			\item if response was sinusoid with decreasing amplitude - resustance was smaller then RC
+			\item if response was exp. decay if R was higher
+			\item if response was aperiodic critical waveform if resistance was equal RC
+		\end{itemize}
 		
-		\begin{figure}[H]
-		\centering
-		\begin{subfigure}{0.95\textwidth}
-			\centering
-			\begin{circuitikz}
-				\ctikzset{bipoles/oscope/width=1.5}
-				\ctikzset{bipoles/oscope/height=1}
-				\draw [black, thick] (0, 0) rectangle (3, -2);
-				\node [black, below] at (1.5, -2) {RC circuits};
-				\draw [black, thick] (-3, 0) rectangle (-1, -1.5);
-				\node [black, above] at (-2, 0) {\small Function Generator};
-				\draw (1.5, 1.3) node[oscopeshape](O) {Oscilloscope};
-				\node [bnc] at (-1.3, -0.75) (FG) {};
-				\node [bnc, font=\tiny, xscale=-1, anchor=zero] at (1, -0.75) (CON1) {};
-				\node [bnc, font=\tiny, rotate=90, anchor=zero, label position=45] at (2, -0.75) (CON2) {};
-				\node [below, font=\tiny] at (1, -0.85) {CON2};
-				\node [below, font=\tiny] at (2, -0.85) {CON1};
-				\draw (O.in 1) node[bnc, anchor=zero, rotate=-90](IN1) {};
-				\draw (O.in 2) node[bnc, anchor=zero, rotate=-90](IN2) {};
-				\draw (FG.hot) to[short, -*] (-0.4, -0.75) -- (-0.4, 0.4) -- (1.08, 0.4) to (IN1.hot);
-				\draw (CON1.hot) to[short] (-0.4, -0.75);
-				\draw (CON2.hot) to[short] (2, 0.4) -- (1.92, 0.4) -- (IN2.hot);
-			\end{circuitikz}
-			\caption{Measurement setup}
-		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
-			\centering
-			\begin{circuitikz}[scale = 0.7, transform shape]
-				\draw (0,0) node[bnc](B1) {CON11}
-				to[R, l=$R_{11}$, a=1.5k$\Omega$] (3,0)
-				to[C, l2=$C_{11}$ and 47nF, l2 halign=c, l2 valign=c] (3,-2)
-				node[ground] {}
-				;
-				\draw (3,0) 
-				to[short] (4.5,0)
-				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{CON12}}
-				;
-				\draw node[ground] at (B1.shield) {};
-				\draw node[ground] at (B2.shield) {};
-			\end{circuitikz}
-			\caption{Circuit A}
-			\label{fig:Circuit A}
-		\end{subfigure}
-		\begin{subfigure}{0.45\textwidth}
-			\centering
-			\begin{circuitikz}[scale = 0.7, transform shape]
-				\draw (0,0) node[bnc](B1) {CON21}
-				to[C, l=$C_{21}$, a=10nF] (3,0)
-				to[R, l2=$R_{21}$ and 1.5k$\Omega$, l2 halign=c, l2 valign=c] (3,-2)
-				node[ground] {}
-				;
-				\draw (3,0) 
-				to[short] (4.5,0)
-				node[bnc, xscale=-1](B2){\scalebox{-1}[1]{CON21}}
-				;
-				\draw node[ground] at (B1.shield) {};
-				\draw node[ground] at (B2.shield) {};
-			\end{circuitikz}
-			\caption{Circuit B}
-			\label{fig:Circuit B}
-		\end{subfigure}
-		\caption{RC Circuits}
-		\label{fig: Circuit}
-	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
@@ -136,7 +156,7 @@
 			\end{circuitikz}
 			\caption{Measured Circuit}
 		\end{subfigure}
-		
+		\hfill
 		\begin{subfigure}{0.45\textwidth}
 			\centering
 			\begin{circuitikz}[scale = 0.8, transform shape]
