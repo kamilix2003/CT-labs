@@ -6,7 +6,7 @@
 ## Frequency response
 - [ ] Done
 ## Course of measurements
-- [ ] Circuits *WIP*
+- [x] Circuits *WIP*
 - [ ] Done
 ## Data processing
 - [x] Plots
