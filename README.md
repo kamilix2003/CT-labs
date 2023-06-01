@@ -10,7 +10,7 @@
 
 [Frequency Response](lab4/Latex/section3_lab4.pdf)
 
-[Two-port Networks](lab5/Latex/section3_lab5.pdf)
+[Two-port Networks](lab5/Latex/Section3_lab5.pdf)
 
 ## HOW TO GIT(gud) for teamek
 1. clone repo `git clone https://github.com/kamilix2003/CT-labs.git`
