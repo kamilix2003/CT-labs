@@ -238,7 +238,30 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{../Matlab/img/CircuitA.eps}
+	\begin{subfigure}{0.6\textwidth}
+	\includegraphics[width=0.9\textwidth]{../Matlab/img/CircuitA.eps}
+	\caption{plot}
+	\end{subfigure}	
+	\hfill
+	\begin{subtable}{0.38\textwidth}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& time & voltage \\
+			\hline
+			$\tau$ & & y \\
+			\hline		
+			$5\tau$ & & y \\
+			\hline
+			$10\tau$ & & y \\
+			\hline
+			10\% & & y \\
+			\hline
+			90\% & & y \\
+			\hline
+		\end{tabular}
+		\caption{table of values}
+	\end{subtable}
 		\caption{Circuit A output voltage}
 	\end{figure}
 	
@@ -272,55 +295,177 @@
 	
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{../Matlab/img/CircuitB.eps}
+	\begin{subfigure}{0.6\textwidth}
+		\includegraphics[width=0.9\textwidth]{../Matlab/img/CircuitB.eps}
+		\caption{plot}
+	\end{subfigure}
+	\hfill
+	\begin{subtable}{0.38\textwidth}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			 & time & voltage \\
+			\hline
+			$\tau$ & & y \\
+			\hline		
+			$5\tau$ & & y \\
+			\hline
+			$10\tau$ & & y \\
+			\hline
+			10\% & & y \\
+			\hline
+			90\% & & y \\
+			\hline
+		\end{tabular}
+		\caption{table of values}
+	\end{subtable}
 	\caption{Circuit B output voltage}
 \end{figure}
 	
 	\subsection{Circuit C}
 	
+	In third circuit we are looking for voltage of coil $L_{21}$.
+	\\ \\
+	Like in previous 2 circuits we transformed circuit to s-domain according to \eqref{eq:laplace-rules}
+	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.8\textwidth}
+		\begin{subfigure}{0.3\textwidth}
 			\begin{circuitikz}[scale = 0.7, transform shape]
+				\ctikzset{voltage/distance from node=.1}
+				\ctikzset{voltage/bump b=2.5}
 				\draw (0, 0)
 				to[R, l2=$R_{in}$ and 50$\Omega$, l2 halign=c, l2 valign=b, *-] (2.5, 0)
 				to[short, -*] (5, 0)
-				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
-				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
-				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
+				to[open, v^<=$v_{out}$] (5, -3) -- (2.5, -3)
+				to[L, l_=$sL_{41}$, v^=$V_{l3}$] (2.5, -1.5)
+				to[C, l_=$\frac{1}{sC_{41}}$] (2.5, 0);
 				\draw (0, 0)
-				to[open, v=$v_{in}$](0, -3)
+				to[open, v_<=$v_{in}$](0, -3)
 				to[short, -*] (2.5, -3);
 			\end{circuitikz}
+			\caption{JP43}
 		\end{subfigure}
-		
-		\begin{subfigure}{0.8\textwidth}
+		\hfill
+		\begin{subfigure}{0.3\textwidth}
 			\begin{circuitikz}[scale = 0.7, transform shape]
+				\ctikzset{voltage/distance from node=.1}
+				\ctikzset{voltage/bump b=2.5}
 				\draw (0, 0)
-				to[R, l2=$R_{42}$ and 1.1k$\Omega$, l2 halign=c, l2 valign=b] (2.5, 0)
+				to[R, l2=$R_{42} + R_{in}$ and 1.15k$\Omega$, l2 halign=c, l2 valign=b] (2.5, 0)
 				to[short, *-*] (5, 0)
-				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
-				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
-				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
+				to[open, v^<=$v_{out}$] (5, -3) -- (2.5, -3)
+				to[L, l_=$sL_{41}$, v^=$V_{l2}$] (2.5, -1.5)
+				to[C, l_=$\frac{1}{sC_{41}}$] (2.5, 0);
 				\draw (0, 0)
-				to[open, v=$v_{in}$](0, -3)
+				to[open, v_<=$v_{in}$](0, -3)
 				to[short, -*] (2.5, -3);
 			\end{circuitikz}
+			\caption{JP42}
 		\end{subfigure}
-		
-		\begin{subfigure}{0.8\textwidth}
+		\hfill
+		\begin{subfigure}{0.3\textwidth}
 			\begin{circuitikz}[scale = 0.7, transform shape]
+				\ctikzset{voltage/distance from node=.1}
+				\ctikzset{voltage/bump b=2.5}
 				\draw (0, 0)
-				to[R, l2=$R_{41}$ and 3.3k$\Omega$, l2 halign=c, l2 valign=b] (2.5, 0)
+				to[R, l2=$R_{41} + R_{in}$ and 3.35k$\Omega$, l2 halign=c, l2 valign=b] (2.5, 0)
 				to[short, *-*] (5, 0)
-				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
-				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
-				to[C, l2_=$C_{41}$ and 33nF, l2 halign=c, l2 valign=c] (2.5, 0);
+				to[open, v^<=$v_{out}$] (5, -3) -- (2.5, -3)
+				to[L, l_=$sL_{41}$, v^=$V_{l1}$] (2.5, -1.5)
+				to[C, l_=$\frac{1}{sC_{41}}$] (2.5, 0);
 				\draw (0, 0)
-				to[open, v=$v_{in}$](0, -3)
+				to[open, v_<=$v_{in}$](0, -3)
 				to[short, -*] (2.5, -3);
 			\end{circuitikz}
+			\caption{JP41}
 		\end{subfigure}
+		\caption{Circuit C schematics}
+	\end{figure}
+	
+	Then solved each circuit for $V_l(s)$
+	
+	\begin{equation}
+		V_l(s) = V_{in}(s)\dfrac{sL_{41}}{R_x + \frac{1}{sC_{21}} + sL_{21}}
+	\end{equation}
+	
+	After plugging in value of each component where $R_x$ is series resistance of the circuit, we can transform equation back to time domain and plot results.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.3 \textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC3}
+			\caption{Plot JP43}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.3 \textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC2}
+			\caption{Plot JP42}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.3 \textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC1}
+			\caption{Plot JP41}
+		\end{subfigure}
+		\begin{subtable}{0.3\textwidth}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& time & voltage \\
+			\hline
+			$\tau$ & & y \\
+			\hline		
+			$5\tau$ & & y \\
+			\hline
+			$10\tau$ & & y \\
+			\hline
+			10\% & & y \\
+			\hline
+			90\% & & y \\
+			\hline
+		\end{tabular}
+		\caption{table of values JP43}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.3\textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& time & voltage \\
+				\hline
+				$\tau$ & & y \\
+				\hline		
+				$5\tau$ & & y \\
+				\hline
+				$10\tau$ & & y \\
+				\hline
+				10\% & & y \\
+				\hline
+				90\% & & y \\
+				\hline
+			\end{tabular}
+			\caption{table of values JP42}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.3\textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& time & voltage \\
+				\hline
+				$\tau$ & & y \\
+				\hline		
+				$5\tau$ & & y \\
+				\hline
+				$10\tau$ & & y \\
+				\hline
+				10\% & & y \\
+				\hline
+				90\% & & y \\
+				\hline
+			\end{tabular}
+			\caption{table of values JP41}
+		\end{subtable}
 	\end{figure}
 	
 	\section{Comparison}
