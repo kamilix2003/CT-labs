@@ -5,7 +5,7 @@
 ## Goal of the exercise
 - [ ] Done
 ## Laplace Transform
-- [ ] Done **WIP**
+- [x] Done
 ## Course of measurements
 - [x] Figures
   - [x] Circuits
