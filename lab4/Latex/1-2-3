@@ -1,0 +1,33 @@
+1. Goal:
+
+The objective of the exercise is to acquaint oneself with the techniques for determining the frequency responses of selected circuits, specifically filters. This objective is accomplished by measuring the response of the circuits when subjected to sinusoidal inputs of varying frequencies. Through this process, participants can gain familiarity with the behavior and characteristics of the circuits under different frequency conditions, allowing for a better understanding of their frequency response properties.
+
+2. Frequency response:
+
+The frequency response of a system or circuit describes its behavior in response to different frequencies of input signals. It shows how the system amplifies or attenuates specific frequencies within a given range. In the context of filters, the frequency response indicates which frequencies are passed or attenuated by the filter. Analyzing the frequency response helps assess a filter's performance, determine its suitability for specific applications, and make informed decisions about its usage in electronic systems.
+
+Certainly! Here's the formula for the frequency response of a system or circuit in LaTeX:
+
+H(jω)=1/(1+jωRC)
+
+Where:
+
+    H(jω) represents the frequency response of the RC circuit.
+    j is the imaginary unit.
+    ω is the angular frequency.
+    R represents the resistance value in the RC circuit.
+    C represents the capacitance value in the RC circuit.
+
+http://www.ee.ic.ac.uk/pcheung/teaching/de1_ee/Lectures/Lecture%208%20-%20Frequency%20Response%20(x2).pdf
+
+3.  Course of the lab
+
+In this lab, we explored the frequency response characteristics of different filters by measuring and analyzing their voltage outputs. The lab focused on three specific circuits: an RC integrating circuit (low-pass filter), a third-order low-pass filter, and a resonant circuit RLC.
+
+We began by setting the frequency range from 1 kHz to 10 kHz with a step size of 1 kHz for the RC integrating circuit. We measured the voltage output at each frequency point and recorded the results. Then, we adjusted the frequency range to 10 kHz to 20 kHz with a step size of 2 kHz and repeated the voltage measurements.
+
+Next, we moved on to the third-order low-pass filter. We set the frequency range from 1 kHz to 10 kHz with a step size of 1 kHz and measured the voltage output at each frequency point. We recorded the results and adjusted the frequency range to 10 kHz to 20 kHz with a step size of 2 kHz. We repeated the voltage measurements for this extended frequency range.
+
+Finally, we worked with the resonant circuit RLC. We set the frequency range from 1 kHz to 8 kHz with a step size of 1 kHz and measured the voltage output at each frequency point. We recorded the results and adjusted the frequency range to 8 kHz to 10 kHz with a step size of 0.2 kHz. We then adjusted it further to 10 kHz to 20 kHz with a step size of 2 kHz and repeated the voltage measurements for each frequency range.
+
+By conducting these measurements and analyzing the results, we gained a deeper understanding of the frequency response behaviors of different filters and their responses to varying frequencies.
