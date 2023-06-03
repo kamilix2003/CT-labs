@@ -247,17 +247,17 @@
 		\centering
 		\begin{tabular}{|c|c|c|}
 			\hline
-			& time & voltage \\
+			& time [$\mu$s] & voltage [V] \\
 			\hline
-			$\tau$ & & y \\
+			$\tau$ & 70 & 1.132 \\
 			\hline		
-			$5\tau$ & & y \\
+			$5\tau$ & 352 & 1.493 \\
 			\hline
-			$10\tau$ & & y \\
+			$10\tau$ & 705 & 1.499 \\
 			\hline
-			10\% & & y \\
+			10\% & 11 & 0.649 \\
 			\hline
-			90\% & & y \\
+			90\% & 133 & 1.349 \\
 			\hline
 		\end{tabular}
 		\caption{table of values}
@@ -304,17 +304,17 @@
 		\centering
 		\begin{tabular}{|c|c|c|}
 			\hline
-			 & time & voltage \\
+			 & time [$\mu$s] & voltage [V] \\
 			\hline
-			$\tau$ & & y \\
+			$\tau$ & 15 & 0.367 \\
 			\hline		
-			$5\tau$ & & y \\
+			$5\tau$ & 75 & 0.007 \\
 			\hline
-			$10\tau$ & & y \\
+			$10\tau$ & 150 & 0.000 \\
 			\hline
-			10\% & & y \\
+			10\% & 2 & 0.894 \\
 			\hline
-			90\% & & y \\
+			90\% & 35 & 0.099 \\
 			\hline
 		\end{tabular}
 		\caption{table of values}
@@ -324,7 +324,7 @@
 	
 	\subsection{Circuit C}
 	
-	In third circuit we are looking for voltage of coil $L_{21}$.
+	In third circuit we are also looking for voltage of coil $L_{21}$.
 	\\ \\
 	Like in previous 2 circuits we transformed circuit to s-domain according to \eqref{eq:laplace-rules}
 	
@@ -383,89 +383,54 @@
 		\caption{Circuit C schematics}
 	\end{figure}
 	
-	Then solved each circuit for $V_l(s)$
+	Then solved each circuit for $V_l(s)$ and $V_{out}(s)$
 	
 	\begin{equation}
 		V_l(s) = V_{in}(s)\dfrac{sL_{41}}{R_x + \frac{1}{sC_{21}} + sL_{21}}
+	\end{equation}
+	
+	\begin{equation}
+		V_{out}(s) = V_{in}(s) \dfrac{\frac{1}{sC_{41}}+sL_{41}}{R_x + \frac{1}{sC_{41}}+sL_{41}}
 	\end{equation}
 	
 	After plugging in value of each component where $R_x$ is series resistance of the circuit, we can transform equation back to time domain and plot results.
 	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.3 \textwidth}
+		\begin{subfigure}{0.45 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC3}
 			\caption{Plot JP43}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.3 \textwidth}
+		\begin{subfigure}{0.45 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC2}
 			\caption{Plot JP42}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.3 \textwidth}
+		\begin{subfigure}{0.45 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC1}
 			\caption{Plot JP41}
 		\end{subfigure}
-		\begin{subtable}{0.3\textwidth}
+		\caption{Coil Voltage}
+	\end{figure}
+	
+		\begin{figure}[H]
 		\centering
-		\begin{tabular}{|c|c|c|}
-			\hline
-			& time & voltage \\
-			\hline
-			$\tau$ & & y \\
-			\hline		
-			$5\tau$ & & y \\
-			\hline
-			$10\tau$ & & y \\
-			\hline
-			10\% & & y \\
-			\hline
-			90\% & & y \\
-			\hline
-		\end{tabular}
-		\caption{table of values JP43}
-		\end{subtable}
+		\begin{subfigure}{0.45 \textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC3out}
+			\caption{Plot JP43}
+		\end{subfigure}
 		\hfill
-		\begin{subtable}{0.3\textwidth}
-			\centering
-			\begin{tabular}{|c|c|c|}
-				\hline
-				& time & voltage \\
-				\hline
-				$\tau$ & & y \\
-				\hline		
-				$5\tau$ & & y \\
-				\hline
-				$10\tau$ & & y \\
-				\hline
-				10\% & & y \\
-				\hline
-				90\% & & y \\
-				\hline
-			\end{tabular}
-			\caption{table of values JP42}
-		\end{subtable}
+		\begin{subfigure}{0.45 \textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC2out}
+			\caption{Plot JP42}
+		\end{subfigure}
 		\hfill
-		\begin{subtable}{0.3\textwidth}
-			\centering
-			\begin{tabular}{|c|c|c|}
-				\hline
-				& time & voltage \\
-				\hline
-				$\tau$ & & y \\
-				\hline		
-				$5\tau$ & & y \\
-				\hline
-				$10\tau$ & & y \\
-				\hline
-				10\% & & y \\
-				\hline
-				90\% & & y \\
-				\hline
-			\end{tabular}
-			\caption{table of values JP41}
-		\end{subtable}
+		\begin{subfigure}{0.45 \textwidth}
+			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC1out}
+			\caption{Plot JP41}
+		\end{subfigure}
+		\caption{Output voltage}
 	\end{figure}
 	
 	\section{Comparison}
@@ -474,4 +439,6 @@
 	\newpage
 	\appendix
 	\section{Appendix}\label{sec:appendix}
+	\href{https://github.com/kamilix2003/CT_labs}{GITHUB repository}
+	\inputminted{matlab}{../Matlab/main.m}
 \end{document}

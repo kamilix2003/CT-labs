@@ -12,7 +12,6 @@ square = amplitude *heaviside(t - T/2) - amplitude *heaviside(t - T) + offset * 
 
 
 % %% Circuit A
-% syms response1(t)
 % C1 = 47e-9;
 % R = 1.5e3;
 % response1(t) = ilaplace(laplace(square) * (1/(s*C1))/(R + 1/(s*C1)));
@@ -50,9 +49,8 @@ square = amplitude *heaviside(t - T/2) - amplitude *heaviside(t - T) + offset * 
 % xlabel('time [s]')
 % ylabel('voltage [V]')
 % print('img/CircuitA','-depsc')
-% 
+
 % %% Circuit B
-% syms response1(t)
 % C2 = 10e-9;
 % R = 1.5e3;
 % response1(t) = ilaplace(laplace(square) * R/(R + 1/(s*C2)));
@@ -64,11 +62,13 @@ square = amplitude *heaviside(t - T/2) - amplitude *heaviside(t - T) + offset * 
 % tauA1 = tauA;
 % tauA5 = 5*tauA;
 % tauA10 = 10*tauA;
-% percent10 = 0.1*max(x) + offset;
-% percent90 = 0.9*max(x);
+% percent10 = double(0.1*max(x))
+% percent90 = double(0.9*max(x))
 % invresponse = finverse(response1);
-% xpercent10 = double(invresponse(percent10));
-% xpercent90 = double(invresponse(percent90));
+% xpercent10 = double(invresponse(percent10))
+% xpercent90 = double(invresponse(percent90))
+% xpercent90 - T/2
+% xpercent10 - T/2
 % % figures
 % fig = figure('Name', 'Circuit B');
 % fig.Position(3:4) = [600 400];
@@ -92,7 +92,6 @@ square = amplitude *heaviside(t - T/2) - amplitude *heaviside(t - T) + offset * 
 % print('img/CircuitB','-depsc')
 
 %% Circuit C
-syms response33(t) response32(t) response(t)
 R3 = 50;
 R2 = 1.15e3;
 R1 = 3.35e3;
@@ -101,19 +100,40 @@ L = 10e-3;
 response33(t) = ilaplace(laplace(square) * (s*L)/(R3 + 1/(s*C)+s*L));
 response32(t) = ilaplace(laplace(square) * (s*L)/(R2 + 1/(s*C)+s*L));
 response31(t) = ilaplace(laplace(square) * (s*L)/(R1 + 1/(s*C)+s*L));
+response33out(t) = ilaplace(laplace(square) * (s*L + 1/(s*C))/(R3 + 1/(s*C)+s*L));
+response32out(t) = ilaplace(laplace(square) * (s*L + 1/(s*C))/(R2 + 1/(s*C)+s*L));
+response31out(t) = ilaplace(laplace(square) * (s*L + 1/(s*C))/(R1 + 1/(s*C)+s*L));
 steps = 1000;
 step = (0.8*T-0.49*T)/steps;
 t = 0.49*T:step:0.8*T;
+
 % R3
 x = response33(t);
+TF = islocalmax(double(x));
+TF(5) = 0;
+MF = islocalmin(double(x));
 figure('Name','Circuit C3')
-plot(t, x)
+plot(t, x, t(TF), x(TF), 'ro')
 ylim([double(min(x)-0.1*max(x)), double(max(x)+0.1*(max(x)))])
 xlim([0.49*T 0.8*T])
 title('Voltage of coil L_{21} with series resistance 50\Omega')
 xlabel('time [s]')
 ylabel('voltage [V]')
 print('img/CircuitC3','-depsc')
+
+x = response33out(t);
+TF = islocalmax(double(x));
+TF(5) = 0;
+MF = islocalmin(double(x));
+figure('Name','Circuit C3')
+plot(t, x, t(TF), x(TF), 'ro')
+ylim([double(min(x)-0.1*max(x)), double(max(x)+0.1*(max(x)))])
+xlim([0.49*T 0.8*T])
+title('Output voltage with series resistance 50\Omega')
+xlabel('time [s]')
+ylabel('voltage [V]')
+print('img/CircuitC3out','-depsc')
+
 % R2
 x = response32(t);
 figure('Name','Circuit C2')
@@ -124,6 +144,17 @@ title('Voltage of coil L_{21} with series resistance 1.15k\Omega')
 xlabel('time [s]')
 ylabel('voltage [V]')
 print('img/CircuitC2','-depsc')
+
+x = response32out(t);
+figure('Name','Circuit C2')
+plot(t, x)
+ylim([double(min(x)-0.1*max(x)), double(max(x)+0.1*(max(x)))])
+xlim([0.496*T 0.52*T])
+title('Output voltage with series resistance 1.15k\Omega')
+xlabel('time [s]')
+ylabel('voltage [V]')
+print('img/CircuitC2out','-depsc')
+
 % R1
 x = response31(t);
 figure('Name','Circuit C1')
@@ -134,6 +165,16 @@ title('Voltage of coil L_{21} with series resistance 3.35k\Omega')
 xlabel('time [s]')
 ylabel('voltage [V]')
 print('img/CircuitC1','-depsc')
+
+x = response31out(t);
+figure('Name','Circuit C1')
+plot(t, x)
+ylim([double(min(x)-0.1*max(x)), double(max(x)+0.1*(max(x)))])
+xlim([0.496*T 0.6*T])
+title('Output voltage with series resistance 3.35k\Omega')
+xlabel('time [s]')
+ylabel('voltage [V]')
+print('img/CircuitC1out','-depsc')
 
 
 
