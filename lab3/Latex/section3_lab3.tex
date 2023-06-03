@@ -231,15 +231,18 @@
 	output voltag of circuit A can be described using simple voltage divider
 	
 	\begin{equation}
-		v_{out}(s) = v_{in}(s) \dfrac{\frac{1}{sC_{11}}}{R_{11} +\frac{1}{sC_{11}}}
+		V_{out}(s) = V_{in}(s) \dfrac{\frac{1}{sC_{11}}}{R_{11} +\frac{1}{sC_{11}}}
 	\end{equation}
 	
-	after applying inverse Laplace transform to $V_{out}(s)$ we obtain below plot with marked $\tau$, 5$\tau$, 10$\tau$, 10\% and 90\% of output voltage.
+	after applying inverse Laplace transform to $v_{out}(s)$ we obtain below plot with marked $\tau$, 5$\tau$, 10$\tau$, 10\% and 90\% of output voltage.
 	
 	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{../Matlab/img/CircuitA.eps}
 		\caption{Circuit A output voltage}
 	\end{figure}
 	
+	\newpage
 	\subsection{Circuit B}
 	steps in circuit B are almost identical to circuit A, first we transformed circuit to s-domain according to \eqref{eq:laplace-rules}
 	\begin{figure}[H]
@@ -268,8 +271,10 @@
 		after applying inverse Laplace transform to $V_{out}(s)$ we obtain below plot with marked $\tau$, 5$\tau$, 10$\tau$, 10\% and 90\% of output voltage.
 	
 	\begin{figure}[H]
-		\caption{Circuit A output voltage}
-	\end{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{../Matlab/img/CircuitB.eps}
+	\caption{Circuit B output voltage}
+\end{figure}
 	
 	\subsection{Circuit C}
 	
