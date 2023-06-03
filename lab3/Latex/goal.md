@@ -1,5 +1,12 @@
 1. Goal of the exercise:
-  In this exercise we were measuring wave outputed by the tested device in response to input wave.
+  In this exercise, the primary goal is to validate the accuracy and effectiveness of the transient analysis approach using Laplace transformation. This method allows for the examination and understanding of the behavior of electrical circuits during the transient state. By measuring the voltages in both RC and RLC circuits that are subjected to a unit step input, we can observe and analyze the transient response of the circuits. This experimental verification provides valuable insights into the practical application and usefulness of the Laplace transformation technique in electrical circuit analysis.
+  
+  
+  
+  
+  
+  
+  <-------
 3. Couse of measurments:
   First we tested two circuits: low-pass and high-pass configuration of RC circuit and RLC circuts. After connecting
   osciloscope to the wave generator and prototype board, we generated square wave with Vp2p = 1V, offset = .5V, frequency
