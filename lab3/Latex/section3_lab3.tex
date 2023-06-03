@@ -14,6 +14,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -57,7 +58,11 @@
 	
 	Integrals like these can be quite difficult to solve, that is why lookup table of \href{https://en.wikipedia.org/wiki/Laplace_transform#Table_of_selected_Laplace_transforms}{Laplace transforms} and \href{https://en.wikipedia.org/wiki/Laplace_transform#Properties_and_theorems}{properties} can be very handy.
 	\\ \\
-	Moving to solving circuits using Laplace transform, there are two approaches, first is constructing differential equation in time domain describing circuit and then solve it using Laplace transform, or second option convert circuit to s-domain with taking into account initial condition.
+	Moving to solving circuits using Laplace transform, there are two approaches, first is constructing differential equation in time domain describing circuit and then solve it using Laplace transform, or second option very similar to solving circuits in steady-state where all components are transformed to s-domain and at the end of calculation transform back to t-domain.
+	
+	\begin{equation}\label{eq:laplace-rules}
+		R \xrightarrow{\mathcal{L}} R \quad C \xrightarrow{\mathcal{L}} \frac{1}{sC} \quad L \xrightarrow{\mathcal{L}} sL
+	\end{equation}
 	
 	
 	\section{Course of measurements}
@@ -186,16 +191,17 @@
 		\caption{RLC circuit}
 	\end{figure}
 
+	\newpage
 	\section{Theoretical calculations}
 	For all calculations we used Matlab with Symbolic Math Toolbox. Source code can be found in Appendix. \ref{sec:appendix}
-	
+	\\ \\
 	In all three circuit input voltage was square wave with 50\% duty cycle which can be described in time domain by
 	
 	\begin{equation}
 		v_{in}(t) = V_{offset} \mathbf{1}(t) + V_{pp} \mathbf{1}(t-\frac{T}{2}) - V_{pp} \mathbf{1}(t-T)
 	\end{equation}
 	
-	and after Laplace transform into frequency domain 
+	and in frequency domain by
 	
 	\begin{equation}
 		V_{in}(s) = \mathcal{L}[v_{in}(t)] = \frac{V_{offset}}{s} + \dfrac{e^{-\frac{T}{2}s}}{s} - \dfrac{e^{-Ts}}{s}
@@ -203,12 +209,14 @@
 
 	\subsection{Circuit A}
 
+	First we need to transform circuit to s-domain according to \eqref{eq:laplace-rules}
+
 	\begin{figure}[H]
 		\centering
 		\begin{circuitikz}[scale = 0.7, transform shape]
 			\draw (0,0)
-			to[R, l=$R_{11}$, a=1.5k$\Omega$, *-] (3,0)
-			to[C, l2=$C_{11}$ and 47nF, l2 halign=c, l2 valign=c] (3,-2)
+			to[R, l=$R_{11}$, *-] (3,0)
+			to[C, l=$\dfrac{1}{sC_{11}}$] (3,-2)
 			to[short, -*] (0, -2)
 			;
 			\draw (0, 0) to[open, v_<=$v_{in}$] (0, -2);
@@ -220,28 +228,29 @@
 		\caption{Circuit A schematics}
 	\end{figure}
 	
-	$v_{out}$ of circuit A can be described using simple voltage divider
+	output voltag of circuit A can be described using simple voltage divider
 	
 	\begin{equation}
-		v_{out}(s) = v_{in}(s) \dfrac{\frac{1}{sC_{11}}}{R_{11} +\frac{1}{sC_{11}}}
+		V_{out}(s) = V_{in}(s) \dfrac{\frac{1}{sC_{11}}}{R_{11} +\frac{1}{sC_{11}}}
 	\end{equation}
 	
-	after applying inverse Laplace transform to $V_out(s)$ we obtain below plot.
+	after applying inverse Laplace transform to $v_{out}(s)$ we obtain below plot with marked $\tau$, 5$\tau$, 10$\tau$, 10\% and 90\% of output voltage.
 	
 	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{../Matlab/img/CircuitA.eps}
 		\caption{Circuit A output voltage}
 	\end{figure}
 	
-	
-	
+	\newpage
 	\subsection{Circuit B}
-	
+	steps in circuit B are almost identical to circuit A, first we transformed circuit to s-domain according to \eqref{eq:laplace-rules}
 	\begin{figure}[H]
 		\centering
 		\begin{circuitikz}[scale = 0.7, transform shape]
 			\draw (0,0)
-			to[C, l=$C_{21}$, a=10nF, *-] (3,0)
-			to[R, l2=$R_{21}$ and 1.5k$\Omega$, l2 halign=c, l2 valign=c] (3,-2)
+			to[C, l_=$\dfrac{1}{sC_{21}}$, *-] (3,0)
+			to[R, l=$R_{21}$] (3,-2)
 			to[short, -*] (0, -2)
 			;
 			\draw (0, 0) to[open, v_<=$v_{in}$] (0, -2);
@@ -253,6 +262,20 @@
 		\caption{Circuit B schematics}
 	\end{figure}
 	
+	output voltage can be described by voltage divider
+	
+	\begin{equation}
+		V_{out}(s) = V_{in}(s) \dfrac{R_{21}}{R_{21} + \frac{1}{sC_{21}}}
+	\end{equation}
+	
+		after applying inverse Laplace transform to $V_{out}(s)$ we obtain below plot with marked $\tau$, 5$\tau$, 10$\tau$, 10\% and 90\% of output voltage.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../Matlab/img/CircuitB.eps}
+	\caption{Circuit B output voltage}
+\end{figure}
+	
 	\subsection{Circuit C}
 	
 	\begin{figure}[H]
@@ -260,7 +283,7 @@
 		\begin{subfigure}{0.8\textwidth}
 			\begin{circuitikz}[scale = 0.7, transform shape]
 				\draw (0, 0)
-				to[R, l2=$R_{c}$ and 50$\Omega$, l2 halign=c, l2 valign=b, *-] (2.5, 0)
+				to[R, l2=$R_{in}$ and 50$\Omega$, l2 halign=c, l2 valign=b, *-] (2.5, 0)
 				to[short, -*] (5, 0)
 				to[open, v^=$v_{out}$] (5, -3) -- (2.5, -3)
 				to[L, l2_=$L_{41}$ and 10mH, l2 halign=c, l2 valign=c] (2.5, -1.5)
