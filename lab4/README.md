@@ -10,7 +10,7 @@
 - [ ] Done
 ## Data processing
 - [x] Plots
-- [ ] Done
+- [x] Done
 ## Characteristics analysis
 - [ ] Done
 ## Conclusions
