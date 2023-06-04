@@ -44,7 +44,9 @@
 	
 	The frequency response of a system or circuit describes its behavior in response to different frequencies of input signals. It shows how the system amplifies or attenuates specific frequencies within a given range. In the context of filters, the frequency response indicates which frequencies are passed or attenuated by the filter. Analyzing the frequency response helps assess a filter's performance, determine its suitability for specific applications, and make informed decisions about its usage in electronic systems.
 	
-	
+	\begin{equation}
+		H(s) = \dfrac{V_{out}(s)}{V_{in}(s)}
+	\end{equation}
 	
 	\section{Course of measurements}
 	
@@ -150,14 +152,17 @@
 	Looking at the voltage gain vs frequency graph we are able to spot point where the characteristic " breaksdown" and starts going rapidly down.
 	
 	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.7\textwidth]{../Matlab/img/11.eps}
-		\caption{Frequency response of RC low-pass filter}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.7\textwidth]{../Matlab/img/12.eps}
-		\caption{Frequency response of III-order low-pass filter}
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../Matlab/img/11.eps}
+		\caption{RC low-pass filter}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../Matlab/img/12.eps}
+		\caption{III-order low-pass filter}
+	\end{subfigure}
+	\caption{Frequency response of low-pass filters circuit}
 	\end{figure}
 	
 	frequency response resonant rlc circuit :
@@ -179,16 +184,7 @@
 	\end{figure}
 	\section{Conclusions}
 	
-	Measuring frequency responses lets us analyze chosen circuits ( filters) in its frequency domain.
-	It also describes the steady-state response of a system to sinusoidal inputs of varying frequencies.
-	From the measurements of the amplitude ( ratio of voltages) and phase (in radians or degrees) of the output as a function of input frequency
-	we are able to do simpler analysis of  more complex systems like the filters in our laboratories.
-	The frequency response is closely related to the transfer function in linear systems, which is the Laplace transform of the impulse response.
-	Using plots graphs to draw characteristics of the quantities we have measured gives us a great way to look at frequency response.
-	Once a frequency response has been measured (e.g., as an impulse response), provided the system is linear and time-invariant, 
-	its characteristic can be approximated with arbitrary accuracy by a digital filter. Similarly, if a system
-	is demonstrated to have a poor frequency response, a digital or analog filter can be applied to the signals prior to their reproduction to compensate for these deficiencies.
-	
+	Measuring frequency responses lets us analyze chosen circuits(filters) in its frequency domain.	It also describes the steady-state response of a system to sinusoidal inputs of varying frequencies. From the measurements of the amplitude(ratio of voltages) and phase(in radians or degrees) of the output as a function of input frequency	we are able to do simpler analysis of more complex systems like the filters in our laboratories. The frequency response is closely related to the transfer function in linear systems, which is the Laplace transform of the impulse response. Using plots graphs to draw characteristics of the quantities we have measured gives us a great way to look at frequency response. Once a frequency response has been measured (e.g., as an impulse response), provided the system is linear and time-invariant, its characteristic can be approximated with arbitrary accuracy by a digital filter. Similarly, if a system is demonstrated to have a poor frequency response, a digital or analog filter can be applied to the signals prior to their reproduction to compensate for these deficiencies.	
 	
 	\newpage
 	\appendix
