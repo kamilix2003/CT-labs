@@ -3,7 +3,7 @@
 [Report](Latex/section3_lab3.pdf)
 
 ## Goal of the exercise
-- [ ] Done
+- [x] Done
 ## Laplace Transform
 - [x] Done
 ## Course of measurements
@@ -12,8 +12,8 @@
   - [x] Measurements diagrams
 - [x] Done
 ## Theoretical calculations
-- [ ] Done **WIP**
+- [x] Done **WIP**
 ## Comparison
-- [ ] Done
+- [x] Done
 ## Conclusions
-- [ ] Done
+- [x] Done

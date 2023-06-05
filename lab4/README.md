@@ -2,16 +2,16 @@
 
 [Report](Latex/section3_lab4.pdf)
 ## Goal of the exercise
-- [ ] Done
+- [x] Done
 ## Frequency response
-- [ ] Done
+- [x] Done
 ## Course of measurements
 - [x] Circuits *WIP*
-- [ ] Done
+- [x] Done
 ## Data processing
 - [x] Plots
 - [x] Done
 ## Characteristics analysis
-- [ ] Done
+- [x] Done
 ## Conclusions
-- [ ] Done
+- [x] Done
