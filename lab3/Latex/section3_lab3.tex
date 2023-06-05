@@ -41,6 +41,9 @@
 \begin{document}
 	\maketitle
 	\section{Goal of the exercise}
+	
+	In this exercise, the primary goal is to validate the accuracy and effectiveness of the transient analysis approach using Laplace transformation. This method allows for the examination and understanding of the behavior of electrical circuits during the transient state. By measuring the voltages in both RC and RLC circuits that are subjected to a unit step input, we can observe and analyze the transient response of the circuits. This experimental verification provides valuable insights into the practical application and usefulness of the Laplace transformation technique in electrical circuit analysis.
+	
 	\section{Laplace Transform}
 	Laplace transform is an integral transform that converts a function of a real variable(time domain) into a function of complex variable(frequency domain). It is powerful tool for solving differential equations, which turns ODEs into algebraic equations and convolution into multiplication. For function $x(t)$, the Laplace transform is the integral
 	
@@ -191,7 +194,6 @@
 		\caption{RLC circuit}
 	\end{figure}
 
-	\newpage
 	\section{Theoretical calculations}
 	For all calculations we used Matlab with Symbolic Math Toolbox. Source code can be found in Appendix. \ref{sec:appendix}
 	\\ \\
@@ -265,7 +267,6 @@
 		\caption{Circuit A output voltage}
 	\end{figure}
 	
-	\newpage
 	\subsection{Circuit B}
 	steps in circuit B are almost identical to circuit A, first we transformed circuit to s-domain according to \eqref{eq:laplace-rules}
 	\begin{figure}[H]
@@ -397,44 +398,443 @@
 	
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.45 \textwidth}
+		\begin{subfigure}{0.3 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC3}
 			\caption{Plot JP43}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.45 \textwidth}
+		\begin{subfigure}{0.3 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC2}
 			\caption{Plot JP42}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.45 \textwidth}
+		\begin{subfigure}{0.3 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC1}
 			\caption{Plot JP41}
 		\end{subfigure}
+				\hfill
+		\begin{subtable}{0.3 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& voltage [V] & time [$\mu$s] \\
+				\hline
+				$v_{max}$ & 0.98 & 2 \\
+				\hline
+				$v_{min}$ & -0.87 & 55 \\
+				\hline
+				\multicolumn{2}{|c|}{ steady-state} & 1939 \\
+				\hline \hline
+				\multicolumn{2}{|c|}{no. of oscillations} & 18 \\
+				\hline
+			\end{tabular}
+			\caption{Table of values JP43}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.3 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+	\hline
+	& voltage [V] & time [$\mu$s] \\
+	\hline
+	$v_{max}$ & 0.76 & 2 \\
+	\hline
+	$v_{min}$ & -0.127 & 36\\
+	\hline
+	\multicolumn{2}{|c|}{ steady-state} & 117 \\
+	\hline
+\end{tabular}
+			\caption{Table of values JP42}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.3 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+	\hline
+	& voltage [V] & time [$\mu$s] \\
+	\hline
+	$v_{max}$ & 0.45 & 2 \\
+	\hline
+	$v_{min}$ & -0.023 & 24 \\
+	\hline
+	\multicolumn{2}{|c|}{ steady-state} & 117 \\
+	\hline
+\end{tabular}
+			\caption{Table of values JP41}
+		\end{subtable}
 		\caption{Coil Voltage}
 	\end{figure}
 	
 		\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.45 \textwidth}
+		\begin{subfigure}{0.3 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC3out}
 			\caption{Plot JP43}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.45 \textwidth}
+		\begin{subfigure}{0.3 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC2out}
 			\caption{Plot JP42}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.45 \textwidth}
+		\begin{subfigure}{0.3 \textwidth}
 			\includegraphics[width=\textwidth]{../Matlab/img/CircuitC1out}
 			\caption{Plot JP41}
 		\end{subfigure}
+				\hfill
+		\begin{subtable}{0.3 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+	\hline
+	& voltage [V] & time [$\mu$s] \\
+	\hline
+	$v_{max}$ & 1.57 & 86 \\
+	\hline
+	$v_{min}$ & 1.41 & 27\\
+	\hline
+	\multicolumn{2}{|c|}{ steady-state} & 885 \\
+	\hline \hline
+	\multicolumn{2}{|c|}{no. of oscillations} & 9 \\
+	\hline
+\end{tabular}
+			\caption{Table of values JP43}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.3 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+	\hline
+	& voltage [V] & time [$\mu$s] \\
+	\hline
+	$v_{max}$ & 1.26 & 2 \\
+	\hline
+	$v_{min}$ & 0.75 & 17 \\
+	\hline
+	\multicolumn{2}{|c|}{ steady-state} & 144 \\
+	\hline
+\end{tabular}
+			\caption{Table of values JP42}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.3 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+	\hline
+	& voltage [V] & time [$\mu$s] \\
+	\hline
+	$v_{max}$ & 0.96 & 2 \\
+	\hline
+	$v_{min}$ & 0.57 & 11 \\
+	\hline
+	\multicolumn{2}{|c|}{ steady-state} & 501 \\
+	\hline
+\end{tabular}
+			\caption{Table of values JP41}
+		\end{subtable}
 		\caption{Output voltage}
 	\end{figure}
 	
+	\newpage
 	\section{Comparison}
+	
+	comparing measurements and calculations results are not very precise in every circuit, most likely by error in measurements(different offset setting) but for some circuits results differ in 3rd decimal place.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subtable}{0.45\textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+			\hline
+			& time [$\mu$s] & voltage [V] \\
+			\hline
+			$\tau$ & 70 & 1.132 \\
+			\hline		
+			$5\tau$ & 352 & 1.493 \\
+			\hline
+			$10\tau$ & 705 & 1.499 \\
+			\hline
+			10\% & 11 & 0.649 \\
+			\hline
+			90\% & 133 & 1.349 \\
+			\hline
+			\end{tabular}
+			\caption{calculated values}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.45\textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& time [$\mu$s] & voltage [V] \\
+				\hline
+				$\tau$ & 64 & 0.632 \\
+				\hline		
+				$5\tau$ & 225 & 0.997 \\
+				\hline
+				$10\tau$ & 450 & 1.000 \\
+				\hline
+				10\% & 4 & 0.010 \\
+				\hline
+				90\% & 140 & 0.896 \\
+				\hline
+			\end{tabular}
+			\caption{measured values}
+		\end{subtable}
+		\caption{Circuit A}
+	\end{figure}	
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subtable}{0.45\textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& time [$\mu$s] & voltage [V] \\
+				\hline
+				$\tau$ & 15 & 0.367 \\
+				\hline		
+				$5\tau$ & 75 & 0.007 \\
+				\hline
+				$10\tau$ & 150 & 0.000 \\
+				\hline
+				10\% & 2 & 0.894 \\
+				\hline
+				90\% & 35 & 0.099 \\
+				\hline
+			\end{tabular}
+			\caption{calculated values}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.45\textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& time [$\mu$s] & voltage [V] \\
+				\hline
+				$\tau$ & 15 & 0.368 \\
+				\hline		
+				$5\tau$ & 73 & 0.008 \\
+				\hline
+				$10\tau$ & 145 & 0.000 \\
+				\hline
+				10\% & 1 & 0.904 \\
+				\hline
+				90\% & 35 & 0.100 \\
+				\hline
+			\end{tabular}
+			\caption{measured values}
+		\end{subtable}
+		\caption{Circuit B}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\begin{subtable}{0.45 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& voltage [V] & time [$\mu$s] \\
+				\hline
+				$v_{max}$ & 0.98 & 2 \\
+				\hline
+				$v_{min}$ & -0.87 & 55 \\
+				\hline
+				\multicolumn{2}{|c|}{ steady-state} & 1939 \\
+				\hline \hline
+				\multicolumn{2}{|c|}{no. of oscillations} & 18 \\
+				\hline
+			\end{tabular}
+			\caption{calculated coil voltage}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.45 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& voltage [V] & time [$\mu$s] \\
+				\hline
+				$v_{max}$ & 1.02 &  \\
+				\hline
+				$v_{min}$ & -0.82 &  \\
+				\hline
+				\multicolumn{2}{|c|}{ steady-state} &  \\
+				\hline \hline
+				\multicolumn{2}{|c|}{no. of oscillations} &  \\
+				\hline
+			\end{tabular}
+			\caption{measured coil voltage}
+		\end{subtable}
+				\begin{subtable}{0.45 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+	\hline
+& voltage [V] & time [$\mu$s] \\
+\hline
+$v_{max}$ & 1.57 & 86 \\
+\hline
+$v_{min}$ & 1.41 & 27\\
+\hline
+\multicolumn{2}{|c|}{ steady-state} & 885 \\
+\hline \hline
+\multicolumn{2}{|c|}{no. of oscillations} & 9 \\
+\hline
+			\end{tabular}
+			\caption{calculated output voltage}
+		\end{subtable}
+		\hfill
+		\begin{subtable}{0.45 \textwidth}
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				& voltage [V] & time [$\mu$s] \\
+				\hline
+				$v_{max}$ & 1.120 &  \\
+				\hline
+				$v_{min}$ & 0.940 &  \\
+				\hline
+				\multicolumn{2}{|c|}{ steady-state} & 1160 \\
+				\hline \hline
+				\multicolumn{2}{|c|}{no. of oscillations} & 10 \\
+				\hline
+			\end{tabular}
+			\caption{measured output voltage}
+		\end{subtable}
+		\caption{Circuit C JP43}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+	& voltage [V] & time [$\mu$s] \\
+	\hline
+	$v_{max}$ & 0.76 & 2 \\
+	\hline
+	$v_{min}$ & -0.127 & 36\\
+	\hline
+	\multicolumn{2}{|c|}{ steady-state} & 117 \\
+	\hline
+	\end{tabular}
+	\caption{calculated coil voltage}
+\end{subtable}
+\hfill
+\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& voltage [V] & time [$\mu$s] \\
+		\hline
+		$v_{max}$ & 0.920 &  \\
+		\hline
+		$v_{min}$ & -0.100 & \\
+		\hline
+		\multicolumn{2}{|c|}{ steady-state} & \\
+		\hline
+	\end{tabular}
+	\caption{measured coil voltage}
+\end{subtable}
+\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+& voltage [V] & time [$\mu$s] \\
+\hline
+$v_{max}$ & 1.26 & 2 \\
+\hline
+$v_{min}$ & 0.75 & 17 \\
+\hline
+\multicolumn{2}{|c|}{ steady-state} & 144 \\
+\hline
+	\end{tabular}
+	\caption{calculated output voltage}
+\end{subtable}
+\hfill
+\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& voltage [V] & time [$\mu$s] \\
+		\hline
+		$v_{max}$ & 0.880 &  \\
+		\hline
+		$v_{min}$ & 0.280 & \\
+		\hline
+		\multicolumn{2}{|c|}{ steady-state} & \\
+		\hline
+	\end{tabular}
+	\caption{measured output voltage}
+\end{subtable}
+		\caption{Circuit C JP42}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+& voltage [V] & time [$\mu$s] \\
+\hline
+$v_{max}$ & 0.96 & 2 \\
+\hline
+$v_{min}$ & 0.57 & 11 \\
+\hline
+\multicolumn{2}{|c|}{ steady-state} & 501 \\
+\hline
+	\end{tabular}
+	\caption{calculated coil voltage}
+\end{subtable}
+\hfill
+\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& voltage [V] & time [$\mu$s] \\
+		\hline
+		$v_{max}$ & 0.721 &  \\
+		\hline
+		$v_{min}$ & 0.000 & \\
+		\hline
+		\multicolumn{2}{|c|}{ steady-state} & \\
+		\hline
+	\end{tabular}
+	\caption{measured coil voltage}
+\end{subtable}
+\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+& voltage [V] & time [$\mu$s] \\
+\hline
+$v_{max}$ & 0.45 & 2 \\
+\hline
+$v_{min}$ & -0.023 & 24 \\
+\hline
+\multicolumn{2}{|c|}{ steady-state} & 117 \\
+\hline
+	\end{tabular}
+	\caption{calculated output voltage}
+\end{subtable}
+\hfill
+\begin{subtable}{0.45 \textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+& voltage [V] & time [$\mu$s] \\
+\hline
+$v_{max}$ & 0.688 & \\
+\hline
+$v_{min}$ & 0.064 & \\
+\hline
+\multicolumn{2}{|c|}{ steady-state} & \\
+\hline
+	\end{tabular}
+	\caption{measured output voltage}
+\end{subtable}
+		\caption{Circuit C JP41}
+	\end{figure}
+	
 	\section{Conclusions}
+	In conclusion Laplace transform in solving circuits is excellent method which gives very accurate results, and works on algebraic level which mean that it can be calculated by a computer as we did in this exercise. Ability to simulate circuits using computer may be not necessary for small circuits but for more complex ones it is unavoidable.
 	
 	\newpage
 	\appendix
